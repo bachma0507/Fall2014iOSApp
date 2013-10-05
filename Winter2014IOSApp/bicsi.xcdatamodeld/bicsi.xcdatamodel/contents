@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="12E55" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Exhibitors" syncable="YES">
+        <attribute name="boothId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="boothLabel" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="coId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="eventId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mapId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Favorites" syncable="YES">
+        <attribute name="boothnumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="deviceowner" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="exhibitorname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="favorite" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="notes" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Sessions" syncable="YES">
+        <attribute name="endTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="itscecs" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sessionDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sessionDay" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sessionDesc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sessionID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sessionName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sessionSpeaker1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sessionSpeaker2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sessionSpeaker3" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sessionSpeaker4" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sessionSpeaker5" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sessionSpeaker6" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sessionStatus" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sessionTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="speaker1Company" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="speaker2Company" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="speaker3Company" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="speaker4Company" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="speaker5Company" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="speaker6Company" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="startTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="startTimeStr" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Sessnotes" syncable="YES">
+        <attribute name="agenda" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="deviceowner" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="notes" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sessiondate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sessionID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sessionname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sessiontime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sessnotesId" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Speakers" syncable="YES">
+        <attribute name="endTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="location2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sess2EndTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sess2StartTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="session1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="session1Date" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="session1Desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="session1Time" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="session2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="session2Date" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="session2Desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="session2Time" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sessionID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sessionID2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="speakerBio" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="speakerCity" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="speakerCompany" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="speakerCountry" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="speakerID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="speakerName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="speakerState" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="speakerWebsite" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="startTime" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Todo" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="todoId" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Exhibitors" positionX="160" positionY="192" width="128" height="150"/>
+        <element name="Favorites" positionX="160" positionY="192" width="128" height="120"/>
+        <element name="Sessions" positionX="160" positionY="192" width="128" height="420"/>
+        <element name="Sessnotes" positionX="160" positionY="192" width="128" height="180"/>
+        <element name="Speakers" positionX="160" positionY="192" width="128" height="405"/>
+        <element name="Todo" positionX="160" positionY="192" width="128" height="90"/>
+    </elements>
+</model>

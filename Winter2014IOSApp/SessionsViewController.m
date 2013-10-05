@@ -1,0 +1,490 @@
+//
+//  SessionsViewController.m
+//  Fall2013IOSApp
+//
+//  Created by Barry on 6/29/13.
+//  Copyright (c) 2013 BICSI. All rights reserved.
+//
+
+#import "SessionsViewController.h"
+#import "EditNoteViewController.h"
+#import "SessionNotes.h"
+#import "SVWebViewController.h"
+#import <QuartzCore/QuartzCore.h>
+#import "NotesViewController.h"
+//#import "StackMob.h"
+#import "Fall2013IOSAppAppDelegate.h"
+
+@interface SessionsViewController ()
+@property (nonatomic, strong) NSMutableArray *mySessionnotes;
+
+@end
+
+@implementation SessionsViewController
+@synthesize session1Label, session1DateLabel, session1TimeLabel, session1DescTextField, speakerNameLabel, speakers;
+@synthesize session1DateLabelText, session1descTextFieldText, session1LabelText, session1TimeLabelText, speakerNameLabelText;
+@synthesize sessionName, sessionDate, sessionTime, sessionDesc, name, sessionId, sessionIdLabel, agendaButton, startTimeStr, endTime, locationLabel, location;
+
+- (NSManagedObjectContext *)managedObjectContext {
+    NSManagedObjectContext *context = nil;
+    id delegate = [[UIApplication sharedApplication] delegate];
+    if ([delegate performSelector:@selector(managedObjectContext)]) {
+        context = [delegate managedObjectContext];
+    }
+    return context;
+}
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
+
+//- (Fall2013IOSAppAppDelegate *)appDelegate {
+//    return (Fall2013IOSAppAppDelegate *)[[UIApplication sharedApplication] delegate];
+//}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+	// Do any additional setup after loading the view.
+    
+    NSUUID *id = [[UIDevice currentDevice] identifierForVendor];
+    NSString *deviceID = [[NSString alloc] initWithFormat:@"%@",id];
+    NSString *newDeviceID = [deviceID substringWithRange:NSMakeRange(30, [deviceID length]-30)];
+    
+    NSLog(@"Untruncated Device ID is: %@", deviceID);
+    NSLog(@"Truncated Device ID is: %@", newDeviceID);
+    
+    
+    //self.managedObjectContext = [[self.appDelegate coreDataStore] contextForCurrentThread];
+    
+    UIBarButtonItem *backButtonItem = [[UIBarButtonItem alloc] initWithTitle:@" " style:UIBarButtonItemStylePlain target:nil action:nil];
+    self.navigationItem.backBarButtonItem = backButtonItem;
+    
+    //self.title = speakerNameLabelText.text;
+    
+    session1Label.text = self.sessionName;
+    session1DateLabel.text = self.sessionDate;
+    session1TimeLabel.text = self.sessionTime;
+    session1DescTextField.text = self.sessionDesc;
+    speakerNameLabel.text = self.name;
+    sessionIdLabel.text = self.sessionId;
+    locationLabel.text = self.location;
+    
+    startTimeStr = self.startTimeStr;
+    endTime = self.endTime;
+    location = self.location;
+    
+    
+    NSLog(@"Session Id 1 is: %@", self.sessionId);
+    
+    //session1DescTextField.layer.borderWidth = 2.0f;
+    //session1DescTextField.layer.borderColor = [[UIColor grayColor] CGColor];
+    // For the border and rounded corners
+    [[session1DescTextField layer] setBorderColor:[[UIColor colorWithRed:48/256.0 green:134/256.0 blue:174/256.0 alpha:1.0] CGColor]];
+    [[session1DescTextField layer] setBorderWidth:2.3];
+    [[session1DescTextField layer] setCornerRadius:10];
+    [session1DescTextField setClipsToBounds: YES];
+    
+    // Setup View
+    //[self setupView];
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    // Edit the entity name as appropriate.
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Sessnotes" inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    //[fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"title != 'Todo with Image'"]];
+    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"sessionID == %@ && deviceowner == %@ && agenda == 'Yes'",self.sessionId,newDeviceID]];
+    NSLog(@"MY SESSION ID 1 IS: %@",self.sessionId);
+    
+    NSArray *results = [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
+    
+//    [self.managedObjectContext executeFetchRequest:fetchRequest onSuccess:^(NSArray *results) {
+//        //[self.refreshControl endRefreshing];
+        self.objects = results;
+        NSLog(@"Results Count is: %lu", (unsigned long)results.count);
+        if (!results || !results.count){
+            [self.agendaButton setTitle:@"Add to Agenda" forState:normal];
+        }
+        else{
+            [self.agendaButton setTitle:@"Remove from Agenda" forState:normal];
+        }
+        
+//    } onFailure:^(NSError *error) {
+//        
+//        //[self.refreshControl endRefreshing];
+//        NSLog(@"An error %@, %@", error, [error userInfo]);
+//    }];
+}
+
+
+
+//}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    // Fetch Notes
+    //[self fetchNotes];
+    
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)addEditNotes:(id)sender {
+    //
+    //    if(!self.mySessionnotes || !self.mySessionnotes.count){
+    //
+    //        UIStoryboard*  sb = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:nil];
+    //
+    //        EditNoteViewController *vc = [sb instantiateViewControllerWithIdentifier:@"EditNoteViewController"];
+    //
+    //        //     Initialize Navigation Controller
+    //        UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:vc];
+    //        //
+    //        //     Present View Controller
+    //        [self.navigationController presentViewController:nc animated:YES completion:nil];
+    //    }
+    //    else{
+    //        [self fetchNotes];
+    //        SessionNotes *sessionnotes = [self.mySessionnotes objectAtIndex:0];
+    //
+    //        // Initialize Edit Note View Controller
+    //        EditNoteViewController *vc = [[EditNoteViewController alloc] initWithSessionNotes:sessionnotes];
+    //
+    //        // Push View Controller onto Navigation Stack
+    //        [self.navigationController pushViewController:vc animated:YES];
+    //    }
+    
+}
+
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+//    if ([segue.identifier isEqualToString:@"notesDetail"]) {
+//
+//        if(!self.mySessionnotes || !self.mySessionnotes.count){
+//
+//            UIStoryboard*  sb = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:nil];
+//
+//            EditNoteViewController *vc = [sb instantiateViewControllerWithIdentifier:@"EditNoteViewController"];
+//            EditNoteViewController *destViewController = segue.destinationViewController;
+//
+//
+//            //     Initialize Navigation Controller
+//            //UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:vc];
+//            //
+//            //     Present View Controller
+//            //[self.navigationController presentViewController:nc animated:YES completion:nil];
+//        }
+//        else{
+//
+//            SessionNotes *sessionnotes = [self.mySessionnotes objectAtIndex:0];
+//
+//            UIStoryboard*  sb = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:nil];
+//
+//            EditNoteViewController *vc = [sb instantiateViewControllerWithIdentifier:@"EditNoteViewController"];
+//
+//
+//            // Initialize Edit Note View Controller
+//            vc = [[EditNoteViewController alloc] initWithSessionNotes:sessionnotes];
+//
+//            // Push View Controller onto Navigation Stack
+//            //[self.navigationController pushViewController:vc animated:YES];
+//        }
+//}
+//}
+- (void)setupView {
+    
+    // Fetch Notes
+    //[self fetchNotes];
+}
+
+- (void)fetchNotes {
+    // Fetch Notes
+    // self.notes = [NSMutableArray arrayWithArray:[Note findAll]];
+    //NSString * myString = [NSString stringWithFormat:@"%@", speakers.sessionID];
+    //self.mySessionnotes = [NSMutableArray arrayWithArray:[SessionNotes findAllSortedBy:@"title" ascending:YES]];
+//NSString * myFilter = [NSString stringWithFormat:@"%@", self.sessionId];
+//NSPredicate * myPredicate = [NSPredicate predicateWithFormat:@"title == '%@'", myFilter];
+//self.mySessionnotes = [NSMutableArray arrayWithArray:[SessionNotes findAllWithPredicate:myPredicate]];
+    //NSLog(@"Session Id is: %@", self.sessionId);
+}
+
+- (IBAction)takeSurvey:(id)sender {
+    
+    NSString * myURL = [NSString stringWithFormat:@"https://www.research.net/s/%@", self.sessionId];
+    //    NSURL *url = [NSURL URLWithString:myURL];
+    //	[[UIApplication sharedApplication] openURL:url];
+    NSURL *URL = [NSURL URLWithString:myURL];
+	SVWebViewController *webViewController = [[SVWebViewController alloc] initWithURL:URL];
+	[self.navigationController pushViewController:webViewController animated:YES];
+    
+}
+
+- (IBAction)agendaButtonPressed:(id)sender {
+    
+    NSUUID *id = [[UIDevice currentDevice] identifierForVendor];
+    NSString *deviceID = [[NSString alloc] initWithFormat:@"%@",id];
+    NSString *newDeviceID = [deviceID substringWithRange:NSMakeRange(30, [deviceID length]-30)];
+    
+    NSLog(@"Untruncated Device ID is: %@", deviceID);
+    NSLog(@"Truncated Device ID is: %@", newDeviceID);
+    
+    NSLog(@"MY SESSION ID 1 IS: %@",self.sessionId);
+    
+     NSManagedObjectContext *context = [self managedObjectContext];
+    
+    if ([self.agendaButton.currentTitle isEqual:@"Add to Agenda"]) {
+        NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:@"Sessnotes" inManagedObjectContext:context];
+        
+        [newManagedObject setValue:self.sessionId forKey:@"sessionID"];
+        [newManagedObject setValue:self.session1Label.text forKey:@"sessionname"];
+        [newManagedObject setValue:self.session1DateLabel.text forKey:@"sessiondate"];
+        [newManagedObject setValue:self.session1TimeLabel.text forKey:@"sessiontime"];
+        [newManagedObject setValue:self.locationLabel.text forKey:@"location"];
+        [newManagedObject setValue:newDeviceID forKey:@"deviceowner"];
+        [newManagedObject setValue:@"Yes" forKey:@"agenda"];
+        
+        NSError *error = nil;
+        // Save the object to persistent store
+        if (![context save:&error]) {
+            NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
+        }
+        
+            NSLog(@"You created a new object!");
+            [agendaButton setTitle:@"Remove from Agenda" forState:normal];
+
+        
+    }
+    else{//start else block
+        NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+        
+        NSEntityDescription *entity = [NSEntityDescription entityForName:@"Sessnotes" inManagedObjectContext:context];
+        [fetchRequest setEntity:entity];
+        
+        [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"sessionID == %@ && deviceowner == %@ && agenda == 'Yes'",self.sessionId,newDeviceID]];
+        NSLog(@"MY SESSION ID 1 IS: %@",self.sessionId);
+        
+        NSArray *results = [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
+        
+            self.objects = results;
+            NSLog(@"Results Count is: %lu", (unsigned long)results.count);
+            if (!results || !results.count){//start nested if block
+                [self.agendaButton setTitle:@"Add to Agenda" forState:normal];}
+            else{
+                NSManagedObject *object = [results objectAtIndex:0];
+                [object setValue:NULL forKey:@"agenda"];
+                
+                NSError *error = nil;
+                // Save the object to persistent store
+                if (![context save:&error]) {
+                    NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
+                }
+
+                
+                    NSLog(@"You updated an object");
+                    [self.agendaButton setTitle:@"Add to Agenda" forState:normal];
+
+            }
+            
+        }
+    
+}//end else block
+
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"notesDetail"]) {
+        self.sessionName = session1Label.text;
+    
+        NotesViewController *destViewController = segue.destinationViewController;
+        destViewController.title = session1Label.text;
+        destViewController.sessionName = self.sessionName;
+        destViewController.sessionId = self.sessionId;
+        
+        NSLog(@"Session ID is %@", self.sessionId);
+    }
+}
+
+- (IBAction)AddEvent:(id)sender {
+    
+    //Create the Event Store
+    EKEventStore *eventStore = [[EKEventStore alloc]init];
+    
+    //Check if iOS6 or later is installed on user's device *******************
+    if([eventStore respondsToSelector:@selector(requestAccessToEntityType:completion:)]) {
+        
+        //Request the access to the Calendar
+        [eventStore requestAccessToEntityType:EKEntityTypeEvent completion:^(BOOL granted,NSError* error){
+            
+            //Access not granted-------------
+            if(!granted){
+                NSString *message = @"This application cannot access your Calendar... please enable in your privacy settings.";
+                UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"Warning"
+                                                                   message:message
+                                                                  delegate:self
+                                                         cancelButtonTitle:@"Ok"
+                                                         otherButtonTitles:nil,nil];
+                //Show an alert message!
+                //UIKit needs every change to be done in the main queue
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [alertView show];
+                }
+                               );
+                
+                //Access granted------------------
+            }else{
+                
+                
+                //Event created
+                if([self createEvent:eventStore]){
+                    //labelText = @"Event added!";
+                    UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"Success"
+                                                                       message:@"Event added to your mobile device's calendar."
+                                                                      delegate:self
+                                                             cancelButtonTitle:@"Ok"
+                                                             otherButtonTitles:nil,nil];
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [alertView show];
+                    }
+                                   );
+                    
+                    //Error occured
+                }else{
+                    //labelText = @"Something goes wrong";
+                    UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"Failure"
+                                                                       message:@"There was a problem. Event not added to your calendar."
+                                                                      delegate:self
+                                                             cancelButtonTitle:@"Ok"
+                                                             otherButtonTitles:nil,nil];
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [alertView show];
+                    }
+                                   );
+
+                }
+                
+            }
+        }];
+    }
+    
+    //Device prior to iOS 6.0  *********************************************
+    else{
+        
+        [self createEvent:eventStore];
+        
+    }
+    
+}
+
+
+//Event creation
+-(BOOL)createEvent:(EKEventStore*)eventStore{
+    NSString *myDateStr = [[NSString alloc]initWithFormat:@"%@",self.sessionDate];
+    NSString *myStartTimeStr = [[NSString alloc]initWithFormat:@"%@",self.startTimeStr];
+    NSString *myEndTimeStr = [[NSString alloc]initWithFormat:@"%@",self.endTime];
+    
+    NSLog(@"start time is %@",myStartTimeStr);
+    NSLog(@"start time is %@",myEndTimeStr);
+    
+    NSString *sessDateStr = [[NSString alloc]initWithFormat:@"%@ %@",myDateStr,myStartTimeStr];
+    NSString *sessEndDateStr = [[NSString alloc]initWithFormat:@"%@ %@",myDateStr, myEndTimeStr];
+    NSString *sessNameStr = [[NSString alloc]initWithFormat:@"%@", self.sessionName];
+    NSString *sessLocationStr = [[NSString alloc]initWithFormat:@"%@", self.location];
+    
+    NSDateFormatter *df = [[NSDateFormatter alloc] init];
+    [df setDateFormat:@"MMM dd yyyy hh:mm a"];
+    NSDate *sessDate = [df dateFromString: sessDateStr];
+    
+    NSDateFormatter *dfEnd = [[NSDateFormatter alloc] init];
+    [dfEnd setDateFormat:@"MMM dd yyyy hh:mm a"];
+    NSDate *sessEndDate = [df dateFromString: sessEndDateStr];
+    
+    
+    
+    EKEvent *event = [EKEvent eventWithEventStore:eventStore];
+    event.title = sessNameStr;
+    event.startDate = sessDate;
+    //event.endDate = [event.startDate dateByAddingTimeInterval:3600];
+    event.endDate = sessEndDate;
+    event.location = sessLocationStr;
+    event.calendar = [eventStore defaultCalendarForNewEvents];
+    
+    NSError *error;
+    [eventStore saveEvent:event span:EKSpanThisEvent error:&error];
+    
+    if (error) {
+        NSLog(@"Event Store Error: %@",[error localizedDescription]);
+        return NO;
+    }else{
+        return YES;
+    }
+    
+    //[self createReminder];
+}
+
+//-(void)createReminder
+//{
+//    EKEventStore *eventStore = [[EKEventStore alloc]init];
+//    [eventStore requestAccessToEntityType:EKEntityTypeReminder completion:^(BOOL granted, NSError *error) {
+//        
+//        if (!granted)
+//        {
+//            NSString *message = @"Cannot set reminder!";
+//            UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"Warning"
+//                                                               message:message
+//                                                              delegate:self
+//                                                     cancelButtonTitle:@"Ok"
+//                                                     otherButtonTitles:nil,nil];
+//            //Show an alert message!
+//            //UIKit needs every change to be done in the main queue
+//            dispatch_async(dispatch_get_main_queue(), ^{
+//                [alertView show];
+//            }
+//                           );
+//            
+//            //Access granted------------------
+//        }
+//    }];
+//
+//
+//
+//    EKReminder *reminder = [EKReminder
+//                            reminderWithEventStore:eventStore];
+//    NSString *sessNameStr = [[NSString alloc]initWithFormat:@"%@", self.sessionName];
+//    
+//    reminder.title = sessNameStr;
+//    
+//    reminder.calendar = [eventStore defaultCalendarForNewReminders];
+//    
+//    NSString *myDateStr = [[NSString alloc]initWithFormat:@"%@",self.sessionDate];
+//    NSString *myStartTimeStr = [[NSString alloc]initWithFormat:@"%@",self.startTime];
+//    NSString *sessDateStr = [[NSString alloc]initWithFormat:@"%@ %@",myDateStr,myStartTimeStr];
+//    NSDateFormatter *df = [[NSDateFormatter alloc] init];
+//    [df setDateFormat:@"MMM dd yyyy hh:mm a"];
+//    NSDate *sessDate = [df dateFromString: sessDateStr];
+//    
+//    NSDate *date = sessDate;
+//    
+//    EKAlarm *alarm = [EKAlarm alarmWithAbsoluteDate:date];
+//    
+//    [reminder addAlarm:alarm];
+//    
+//    NSError *error = nil;
+//    
+//    [eventStore saveReminder:reminder commit:YES error:&error];
+//    
+//    if (error)
+//        NSLog(@"error = %@", error);
+//    
+//}
+
+
+@end
