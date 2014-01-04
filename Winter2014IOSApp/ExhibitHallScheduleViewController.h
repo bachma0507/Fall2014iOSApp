@@ -14,9 +14,15 @@
 
 @property (nonatomic, strong) NSMutableArray * json;
 @property (nonatomic, strong) NSMutableArray * exhibitHallArray;
+@property (nonatomic, strong) NSMutableArray * results;
+//@property BOOL isFiltered;
+
+@property (strong, nonatomic) IBOutlet UITableView *myTableView;
+
+@property (strong, nonatomic) NSArray *objects;
 
 //#pragma mark - Methods
--(void) retrieveData;
+//-(void) retrieveData;
 //- (void)fetchedData:(NSData *)responseData;
 
 @end

@@ -7,7 +7,7 @@
 #import "SessionsViewController.h"
 @class MBProgressHUD;
 
-@interface SessionsMainViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface SessionsMainViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UIAlertViewDelegate>
 {
     MBProgressHUD *HUD;
     

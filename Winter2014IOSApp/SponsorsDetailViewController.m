@@ -8,6 +8,7 @@
 
 #import "SponsorsDetailViewController.h"
 #import "SVWebViewController.h"
+#import "LocateOnMapViewController.h"
 
 @interface SponsorsDetailViewController ()
 
@@ -22,6 +23,7 @@
 @synthesize sponsorsNameLabel;
 @synthesize sponsorsImage;
 @synthesize sponsorsWebsite;
+@synthesize boothNumber;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -47,14 +49,17 @@
     sponsorsNameLabel.font = [UIFont fontWithName:@"Arial" size:17.0];
     sponsorsNameLabel.textColor = [UIColor blueColor];
     
-    NSString * myURL = [NSString stringWithFormat:@"%@", sponsors.sponsorImage];
+    NSString * myFile = [NSString stringWithFormat:@"%@", sponsors.sponsorImage];
+    
+    NSLog(@"Image name is: %@", myFile);
     
     UIImage* myImage = [UIImage imageWithData:
                         [NSData dataWithContentsOfURL:
-                         [NSURL URLWithString: myURL]]];
+                         [NSURL URLWithString: myFile]]];
+    [sponsorsImage setImage:myImage];
     
     //NSString * myImage = [NSString stringWithFormat:@"%@", sponsors.sponsorImage];
-    [sponsorsImage setImage:myImage];
+    
     //sponsorsImage.image = [UIImage imageNamed:myImage];
     
     
@@ -76,5 +81,23 @@
 	SVWebViewController *webViewController = [[SVWebViewController alloc] initWithURL:URL];
 	[self.navigationController pushViewController:webViewController animated:YES];
 
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if ([segue.identifier isEqualToString:@"locationDetail"]) {
+        self.boothNumber = sponsors.boothNumber;
+        self.name = sponsors.sponsorName;
+        
+        LocateOnMapViewController *destViewController = segue.destinationViewController;
+        //destViewController.title = nameLabel.text;
+        destViewController.boothLabel = self.boothNumber;
+        destViewController.title = self.name;
+        
+        NSLog(@"Booth Label is %@", self.boothNumber);
+    }
+
+    
+    
 }
 @end

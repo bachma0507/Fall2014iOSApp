@@ -30,10 +30,10 @@
 //    return self;
 //}
 
-@synthesize boothLabel, name, url, mapId, coId, eventId, boothId;
+@synthesize boothLabel, name, url, mapId, coId, eventId, boothId, phone;
 
 
--(id) initWithBoothName:(NSString *) bName andboothLabel: (NSString *) blabel andBoothURL: (NSString *) bURL andMapId: (NSString *) bmapId andCoId: (NSString *) bcoId andEventId: (NSString *) beventId andBoothId: (NSString *) bboothId
+-(id) initWithBoothName:(NSString *) bName andboothLabel: (NSString *) blabel andBoothURL: (NSString *) bURL andMapId: (NSString *) bmapId andCoId: (NSString *) bcoId andEventId: (NSString *) beventId andBoothId: (NSString *) bboothId andPhone: (NSString *) bphone
 {
     
     self = [super init];
@@ -45,6 +45,7 @@
         mapId = bmapId;
         coId = bcoId;
         eventId = beventId;
+        phone = bphone;
         
     }
     

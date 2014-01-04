@@ -10,6 +10,7 @@
 #import "ExhibitorsDetailViewController.h"
 #import "MBProgressHUD.h"
 #import "Fall2013IOSAppAppDelegate.h"
+#import "StartPageViewController.h"
 
 @interface ExhibitorsViewController ()
 
@@ -46,7 +47,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    
+    [TestFlight passCheckpoint:@"ExhbitorsTable-info-viewed"];
     
     UIBarButtonItem *backButtonItem = [[UIBarButtonItem alloc] initWithTitle:@" " style:UIBarButtonItemStylePlain target:nil action:nil];
     self.navigationItem.backBarButtonItem = backButtonItem;
@@ -103,10 +104,15 @@
 }
 
 
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row%2 == 0) {
-        UIColor *altCellColor = [UIColor colorWithWhite:0.7 alpha:0.1];
+- (void)tableView: (UITableView*)tableView willDisplayCell: (UITableViewCell*)cell forRowAtIndexPath: (NSIndexPath*)indexPath
+{
+    
+    if(indexPath.row % 2 == 0){
+        UIColor *altCellColor = [UIColor colorWithRed:235/255.0 green:240/255.0 blue:233/255.0 alpha:1.0];
         cell.backgroundColor = altCellColor;
+    }
+    else{
+        cell.backgroundColor = [UIColor whiteColor];
     }
 }
 
@@ -154,22 +160,22 @@
     NSManagedObject *object = [self.objects objectAtIndex:indexPath.row];
     //myexhibitors = [exhibitorsArray objectAtIndex:indexPath.row];
     cell.textLabel.text = [object valueForKey:@"name"];
-    cell.textLabel.font = [UIFont fontWithName:@"Arial" size:15.0];
+    //cell.textLabel.font = [UIFont fontWithName:@"Arial" size:15.0];
     cell.textLabel.textColor = [UIColor brownColor];
     NSString * booth = [NSString stringWithFormat:@"Booth Number: %@", [object valueForKey:@"boothLabel"]];
     cell.detailTextLabel.text = booth;
-    cell.detailTextLabel.font = [UIFont fontWithName:@"Arial" size:13.0];
+    //cell.detailTextLabel.font = [UIFont fontWithName:@"Arial" size:13.0];
     }
     else{
         
     //myexhibitors = [results objectAtIndex:indexPath.row];
     NSManagedObject *object = [results objectAtIndex:indexPath.row];
     cell.textLabel.text = [object valueForKey:@"name"];
-    cell.textLabel.font = [UIFont fontWithName:@"Arial" size:15.0];
+    //cell.textLabel.font = [UIFont fontWithName:@"Arial" size:15.0];
     cell.textLabel.textColor = [UIColor brownColor];
     NSString * booth = [NSString stringWithFormat:@"Booth Number: %@", [object valueForKey:@"boothLabel"]];
     cell.detailTextLabel.text = booth;
-    cell.detailTextLabel.font = [UIFont fontWithName:@"Arial" size:13.0];
+    //cell.detailTextLabel.font = [UIFont fontWithName:@"Arial" size:13.0];
     }
     
     return cell;
@@ -193,16 +199,40 @@
     
     NSArray *myResults = [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
     
+    if (!myResults || !myResults.count) {
+        NSString *message = @"There seems to have been an error updating data. Please go back to the Home screen and press the Update Data button at the bottom of the screen.";
+        UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"Data Update Error"
+                                                           message:message
+                                                          delegate:self
+                                                 cancelButtonTitle:@"Ok"
+                                                 otherButtonTitles:nil,nil];
+        [alertView show];
+    }
+    else{
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc]
                                         init];
 
     [refreshControl endRefreshing];
     self.objects = myResults;
     [self.myTableView reloadData];
-    
+    }
 }
 
-    
+//-(void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+//    
+//    //u need to change 0 to other value(,1,2,3) if u have more buttons.then u can check which button was pressed.
+//    
+//    if (buttonIndex == 0) {
+//        
+//        [self updateData];
+//        
+//        
+//    }
+//    
+//    
+//    
+//}
+
     
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -231,6 +261,15 @@
         }
     }
 }
+
+//-(void)updateData{
+//    StartPageViewController * startPage = [[StartPageViewController alloc] init];
+//    
+//    [startPage updateAllData];
+//    
+//    
+//    
+//}
 
 
 @end

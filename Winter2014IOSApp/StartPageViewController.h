@@ -20,6 +20,7 @@
 {
     MBProgressHUD *HUD;
     Reachability *internetReach;
+
 }
 
 @property (nonatomic, strong) NSMutableArray * json;
@@ -40,5 +41,7 @@
 
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
+-(void)updateAllData;
+
 
 @end

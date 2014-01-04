@@ -56,6 +56,8 @@
 @property (nonatomic, strong) NSString * startTimeStr;
 @property (nonatomic, strong) NSString * endTime;
 @property (nonatomic, strong) NSString * location;
+@property (nonatomic, strong) NSString * sessionDay;
+
 
 
 //@property (strong, nonatomic) IBOutlet UITextField * sessionNameLabelText;
@@ -72,6 +74,7 @@
 //@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (strong, nonatomic) NSArray *objects;
 @property (strong, nonatomic) IBOutlet UIButton *agendaButton;
+@property (strong, nonatomic) IBOutlet UIButton *pollButton;
 
 - (BOOL)createEvent:(EKEventStore*)eventStore;
 
@@ -80,5 +83,6 @@
 
 - (IBAction)takeSurvey:(id)sender;
 - (IBAction)AddEvent:(id)sender;
+- (IBAction)takePoll:(id)sender;
 
 @end

@@ -44,6 +44,8 @@
 {
     [super viewDidLoad];
     
+    [TestFlight passCheckpoint:@"AllNotes-info-viewed"];
+    
 //    UIBarButtonItem *backButtonItem = [[UIBarButtonItem alloc] initWithTitle:@" " style:UIBarButtonItemStylePlain target:nil action:nil];
 //    self.navigationItem.backBarButtonItem = backButtonItem;
     

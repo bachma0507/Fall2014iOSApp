@@ -7,15 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ConfSched.h"
+#import "CSchedule.h"
 #import "confSchedDetailViewCell.h"
 
 @interface ConfSchedDetailTableViewController : UITableViewController
 
-@property (strong, nonatomic) NSArray *objects;
+@property (strong, nonatomic) NSArray *myObjects;
 
 //@property (nonatomic, strong) NSMutableArray * results;
 
-@property (nonatomic, strong) ConfSched * confsched;
+@property (nonatomic, strong) CSchedule * cschedule;
 
 @end

@@ -14,6 +14,8 @@
 
 @property (nonatomic, strong) NSString * exhibitorName;
 @property (nonatomic, strong) NSString * boothNumber;
+@property (nonatomic, strong) NSString * url;
+@property (nonatomic, strong) NSString * phone;
 
 //@property (nonatomic, strong) IBOutlet UILabel * exhibitorNameLabel;
 //@property (nonatomic, strong) IBOutlet UILabel * boothNumberLabel;

@@ -22,6 +22,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [TestFlight passCheckpoint:@"HotelAlert-info-viewed"];
+    
+    
 	// Do any additional setup after loading the view.
     //download data using background Grand Central dispatch process called from macro
 //    dispatch_async(kBgQueue, ^{

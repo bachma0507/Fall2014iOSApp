@@ -21,7 +21,16 @@
 @implementation ExhibitHallScheduleViewController
 
 @synthesize json;
-@synthesize exhibitHallArray;
+@synthesize exhibitHallArray, results, myTableView, objects;
+
+- (NSManagedObjectContext *)managedObjectContext {
+    NSManagedObjectContext *context = nil;
+    id delegate = [[UIApplication sharedApplication] delegate];
+    if ([delegate performSelector:@selector(managedObjectContext)]) {
+        context = [delegate managedObjectContext];
+    }
+    return context;
+}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -36,7 +45,7 @@
 {
     [super viewDidLoad];
 
-
+    [TestFlight passCheckpoint:@"ExhbitHallScheduleTable-viewed"];
     
     UIBarButtonItem *backButtonItem = [[UIBarButtonItem alloc] initWithTitle:@" " style:UIBarButtonItemStylePlain target:nil action:nil];
     self.navigationItem.backBarButtonItem = backButtonItem;
@@ -49,45 +58,57 @@
 //    });
     
     
-    [self retrieveData];
+    
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc]
+                                        init];
+    [refreshControl addTarget:self action:@selector(refreshTable) forControlEvents:UIControlEventValueChanged];
+    
+    //self.refreshControl  = refreshControl;
+    
+    [refreshControl beginRefreshing];
+    
+    
+    [self refreshTable];
     
     
 }
 
-//#pragma mark - Methods
-//- (void)fetchedData:(NSData *)responseData
-- (void)retrieveData
-{
+-(void)refreshTable{
     
     
-    NSURL * url = [NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"ehschedule-json.json" ofType:nil]];
-    NSData * data = [NSData dataWithContentsOfURL:url];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     
-    json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Ehschedule" inManagedObjectContext:self.managedObjectContext];
     
-    //Set up our sessions array
-    exhibitHallArray = [[NSMutableArray alloc] init];
+    [fetchRequest setEntity:entity];
     
-    for (int i = 0; i < json.count; i++) {
-        //create session object
-        NSString * sID = [[json objectAtIndex:i] objectForKey:@"id"];
-        NSString * sDate = [[json objectAtIndex:i] objectForKey:@"scheduleDate"];
-        NSString * sName = [[json objectAtIndex:i] objectForKey:@"sessionName"];
-        NSString * sTime = [[json objectAtIndex:i] objectForKey:@"sessionTime"];
-        
-        EHSchedule   * mySchedule = [[EHSchedule alloc] initWithScheduleID: sID andScheduleDate: sDate andSessionName: sName andSessionTime: sTime];
-        
-        //Add our sessions object to our exhibitHallArray
-        [exhibitHallArray addObject:mySchedule];
-        
-        
-        
+    NSSortDescriptor *sortDescriptor1 = [[NSSortDescriptor alloc] initWithKey:@"scheduleDate" ascending:YES];
+    NSSortDescriptor *sortDescriptor2 = [[NSSortDescriptor alloc] initWithKey:@"startTime" ascending:YES];
+    NSArray *sortDescriptors = [NSArray arrayWithObjects:sortDescriptor1, sortDescriptor2, nil];
+    
+    
+    [fetchRequest setSortDescriptors:sortDescriptors];
+    
+    NSArray *myResults = [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
+    
+    if (!myResults || !myResults.count) {
+        NSString *message = @"There seems to have been an error updating data. Please go back to the Home screen and press the Update Data button at the bottom of the screen.";
+        UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"Data Update Error"
+                                                           message:message
+                                                          delegate:self
+                                                 cancelButtonTitle:@"Ok"
+                                                 otherButtonTitles:nil,nil];
+        [alertView show];
     }
-    
-    
-    
-    [self.tableView reloadData];
-    
+    else{
+        
+        UIRefreshControl *refreshControl = [[UIRefreshControl alloc]
+                                            init];
+        
+        [refreshControl endRefreshing];
+        self.objects = myResults;
+        [self.myTableView reloadData];
+    }
 }
 
 
@@ -110,7 +131,7 @@
 {
 
     // Return the number of rows in the section.
-    return [exhibitHallArray count];
+    return self.objects.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -130,18 +151,20 @@
     
     // Configure the cell...
     
-    EHSchedule * ehschedule = nil;
+    //EHSchedule * ehschedule = nil;
     
-    ehschedule = [exhibitHallArray objectAtIndex:indexPath.row];
+    //ehschedule = [exhibitHallArray objectAtIndex:indexPath.row];
     
-    cell.scheduleDate.text = ehschedule.scheduleDate;
+    NSManagedObject *object = [self.objects objectAtIndex:indexPath.row];
+    
+    cell.scheduleDate.text = [object valueForKey:@"scheduleDate"];
     cell.scheduleDate.font = [UIFont fontWithName:@"Arial" size:10.0];
     
-    cell.sessionName.text = ehschedule.sessionName;
+    cell.sessionName.text = [object valueForKey:@"sessionName"];
     cell.sessionName.font = [UIFont fontWithName:@"Arial" size:13.0];
     cell.sessionName.textColor = [UIColor brownColor];
     
-    cell.sessionTime.text = ehschedule.sessionTime;
+    cell.sessionTime.text = [object valueForKey:@"sessionTime"];
     cell.sessionTime.font = [UIFont fontWithName:@"Arial" size:12.0];
     
 //    cell.sessionName.userInteractionEnabled = YES;

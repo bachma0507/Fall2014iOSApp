@@ -19,7 +19,7 @@
 //#define getDataURL [NSURL URLWithString: @"http://speedyreference.com/hotels.php"] //2
 
 @implementation HotelsViewController
-@synthesize hotelNameLabel, hotels, hotelsArray, json, hotelAddressLabel, hotelCityLabel, hotelStateLabel, hotelZipLabel, hotelTelephoneLabel, hotelCountryLabel, hotelWebsite, resDateLabel, groupCodeLabel, hotelDescTextView, alertLineLabel;
+@synthesize hotelNameLabel, hotels, hotelsArray, json, hotelAddressLabel, hotelCityLabel, hotelStateLabel, hotelZipLabel, hotelTelephoneLabel, hotelCountryLabel, hotelWebsite, resDateLabel, groupCodeLabel, hotelDescTextView, alertLineLabel, hotelImageView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -35,9 +35,18 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    [TestFlight passCheckpoint:@"hotel-info-viewed"];
+    
     //set backbutton customization for AlertLineViewController 
     UIBarButtonItem *backButtonItem = [[UIBarButtonItem alloc] initWithTitle:@" " style:UIBarButtonItemStylePlain target:nil action:nil];
     self.navigationItem.backBarButtonItem = backButtonItem;
+    
+    CALayer *layer = self.hotelImageView.layer;
+    layer.masksToBounds = NO;
+    layer.shadowRadius = 3.0f;
+    layer.shadowOffset = CGSizeMake(0.0f, 2.0f);
+    layer.shadowOpacity = 0.5f;
+    layer.shouldRasterize = YES;
     
 //    dispatch_async(kBgQueue, ^{
 //        NSData* data = [NSData dataWithContentsOfURL:

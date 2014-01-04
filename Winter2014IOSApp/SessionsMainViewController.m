@@ -11,6 +11,10 @@
 #import "MBProgressHUD.h"
 #import "Fall2013IOSAppAppDelegate.h"
 #import <CoreData/CoreData.h>
+#import "StartPageViewController.h"
+#import "SVWebViewController.h"
+
+
 
 @interface SessionsMainViewController ()
 
@@ -55,6 +59,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    [TestFlight passCheckpoint:@"SessionsTable-info-viewed"];
     
     UIBarButtonItem *backButtonItem = [[UIBarButtonItem alloc] initWithTitle:@" " style:UIBarButtonItemStylePlain target:nil action:nil];
     self.navigationItem.backBarButtonItem = backButtonItem;
@@ -154,10 +160,10 @@
         NSManagedObject *object = [dateSection objectAtIndex:indexPath.row];
         cell.textLabel.text = [object valueForKey:@"sessionName"];
         cell.detailTextLabel.text = [object valueForKey:@"sessionTime"];
-        cell.detailTextLabel.font = [UIFont fontWithName:@"Arial" size:10.0];
+        //cell.detailTextLabel.font = [UIFont fontWithName:@"Arial" size:10.0];
         //cell.textLabel.font = [UIFont fontWithName:@"Arial-Bold" size:10.0];
         //cell.textLabel.textColor = [UIColor brownColor];
-        cell.textLabel.font = [UIFont systemFontOfSize:11.0];
+        //cell.textLabel.font = [UIFont systemFontOfSize:11.0];
         cell.textLabel.textColor = [UIColor brownColor];
         
         cell.textLabel.numberOfLines = 0;
@@ -169,14 +175,14 @@
         NSManagedObject *object = [self.results objectAtIndex:indexPath.row];
         cell.textLabel.text = [object valueForKey:@"sessionName"];
         cell.detailTextLabel.text = [object valueForKey:@"sessionTime"];
-        cell.detailTextLabel.font = [UIFont fontWithName:@"Arial" size:11.0];
+        //cell.detailTextLabel.font = [UIFont fontWithName:@"Arial" size:11.0];
         //cell.textLabel.font = [UIFont fontWithName:@"Arial-Bold" size:10.0];
         //cell.textLabel.textColor = [UIColor brownColor];
-        cell.textLabel.font = [UIFont systemFontOfSize:13.0];
+        //cell.textLabel.font = [UIFont systemFontOfSize:13.0];
         cell.textLabel.textColor = [UIColor brownColor];
         
-        cell.textLabel.numberOfLines = 0;
-        cell.textLabel.lineBreakMode = NSLineBreakByWordWrapping;
+        //cell.textLabel.numberOfLines = 0;
+        //cell.textLabel.lineBreakMode = NSLineBreakByWordWrapping;
     }
     
     return cell;
@@ -194,18 +200,35 @@
     
     [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"NOT (sessionID CONTAINS 'BODM')"]];
     
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"sessionDate" ascending:YES];
-    NSArray *sortDescriptors = [NSArray arrayWithObjects:sortDescriptor, nil];
+    NSSortDescriptor *sortDescriptor1 = [[NSSortDescriptor alloc] initWithKey:@"sessionDate" ascending:YES];
+    NSSortDescriptor *sortDescriptor2 = [[NSSortDescriptor alloc] initWithKey:@"startTime" ascending:YES];
+    NSArray *sortDescriptors = [NSArray arrayWithObjects:sortDescriptor1, sortDescriptor2, nil];
     
     [fetchRequest setSortDescriptors:sortDescriptors];
     
     NSArray *myResults = [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
+    
+    
+    if (!myResults || !myResults.count) {
+        NSString *message = @"There seems to have been an error updating data. Please go back to the Home screen and press the Update Data button at the bottom of the screen.";
+        UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"Data Update Error"
+                                                           message:message
+                                                          delegate:self
+                                                 cancelButtonTitle:@"Ok"
+                                                 otherButtonTitles:nil,nil];
+        [alertView show];
+    }
+    else{
     
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc]
                                         init];
     
     [refreshControl endRefreshing];
     self.objects = myResults;
+    
+    
+
+    
     
     tempDict = nil;
     tempDict = [[NSMutableDictionary alloc] init];
@@ -241,16 +264,35 @@
     
     [self.myTableView reloadData];
 }
-
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (indexPath.row%2 == 0)
-    {
-        UIColor *altCellColor = [UIColor colorWithWhite:0.7 alpha:0.1];
-        cell.backgroundColor = altCellColor;
-    }
 }
 
+//-(void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+//    
+//    //u need to change 0 to other value(,1,2,3) if u have more buttons.then u can check which button was pressed.
+//    
+//    if (buttonIndex == 0) {
+//        
+//        [self updateData];
+//        
+//            
+//    }
+//    
+//    
+//    
+//}
+
+
+- (void)tableView: (UITableView*)tableView willDisplayCell: (UITableViewCell*)cell forRowAtIndexPath: (NSIndexPath*)indexPath
+{
+    
+    if(indexPath.row % 2 == 0){
+        UIColor *altCellColor = [UIColor colorWithRed:235/255.0 green:240/255.0 blue:233/255.0 alpha:1.0];
+        cell.backgroundColor = altCellColor;
+    }
+        else{
+        cell.backgroundColor = [UIColor whiteColor];
+}
+}
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (self.searchDisplayController.isActive)
@@ -281,5 +323,14 @@
         }
     }
 }
+
+//-(void)updateData{
+//    StartPageViewController * startPage = [[StartPageViewController alloc] init];
+//    
+//    [startPage updateAllData];
+//    
+//    
+//    
+//}
 
 @end

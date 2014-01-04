@@ -40,6 +40,7 @@
 @property (nonatomic, strong) NSString * sess2StartTime;
 @property (nonatomic, strong) NSString * sess2EndTime;
 @property (nonatomic, strong) NSString * location2;
+@property (nonatomic, strong) NSString * poll2;
 @property (strong, nonatomic) IBOutlet UILabel *sessionIdLabel;
 @property (strong, nonatomic) IBOutlet UILabel *sessionId2Label;
 
@@ -53,6 +54,7 @@
 //@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (strong, nonatomic) NSArray *objects;
 @property (strong, nonatomic) IBOutlet UIButton *agendaButton;
+@property (strong, nonatomic) IBOutlet UIButton *pollButton;
 
 @property (nonatomic, strong) Speakers * speakers;
 
@@ -62,6 +64,7 @@
 - (IBAction)takeSurvey:(id)sender;
 - (IBAction)agendaButtonPressed:(id)sender;
 - (IBAction)AddEvent:(id)sender;
+- (IBAction)takePoll:(id)sender;
 
 
 @end

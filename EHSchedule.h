@@ -14,10 +14,11 @@
 @property (nonatomic, strong) NSString * scheduleDate;
 @property (nonatomic, strong) NSString * sessionName;
 @property (nonatomic, strong) NSString * sessionTime;
+@property (nonatomic, strong) NSString * startTime;
 
 
 //methods
--(id) initWithScheduleID: (NSString *) sID andScheduleDate: (NSString *) sDate andSessionName: (NSString *) sName andSessionTime: (NSString *) sTime;
+-(id) initWithScheduleID: (NSString *) sID andScheduleDate: (NSString *) sDate andSessionName: (NSString *) sName andSessionTime: (NSString *) sTime andStartTime: (NSString *) sStartTime;
 
 
 @end

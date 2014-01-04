@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ExhibitHallFloorPlanViewController : UIViewController
+@interface ExhibitHallFloorPlanViewController : UIViewController <UIWebViewDelegate>
 @property (strong, nonatomic) IBOutlet UIWebView *webView;
 
 @property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activity;
 
-- (IBAction)handlePinch:(UIPinchGestureRecognizer *)recognizer;
+//- (IBAction)handlePinch:(UIPinchGestureRecognizer *)recognizer;
 
-- (IBAction)handlePan:(UIPanGestureRecognizer *)recognizer;
+//- (IBAction)handlePan:(UIPanGestureRecognizer *)recognizer;
 
 
 @end

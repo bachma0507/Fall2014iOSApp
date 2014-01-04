@@ -13,7 +13,18 @@
 @end
 
 @implementation CECInfoViewController
-@synthesize webView;
+@synthesize webView,json, htmlArray, objects;
+
+
+
+- (NSManagedObjectContext *)managedObjectContext {
+    NSManagedObjectContext *context = nil;
+    id delegate = [[UIApplication sharedApplication] delegate];
+    if ([delegate performSelector:@selector(managedObjectContext)]) {
+        context = [delegate managedObjectContext];
+    }
+    return context;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,13 +40,61 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    [TestFlight passCheckpoint:@"CEC-info-viewed"];
+    
     UIBarButtonItem *backButtonItem = [[UIBarButtonItem alloc] initWithTitle:@" " style:UIBarButtonItemStylePlain target:nil action:nil];
     self.navigationItem.backBarButtonItem = backButtonItem;
+    
+    
+    
+    //[self getURL];
+    
+    
+    //NSManagedObject *object = [self.objects objectAtIndex:0];
+   // NSString *myURL = [[NSString alloc] initWithFormat:@"%@", [object valueForKey:@"url"]];
+    //NSLog(@"Value for URL is: %@",myURL);
+    
+    //webView.delegate = self;
+    
     
     NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"cec.html" ofType:nil]];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [webView loadRequest:request];
+    
+//    NSString *httpSource = @"http://speedyreference.com/bicsiappcms/cec.html";
+//    NSURL *fullUrl = [NSURL URLWithString:httpSource];
+//    NSURLRequest *httpRequest = [NSURLRequest requestWithURL:fullUrl];
+//    [webView loadRequest:httpRequest];
+    
+//    NSString *httpSource = myURL;
+//    NSURL *fullUrl = [NSURL URLWithString:httpSource];
+//    NSURLRequest *httpRequest = [NSURLRequest requestWithURL:fullUrl];
+//    [webView loadRequest:httpRequest];
 }
+
+//-(void)getURL
+//
+//{
+//    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+//    // Edit the entity name as appropriate.
+//    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Html" inManagedObjectContext:self.managedObjectContext];
+//    [fetchRequest setEntity:entity];
+//    //[fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"title != 'Todo with Image'"]];
+//    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"name == 'cec'"]];
+//    
+//    NSArray *results = [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
+//    
+//    //[self.managedObjectContext executeFetchRequest:fetchRequest onSuccess:^(NSArray *results) {
+//    //[self.refreshControl endRefreshing];
+//    self.objects = results;
+//    //    if (!results || !results.count){
+//    //        [self.agendaButton setTitle:@"Add to Planner" forState:normal];
+//    //
+//    //    }
+//    //    else{
+//    //        [self.agendaButton setTitle:@"Remove from Planner" forState:normal];
+//    //    }
+//}
 
 - (void)didReceiveMemoryWarning
 {
@@ -43,4 +102,18 @@
     // Dispose of any resources that can be recreated.
 }
 
+//-(void)webViewDidStartLoad:(UIWebView *)WebView
+//{
+//    [activity startAnimating];
+//    
+//    
+//}
+//
+//-(void)webViewDidFinishLoad:(UIWebView *)WebView
+//{
+//    [activity stopAnimating];
+//    activity.hidden = TRUE;
+//}
+
 @end
+

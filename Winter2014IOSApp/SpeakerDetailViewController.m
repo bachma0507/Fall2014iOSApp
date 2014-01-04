@@ -28,7 +28,7 @@
 @synthesize speakerCompany;
 @synthesize speakerBioTextView;
 @synthesize speakers;
-@synthesize website;
+@synthesize poll1;
 @synthesize speakerWebsite;
 @synthesize speakerPic, session1DateLabel, session1label, session1TimeLabel, sessionDesc, sessionName, sessionDate, sessionTime, sessionId;
 @synthesize session2Date;
@@ -46,6 +46,7 @@
 @synthesize sess2EndTime;
 @synthesize sess2StartTime;
 @synthesize location2;
+@synthesize poll2;
 
 
 - (NSManagedObjectContext *)managedObjectContext {
@@ -102,6 +103,11 @@
     sess2StartTime = speakers.sess2StartTime;
     sess2EndTime = speakers.sess2EndTime;
     location2 = speakers.location2;
+    poll1 = speakers.speakerWebsite;
+    poll2 = speakers.speakerPic;
+    
+    NSLog(@"Poll1 is: %@", speakers.speakerWebsite);
+    NSLog(@"Poll2 is: %@", speakers.speakerPic);
 
     
     [[speakerBioTextView layer] setBorderColor:[[UIColor colorWithRed:48/256.0 green:134/256.0 blue:174/256.0 alpha:1.0] CGColor]];
@@ -141,6 +147,8 @@
         self.sess2StartTime = sess2StartTime;
         self.sess2EndTime = sess2EndTime;
         self.location2 = location2;
+        self.poll1 = poll1;
+        self.poll2 = poll2;
         
         
         self.sessionId = sessionId;
@@ -156,6 +164,7 @@
         destViewController.startTimeStr = self.startTimeStr;
         destViewController.endTime = self.endTime;
         destViewController.location = self.location;
+        destViewController.poll1 = self.poll1;
 //        destViewController.session1LabelText.text = @"Hello";
         NSLog(@"SessionID 1 is: %@", self.sessionId);
     }
@@ -181,6 +190,7 @@
         destViewController.sess2StartTime = self.sess2StartTime;
         destViewController.sess2EndTime = self.sess2EndTime;
         destViewController.location2 = self.location2;
+        destViewController.poll2 = self.poll2;
         //        destViewController.session1LabelText.text = @"Hello";
         NSLog(@"SessionID 2 is: %@", self.sessionId2);
     }

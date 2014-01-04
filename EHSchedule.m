@@ -14,11 +14,12 @@
 @synthesize scheduleDate;
 @synthesize sessionName;
 @synthesize sessionTime;
+@synthesize startTime;
 
 
 
 
--(id) initWithScheduleID: (NSString *) sID andScheduleDate: (NSString *) sDate andSessionName: (NSString *) sName andSessionTime: (NSString *) sTime
+-(id) initWithScheduleID: (NSString *) sID andScheduleDate: (NSString *) sDate andSessionName: (NSString *) sName andSessionTime: (NSString *) sTime andStartTime: (NSString *) sStartTime
 {
     self = [super init];
     if (self) {
@@ -27,6 +28,8 @@
         scheduleDate = sDate;
         sessionName = sName;
         sessionTime = sTime;
+        startTime = sStartTime;
+        
         
     }
     return self;

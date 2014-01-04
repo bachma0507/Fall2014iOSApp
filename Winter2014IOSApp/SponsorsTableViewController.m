@@ -8,6 +8,7 @@
 
 #import "SponsorsTableViewController.h"
 #import "SponsorsDetailViewController.h"
+#import "Fall2013IOSAppAppDelegate.h"
 #import "MBProgressHUD.h"
 
 
@@ -23,6 +24,19 @@
 
 @synthesize json;
 @synthesize sponsorsArray;
+@synthesize results;
+@synthesize objects;
+@synthesize myTableView;
+
+
+- (NSManagedObjectContext *)managedObjectContext {
+    NSManagedObjectContext *context = nil;
+    id delegate = [[UIApplication sharedApplication] delegate];
+    if ([delegate performSelector:@selector(managedObjectContext)]) {
+        context = [delegate managedObjectContext];
+    }
+    return context;
+}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -36,6 +50,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [TestFlight passCheckpoint:@"SponsorsTable-info-viewed"];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -46,12 +62,12 @@
     UIBarButtonItem *backButtonItem = [[UIBarButtonItem alloc] initWithTitle:@" " style:UIBarButtonItemStylePlain target:nil action:nil];
     self.navigationItem.backBarButtonItem = backButtonItem;
     
-        HUD = [[MBProgressHUD alloc] initWithView:self.view];
-        HUD.labelText = @"Loading data...";
-        //HUD.detailsLabelText = @"Just relax";
-        HUD.mode = MBProgressHUDAnimationFade;
-        [self.view addSubview:HUD];
-        [HUD showWhileExecuting:@selector(waitForTwoSeconds) onTarget:self withObject:nil animated:YES];
+//        HUD = [[MBProgressHUD alloc] initWithView:self.view];
+//        HUD.labelText = @"Loading data...";
+//        //HUD.detailsLabelText = @"Just relax";
+//        HUD.mode = MBProgressHUDAnimationFade;
+//        [self.view addSubview:HUD];
+//        [HUD showWhileExecuting:@selector(waitForTwoSeconds) onTarget:self withObject:nil animated:YES];
     
 //    dispatch_async(kBgQueue, ^{
 //        NSData* data = [NSData dataWithContentsOfURL:
@@ -65,14 +81,23 @@
 //    [self.view addSubview:HUD];
 //    [HUD show:YES];
     
-    [self retrieveData];
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc]
+                                        init];
+    [refreshControl addTarget:self action:@selector(refreshTable) forControlEvents:UIControlEventValueChanged];
+    
+    //self.refreshControl  = refreshControl;
+    
+    [refreshControl beginRefreshing];
+    
+    
+    [self refreshTable];
 
     
 }
 
-- (void)waitForTwoSeconds {
-    sleep(1);
-}
+//- (void)waitForTwoSeconds {
+//    sleep(2);
+//}
 
 
 - (void)didReceiveMemoryWarning
@@ -81,77 +106,43 @@
     // Dispose of any resources that can be recreated.
 }
 
-//#pragma mark - Methods
-//- (void)fetchedData:(NSData *)responseData
--(void)retrieveData
-{
- 
+
+-(void)refreshTable{
     
-    NSURL * url = [NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"sponsors-json.json" ofType:nil]];
-    NSData * data = [NSData dataWithContentsOfURL:url];
     
-    json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     
-    //Set up our sessions array
-    sponsorsArray = [[NSMutableArray alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Sponsors" inManagedObjectContext:self.managedObjectContext];
     
-    for (int i = 0; i < json.count; i++) {
-        //create session object
-        NSString * sID = [[json objectAtIndex:i] objectForKey:@"id"];
-        NSString * sLevel = [[json objectAtIndex:i] objectForKey:@"sponsorLevel"];
-        NSString * sSpecial = [[json objectAtIndex:i] objectForKey:@"sponsorSpecial"];
-        NSString * sName = [[json objectAtIndex:i] objectForKey:@"sponsorName"];
-        NSString * bNumber = [[json objectAtIndex:i] objectForKey:@"boothNumber"];
-        NSString * sWebsite = [[json objectAtIndex:i] objectForKey:@"sponsorWebsite"];
-        NSString * sImage = [[json objectAtIndex:i] objectForKey:@"sponsorImage"];
-        
-        Sponsors   * mySponsors = [[Sponsors alloc] initWithSponsorID: sID andSponsorLevel: sLevel andSponsorSpecial: sSpecial andSponsorName: sName andBoothnumber: bNumber andSponsorWebsite:sWebsite andSponsorImage:sImage];
-        
-        //Add our sessions object to our exhibitHallArray
-        [sponsorsArray addObject:mySponsors];
-        
-        
+    [fetchRequest setEntity:entity];
+    
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"series" ascending:YES];
+    NSArray *sortDescriptors = [NSArray arrayWithObjects:sortDescriptor, nil];
+    
+    [fetchRequest setSortDescriptors:sortDescriptors];
+    
+    NSArray *myResults = [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
+    
+    if (!myResults || !myResults.count) {
+        NSString *message = @"There seems to have been an error updating data. Please go back to the Home screen and press the Update Data button at the bottom of the screen.";
+        UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"Data Update Error"
+                                                           message:message
+                                                          delegate:self
+                                                 cancelButtonTitle:@"Ok"
+                                                 otherButtonTitles:nil,nil];
+        [alertView show];
     }
-    
-    
-//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),^{
-//        
-//        NSURL *url = [NSURL URLWithString:@"http://speedyreference.com/sponsors.php"];
-//        NSData * data = [NSData dataWithContentsOfURL:url];
-//        
-//        dispatch_async(dispatch_get_main_queue(), ^{
-//            
-//            json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
-//            
-//            //Set up our sessions array
-//            sponsorsArray = [[NSMutableArray alloc] init];
-//            
-//            for (int i = 0; i < json.count; i++) {
-//                //create session object
-//                NSString * sID = [[json objectAtIndex:i] objectForKey:@"id"];
-//                NSString * sLevel = [[json objectAtIndex:i] objectForKey:@"sponsorLevel"];
-//                NSString * sSpecial = [[json objectAtIndex:i] objectForKey:@"sponsorSpecial"];
-//                NSString * sName = [[json objectAtIndex:i] objectForKey:@"sponsorName"];
-//                NSString * bNumber = [[json objectAtIndex:i] objectForKey:@"boothNumber"];
-//                NSString * sWebsite = [[json objectAtIndex:i] objectForKey:@"sponsorWebsite"];
-//                NSString * sImage = [[json objectAtIndex:i] objectForKey:@"sponsorImage"];
-//                
-//                Sponsors   * mySponsors = [[Sponsors alloc] initWithSponsorID: sID andSponsorLevel: sLevel andSponsorSpecial: sSpecial andSponsorName: sName andBoothnumber: bNumber andSponsorWebsite:sWebsite andSponsorImage:sImage];
-//                
-//                //Add our sessions object to our exhibitHallArray
-//                [sponsorsArray addObject:mySponsors];
-//                
-//                
-//            }
-//            
-//            
-//        });
-//    });
-
-    
-    [self.tableView reloadData];
-
+    else{
+        
+        UIRefreshControl *refreshControl = [[UIRefreshControl alloc]
+                                            init];
+        
+        [refreshControl endRefreshing];
+        self.objects = myResults;
+        [self.myTableView reloadData];
+    }
 }
+
 
 #pragma mark - Table view data source
 
@@ -166,7 +157,7 @@
 {
 
     // Return the number of rows in the section.
-    return sponsorsArray.count;
+    return self.objects.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -186,22 +177,24 @@
     
     // Configure the cell...
     
-    Sponsors * sponsors = nil;
+    NSManagedObject *object = [self.objects objectAtIndex:indexPath.row];
     
-    sponsors = [sponsorsArray objectAtIndex:indexPath.row];
+    //Sponsors * sponsors = nil;
     
-    cell.sponsorName.text = sponsors.sponsorName;
+    //sponsors = [sponsorsArray objectAtIndex:indexPath.row];
+    
+    cell.sponsorName.text = [object valueForKey:@"sponsorName"];
     cell.sponsorName.font = [UIFont fontWithName:@"Arial" size:13.0];
     cell.sponsorName.textColor = [UIColor blueColor];
     
-    cell.sponsorLevel.text = sponsors.sponsorLevel;
+    cell.sponsorLevel.text = [object valueForKey:@"sponsorLevel"];
     cell.sponsorLevel.font = [UIFont fontWithName:@"Arial" size:12.0];
     cell.sponsorLevel.textColor = [UIColor brownColor];
     
-    cell.sponsorSpecial.text = sponsors.sponsorSpecial;
-    cell.sponsorSpecial.font = [UIFont fontWithName:@"Arial" size:11.0];
+    cell.sponsorSpecial.text = [object valueForKey:@"sponsorSpecial"];
+    cell.sponsorSpecial.font = [UIFont fontWithName:@"Arial" size:8.0];
     
-    cell.boothNumber.text = sponsors.boothNumber;
+    cell.boothNumber.text = [object valueForKey:@"boothNumber"];
     cell.boothNumber.font = [UIFont fontWithName:@"Arial" size:11.0];
     
 
@@ -285,9 +278,9 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"SponsorDetailCell"]) {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        NSIndexPath *indexPath = [self.myTableView indexPathForSelectedRow];
         SponsorsDetailViewController *destViewController = segue.destinationViewController;
-        destViewController.sponsors = [sponsorsArray objectAtIndex:indexPath.row];
+        destViewController.sponsors = [self.objects objectAtIndex:indexPath.row];
         
     }
 }

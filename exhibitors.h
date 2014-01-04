@@ -19,13 +19,13 @@
 @property (nonatomic, strong) NSString * coId;
 @property (nonatomic, strong) NSString * eventId;
 @property (nonatomic, strong) NSString * boothId;
-
+@property (nonatomic, strong) NSString * phone;
 
 
 //methods
 //-(id) initWithBoothID: (NSString *) bID andBoothName: (NSString *) bName andboothLabel: (NSString *) blabel andBoothURL: (NSString *) bURL;
 
--(id) initWithBoothName:(NSString *) bName andboothLabel: (NSString *) blabel andBoothURL: (NSString *) bURL andMapId: (NSString *) bmapId andCoId: (NSString *) bcoId andEventId: (NSString *) beventId andBoothId: (NSString *) bboothId;
+-(id) initWithBoothName:(NSString *) bName andboothLabel: (NSString *) blabel andBoothURL: (NSString *) bURL andMapId: (NSString *) bmapId andCoId: (NSString *) bcoId andEventId: (NSString *) beventId andBoothId: (NSString *) bboothId andPhone: (NSString *) bphone;
 
 //@property (nonatomic, strong) NSString * boothlabel;
 //@property (nonatomic, strong) NSString * name;

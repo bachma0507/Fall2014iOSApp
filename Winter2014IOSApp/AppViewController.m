@@ -32,6 +32,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    
     //NSString *httpSource = @"http://speedyreference.com/bicsi2.html";
     NSString *httpSource = @"http://www.bicsi.org/m/Login_App.aspx";
     NSURL *fullUrl = [NSURL URLWithString:httpSource];

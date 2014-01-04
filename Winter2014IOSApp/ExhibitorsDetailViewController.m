@@ -12,13 +12,16 @@
 //#import "StackMob.h"
 #import "Fall2013IOSAppAppDelegate.h"
 #import "ExhibitorWebViewController.h"
+#import "LocateOnMapViewController.h"
+#import <AddressBook/AddressBook.h>
+#import <AddressBook/ABPerson.h>
 
 @interface ExhibitorsDetailViewController ()
 
 @end
 
 @implementation ExhibitorsDetailViewController
-@synthesize myExhibitors, boothNumberLabel, nameLabel, urlLabel, myWebView, favoritesButton, exhibitorName, boothNumber, boothId, coId, eventId, activity;
+@synthesize myExhibitors, boothNumberLabel, nameLabel, urlLabel, myWebView, favoritesButton, exhibitorName, boothNumber, boothId, coId, eventId, activity, boothLabel, name, locationButton, url, phone, phoneLabel;
 
 - (NSManagedObjectContext *)managedObjectContext {
     NSManagedObjectContext *context = nil;
@@ -45,7 +48,12 @@
 	UIBarButtonItem *backButtonItem = [[UIBarButtonItem alloc] initWithTitle:@" " style:UIBarButtonItemStylePlain target:nil action:nil];
     self.navigationItem.backBarButtonItem = backButtonItem;
     
-    
+//    CGSize screenSize = [[UIScreen mainScreen] bounds].size;
+//    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+//        if (screenSize.height < 560.0f) {
+//           [self.locationButton setHidden:YES];
+//        }
+//    }
     
     self.title = myExhibitors.name;
     
@@ -54,13 +62,15 @@
     nameLabel.font = [UIFont fontWithName:@"Arial" size:17.0];
     nameLabel.textColor = [UIColor blueColor];
     boothNumberLabel.text = myExhibitors.boothLabel;
+    phoneLabel.text = myExhibitors.phone;
+    urlLabel.text = myExhibitors.url;
     //boothNumberLabel.text =;
     
     myWebView.delegate = self;
         
         //NSString *httpSource = @"http://s23.a2zinc.net/clients/BICSI/fall2013//Public/GeneratePDF.aspx?IMID=undefined&EventId=20&MapId=20";
         //NSString * myURL = [NSString stringWithFormat:@"http://www.bicsi.org/m2/Floor.aspx?BoothId=%@", myExhibitors.boothLabel];
-        NSString * myURL = [NSString stringWithFormat:@"http://s23.a2zinc.net/clients/BICSI/fall2013/public/eBooth.aspx?Nav=false&BoothID=%@&EventID=%@&CoID=%@&Source=ExhibitorList", myExhibitors.boothId, myExhibitors.eventId, myExhibitors.coId];
+        NSString * myURL = [NSString stringWithFormat:@"http://s23.a2zinc.net/clients/BICSI/winter2014/public/eBooth.aspx?Nav=false&BoothID=%@&EventID=%@&CoID=%@&Source=ExhibitorList", myExhibitors.boothId, myExhibitors.eventId, myExhibitors.coId];
         NSURL *fullUrl = [NSURL URLWithString:myURL];
         NSURLRequest *httpRequest = [NSURLRequest requestWithURL:fullUrl];
         [myWebView loadRequest:httpRequest];
@@ -139,7 +149,7 @@
     //NSString * myURL = [NSString stringWithFormat:@"%@", myExhibitors.url];
     //    NSURL *url = [NSURL URLWithString:myURL];
     //	[[UIApplication sharedApplication] openURL:url];
-     NSString * myURL = [NSString stringWithFormat:@"http://s23.a2zinc.net/clients/BICSI/fall2013/public/eBooth.aspx?Nav=false&BoothID=%@&EventID=%@&CoID=%@&Source=ExhibitorList", myExhibitors.boothId, myExhibitors.eventId, myExhibitors.coId];
+     NSString * myURL = [NSString stringWithFormat:@"http://s23.a2zinc.net/clients/BICSI/winter2014/public/eBooth.aspx?Nav=false&BoothID=%@&EventID=%@&CoID=%@&Source=ExhibitorList", myExhibitors.boothId, myExhibitors.eventId, myExhibitors.coId];
     NSURL *URL = [NSURL URLWithString:myURL];
 	SVWebViewController *webViewController = [[SVWebViewController alloc] initWithURL:URL];
 	[self.navigationController pushViewController:webViewController animated:YES];
@@ -165,8 +175,8 @@
         
         [newManagedObject setValue:self.boothNumberLabel.text forKey:@"boothnumber"];
         [newManagedObject setValue:self.nameLabel.text forKey:@"exhibitorname"];
-//        [newManagedObject setValue:self.sessionDateLabel.text forKey:@"sessiondate"];
-//        [newManagedObject setValue:self.sessionTimeLabel.text forKey:@"sessiontime"];
+        [newManagedObject setValue:self.urlLabel.text forKey:@"url"];
+        [newManagedObject setValue:self.phoneLabel.text forKey:@"phone"];
         [newManagedObject setValue:newDeviceID forKey:@"deviceowner"];
         [newManagedObject setValue:@"Yes" forKey:@"favorite"];
         
@@ -216,6 +226,12 @@
     
 }//end else block
 
+- (IBAction)mapButtonPressed:(id)sender {
+    
+    
+    
+}
+
 
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -244,8 +260,34 @@
             
             NSLog(@"Booth ID is %@", self.boothId);
     }
+    
+    else if ([segue.identifier isEqualToString:@"locationDetail"]) {
+        self.boothLabel = myExhibitors.boothLabel;
+        self.name = myExhibitors.name;
+        
+        LocateOnMapViewController *destViewController = segue.destinationViewController;
+        //destViewController.title = nameLabel.text;
+        destViewController.boothLabel = self.boothLabel;
+        destViewController.title = self.name;
+        
+        NSLog(@"Booth Label is %@", self.boothLabel);
+    }
+
 
 }
+
+//-(void)saveAsContact{
+//    ABAddressBookRef addressBook = ABAddressBookCreate();
+//    ABRecordRef person = ABPersonCreate();
+//    
+//    ABRecordSetValue(person, kABPersonFirstNameProperty, @"Kate" , nil);
+//    ABRecordSetValue(person, kABPersonLastNameProperty, @"Hutson", nil);
+//    ABAddressBookAddRecord(addressBook, person, nil);
+//    ABAddressBookSave(addressBook, nil);
+//    
+//    
+//    
+//}
 
 
 

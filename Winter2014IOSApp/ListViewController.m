@@ -47,26 +47,23 @@ extern int iNotificationCounter;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
+    
+    [TestFlight passCheckpoint:@"Alerts-info-viewed"];
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
+//////////////////////////STACKMOB BEGIN
     self.managedObjectContext = [[self coreDataStore] contextForCurrentThread];
     
     self.client = [[SMClient alloc] initWithAPIVersion:@"1" publicKey:@"144a82ba-d4b7-42c6-8674-c492fdc8c403"];
     self.coreDataStore = [self.client coreDataStoreWithManagedObjectModel:self.managedObjectModel];
-    
+//////////////////////////STACKMOB END
     //----------------------------------------------//
-    //For reseting the tabbar badge value
-    //Added by Maaj
-    UITabBarController *tBar = (UITabBarController*)[[[UIApplication sharedApplication] keyWindow] rootViewController];
-    UITabBarItem *item=[[[tBar tabBar] items] objectAtIndex:2];
-    [item setBadgeValue:nil];
-    iNotificationCounter = 0;
-    //----------------------------------------------//
+   
     
     
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc]
@@ -77,14 +74,16 @@ extern int iNotificationCounter;
     
     [refreshControl beginRefreshing];
     
-    printf("View Did Load is called ");//maaj code 062313
+    //printf("View Did Load is called ");//maaj code 062313
     
     [self refreshTable];
 
     
-        
+   [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(refreshTable) userInfo:nil repeats:NO];
     
 }
+
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -106,7 +105,7 @@ extern int iNotificationCounter;
 {
 //#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    printf("object count \n");//maaj code 062313
+    //printf("object count \n");//maaj code 062313
     return [self.objects count];
 }
 
@@ -137,10 +136,15 @@ extern int iNotificationCounter;
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row%2 == 0) {
-        UIColor *altCellColor = [UIColor colorWithWhite:0.7 alpha:0.1];
+- (void)tableView: (UITableView*)tableView willDisplayCell: (UITableViewCell*)cell forRowAtIndexPath: (NSIndexPath*)indexPath
+{
+    
+    if(indexPath.row % 2 == 0){
+        UIColor *altCellColor = [UIColor colorWithRed:235/255.0 green:240/255.0 blue:233/255.0 alpha:1.0];
         cell.backgroundColor = altCellColor;
+    }
+    else{
+        cell.backgroundColor = [UIColor whiteColor];
     }
 }
 
@@ -156,9 +160,9 @@ extern int iNotificationCounter;
 
 
 - (void) refreshTable {
-    
+//////////////STACKMOB BEGIN
     self.managedObjectContext = [[self coreDataStore] contextForCurrentThread];
-    
+//////////////SATCKMOB END
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     // Edit the entity name as appropriate.
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Alerts" inManagedObjectContext:self.managedObjectContext];
@@ -169,24 +173,28 @@ extern int iNotificationCounter;
     //NSArray *array = [self executeFetchRequest:fetchRequest error:&error];
     
     // Edit the sort key as appropriate.
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"date" ascending:NO];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"createddate" ascending:NO];
     NSArray *sortDescriptors = [NSArray arrayWithObjects:sortDescriptor, nil];
     
     [fetchRequest setSortDescriptors:sortDescriptors];
     
      //NSArray *results = [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
-    
+//////////////STACKMOB BEGIN
     [self.managedObjectContext executeFetchRequest:fetchRequest onSuccess:^(NSArray *results) {
         [self.refreshControl endRefreshing];
         self.objects = results;
+        NSLog(@"News & Alerts results = %lu", (unsigned long)results.count);
+        
         [self.tableView reloadData];
         
     } onFailure:^(NSError *error) {
-        
+       
         [self.refreshControl endRefreshing];
         NSLog(@"An error %@, %@", error, [error userInfo]);
     }];
+//////////////SATCKMOB END
 }
+
 
 
 /*
@@ -244,5 +252,21 @@ extern int iNotificationCounter;
 - (IBAction)buttonPressed:(id)sender {
     
     [self refreshTable];
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    
+    //[self refreshTable];
+    [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(refreshTable) userInfo:nil repeats:YES];
+    
+    //For reseting the tabbar badge value
+    //Added by Maaj
+    UITabBarController *tBar = (UITabBarController*)[[[UIApplication sharedApplication] keyWindow] rootViewController];
+    UITabBarItem *item=[[[tBar tabBar] items] objectAtIndex:1];
+    [item setBadgeValue:nil];
+    iNotificationCounter = 0;
+    //----------------------------------------------//
+    
 }
 @end

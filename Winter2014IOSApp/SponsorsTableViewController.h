@@ -11,17 +11,24 @@
 #import "SponsorsViewCell.h"
 @class MBProgressHUD;
 
-@interface SponsorsTableViewController : UITableViewController{
+@interface SponsorsTableViewController : UITableViewController 
+
+{
     MBProgressHUD *HUD;
 }
 
 @property (nonatomic, strong) NSMutableArray * json;
 @property (nonatomic, strong) NSMutableArray * sponsorsArray;
+@property (nonatomic, strong) NSMutableArray * results;
+
+@property (strong, nonatomic) NSArray *objects;
+
+@property (strong, nonatomic) IBOutlet UITableView *myTableView;
 
 
 //#pragma mark - Methods
 //- (void)fetchedData:(NSData *)responseData;
-- (void)retrieveData;
+//- (void)retrieveData;
 
 
 @end

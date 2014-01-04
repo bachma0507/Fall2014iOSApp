@@ -110,7 +110,7 @@ fi
 
 # Remove temp dSYM archive
 echo "Cleaning up temporary dSYM archive..."
-/bin/rm -f "DSYM_ZIP_FPATH"
+/bin/rm -f "${DSYM_ZIP_FPATH}"
 
 echo "Crittercism dSYM upload complete."
 

@@ -16,11 +16,12 @@
 @synthesize boothNumber;
 @synthesize sponsorWebsite;
 @synthesize sponsorImage;
+@synthesize series;
 
 
 
 
--(id) initWithSponsorID: (NSString *) sID andSponsorLevel: (NSString *) sLevel andSponsorSpecial: (NSString *) sSpecial andSponsorName: (NSString *) sName andBoothnumber: (NSString *) bNumber andSponsorWebsite:(NSString *)sWebsite andSponsorImage:(NSString *)sImage
+-(id) initWithSponsorID: (NSString *) sID andSponsorLevel: (NSString *) sLevel andSponsorSpecial: (NSString *) sSpecial andSponsorName: (NSString *) sName andBoothnumber: (NSString *) bNumber andSponsorWebsite:(NSString *)sWebsite andSponsorImage:(NSString *)sImage andSeries: (NSString *) sSeries
 {
     self = [super init];
     if (self) {
@@ -31,6 +32,7 @@
         boothNumber = bNumber;
         sponsorWebsite = sWebsite;
         sponsorImage = sImage;
+        series = sSeries;
         
         
     }

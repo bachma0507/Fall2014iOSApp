@@ -7,8 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Html.h"
 
-@interface CECInfoViewController : UIViewController
+@interface CECInfoViewController : UIViewController <UIWebViewDelegate>
+@property (nonatomic, strong) NSMutableArray * json;
+@property (nonatomic, strong) NSMutableArray * htmlArray;
+//@property (nonatomic, strong) NSMutableArray * results;
+//@property BOOL isFiltered;
+
+@property (strong, nonatomic) NSArray *objects;
+
+
+
 @property (strong, nonatomic) IBOutlet UIWebView *webView;
+//@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activity;
 
 @end

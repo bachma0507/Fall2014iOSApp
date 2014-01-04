@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="12E55" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3396" systemVersion="12F45" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Cschedule" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="day" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="trueDate" optional="YES" attributeType="Date" syncable="YES"/>
+    </entity>
+    <entity name="Ehschedule" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="scheduleDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sessionName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sessionTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="startTime" optional="YES" attributeType="Date" syncable="YES"/>
+    </entity>
     <entity name="Exhibitors" syncable="YES">
         <attribute name="boothId" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="boothLabel" optional="YES" attributeType="String" syncable="YES"/>
@@ -7,6 +20,7 @@
         <attribute name="eventId" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="mapId" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Favorites" syncable="YES">
@@ -15,6 +29,13 @@
         <attribute name="exhibitorname" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="favorite" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="notes" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Html" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Sessions" syncable="YES">
         <attribute name="endTime" optional="YES" attributeType="String" syncable="YES"/>
@@ -53,6 +74,7 @@
         <attribute name="sessionname" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="sessiontime" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="sessnotesId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="starttime" optional="YES" attributeType="Date" syncable="YES"/>
     </entity>
     <entity name="Speakers" syncable="YES">
         <attribute name="endTime" optional="YES" attributeType="String" syncable="YES"/>
@@ -76,9 +98,23 @@
         <attribute name="speakerCountry" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="speakerID" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="speakerName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="speakerPic" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="speakerState" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="speakerWebsite" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="startTime" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Sponsors" syncable="YES">
+        <attribute name="boothNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="series" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sponsorID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sponsorImage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sponsorLevel" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sponsorName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sponsorSpecial" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sponsorWebsite" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Timeinterval" syncable="YES">
+        <attribute name="updatetime" optional="YES" attributeType="Date" syncable="YES"/>
     </entity>
     <entity name="Todo" syncable="YES">
         <attribute name="date" optional="YES" attributeType="String" syncable="YES"/>
@@ -86,11 +122,16 @@
         <attribute name="todoId" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Exhibitors" positionX="160" positionY="192" width="128" height="150"/>
-        <element name="Favorites" positionX="160" positionY="192" width="128" height="120"/>
-        <element name="Sessions" positionX="160" positionY="192" width="128" height="420"/>
-        <element name="Sessnotes" positionX="160" positionY="192" width="128" height="180"/>
-        <element name="Speakers" positionX="160" positionY="192" width="128" height="405"/>
-        <element name="Todo" positionX="160" positionY="192" width="128" height="90"/>
+        <element name="Exhibitors" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Favorites" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Sessions" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Sessnotes" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Speakers" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Timeinterval" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Todo" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Sponsors" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Cschedule" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Ehschedule" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Html" positionX="0" positionY="0" width="0" height="0"/>
     </elements>
 </model>

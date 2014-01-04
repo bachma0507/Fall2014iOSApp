@@ -30,6 +30,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    [TestFlight passCheckpoint:@"Courses-info-viewed"];
+    
     webView.delegate = self;
     
     

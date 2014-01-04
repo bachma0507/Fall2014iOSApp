@@ -29,18 +29,28 @@
 {
     [super viewDidLoad];
     
+    [TestFlight passCheckpoint:@"PDFProgram-info-viewed"];
+    
     UIBarButtonItem *backButtonItem = [[UIBarButtonItem alloc] initWithTitle:@" " style:UIBarButtonItemStylePlain target:nil action:nil];
     self.navigationItem.backBarButtonItem = backButtonItem;
     
 	// Do any additional setup after loading the view.
     
-    NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"ProgramFall2013.pdf" ofType:nil]];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    [webView loadRequest:request];
+    webView.delegate = self;
     
-//    NSString *httpSource = @"http://barrycjulien.com/bicsi/pdf/ProgramFall2013.pdf";
+    NSString *httpSource = @"http://speedyreference.com/bicsiappcms/conferenceprogram.html";
+    NSURL *fullUrl = [NSURL URLWithString:httpSource];
+    NSURLRequest *httpRequest = [NSURLRequest requestWithURL:fullUrl];
+    [webView loadRequest:httpRequest];
+    
+    
+//    NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"THE BICSI 2014 WINTER CONFERENCE PROGRAM.pdf" ofType:nil]];
+//    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+//    [webView loadRequest:request];
+    
+ //   NSString *httpSource = @"http://barrycjulien.com/bicsi/pdf/ProgramFall2013.pdf";
 //    //NSString *httpSource = @"http://www.chirpe.com/Floorplan.aspx?EventID=2027";
-//    NSURL *fullUrl = [NSURL URLWithString:httpSource];
+ //   NSURL *fullUrl = [NSURL URLWithString:httpSource];
 //    NSURLRequest *httpRequest = [NSURLRequest requestWithURL:fullUrl];
 //    [webView loadRequest:httpRequest];
     

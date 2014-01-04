@@ -14,8 +14,10 @@
 #import "NotesViewController.h"
 //#import "StackMob.h"
 #import "Fall2013IOSAppAppDelegate.h"
+#import <MessageUI/MessageUI.h>
+#import "SVWebViewController.h"
 
-@interface SessionsViewController ()
+@interface SessionsViewController () <MFMessageComposeViewControllerDelegate>
 @property (nonatomic, strong) NSMutableArray *mySessionnotes;
 
 @end
@@ -23,7 +25,7 @@
 @implementation SessionsViewController
 @synthesize session1Label, session1DateLabel, session1TimeLabel, session1DescTextField, speakerNameLabel, speakers;
 @synthesize session1DateLabelText, session1descTextFieldText, session1LabelText, session1TimeLabelText, speakerNameLabelText;
-@synthesize sessionName, sessionDate, sessionTime, sessionDesc, name, sessionId, sessionIdLabel, agendaButton, startTimeStr, endTime, locationLabel, location;
+@synthesize sessionName, sessionDate, sessionTime, sessionDesc, name, sessionId, sessionIdLabel, agendaButton, startTimeStr, endTime, locationLabel,location, sessionDay, poll1, pollButton;
 
 - (NSManagedObjectContext *)managedObjectContext {
     NSManagedObjectContext *context = nil;
@@ -78,9 +80,20 @@
     startTimeStr = self.startTimeStr;
     endTime = self.endTime;
     location = self.location;
+    sessionDay = self.sessionDay;
+    poll1 = self.poll1;
+    
+//    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad){
+//        [self.pollButton setHidden:YES];
+//    }
+    
+    if ([self.poll1  isEqual: @""]) {
+        [self.pollButton setHidden:YES];
+    }
     
     
     NSLog(@"Session Id 1 is: %@", self.sessionId);
+    NSLog(@"Session day is: %@", self.sessionDay);
     
     //session1DescTextField.layer.borderWidth = 2.0f;
     //session1DescTextField.layer.borderColor = [[UIColor grayColor] CGColor];
@@ -108,10 +121,10 @@
         self.objects = results;
         NSLog(@"Results Count is: %lu", (unsigned long)results.count);
         if (!results || !results.count){
-            [self.agendaButton setTitle:@"Add to Agenda" forState:normal];
+            [self.agendaButton setTitle:@"Add to Planner" forState:normal];
         }
         else{
-            [self.agendaButton setTitle:@"Remove from Agenda" forState:normal];
+            [self.agendaButton setTitle:@"Remove from Planner" forState:normal];
         }
         
 //    } onFailure:^(NSError *error) {
@@ -241,7 +254,7 @@
     
      NSManagedObjectContext *context = [self managedObjectContext];
     
-    if ([self.agendaButton.currentTitle isEqual:@"Add to Agenda"]) {
+    if ([self.agendaButton.currentTitle isEqual:@"Add to Planner"]) {
         NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:@"Sessnotes" inManagedObjectContext:context];
         
         [newManagedObject setValue:self.sessionId forKey:@"sessionID"];
@@ -249,6 +262,10 @@
         [newManagedObject setValue:self.session1DateLabel.text forKey:@"sessiondate"];
         [newManagedObject setValue:self.session1TimeLabel.text forKey:@"sessiontime"];
         [newManagedObject setValue:self.locationLabel.text forKey:@"location"];
+        NSDateFormatter *df = [[NSDateFormatter alloc] init];
+        [df setDateFormat:@"hh:mm a"];
+        NSDate *sessTime = [df dateFromString: self.startTimeStr];
+        [newManagedObject setValue:sessTime forKey:@"starttime"];
         [newManagedObject setValue:newDeviceID forKey:@"deviceowner"];
         [newManagedObject setValue:@"Yes" forKey:@"agenda"];
         
@@ -259,7 +276,7 @@
         }
         
             NSLog(@"You created a new object!");
-            [agendaButton setTitle:@"Remove from Agenda" forState:normal];
+            [agendaButton setTitle:@"Remove from Planner" forState:normal];
 
         
     }
@@ -277,7 +294,7 @@
             self.objects = results;
             NSLog(@"Results Count is: %lu", (unsigned long)results.count);
             if (!results || !results.count){//start nested if block
-                [self.agendaButton setTitle:@"Add to Agenda" forState:normal];}
+                [self.agendaButton setTitle:@"Add to Planner" forState:normal];}
             else{
                 NSManagedObject *object = [results objectAtIndex:0];
                 [object setValue:NULL forKey:@"agenda"];
@@ -290,7 +307,7 @@
 
                 
                     NSLog(@"You updated an object");
-                    [self.agendaButton setTitle:@"Add to Agenda" forState:normal];
+                    [self.agendaButton setTitle:@"Add to Planner" forState:normal];
 
             }
             
@@ -391,8 +408,11 @@
     NSString *myStartTimeStr = [[NSString alloc]initWithFormat:@"%@",self.startTimeStr];
     NSString *myEndTimeStr = [[NSString alloc]initWithFormat:@"%@",self.endTime];
     
-    NSLog(@"start time is %@",myStartTimeStr);
-    NSLog(@"start time is %@",myEndTimeStr);
+    NSLog(@"myDateStr is: %@", myDateStr);
+    NSLog(@"myStartTimeStr is: %@", myStartTimeStr);
+    
+    //NSLog(@"start time is %@",myStartTimeStr);
+    NSLog(@"myEndTimeStr is %@",myEndTimeStr);
     
     NSString *sessDateStr = [[NSString alloc]initWithFormat:@"%@ %@",myDateStr,myStartTimeStr];
     NSString *sessEndDateStr = [[NSString alloc]initWithFormat:@"%@ %@",myDateStr, myEndTimeStr];
@@ -402,10 +422,12 @@
     NSDateFormatter *df = [[NSDateFormatter alloc] init];
     [df setDateFormat:@"MMM dd yyyy hh:mm a"];
     NSDate *sessDate = [df dateFromString: sessDateStr];
+    NSLog(@"sessDate is: %@", sessDate);
     
     NSDateFormatter *dfEnd = [[NSDateFormatter alloc] init];
     [dfEnd setDateFormat:@"MMM dd yyyy hh:mm a"];
     NSDate *sessEndDate = [df dateFromString: sessEndDateStr];
+    NSLog(@"sessEndDate is: %@", sessEndDate);
     
     
     
@@ -485,6 +507,64 @@
 //        NSLog(@"error = %@", error);
 //    
 //}
+
+- (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult) result
+{
+    switch (result) {
+        case MessageComposeResultCancelled:
+            break;
+            
+        case MessageComposeResultFailed:
+        {
+            UIAlertView *warningAlert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Failed to send SMS!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [warningAlert show];
+            break;
+        }
+            
+        case MessageComposeResultSent:
+            break;
+            
+        default:
+            break;
+    }
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)showSMS
+{
+    
+    if(![MFMessageComposeViewController canSendText]) {
+        UIAlertView *warningAlert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Your device doesn't support SMS!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [warningAlert show];
+        return;
+    }
+    
+    NSArray *recipents = @[@"22333"];
+    //NSString *message = [NSString stringWithFormat:@"Just sent the %@ file to your email. Please check!", file];
+    
+    MFMessageComposeViewController *messageController = [[MFMessageComposeViewController alloc] init];
+    messageController.messageComposeDelegate = self;
+    [messageController setRecipients:recipents];
+    //[messageController setBody:message];
+    
+    // Present message view controller on screen
+    [self presentViewController:messageController animated:YES completion:nil];
+}
+
+- (IBAction)takePoll:(id)sender {
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone){
+        
+        [self showSMS];
+    }
+    else{
+        NSString * myURL = [NSString stringWithFormat:@"http://pollev.com"];
+        NSURL *URL = [NSURL URLWithString:myURL];
+        SVWebViewController *webViewController = [[SVWebViewController alloc] initWithURL:URL];
+        [self.navigationController pushViewController:webViewController animated:YES];
+    }
+    
+}
 
 
 @end

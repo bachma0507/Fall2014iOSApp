@@ -24,7 +24,7 @@ extern NSString * SMCurrentNetworkStatusKey;
 
 typedef enum {
     Unknown = -1,
-   // NotReachable  = 0,
+    NotReachable  = 0,
     Reachable = 1,
 } SMNetworkStatus;
 

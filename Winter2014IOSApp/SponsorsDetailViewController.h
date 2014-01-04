@@ -15,6 +15,7 @@
 @property (nonatomic, strong) NSString * name;
 @property (nonatomic, strong) NSString * image;
 @property (nonatomic, strong) NSString * website;
+@property (nonatomic, strong) NSString * boothNumber;
 
 
 @property (strong, nonatomic) IBOutlet UILabel *sponsorsNameLabel;

@@ -19,7 +19,7 @@
 @property (nonatomic, strong) NSString * name;
 @property (nonatomic, strong) NSString * company;
 @property (nonatomic, strong) NSString * bio;
-@property (nonatomic, strong) NSString * website;
+@property (nonatomic, strong) NSString * poll1;
 @property (nonatomic, strong) NSString * sessionDesc;
 @property (nonatomic, strong) NSString * sessionName;
 @property (nonatomic, strong) NSString * sessionDate;
@@ -36,6 +36,7 @@
 @property (nonatomic, strong) NSString * sess2StartTime;
 @property (nonatomic, strong) NSString * sess2EndTime;
 @property (nonatomic, strong) NSString * location2;
+@property (nonatomic, strong) NSString * poll2;
 
 
 @property (strong, nonatomic) IBOutlet UILabel *speakerName;

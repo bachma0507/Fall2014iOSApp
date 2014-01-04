@@ -17,8 +17,8 @@
 @end
 
 @implementation ConfSchedDetailTableViewController
-@synthesize objects;
-@synthesize confsched;
+@synthesize myObjects;
+@synthesize cschedule;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -45,7 +45,7 @@
 {
     [super viewDidLoad];
 
-    self.title = confsched.date;
+    self.title = cschedule.date;
     
     UIBarButtonItem *backButtonItem = [[UIBarButtonItem alloc] initWithTitle:@" " style:UIBarButtonItemStylePlain target:nil action:nil];
     self.navigationItem.backBarButtonItem = backButtonItem;
@@ -75,12 +75,15 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)tableView: (UITableView*)tableView willDisplayCell: (UITableViewCell*)cell forRowAtIndexPath: (NSIndexPath*)indexPath
 {
-    if (indexPath.row%2 == 0)
-    {
-        UIColor *altCellColor = [UIColor colorWithWhite:0.7 alpha:0.1];
+    
+    if(indexPath.row % 2 == 0){
+        UIColor *altCellColor = [UIColor colorWithRed:235/255.0 green:240/255.0 blue:233/255.0 alpha:1.0];
         cell.backgroundColor = altCellColor;
+    }
+    else{
+        cell.backgroundColor = [UIColor whiteColor];
     }
 }
 
@@ -97,7 +100,7 @@
 {
 //#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return self.objects.count;
+    return self.myObjects.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -120,7 +123,7 @@
         
     }
     
-    NSManagedObject *object = [self.objects objectAtIndex:indexPath.row];
+    NSManagedObject *object = [self.myObjects objectAtIndex:indexPath.row];
     cell.sessionName.text = [object valueForKey:@"sessionName"];
     cell.sessionTime.text = [object valueForKey:@"sessionTime"];
     cell.sessionStatus.text = [object valueForKey:@"sessionStatus"];
@@ -160,7 +163,9 @@
     
     [fetchRequest setEntity:entity];
     
-    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"sessionDate == %@",confsched.date]];
+    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"sessionDate == %@",cschedule.date]];
+    
+    NSLog(@"cshedule date in refreshtable is: %@",cschedule.date);
     
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"startTime" ascending:YES];
     NSArray *sortDescriptors = [NSArray arrayWithObjects:sortDescriptor, nil];
@@ -169,7 +174,7 @@
     
     NSArray *myResults = [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
     
-    self.objects = myResults;
+    self.myObjects = myResults;
     
     if (!myResults || !myResults.count){
         NSLog(@"No results!");
@@ -179,7 +184,7 @@
                                             init];
         
         [refreshControl endRefreshing];
-        self.objects = myResults;
+        self.myObjects = myResults;
         
 
     }
@@ -197,7 +202,7 @@
                         
             NSIndexPath * indexPath = [self.tableView indexPathForSelectedRow];
             SessionsDetailViewController *destViewController = segue.destinationViewController;
-            destViewController.mySessions = [self.objects objectAtIndex:indexPath.row];
+            destViewController.mySessions = [self.myObjects objectAtIndex:indexPath.row];
             
             
         }

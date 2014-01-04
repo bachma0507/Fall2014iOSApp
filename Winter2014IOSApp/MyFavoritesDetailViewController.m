@@ -10,13 +10,14 @@
 #import <QuartzCore/QuartzCore.h>
 //#import "StackMob.h"
 #import "Fall2013IOSAppAppDelegate.h"
+#import "LocateOnMapViewController.h"
 
 @interface MyFavoritesDetailViewController ()
 
 @end
 
 @implementation MyFavoritesDetailViewController
-@synthesize boothNumber, boothNumberLabel, exhibitorName, exhibitorNameLabel;
+@synthesize boothNumber, boothNumberLabel, exhibitorName, exhibitorNameLabel, boothLabel, name, urlLabel, phoneLabel, url, phone;
 
 - (NSManagedObjectContext *)managedObjectContext {
     NSManagedObjectContext *context = nil;
@@ -58,6 +59,8 @@
     
     exhibitorNameLabel.text = self.exhibitorName;
     boothNumberLabel.text = self.boothNumber;
+    urlLabel.text = self.url;
+    phoneLabel.text = self.phone;
 }
 
 - (void)didReceiveMemoryWarning
@@ -77,6 +80,19 @@
         
         NSLog(@"Booth number is %@", self.boothNumber);
     }
+    
+    else if ([segue.identifier isEqualToString:@"locationDetail"]) {
+        self.boothLabel = boothNumberLabel.text;
+        self.name = exhibitorNameLabel.text;
+        
+        LocateOnMapViewController *destViewController = segue.destinationViewController;
+        //destViewController.title = nameLabel.text;
+        destViewController.boothLabel = self.boothLabel;
+        destViewController.title = self.name;
+        
+        NSLog(@"Booth Label is %@", self.boothLabel);
+    }
+    
 }
 
 @end

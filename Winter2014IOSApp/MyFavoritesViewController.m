@@ -17,7 +17,7 @@
 @end
 
 @implementation MyFavoritesViewController
-@synthesize exhibitorName, boothNumber;
+@synthesize exhibitorName, boothNumber, url, phone;
 
 - (NSManagedObjectContext *)managedObjectContext {
     NSManagedObjectContext *context = nil;
@@ -40,6 +40,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [TestFlight passCheckpoint:@"MyFavoriteExhibitorsTable-info-viewed"];
     
     NSLog(@"ViewDidLoad in MyFavoritesViewController started");
 
@@ -103,7 +105,7 @@
     NSManagedObject *object = [self.objects objectAtIndex:indexPath.row];
     cell.exhibitorNameLabel.text = [object valueForKey:@"exhibitorname"];
     cell.boothNumberLabel.text = [object valueForKey:@"boothnumber"];
-    //cell.sessionTimeLabel.text = [object valueForKey:@"sessiontime"];
+        //cell.sessionTimeLabel.text = [object valueForKey:@"sessiontime"];
     
     //NSLog(@"BOOTH NUMBER IS %@", cell.boothNumberLabel.text);
     
@@ -137,7 +139,7 @@
     //NSArray *array = [self executeFetchRequest:fetchRequest error:&error];
     
     // Edit the sort key as appropriate.
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"exhibitorname" ascending:YES];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"boothnumber" ascending:YES];
     NSArray *sortDescriptors = [NSArray arrayWithObjects:sortDescriptor, nil];
     
     [fetchRequest setSortDescriptors:sortDescriptors];
@@ -200,14 +202,20 @@
         NSManagedObject *object = [self.objects objectAtIndex:indexPath.row];
         self.exhibitorName = [object valueForKey:@"exhibitorname"];
         self.boothNumber = [object valueForKey:@"boothnumber"];
+        self.url = [object valueForKey:@"url"];
+        self.phone = [object valueForKey:@"phone"];
         
         MyFavoritesDetailViewController *destViewController = segue.destinationViewController;
         destViewController.title = self.exhibitorName;
         destViewController.exhibitorName = self.exhibitorName;
         destViewController.boothNumber = self.boothNumber;
+        destViewController.url = self.url;
+        destViewController.phone = self.phone;
         
         NSLog(@"Segue Booth Number is %@", self.boothNumber);
         NSLog(@"Segue Exhibitor Name is %@", self.exhibitorName);
+        NSLog(@"Segue URL Name is %@", self.url);
+        NSLog(@"Segue Phone Name is %@", self.phone);
     }
 }
 

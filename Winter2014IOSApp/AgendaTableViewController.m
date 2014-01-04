@@ -20,6 +20,7 @@
 @implementation AgendaTableViewController
 @synthesize sessionName, sessionId, location;
 
+
 - (NSManagedObjectContext *)managedObjectContext {
     NSManagedObjectContext *context = nil;
     id delegate = [[UIApplication sharedApplication] delegate];
@@ -38,19 +39,14 @@
     return self;
 }
 
-//- (Fall2013IOSAppAppDelegate *)appDelegate {
-//    return (Fall2013IOSAppAppDelegate *)[[UIApplication sharedApplication] delegate];
-//}
+
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    [TestFlight passCheckpoint:@"MyAgendaTable-info-viewed"];
+    
     
     UIBarButtonItem *backButtonItem = [[UIBarButtonItem alloc] initWithTitle:@" " style:UIBarButtonItemStylePlain target:nil action:nil];
     self.navigationItem.backBarButtonItem = backButtonItem;
@@ -62,9 +58,6 @@
     
     NSLog(@"Untruncated Device ID is: %@", deviceID);
     NSLog(@"Truncated Device ID is: %@", newDeviceID);
-    
-    
-    //self.managedObjectContext = [[self.appDelegate coreDataStore] contextForCurrentThread];
     
     
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc]
@@ -91,13 +84,16 @@
 {
     // Return the number of sections.
     return 1;
+    //return [dateArray count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
     return [self.objects count];
+    
 }
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -112,21 +108,38 @@
     
     NSManagedObject *object = [self.objects objectAtIndex:indexPath.row];
     cell.sessionNameLabel.text = [object valueForKey:@"sessionname"];
+    cell.sessionNameLabel.textColor = [UIColor brownColor];
     cell.sessionDateLabel.text = [object valueForKey:@"sessiondate"];
+    cell.sessionDateLabel.textColor = [UIColor blackColor];
     cell.sessionTimeLabel.text = [object valueForKey:@"sessiontime"];
+    cell.sessionTimeLabel.textColor = [UIColor blackColor];
     
+    //cell.textLabel.numberOfLines = 0;
+    //cell.textLabel.lineBreakMode = NSLineBreakByWordWrapping;
     
     return cell;
 
 }
 
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row%2 == 0) {
-        UIColor *altCellColor = [UIColor colorWithWhite:0.7 alpha:0.1];
+//- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+//    if (indexPath.row%2 == 0) {
+//        UIColor *altCellColor = [UIColor colorWithWhite:0.7 alpha:0.1];
+//        cell.backgroundColor = altCellColor;
+//    }
+//}
+
+
+- (void)tableView: (UITableView*)tableView willDisplayCell: (UITableViewCell*)cell forRowAtIndexPath: (NSIndexPath*)indexPath
+{
+    
+    if(indexPath.row % 2 == 0){
+        UIColor *altCellColor = [UIColor colorWithRed:235/255.0 green:240/255.0 blue:233/255.0 alpha:1.0];
         cell.backgroundColor = altCellColor;
     }
+    else{
+        cell.backgroundColor = [UIColor whiteColor];
+    }
 }
-
 
 - (void) refreshTable {
     NSUUID *id = [[UIDevice currentDevice] identifierForVendor];
@@ -147,15 +160,16 @@
     //NSArray *array = [self executeFetchRequest:fetchRequest error:&error];
     
     // Edit the sort key as appropriate.
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"sessiondate" ascending:YES];
-    NSArray *sortDescriptors = [NSArray arrayWithObjects:sortDescriptor, nil];
+    NSSortDescriptor *sortDescriptor1 = [[NSSortDescriptor alloc] initWithKey:@"sessiondate" ascending:YES];
+    NSSortDescriptor *sortDescriptor2 = [[NSSortDescriptor alloc] initWithKey:@"starttime" ascending:YES];
+    NSArray *sortDescriptors = [NSArray arrayWithObjects:sortDescriptor1, sortDescriptor2, nil];
     
     [fetchRequest setSortDescriptors:sortDescriptors];
     
      NSArray *results = [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
     
     if (!results || !results.count) {
-        NSString *message = @"You have not added any sessions to your agenda. Please click on Add to Agenda when viewing Session details. If you signed up for sessions when you registered, please click on the My BICSI icon and go to My Schedule.";
+        NSString *message = @"You have not added any sessions to your planner. Please click on Add to Planner when viewing Session details. If you signed up for sessions when you registered, please click on the My BICSI icon and go to My Schedule.";
         UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"Notification"
                                                            message:message
                                                           delegate:self
@@ -165,16 +179,14 @@
     }
 
     
-    //[self.managedObjectContext executeFetchRequest:fetchRequest onSuccess:^(NSArray *results) {
+    
         [self.refreshControl endRefreshing];
         self.objects = results;
+    NSLog(@"Results = %lu", (unsigned long)results.count);
+    
+    
         [self.tableView reloadData];
         
-//    } onFailure:^(NSError *error) {
-//        
-//        [self.refreshControl endRefreshing];
-//        NSLog(@"An error %@, %@", error, [error userInfo]);
-//    }];
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -187,13 +199,12 @@
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         //add code here for when you hit delete
         
-        //NSManagedObjectContext *context = [[[self appDelegate] coreDataStore] contextForCurrentThread];
-        
         NSManagedObject *object = [self.objects objectAtIndex:indexPath.row];
         
         NSManagedObjectContext *context = [self managedObjectContext];
         
         [context deleteObject:[context objectWithID:[object objectID]]];
+        
         
         NSError *error = nil;
         // Save the object to persistent store
@@ -201,16 +212,15 @@
             NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
         }
         
-//        [context saveOnSuccess:^{
-//            NSLog(@"The save was successful!");
-//        } onFailure:^(NSError *error) {
-//            NSLog(@"The save wasn't successful: %@", [error localizedDescription]);
-//        }];
-        
         NSMutableArray *array = [self.objects mutableCopy];
         [array removeObjectAtIndex:indexPath.row];
         self.objects = array;
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        //[tableView reloadSections:[NSIndexSet indexSetWithIndex:indexPath.section] withRowAnimation: UITableViewRowAnimationAutomatic];
+        //[tableView reloadData];
+    
+//
+       
     }
 }
 

@@ -17,10 +17,11 @@
 @property (nonatomic, strong) NSString * boothNumber;
 @property (nonatomic, strong) NSString * sponsorWebsite;
 @property (nonatomic, strong) NSString * sponsorImage;
+@property (nonatomic, strong) NSString * series;
 
 
 //methods
--(id) initWithSponsorID: (NSString *) sID andSponsorLevel: (NSString *) sLevel andSponsorSpecial: (NSString *) sSpecial andSponsorName: (NSString *) sName andBoothnumber: (NSString *) bNumber andSponsorWebsite: (NSString *) sWebsite andSponsorImage: (NSString *) sImage;
+-(id) initWithSponsorID: (NSString *) sID andSponsorLevel: (NSString *) sLevel andSponsorSpecial: (NSString *) sSpecial andSponsorName: (NSString *) sName andBoothnumber: (NSString *) bNumber andSponsorWebsite: (NSString *) sWebsite andSponsorImage: (NSString *) sImage andSeries: (NSString *) sSeries;
 
 
 @end

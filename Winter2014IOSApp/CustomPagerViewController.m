@@ -8,11 +8,14 @@
 
 #import "CustomPagerViewController.h"
 
+
 @interface CustomPagerViewController ()
 
 @end
 
 @implementation CustomPagerViewController
+
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -22,6 +25,8 @@
     }
     return self;
 }
+
+
 
 - (void)viewDidLoad
 {
@@ -35,7 +40,14 @@
 	[self addChildViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"View1"]];
 	[self addChildViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"View2"]];
 	//[self addChildViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"View3"]];
+    
+    
+    
+    
+    
 }
+
+
 
 - (void)didReceiveMemoryWarning
 {

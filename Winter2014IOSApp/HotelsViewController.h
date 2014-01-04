@@ -33,6 +33,7 @@
 
 @property (strong, nonatomic) IBOutlet UITextView *hotelDescTextView;
 @property (strong, nonatomic) IBOutlet UILabel *alertLineLabel;
+@property (strong, nonatomic) IBOutlet UIImageView *hotelImageView;
 
 - (IBAction)resButtonPressed:(id)sender;
 

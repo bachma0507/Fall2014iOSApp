@@ -7,15 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ConfSched.h"
+#import "CSchedule.h"
 
 @interface ConfSchedTableViewController : UITableViewController
 
 @property (nonatomic, strong) NSMutableArray * json;
 @property (nonatomic, strong) NSMutableArray * confSchedArray;
+@property (nonatomic, strong) NSMutableArray * results;
+//@property BOOL isFiltered;
+
+@property (strong, nonatomic) IBOutlet UITableView *myTableView;
+
+@property (strong, nonatomic) NSArray *objects;
 
 //#pragma mark - Methods
--(void) retrieveData;
+//-(void) retrieveData;
 //- (void)fetchedData:(NSData *)responseData;
 
 @end

@@ -15,7 +15,17 @@
 
 @implementation ConfSchedTableViewController
 @synthesize json;
-@synthesize confSchedArray;
+@synthesize confSchedArray, myTableView, results, objects;
+
+
+- (NSManagedObjectContext *)managedObjectContext {
+    NSManagedObjectContext *context = nil;
+    id delegate = [[UIApplication sharedApplication] delegate];
+    if ([delegate performSelector:@selector(managedObjectContext)]) {
+        context = [delegate managedObjectContext];
+    }
+    return context;
+}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -30,10 +40,21 @@
 {
     [super viewDidLoad];
     
+    [TestFlight passCheckpoint:@"ConfScheduleTable-info-viewed"];
+    
     UIBarButtonItem *backButtonItem = [[UIBarButtonItem alloc] initWithTitle:@" " style:UIBarButtonItemStylePlain target:nil action:nil];
     self.navigationItem.backBarButtonItem = backButtonItem;
 
-    [self retrieveData];
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc]
+                                        init];
+    [refreshControl addTarget:self action:@selector(refreshTable) forControlEvents:UIControlEventValueChanged];
+    
+    //self.refreshControl  = refreshControl;
+    
+    [refreshControl beginRefreshing];
+    
+    
+    [self refreshTable];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -48,6 +69,43 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)refreshTable{
+    
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Cschedule" inManagedObjectContext:self.managedObjectContext];
+    
+    [fetchRequest setEntity:entity];
+    
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"trueDate" ascending:YES];
+    NSArray *sortDescriptors = [NSArray arrayWithObjects:sortDescriptor, nil];
+    
+    [fetchRequest setSortDescriptors:sortDescriptors];
+    
+    NSArray *myResults = [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
+    
+    if (!myResults || !myResults.count) {
+        NSString *message = @"There seems to have been an error updating data. Please go back to the Home screen and press the Update Data button at the bottom of the screen.";
+        UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"Data Update Error"
+                                                           message:message
+                                                          delegate:self
+                                                 cancelButtonTitle:@"Ok"
+                                                 otherButtonTitles:nil,nil];
+        [alertView show];
+    }
+    else{
+        
+        UIRefreshControl *refreshControl = [[UIRefreshControl alloc]
+                                            init];
+        
+        [refreshControl endRefreshing];
+        self.objects = myResults;
+        [self.myTableView reloadData];
+    }
+}
+
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -61,13 +119,28 @@
 {
 //#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return [confSchedArray count];
+    return self.objects.count;
 }
 
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row%2 == 0) {
-        UIColor *altCellColor = [UIColor colorWithWhite:0.7 alpha:0.1];
+//- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+//    if (indexPath.row%2 == 0) {
+//        UIColor *altCellColor = [UIColor colorWithWhite:0.7 alpha:0.1];
+//        cell.backgroundColor = altCellColor;
+//    }
+//}
+
+
+
+
+- (void)tableView: (UITableView*)tableView willDisplayCell: (UITableViewCell*)cell forRowAtIndexPath: (NSIndexPath*)indexPath
+{
+    
+    if(indexPath.row % 2 == 0){
+        UIColor *altCellColor = [UIColor colorWithRed:235/255.0 green:240/255.0 blue:233/255.0 alpha:1.0];
         cell.backgroundColor = altCellColor;
+    }
+    else{
+        cell.backgroundColor = [UIColor whiteColor];
     }
 }
 
@@ -80,12 +153,14 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    ConfSched * confsched = nil;
+    //ConfSched * confsched = nil;
     
-    confsched = [confSchedArray objectAtIndex:indexPath.row];
+    //confsched = [confSchedArray objectAtIndex:indexPath.row];
     
-    cell.textLabel.text = confsched.day;
-    cell.detailTextLabel.text = confsched.date;
+    NSManagedObject *object = [self.objects objectAtIndex:indexPath.row];
+    
+    cell.textLabel.text = [object valueForKey:@"day"];
+    cell.detailTextLabel.text = [object valueForKey:@"date"];
     
     cell.textLabel.font = [UIFont fontWithName:@"Arial-Bold" size:15.0];
     cell.textLabel.textColor = [UIColor brownColor];
@@ -98,41 +173,12 @@
     return cell;
 }
 
--(void) retrieveData
-{
-    NSURL * url = [NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"confschedule.json" ofType:nil]];
-    NSData * data = [NSData dataWithContentsOfURL:url];
-    
-    json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
-    
-    //Set up our confsched array
-    confSchedArray = [[NSMutableArray alloc] init];
-    
-    for (int i = 0; i < json.count; i++) {
-        //create confSched object
-        NSString * cID = [[json objectAtIndex:i] objectForKey:@"id"];
-        NSString * cDay = [[json objectAtIndex:i] objectForKey:@"Day"];
-        NSString * cDate = [[json objectAtIndex:i] objectForKey:@"Date"];
-        
-        
-        ConfSched   * myConfSched = [[ConfSched alloc] initWithID: cID andDay: cDay andDate: cDate];
-        
-        //Add our sessions object to our exhibitHallArray
-        [confSchedArray addObject:myConfSched];
-        
-        
-        
-    }
-    
-    [self.tableView reloadData];
-
-}
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"confSchedDetailCell"]) {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        NSIndexPath *indexPath = [self.myTableView indexPathForSelectedRow];
         ConfSchedDetailTableViewController *destViewController = segue.destinationViewController;
-        destViewController.confsched = [confSchedArray objectAtIndex:indexPath.row];
+        destViewController.cschedule = [self.objects objectAtIndex:indexPath.row];
         
         // Hide bottom tab bar in the detail view
         //destViewController.hidesBottomBarWhenPushed = YES;
