@@ -86,14 +86,14 @@ int iNotificationCounter=0;
    //[[UINavigationBar appearance]setShadowImage:[[UIImage alloc] init]];
     
     if (SYSTEM_VERSION_LESS_THAN(@"7.0")) {
-        UIImage *navBackgroundImage = [UIImage imageNamed:@"navbarflatgrey"];
+        UIImage *navBackgroundImage = [UIImage imageNamed:@"navbarflatblue"];
         [[UINavigationBar appearance] setBackgroundImage:navBackgroundImage forBarMetrics:UIBarMetricsDefault];
         
         
     }
     
     if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0")) {
-    UIImage *navBackgroundImage = [UIImage imageNamed:@"navbarflatgrey2"];
+    UIImage *navBackgroundImage = [UIImage imageNamed:@"navbarflatblue2"];
     [[UINavigationBar appearance] setBackgroundImage:navBackgroundImage forBarMetrics:UIBarMetricsDefault];
     //[[UINavigationBar appearance] setBarTintColor:UIColorFromRGB(0x3[[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     }
@@ -106,13 +106,13 @@ int iNotificationCounter=0;
         [[UIBarButtonItem appearance] setBackButtonBackgroundImage:backButtonImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
     }
 //    
-    UIImage* tabBarBackground = [UIImage imageNamed:@"tabbarflatgrey.png"];
+    UIImage* tabBarBackground = [UIImage imageNamed:@"tabbarflatblue.png"];
     [[UITabBar appearance] setBackgroundImage:tabBarBackground];
     
     [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
                                                        [UIColor whiteColor], UITextAttributeTextColor,
                                                        nil] forState:UIControlStateNormal];
-    UIColor *titleHighlightedColor = [UIColor /*whiteColor*/colorWithRed:247/255.0 green:185/255.0 blue:15/255.0 alpha:1.0];
+    UIColor *titleHighlightedColor = [UIColor /*whiteColor*/colorWithRed:52/255.0 green:105/255.0 blue:130/255.0 alpha:1.0];
     [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
                                                        titleHighlightedColor, UITextAttributeTextColor,
                                                        nil] forState:UIControlStateHighlighted];
@@ -120,11 +120,11 @@ int iNotificationCounter=0;
     
     
     [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
-                                                           [UIColor colorWithRed:247/255.0 green:185/255.0 blue:15/255.0 alpha:1.0], UITextAttributeTextColor,
+                                                           [UIColor colorWithRed:237/255.0 green:28/255.0 blue:36/255.0 alpha:1.0], UITextAttributeTextColor,
                                                            [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.8],UITextAttributeTextShadowColor,
                                                            [NSValue valueWithUIOffset:UIOffsetMake(0, 0)],UITextAttributeTextShadowOffset,
                                                            //[UIFont fontWithName:@"HelveticaNeue-CondensedBlack"
-                                                           [UIFont fontWithName:@"Arial"size:21.0], UITextAttributeFont, nil]];
+                                                           [UIFont fontWithName:@"Arial"size:20.0], UITextAttributeFont, nil]];
     
     if (SYSTEM_VERSION_LESS_THAN(@"7.0")) {
         UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;

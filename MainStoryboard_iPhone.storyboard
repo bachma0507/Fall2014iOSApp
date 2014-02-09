@@ -2094,7 +2094,7 @@ Note: Exams are not included in the course fees. Exam application and applicable
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="yF3-sx-bIE">
                                 <rect key="frame" x="16" y="6" width="68" height="67"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" image="confschedW14_icon.png">
+                                <state key="normal" image="confschedC14_icon.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -2109,7 +2109,7 @@ Note: Exams are not included in the course fees. Exam application and applicable
                                 <rect key="frame" x="10" y="70" width="86" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.50196078431372548" green="0.5607843137254902" blue="0.58823529411764708" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Uap-98-TY9">
@@ -2333,7 +2333,7 @@ Note: Exams are not included in the course fees. Exam application and applicable
             </objects>
             <point key="canvasLocation" x="-1172" y="-742"/>
         </scene>
-        <!--Custom Pager View Controller - 2014 BICSI Winter Conference-->
+        <!--Custom Pager View Controller - 2014 BICSI Canadian Conference-->
         <scene sceneID="Bhv-9j-9Zu">
             <objects>
                 <viewController storyboardIdentifier="CustomPagerViewController" id="Ss4-z7-BpY" customClass="CustomPagerViewController" sceneMemberID="viewController">
@@ -2360,7 +2360,7 @@ Note: Exams are not included in the course fees. Exam application and applicable
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationItem key="navigationItem" title="2014 BICSI Winter Conference" id="cM2-lq-2qT"/>
+                    <navigationItem key="navigationItem" title="2014 BICSI Canadian Conference" id="cM2-lq-2qT"/>
                     <connections>
                         <outlet property="pageControl" destination="EC6-Zq-3g6" id="5Qd-6J-3yU"/>
                         <outlet property="scrollView" destination="NdV-tY-Djg" id="sG7-TR-fi4"/>
@@ -3466,14 +3466,36 @@ Note: Exams are not included in the course fees. Exam application and applicable
     <resources>
         <image name="Rosen_hotel-iphone.png" width="217" height="145"/>
         <image name="add-notes.png" width="25" height="28"/>
+        <image name="add-notes.png" width="25" height="28"/>
+        <image name="add-notes.png" width="25" height="28"/>
+        <image name="add-notes.png" width="25" height="28"/>
         <image name="agendaW14_icon.png" width="50" height="50"/>
         <image name="backbutton-default.png" width="50" height="30"/>
         <image name="backbutton.png" width="50" height="30"/>
         <image name="button-green.png" width="111" height="27"/>
+        <image name="button-green.png" width="111" height="27"/>
+        <image name="button-green.png" width="111" height="27"/>
+        <image name="button-green.png" width="111" height="27"/>
+        <image name="button-green.png" width="111" height="27"/>
+        <image name="button-green.png" width="111" height="27"/>
+        <image name="button-green.png" width="111" height="27"/>
+        <image name="button-green.png" width="111" height="27"/>
+        <image name="button-green.png" width="111" height="27"/>
+        <image name="button-green.png" width="111" height="27"/>
+        <image name="button-green.png" width="111" height="27"/>
+        <image name="button-green.png" width="111" height="27"/>
+        <image name="button-green.png" width="111" height="27"/>
+        <image name="button-green.png" width="111" height="27"/>
+        <image name="button-green.png" width="111" height="27"/>
+        <image name="button-green.png" width="111" height="27"/>
+        <image name="button-green.png" width="111" height="27"/>
         <image name="cecW14_icon.png" width="50" height="50"/>
         <image name="committeeW14_icon.png" width="50" height="50"/>
-        <image name="confschedW14_icon.png" width="50" height="50"/>
+        <image name="confschedC14_icon.png" width="50" height="50"/>
         <image name="contactusW14_icon.png" width="50" height="50"/>
+        <image name="createuser_button.png" width="111" height="27"/>
+        <image name="createuser_button.png" width="111" height="27"/>
+        <image name="createuser_button.png" width="111" height="27"/>
         <image name="createuser_button.png" width="111" height="27"/>
         <image name="ehscheduleW14_icon.png" width="50" height="50"/>
         <image name="exhibitorsW14_icon.png" width="50" height="50"/>
@@ -3490,6 +3512,7 @@ Note: Exams are not included in the course fees. Exam application and applicable
         <image name="notesW14_icon.png" width="50" height="50"/>
         <image name="programW14_icon.png" width="50" height="50"/>
         <image name="reload30x30.png" width="30" height="30"/>
+        <image name="reload30x30.png" width="30" height="30"/>
         <image name="sessionsW14_icon.png" width="50" height="50"/>
         <image name="shutterstock_cec-ipad.png" width="205" height="128"/>
         <image name="shutterstock_contact-us-ipad.png" width="265" height="128"/>
@@ -3499,12 +3522,24 @@ Note: Exams are not included in the course fees. Exam application and applicable
         <image name="speakersW14_icon.png" width="50" height="50"/>
         <image name="sponsorsW14_icon.png" width="50" height="50"/>
         <image name="take-survey.png" width="25" height="26"/>
+        <image name="take-survey.png" width="25" height="26"/>
+        <image name="take-survey.png" width="25" height="26"/>
+        <image name="take-survey.png" width="25" height="26"/>
         <image name="techsupportW14_icon.png" width="50" height="50"/>
         <image name="trainingW14_icon.png" width="50" height="50"/>
         <image name="twitter.png" width="64" height="64"/>
         <image name="twitterfeed.png" width="270" height="50"/>
         <image name="twitterpost.png" width="270" height="50"/>
         <image name="updatedata_button.png" width="222" height="65"/>
+        <image name="updatedata_button.png" width="222" height="65"/>
+        <image name="updatedata_button.png" width="222" height="65"/>
+        <image name="updatedata_button.png" width="222" height="65"/>
+        <image name="updatedata_button.png" width="222" height="65"/>
+        <image name="updatedata_button.png" width="222" height="65"/>
+        <image name="updatedata_button.png" width="222" height="65"/>
+        <image name="updatedata_button.png" width="222" height="65"/>
+        <image name="view_website_icon.png" width="25" height="25"/>
+        <image name="view_website_icon.png" width="25" height="25"/>
         <image name="view_website_icon.png" width="25" height="25"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
