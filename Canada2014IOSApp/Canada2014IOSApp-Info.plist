@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>BICSI Winter 2014</string>
+	<string>BICSI Canada 2014</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIcons</key>
@@ -45,7 +45,7 @@
 		</dict>
 	</dict>
 	<key>CFBundleIdentifier</key>
-	<string>org.bicsi.winter2014app</string>
+	<string>org.bicsi.canada2014app</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>7.0.2</string>
 	<key>CFBundleName</key>

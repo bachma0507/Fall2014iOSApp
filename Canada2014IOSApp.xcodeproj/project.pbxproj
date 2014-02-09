@@ -650,16 +650,15 @@
 		4C28488117D2BB5600F6C6B2 /* confSchedDetailViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = confSchedDetailViewCell.m; sourceTree = "<group>"; };
 		4C2C717E182146F6008497F5 /* Rosen_hotel-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Rosen_hotel-ipad.png"; sourceTree = "<group>"; };
 		4C2C717F182146F6008497F5 /* Rosen_hotel-iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Rosen_hotel-iphone.png"; sourceTree = "<group>"; };
-		4C2D69F5174541100053BCC0 /* Winter2014IOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Winter2014IOSApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C2D69F5174541100053BCC0 /* Canada2014IOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Canada2014IOSApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C2D69F8174541100053BCC0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4C2D69FA174541100053BCC0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4C2D69FC174541100053BCC0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		4C2D6A00174541100053BCC0 /* Winter2014IOSApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Winter2014IOSApp-Info.plist"; sourceTree = "<group>"; };
+		4C2D6A00174541100053BCC0 /* Canada2014IOSApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Canada2014IOSApp-Info.plist"; sourceTree = "<group>"; };
 		4C2D6A02174541100053BCC0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4C2D6A04174541100053BCC0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		4C2D6A06174541100053BCC0 /* Winter2014IOSApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Winter2014IOSApp-Prefix.pch"; sourceTree = "<group>"; };
-		4C2D6A07174541100053BCC0 /* Fall2013IOSAppAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Fall2013IOSAppAppDelegate.h; path = Winter2014IOSApp/Fall2013IOSAppAppDelegate.h; sourceTree = "<group>"; };
-		4C2D6A08174541100053BCC0 /* Fall2013IOSAppAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Fall2013IOSAppAppDelegate.m; path = Winter2014IOSApp/Fall2013IOSAppAppDelegate.m; sourceTree = "<group>"; };
+		4C2D6A06174541100053BCC0 /* Canada2014IOSApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Canada2014IOSApp-Prefix.pch"; sourceTree = "<group>"; };
+		4C2D6A08174541100053BCC0 /* Fall2013IOSAppAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Fall2013IOSAppAppDelegate.m; path = Canada2014IOSApp/Fall2013IOSAppAppDelegate.m; sourceTree = "<group>"; };
 		4C2D6A16174541100053BCC0 /* Fall2013IOSAppViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Fall2013IOSAppViewController.h; sourceTree = "<group>"; };
 		4C2D6A17174541100053BCC0 /* Fall2013IOSAppViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Fall2013IOSAppViewController.m; sourceTree = "<group>"; };
 		4C2D6A33174697D80053BCC0 /* AppViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppViewController.h; sourceTree = "<group>"; };
@@ -700,12 +699,12 @@
 		4C3EC0CB17642618002E7415 /* SocialDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialDetailViewController.h; sourceTree = "<group>"; };
 		4C3EC0CC17642618002E7415 /* SocialDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialDetailViewController.m; sourceTree = "<group>"; };
 		4C3EC0CE1764287D002E7415 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
-		4C3EC0E117645CA9002E7415 /* socialItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = socialItems.h; path = Winter2014IOSApp/socialItems.h; sourceTree = "<group>"; };
-		4C3EC0E217645CAA002E7415 /* socialItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = socialItems.m; path = Winter2014IOSApp/socialItems.m; sourceTree = "<group>"; };
+		4C3EC0E117645CA9002E7415 /* socialItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = socialItems.h; path = Canada2014IOSApp/socialItems.h; sourceTree = "<group>"; };
+		4C3EC0E217645CAA002E7415 /* socialItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = socialItems.m; path = Canada2014IOSApp/socialItems.m; sourceTree = "<group>"; };
 		4C3FD796175BBEFE00B381AA /* InfoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoDetailViewController.h; sourceTree = "<group>"; };
 		4C3FD797175BBEFE00B381AA /* InfoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoDetailViewController.m; sourceTree = "<group>"; };
-		4C3FD799175BBFAC00B381AA /* infoItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = infoItems.h; path = Winter2014IOSApp/infoItems.h; sourceTree = "<group>"; };
-		4C3FD79A175BBFAC00B381AA /* infoItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = infoItems.m; path = Winter2014IOSApp/infoItems.m; sourceTree = "<group>"; };
+		4C3FD799175BBFAC00B381AA /* infoItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = infoItems.h; path = Canada2014IOSApp/infoItems.h; sourceTree = "<group>"; };
+		4C3FD79A175BBFAC00B381AA /* infoItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = infoItems.m; path = Canada2014IOSApp/infoItems.m; sourceTree = "<group>"; };
 		4C3FD7A8175BC94100B381AA /* tabbar_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_selected.png; sourceTree = "<group>"; };
 		4C3FD7A9175BC94100B381AA /* tabbar_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_selected@2x.png"; sourceTree = "<group>"; };
 		4C3FD7AE175BD22900B381AA /* tabbar_wide_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_wide_selected@2x.png"; sourceTree = "<group>"; };
@@ -720,8 +719,8 @@
 		4C43CE94174741A7008AAA9D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		4C43CE96174741B0008AAA9D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		4C43CE981747421A008AAA9D /* pushio_config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pushio_config.json; sourceTree = "<group>"; };
-		4C43CE9E17474E34008AAA9D /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = Winter2014IOSApp/Reachability.h; sourceTree = "<group>"; };
-		4C43CE9F17474E34008AAA9D /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = Winter2014IOSApp/Reachability.m; sourceTree = "<group>"; };
+		4C43CE9E17474E34008AAA9D /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = Canada2014IOSApp/Reachability.h; sourceTree = "<group>"; };
+		4C43CE9F17474E34008AAA9D /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = Canada2014IOSApp/Reachability.m; sourceTree = "<group>"; };
 		4C453BAE185BC51A00D57388 /* CSchedule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSchedule.h; sourceTree = "<group>"; };
 		4C453BAF185BC51A00D57388 /* CSchedule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSchedule.m; sourceTree = "<group>"; };
 		4C453BB1185CE10600D57388 /* Html.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Html.h; sourceTree = "<group>"; };
@@ -999,6 +998,7 @@
 		4CE1C00A1774DAA8000218CE /* HotelsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotelsViewController.m; sourceTree = "<group>"; };
 		4CE68DFD1765537C0082FA84 /* RNCachingURLProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNCachingURLProtocol.h; sourceTree = "<group>"; };
 		4CE68DFE176553880082FA84 /* RNCachingURLProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNCachingURLProtocol.m; sourceTree = "<group>"; };
+		4CE7B2D818A743DD0034A25C /* Fall2013IOSAppAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Fall2013IOSAppAppDelegate.h; path = Canada2014IOSApp/Fall2013IOSAppAppDelegate.h; sourceTree = "<group>"; };
 		4CF08410181ECCCF00FF6978 /* facebook_button_ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook_button_ipad.png; sourceTree = "<group>"; };
 		4CF08411181ECCCF00FF6978 /* facebook_button_568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "facebook_button_568h@2x.png"; sourceTree = "<group>"; };
 		4CF08412181ECCCF00FF6978 /* facebook_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "facebook_button@2x.png"; sourceTree = "<group>"; };
@@ -1189,7 +1189,7 @@
 			name = newMainViewImages;
 			sourceTree = "<group>";
 		};
-		4C23682217FB1007001843B4 /* winter2014appicons */ = {
+		4C23682217FB1007001843B4 /* canada2014appicons */ = {
 			isa = PBXGroup;
 			children = (
 				4CD6B5781821F8440014A51D /* findactivitiesW14_icon.png */,
@@ -1310,7 +1310,7 @@
 				4C23684C17FB1115001843B4 /* cecW14_icon_ipad.png */,
 				4C23684D17FB1115001843B4 /* cecW14_icon_ipad@2x.png */,
 			);
-			name = winter2014appicons;
+			name = canada2014appicons;
 			sourceTree = "<group>";
 		};
 		4C2D69EC174541100053BCC0 = {
@@ -1332,7 +1332,7 @@
 				4C48759D176CED9E00059E21 /* AppDelegates */,
 				4C48759C176CED7200059E21 /* Storyboards */,
 				4C3EC0D0176428A4002E7415 /* images */,
-				4C2D69FE174541100053BCC0 /* Winter2014IOSApp */,
+				4C2D69FE174541100053BCC0 /* Canada2014IOSApp */,
 				4C2D69F7174541100053BCC0 /* Frameworks */,
 				4C2D69F6174541100053BCC0 /* Products */,
 			);
@@ -1341,7 +1341,7 @@
 		4C2D69F6174541100053BCC0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4C2D69F5174541100053BCC0 /* Winter2014IOSApp.app */,
+				4C2D69F5174541100053BCC0 /* Canada2014IOSApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1377,7 +1377,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		4C2D69FE174541100053BCC0 /* Winter2014IOSApp */ = {
+		4C2D69FE174541100053BCC0 /* Canada2014IOSApp */ = {
 			isa = PBXGroup;
 			children = (
 				4CCB78DD1843B65700D9D1C6 /* CEC */,
@@ -1408,7 +1408,7 @@
 				4CCB78DF1843B67400D9D1C6 /* Training&Exams */,
 				4CCB78ED1843B99600D9D1C6 /* UnusedViewControllers */,
 			);
-			path = Winter2014IOSApp;
+			path = Canada2014IOSApp;
 			sourceTree = "<group>";
 		};
 		4C2D69FF174541100053BCC0 /* Supporting Files */ = {
@@ -1423,10 +1423,10 @@
 				4C246219178C95D800F0165B /* contact.html */,
 				4C246210178C772D00F0165B /* web.css */,
 				4C43CE981747421A008AAA9D /* pushio_config.json */,
-				4C2D6A00174541100053BCC0 /* Winter2014IOSApp-Info.plist */,
+				4C2D6A00174541100053BCC0 /* Canada2014IOSApp-Info.plist */,
 				4C2D6A01174541100053BCC0 /* InfoPlist.strings */,
 				4C2D6A04174541100053BCC0 /* main.m */,
-				4C2D6A06174541100053BCC0 /* Winter2014IOSApp-Prefix.pch */,
+				4C2D6A06174541100053BCC0 /* Canada2014IOSApp-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -1462,7 +1462,7 @@
 		4C3EC0D0176428A4002E7415 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				4CBDD4931848DA47007A9002 /* win14sponsorimages */,
+				4CBDD4931848DA47007A9002 /* canada14sponsorimages */,
 				4C8F683C18330CD3007D7CA3 /* comm_meetings_icon_ipad.png */,
 				4C2C717E182146F6008497F5 /* Rosen_hotel-ipad.png */,
 				4C2C717F182146F6008497F5 /* Rosen_hotel-iphone.png */,
@@ -1487,7 +1487,7 @@
 				4CF08414181ECCCF00FF6978 /* facebook_button_ipad@2x.png */,
 				4C5A85671800926F00378976 /* navbarflatgrey2.png */,
 				4C2368FA17FB79D3001843B4 /* backbutton-default.png */,
-				4C23682217FB1007001843B4 /* winter2014appicons */,
+				4C23682217FB1007001843B4 /* canada2014appicons */,
 				4C76B09B17F91B1B0017E71E /* tabbarflatgrey.png */,
 				4C76B09C17F91B1B0017E71E /* navbarflatgrey.png */,
 				4C156C1917D7E909008919A9 /* reload30x30.png */,
@@ -1549,7 +1549,7 @@
 		4C48759D176CED9E00059E21 /* AppDelegates */ = {
 			isa = PBXGroup;
 			children = (
-				4C2D6A07174541100053BCC0 /* Fall2013IOSAppAppDelegate.h */,
+				4CE7B2D818A743DD0034A25C /* Fall2013IOSAppAppDelegate.h */,
 				4C2D6A08174541100053BCC0 /* Fall2013IOSAppAppDelegate.m */,
 			);
 			name = AppDelegates;
@@ -1563,6 +1563,7 @@
 				4CDBDA5017A5DDF6006CF14F /* appalert.xcdatamodeld */,
 			);
 			name = DataModel;
+			path = Canada2014IOSApp;
 			sourceTree = "<group>";
 		};
 		4C48759F176CEDE200059E21 /* classes */ = {
@@ -1635,7 +1636,7 @@
 			name = backgnd;
 			sourceTree = "<group>";
 		};
-		4CBDD4931848DA47007A9002 /* win14sponsorimages */ = {
+		4CBDD4931848DA47007A9002 /* canada14sponsorimages */ = {
 			isa = PBXGroup;
 			children = (
 				4C0427381854AB6500C5FCBE /* com_cables_bronze.png */,
@@ -1667,7 +1668,7 @@
 				4CBDD4AD1848DA70007A9002 /* hyperline_gold.png */,
 				4CBDD4AE1848DA70007A9002 /* dymo_diamond.png */,
 			);
-			name = win14sponsorimages;
+			name = canada14sponsorimages;
 			sourceTree = "<group>";
 		};
 		4CC882EF1807ADDF000E30CE /* StackMob-v1.4.0 */ = {
@@ -2131,9 +2132,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4C2D69F4174541100053BCC0 /* Winter2014IOSApp */ = {
+		4C2D69F4174541100053BCC0 /* Canada2014IOSApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4C2D6A1B174541100053BCC0 /* Build configuration list for PBXNativeTarget "Winter2014IOSApp" */;
+			buildConfigurationList = 4C2D6A1B174541100053BCC0 /* Build configuration list for PBXNativeTarget "Canada2014IOSApp" */;
 			buildPhases = (
 				4C2D69F1174541100053BCC0 /* Sources */,
 				4C2D69F2174541100053BCC0 /* Frameworks */,
@@ -2143,9 +2144,9 @@
 			);
 			dependencies = (
 			);
-			name = Winter2014IOSApp;
+			name = Canada2014IOSApp;
 			productName = Fall2013IOSApp;
-			productReference = 4C2D69F5174541100053BCC0 /* Winter2014IOSApp.app */;
+			productReference = 4C2D69F5174541100053BCC0 /* Canada2014IOSApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -2163,7 +2164,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4C2D69F0174541100053BCC0 /* Build configuration list for PBXProject "Winter2014IOSApp" */;
+			buildConfigurationList = 4C2D69F0174541100053BCC0 /* Build configuration list for PBXProject "Canada2014IOSApp" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -2182,7 +2183,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4C2D69F4174541100053BCC0 /* Winter2014IOSApp */,
+				4C2D69F4174541100053BCC0 /* Canada2014IOSApp */,
 			);
 		};
 /* End PBXProject section */
@@ -2703,8 +2704,8 @@
 					"/Users/barry/Desktop/appbackup/Testing\\ Code/Winter\\ App\\ iOS\\ 7/101213\\ -\\ testing\\ code/Winter2014IOSApp",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Winter2014IOSApp/Winter2014IOSApp-Prefix.pch";
-				INFOPLIST_FILE = "Winter2014IOSApp/Winter2014IOSApp-Info.plist";
+				GCC_PREFIX_HEADER = "Canada2014IOSApp/Canada2014IOSApp-Prefix.pch";
+				INFOPLIST_FILE = "Canada2014IOSApp/Canada2014IOSApp-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/barry/Desktop/appbackup/Testing\\ Code/Winter\\ App\\ iOS\\ 7/101013\\ -\\ testing\\ code\\ -\\ crittercism\\ upg/Winter2014IOSApp/CrittercismSDK",
@@ -2712,7 +2713,7 @@
 					"/Users/barry/Desktop/appbackup/Testing\\ Code/Winter\\ App\\ iOS\\ 7/110813\\ -\\ testing\\ code\\ -\\ TestFlight\\ SDK/Winter2014IOSApp/TestFlightSDK2.0.2",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = Winter2014IOSApp;
+				PRODUCT_NAME = Canada2014IOSApp;
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -2729,8 +2730,8 @@
 					"/Users/barry/Desktop/appbackup/Testing\\ Code/Winter\\ App\\ iOS\\ 7/101213\\ -\\ testing\\ code/Winter2014IOSApp",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Winter2014IOSApp/Winter2014IOSApp-Prefix.pch";
-				INFOPLIST_FILE = "Winter2014IOSApp/Winter2014IOSApp-Info.plist";
+				GCC_PREFIX_HEADER = "Canada2014IOSApp/Canada2014IOSApp-Prefix.pch";
+				INFOPLIST_FILE = "Canada2014IOSApp/Canada2014IOSApp-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/barry/Desktop/appbackup/Testing\\ Code/Winter\\ App\\ iOS\\ 7/101013\\ -\\ testing\\ code\\ -\\ crittercism\\ upg/Winter2014IOSApp/CrittercismSDK",
@@ -2738,7 +2739,7 @@
 					"/Users/barry/Desktop/appbackup/Testing\\ Code/Winter\\ App\\ iOS\\ 7/110813\\ -\\ testing\\ code\\ -\\ TestFlight\\ SDK/Winter2014IOSApp/TestFlightSDK2.0.2",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = Winter2014IOSApp;
+				PRODUCT_NAME = Canada2014IOSApp;
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -2747,7 +2748,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4C2D69F0174541100053BCC0 /* Build configuration list for PBXProject "Winter2014IOSApp" */ = {
+		4C2D69F0174541100053BCC0 /* Build configuration list for PBXProject "Canada2014IOSApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4C2D6A19174541100053BCC0 /* Debug */,
@@ -2756,7 +2757,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4C2D6A1B174541100053BCC0 /* Build configuration list for PBXNativeTarget "Winter2014IOSApp" */ = {
+		4C2D6A1B174541100053BCC0 /* Build configuration list for PBXNativeTarget "Canada2014IOSApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4C2D6A1C174541100053BCC0 /* Debug */,

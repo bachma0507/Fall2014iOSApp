@@ -54,7 +54,7 @@ int iNotificationCounter=0;
 
     // Setup TestFlight
     [TestFlight setDeviceIdentifier:[[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString]];
-    [TestFlight takeOff:@"0d8f4bf6-83f8-4323-8aeb-f4218d54898e"];
+    [TestFlight takeOff:@"8425b2ed-652c-496e-b506-d0ce6243cc76"];
     
     // Use this option to notifiy beta users of any updates
     [TestFlight setOptions:@{ TFOptionDisableInAppUpdates : @YES }];
@@ -65,7 +65,7 @@ int iNotificationCounter=0;
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
    
-    [Crittercism enableWithAppID: @"52430288d0d8f75147000004"];
+    [Crittercism enableWithAppID: @"52f7167d97c8f24e8f000002"];
     
     [PFFacebookUtils initializeFacebook];
     

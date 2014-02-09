@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>5714E809-3F21-4082-B8DD-CB6DB18F2D59</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Canada2014IOSApp</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>A0E93C96-C33D-4489-8B1B-8946C70AC351</key>
+		<string>https://github.com/bachma0507/Winter2014IOSApp.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Canada2014IOSApp.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>A0E93C96-C33D-4489-8B1B-8946C70AC351</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/bachma0507/Winter2014IOSApp.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>A0E93C96-C33D-4489-8B1B-8946C70AC351</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>A0E93C96-C33D-4489-8B1B-8946C70AC351</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Canada2014IOSApp</string>
+		</dict>
+	</array>
+</dict>
+</plist>
