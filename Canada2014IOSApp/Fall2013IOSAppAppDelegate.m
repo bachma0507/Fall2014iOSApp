@@ -106,13 +106,13 @@ int iNotificationCounter=0;
         [[UIBarButtonItem appearance] setBackButtonBackgroundImage:backButtonImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
     }
 //    
-    UIImage* tabBarBackground = [UIImage imageNamed:@"tabbarflatblue.png"];
+    UIImage* tabBarBackground = [UIImage imageNamed:@"tabbarflatdarkblue.png"];
     [[UITabBar appearance] setBackgroundImage:tabBarBackground];
     
     [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
                                                        [UIColor whiteColor], UITextAttributeTextColor,
                                                        nil] forState:UIControlStateNormal];
-    UIColor *titleHighlightedColor = [UIColor /*whiteColor*/colorWithRed:52/255.0 green:105/255.0 blue:130/255.0 alpha:1.0];
+    UIColor *titleHighlightedColor = [UIColor /*whiteColor*/colorWithRed:255/255.0 green:214/255.0 blue:203/255.0 alpha:1.0];
     [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
                                                        titleHighlightedColor, UITextAttributeTextColor,
                                                        nil] forState:UIControlStateHighlighted];
