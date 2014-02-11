@@ -205,7 +205,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="mRc-ye-etm">
                                 <rect key="frame" x="240" y="180" width="50" height="50"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" image="techsupportW14_icon.png">
+                                <state key="normal" image="techsupportC14-icon-400x400_icon.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -219,13 +219,13 @@
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" text="Email Tech Support" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dVv-ii-TRQ">
                                 <rect key="frame" x="219" y="258" width="92" height="39"/>
                                 <fontDescription key="fontDescription" name="Lato-Hairline" family="Lato" pointSize="13"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.50196078430000002" green="0.56078431370000004" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="HJz-dU-f6d">
                                 <rect key="frame" x="16" y="23" width="55" height="44"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" image="cecW14_icon.png">
+                                <state key="normal" image="cecC14-icon-400x400_icon.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -240,13 +240,13 @@
                                 <rect key="frame" x="8" y="67" width="75" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Lato-Hairline" family="Lato" pointSize="13"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.50196078430000002" green="0.56078431370000004" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="UKV-xU-Znr">
                                 <rect key="frame" x="121" y="23" width="64" height="50"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" image="contactusW14_icon.png">
+                                <state key="normal" image="contactusC14-icon-400x400_icon.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -261,13 +261,13 @@
                                 <rect key="frame" x="116" y="75" width="75" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Lato-Hairline" family="Lato" pointSize="13"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.50196078430000002" green="0.56078431370000004" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="dfw-dd-b3s">
                                 <rect key="frame" x="240" y="23" width="50" height="50"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Button" image="trainingW14_icon.png">
+                                <state key="normal" title="Button" image="trainingC14-icon-400x400_icon.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -282,13 +282,13 @@
                                 <rect key="frame" x="228" y="81" width="75" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Lato-Hairline" family="Lato" pointSize="13"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.50196078430000002" green="0.56078431370000004" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="RI0-MN-Oe9">
                                 <rect key="frame" x="20" y="180" width="50" height="50"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" image="committeeW14_icon.png">
+                                <state key="normal" image="committeeC14-icon-400x400_icon.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -302,19 +302,19 @@
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" text="Committee Meetings" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5he-2P-ahR">
                                 <rect key="frame" x="4" y="257" width="83" height="33"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.50196078430000002" green="0.56078431370000004" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" text="Hotel Information" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7DS-l4-dqE">
                                 <rect key="frame" x="115" y="254" width="76" height="39"/>
                                 <fontDescription key="fontDescription" name="Lato-Hairline" family="Lato" pointSize="13"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.50196078430000002" green="0.56078431370000004" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="o5W-yd-PEu">
                                 <rect key="frame" x="128" y="180" width="50" height="50"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Button" image="hotelW14_icon.png">
+                                <state key="normal" title="Button" image="hotelC14-icon-400x400_icon.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -328,7 +328,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="iI5-b0-71U">
                                 <rect key="frame" x="25" y="349" width="42" height="50"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" image="floorplanW14_icon.png">
+                                <state key="normal" image="floorplanC14-icon-400x400_icon.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -342,19 +342,19 @@
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" text="Exhibit Hall Floor Plan" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kmW-BX-Ouw">
                                 <rect key="frame" x="8" y="423" width="85" height="39"/>
                                 <fontDescription key="fontDescription" name="Lato-Hairline" family="Lato" pointSize="13"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.50196078430000002" green="0.56078431370000004" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" text="Conference Program (PDF)" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XOb-st-3gP">
                                 <rect key="frame" x="105" y="423" width="96" height="37"/>
                                 <fontDescription key="fontDescription" name="Lato-Hairline" family="Lato" pointSize="13"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.50196078430000002" green="0.56078431370000004" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="KxR-Rg-OFV">
                                 <rect key="frame" x="128" y="349" width="50" height="50"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" image="programW14_icon.png">
+                                <state key="normal" image="programC14-icon-400x400_icon.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -377,7 +377,7 @@
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" text="Find Area Activities" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RsM-ud-dak">
                                 <rect key="frame" x="223" y="423" width="85" height="39"/>
                                 <fontDescription key="fontDescription" name="Lato-Hairline" family="Lato" pointSize="13"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.50196078430000002" green="0.56078431370000004" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -2115,7 +2115,7 @@ Note: Exams are not included in the course fees. Exam application and applicable
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Uap-98-TY9">
                                 <rect key="frame" x="137" y="6" width="50" height="73"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" image="speakersW14_icon.png">
+                                <state key="normal" image="speakersC14_icon.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -2130,13 +2130,13 @@ Note: Exams are not included in the course fees. Exam application and applicable
                                 <rect key="frame" x="136" y="75" width="68" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Lato-Hairline" family="Lato" pointSize="7"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.50196078430000002" green="0.56078431370000004" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="qhN-jT-LoJ">
                                 <rect key="frame" x="233" y="10" width="59" height="55"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" image="ehscheduleW14_icon.png">
+                                <state key="normal" image="ehscheduleC14-400x400_icon.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -2151,13 +2151,13 @@ Note: Exams are not included in the course fees. Exam application and applicable
                                 <rect key="frame" x="214" y="70" width="97" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Lato-Hairline" family="Lato" pointSize="13"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.50196078430000002" green="0.56078431370000004" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hYj-ea-Wd7">
                                 <rect key="frame" x="21" y="124" width="55" height="56"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" image="sponsorsW14_icon.png">
+                                <state key="normal" image="sponsorsC14-400x400_icon.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -2171,13 +2171,13 @@ Note: Exams are not included in the course fees. Exam application and applicable
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Sponsors" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2y5-1u-eqQ">
                                 <rect key="frame" x="7" y="188" width="77" height="18"/>
                                 <fontDescription key="fontDescription" name="Lato-Hairline" family="Lato" pointSize="12"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.50196078430000002" green="0.56078431370000004" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="nby-5E-d22">
                                 <rect key="frame" x="233" y="127" width="55" height="44"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" image="exhibitorsW14_icon.png">
+                                <state key="normal" image="exhibitorsC14-400x400_icon.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -2191,13 +2191,13 @@ Note: Exams are not included in the course fees. Exam application and applicable
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Exhibitors" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vZG-xe-uD7">
                                 <rect key="frame" x="230" y="188" width="70" height="18"/>
                                 <fontDescription key="fontDescription" name="Lato-Hairline" family="Lato" pointSize="13"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.50196078430000002" green="0.56078431370000004" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="iF5-h5-5hh">
                                 <rect key="frame" x="136" y="125" width="50" height="50"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" image="sessionsW14_icon.png">
+                                <state key="normal" image="sessionsC14-400x400_icon.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -2211,13 +2211,13 @@ Note: Exams are not included in the course fees. Exam application and applicable
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" text="Session Information" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XPv-7F-VIt">
                                 <rect key="frame" x="115" y="181" width="87" height="37"/>
                                 <fontDescription key="fontDescription" name="Lato-Hairline" family="Lato" pointSize="13"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.50196078430000002" green="0.56078431370000004" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="81H-U4-621">
                                 <rect key="frame" x="133" y="242" width="50" height="50"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" image="notesW14_icon.png">
+                                <state key="normal" image="notesC14-400x400_icon.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -2231,13 +2231,13 @@ Note: Exams are not included in the course fees. Exam application and applicable
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" text="My Session Notes" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Jzf-u9-kMC">
                                 <rect key="frame" x="119" y="300" width="82" height="35"/>
                                 <fontDescription key="fontDescription" name="Lato-Hairline" family="Lato" pointSize="13"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.50196078430000002" green="0.56078431370000004" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="rJC-SI-sf8">
                                 <rect key="frame" x="235" y="242" width="50" height="50"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" image="agendaW14_icon.png">
+                                <state key="normal" image="agendaC14-400x400_icon.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -2251,13 +2251,13 @@ Note: Exams are not included in the course fees. Exam application and applicable
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" text="My Session Planner" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mbW-mM-ww5">
                                 <rect key="frame" x="222" y="300" width="76" height="35"/>
                                 <fontDescription key="fontDescription" name="Lato-Hairline" family="Lato" pointSize="13"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.50196078430000002" green="0.56078431370000004" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="wBe-hG-p3N">
                                 <rect key="frame" x="28" y="242" width="50" height="50"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" image="favoritesW14_icon.png">
+                                <state key="normal" image="favoritesC14-400x400_icon.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -2271,7 +2271,7 @@ Note: Exams are not included in the course fees. Exam application and applicable
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" text="My Favorite Exhibitors" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GEE-4i-PcX">
                                 <rect key="frame" x="16" y="299" width="81" height="35"/>
                                 <fontDescription key="fontDescription" name="Lato-Hairline" family="Lato" pointSize="13"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.50196078430000002" green="0.56078431370000004" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="oIL-uS-u1o">
@@ -3466,45 +3466,80 @@ Note: Exams are not included in the course fees. Exam application and applicable
     <resources>
         <image name="Rosen_hotel-iphone.png" width="217" height="145"/>
         <image name="add-notes.png" width="25" height="28"/>
-        <image name="agendaW14_icon.png" width="50" height="50"/>
+        <image name="add-notes.png" width="25" height="28"/>
+        <image name="add-notes.png" width="25" height="28"/>
+        <image name="add-notes.png" width="25" height="28"/>
+        <image name="agendaC14-400x400_icon.png" width="50" height="50"/>
         <image name="backbutton-default.png" width="50" height="30"/>
         <image name="backbutton.png" width="50" height="30"/>
         <image name="button-green.png" width="111" height="27"/>
-        <image name="cecW14_icon.png" width="50" height="50"/>
-        <image name="committeeW14_icon.png" width="50" height="50"/>
+        <image name="button-green.png" width="111" height="27"/>
+        <image name="button-green.png" width="111" height="27"/>
+        <image name="button-green.png" width="111" height="27"/>
+        <image name="button-green.png" width="111" height="27"/>
+        <image name="button-green.png" width="111" height="27"/>
+        <image name="button-green.png" width="111" height="27"/>
+        <image name="button-green.png" width="111" height="27"/>
+        <image name="button-green.png" width="111" height="27"/>
+        <image name="button-green.png" width="111" height="27"/>
+        <image name="button-green.png" width="111" height="27"/>
+        <image name="button-green.png" width="111" height="27"/>
+        <image name="button-green.png" width="111" height="27"/>
+        <image name="button-green.png" width="111" height="27"/>
+        <image name="button-green.png" width="111" height="27"/>
+        <image name="button-green.png" width="111" height="27"/>
+        <image name="button-green.png" width="111" height="27"/>
+        <image name="cecC14-icon-400x400_icon.png" width="50" height="50"/>
+        <image name="committeeC14-icon-400x400_icon.png" width="50" height="50"/>
         <image name="confschedC14_icon.png" width="50" height="50"/>
-        <image name="contactusW14_icon.png" width="50" height="50"/>
+        <image name="contactusC14-icon-400x400_icon.png" width="50" height="50"/>
         <image name="createuser_button.png" width="111" height="27"/>
-        <image name="ehscheduleW14_icon.png" width="50" height="50"/>
-        <image name="exhibitorsW14_icon.png" width="50" height="50"/>
+        <image name="createuser_button.png" width="111" height="27"/>
+        <image name="createuser_button.png" width="111" height="27"/>
+        <image name="createuser_button.png" width="111" height="27"/>
+        <image name="ehscheduleC14-400x400_icon.png" width="50" height="50"/>
+        <image name="exhibitorsC14-400x400_icon.png" width="50" height="50"/>
         <image name="facebook.png" width="64" height="64"/>
         <image name="facebook_button.png" width="111" height="27"/>
         <image name="facebookpost.png" width="270" height="50"/>
-        <image name="favoritesW14_icon.png" width="50" height="50"/>
+        <image name="favoritesC14-400x400_icon.png" width="50" height="50"/>
         <image name="findactivitiesW14_icon.png" width="50" height="50"/>
-        <image name="floorplanW14_icon.png" width="50" height="50"/>
+        <image name="floorplanC14-icon-400x400_icon.png" width="50" height="50"/>
         <image name="home_tab_icon_unselected.png" width="22" height="22"/>
-        <image name="hotelW14_icon.png" width="50" height="50"/>
+        <image name="hotelC14-icon-400x400_icon.png" width="50" height="50"/>
         <image name="mybicsi_tab_icon_unselected.png" width="22" height="22"/>
         <image name="news_tab_icon_unselected.png" width="22" height="22"/>
-        <image name="notesW14_icon.png" width="50" height="50"/>
-        <image name="programW14_icon.png" width="50" height="50"/>
+        <image name="notesC14-400x400_icon.png" width="50" height="50"/>
+        <image name="programC14-icon-400x400_icon.png" width="50" height="50"/>
         <image name="reload30x30.png" width="30" height="30"/>
-        <image name="sessionsW14_icon.png" width="50" height="50"/>
+        <image name="reload30x30.png" width="30" height="30"/>
+        <image name="sessionsC14-400x400_icon.png" width="50" height="50"/>
         <image name="shutterstock_cec-ipad.png" width="205" height="128"/>
         <image name="shutterstock_contact-us-ipad.png" width="265" height="128"/>
         <image name="shutterstock_meeting-ipad.png" width="232" height="174"/>
         <image name="shutterstock_training-ipad.png" width="397" height="298"/>
         <image name="social_tab_icon_unselected.png" width="22" height="22"/>
-        <image name="speakersW14_icon.png" width="50" height="50"/>
-        <image name="sponsorsW14_icon.png" width="50" height="50"/>
+        <image name="speakersC14_icon.png" width="50" height="50"/>
+        <image name="sponsorsC14-400x400_icon.png" width="50" height="50"/>
         <image name="take-survey.png" width="25" height="26"/>
-        <image name="techsupportW14_icon.png" width="50" height="50"/>
-        <image name="trainingW14_icon.png" width="50" height="50"/>
+        <image name="take-survey.png" width="25" height="26"/>
+        <image name="take-survey.png" width="25" height="26"/>
+        <image name="take-survey.png" width="25" height="26"/>
+        <image name="techsupportC14-icon-400x400_icon.png" width="50" height="50"/>
+        <image name="trainingC14-icon-400x400_icon.png" width="50" height="50"/>
         <image name="twitter.png" width="64" height="64"/>
         <image name="twitterfeed.png" width="270" height="50"/>
         <image name="twitterpost.png" width="270" height="50"/>
         <image name="updatedata_button.png" width="222" height="65"/>
+        <image name="updatedata_button.png" width="222" height="65"/>
+        <image name="updatedata_button.png" width="222" height="65"/>
+        <image name="updatedata_button.png" width="222" height="65"/>
+        <image name="updatedata_button.png" width="222" height="65"/>
+        <image name="updatedata_button.png" width="222" height="65"/>
+        <image name="updatedata_button.png" width="222" height="65"/>
+        <image name="updatedata_button.png" width="222" height="65"/>
+        <image name="view_website_icon.png" width="25" height="25"/>
+        <image name="view_website_icon.png" width="25" height="25"/>
         <image name="view_website_icon.png" width="25" height="25"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
