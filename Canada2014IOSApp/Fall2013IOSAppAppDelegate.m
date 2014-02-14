@@ -698,6 +698,7 @@ int iNotificationCounter=0;
                     
                     //Add our sessions object to our sessionsArray
                     [sessionsArray addObject:mySessions];
+                    NSLog(@"Sessions array count: %lu", (unsigned long)sessionsArray.count);
                     
                     NSManagedObjectContext *context = [self managedObjectContext];
                     
@@ -756,6 +757,7 @@ int iNotificationCounter=0;
                             NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
                         }
                         NSLog(@"You created a new Session object!");
+                        //NSLog(@"Object created sessionName is: %@",mySessions.sessionName);
                     }
                     
                     

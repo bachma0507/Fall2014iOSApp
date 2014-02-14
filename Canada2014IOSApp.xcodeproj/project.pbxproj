@@ -391,6 +391,12 @@
 		4C894E1918AAB17B00001623 /* trainingC14-icon-400x400_icon-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C894E1818AAB17B00001623 /* trainingC14-icon-400x400_icon-568h@2x.png */; };
 		4C894E1B18AAB18500001623 /* trainingC14-icon-400x400_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C894E1A18AAB18500001623 /* trainingC14-icon-400x400_icon@2x.png */; };
 		4C894E1D18AAB18F00001623 /* trainingC14-icon-400x400_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C894E1C18AAB18F00001623 /* trainingC14-icon-400x400_icon.png */; };
+		4C894E1F18AD461E00001623 /* findactvitiesC14-icon-400x400_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C894E1E18AD461E00001623 /* findactvitiesC14-icon-400x400_icon.png */; };
+		4C894E2118AD506C00001623 /* findactvitiesC14-icon-400x400_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C894E2018AD506C00001623 /* findactvitiesC14-icon-400x400_icon@2x.png */; };
+		4C894E2318AD507700001623 /* findactvitiesC14-icon-400x400_icon-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C894E2218AD507700001623 /* findactvitiesC14-icon-400x400_icon-568h@2x.png */; };
+		4C894E2518AD508300001623 /* findactvitiesC14-icon-400x400_icon_ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C894E2418AD508300001623 /* findactvitiesC14-icon-400x400_icon_ipad.png */; };
+		4C894E2718AD50A000001623 /* findactvitiesC14-icon-400x400_icon_ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C894E2618AD50A000001623 /* findactvitiesC14-icon-400x400_icon_ipad@2x.png */; };
+		4C894E2B18AD821E00001623 /* HotelWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C894E2A18AD821E00001623 /* HotelWebViewController.m */; };
 		4C8A8348177B7CC100022E03 /* exhibitors.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8A8347177B7CC100022E03 /* exhibitors.m */; };
 		4C8A834B177B7ECF00022E03 /* ExhibitorsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8A834A177B7ECF00022E03 /* ExhibitorsViewController.m */; };
 		4C8A834E177B80B800022E03 /* ExhibitorsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8A834D177B80B800022E03 /* ExhibitorsDetailViewController.m */; };
@@ -1004,6 +1010,13 @@
 		4C894E1818AAB17B00001623 /* trainingC14-icon-400x400_icon-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trainingC14-icon-400x400_icon-568h@2x.png"; sourceTree = "<group>"; };
 		4C894E1A18AAB18500001623 /* trainingC14-icon-400x400_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trainingC14-icon-400x400_icon@2x.png"; sourceTree = "<group>"; };
 		4C894E1C18AAB18F00001623 /* trainingC14-icon-400x400_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trainingC14-icon-400x400_icon.png"; sourceTree = "<group>"; };
+		4C894E1E18AD461E00001623 /* findactvitiesC14-icon-400x400_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "findactvitiesC14-icon-400x400_icon.png"; sourceTree = "<group>"; };
+		4C894E2018AD506C00001623 /* findactvitiesC14-icon-400x400_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "findactvitiesC14-icon-400x400_icon@2x.png"; sourceTree = "<group>"; };
+		4C894E2218AD507700001623 /* findactvitiesC14-icon-400x400_icon-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "findactvitiesC14-icon-400x400_icon-568h@2x.png"; sourceTree = "<group>"; };
+		4C894E2418AD508300001623 /* findactvitiesC14-icon-400x400_icon_ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "findactvitiesC14-icon-400x400_icon_ipad.png"; sourceTree = "<group>"; };
+		4C894E2618AD50A000001623 /* findactvitiesC14-icon-400x400_icon_ipad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "findactvitiesC14-icon-400x400_icon_ipad@2x.png"; sourceTree = "<group>"; };
+		4C894E2918AD821E00001623 /* HotelWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotelWebViewController.h; sourceTree = "<group>"; };
+		4C894E2A18AD821E00001623 /* HotelWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotelWebViewController.m; sourceTree = "<group>"; };
 		4C8A8346177B7CC100022E03 /* exhibitors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = exhibitors.h; sourceTree = "<group>"; };
 		4C8A8347177B7CC100022E03 /* exhibitors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = exhibitors.m; sourceTree = "<group>"; };
 		4C8A8349177B7ECF00022E03 /* ExhibitorsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExhibitorsViewController.h; sourceTree = "<group>"; };
@@ -1559,6 +1572,7 @@
 		4C2D69FE174541100053BCC0 /* Canada2014IOSApp */ = {
 			isa = PBXGroup;
 			children = (
+				4C894E2818AD548800001623 /* hotelWebview */,
 				4CCB78DD1843B65700D9D1C6 /* CEC */,
 				4CCB78EA1843B90300D9D1C6 /* CommitteeMeetings */,
 				4CCB78E41843B85900D9D1C6 /* ConferenceSchedule */,
@@ -1860,6 +1874,7 @@
 		4C894CF718AAAE6C00001623 /* 50 */ = {
 			isa = PBXGroup;
 			children = (
+				4C894E1E18AD461E00001623 /* findactvitiesC14-icon-400x400_icon.png */,
 				4C894E1C18AAB18F00001623 /* trainingC14-icon-400x400_icon.png */,
 				4C894CF818AAAE6C00001623 /* agendaC14-400x400_icon.png */,
 				4C894CF918AAAE6C00001623 /* cecC14-icon-400x400_icon.png */,
@@ -1882,6 +1897,7 @@
 		4C894D1418AAAE6C00001623 /* 100 */ = {
 			isa = PBXGroup;
 			children = (
+				4C894E2018AD506C00001623 /* findactvitiesC14-icon-400x400_icon@2x.png */,
 				4C894E1A18AAB18500001623 /* trainingC14-icon-400x400_icon@2x.png */,
 				4C894D1518AAAE6C00001623 /* agendaC14-400x400_icon@2x.png */,
 				4C894D1618AAAE6C00001623 /* cecC14-icon-400x400_icon@2x.png */,
@@ -1904,6 +1920,7 @@
 		4C894D3118AAAE6C00001623 /* 118 */ = {
 			isa = PBXGroup;
 			children = (
+				4C894E2218AD507700001623 /* findactvitiesC14-icon-400x400_icon-568h@2x.png */,
 				4C894E1818AAB17B00001623 /* trainingC14-icon-400x400_icon-568h@2x.png */,
 				4C894D3218AAAE6C00001623 /* agendaC14-400x400_icon-568h@2x.png */,
 				4C894D3318AAAE6C00001623 /* cecC14-icon-400x400_icon-568h@2x.png */,
@@ -1926,6 +1943,7 @@
 		4C894D4E18AAAE6C00001623 /* 120 */ = {
 			isa = PBXGroup;
 			children = (
+				4C894E2418AD508300001623 /* findactvitiesC14-icon-400x400_icon_ipad.png */,
 				4C894E1618AAB17200001623 /* trainingC14-icon-400x400_icon_ipad.png */,
 				4C894D4F18AAAE6C00001623 /* agendaC14-400x400_icon_ipad.png */,
 				4C894D5018AAAE6C00001623 /* cecC14-icon-400x400_icon_ipad.png */,
@@ -1948,6 +1966,7 @@
 		4C894D6B18AAAE6C00001623 /* 240 */ = {
 			isa = PBXGroup;
 			children = (
+				4C894E2618AD50A000001623 /* findactvitiesC14-icon-400x400_icon_ipad@2x.png */,
 				4C894E1418AAB16900001623 /* trainingC14-icon-400x400_icon_ipad@2x.png */,
 				4C894D6C18AAAE6C00001623 /* agendaC14-400x400_icon_ipad@2x.png */,
 				4C894D6D18AAAE6C00001623 /* cecC14-icon-400x400_icon_ipad@2x.png */,
@@ -1965,6 +1984,15 @@
 				4C894D7918AAAE6C00001623 /* techsupportC14-icon-400x400_icon_ipad@2x.png */,
 			);
 			path = 240;
+			sourceTree = "<group>";
+		};
+		4C894E2818AD548800001623 /* hotelWebview */ = {
+			isa = PBXGroup;
+			children = (
+				4C894E2918AD821E00001623 /* HotelWebViewController.h */,
+				4C894E2A18AD821E00001623 /* HotelWebViewController.m */,
+			);
+			name = hotelWebview;
 			sourceTree = "<group>";
 		};
 		4C8E884F182C248C001204D9 /* TestFlightSDK2.0.2 */ = {
@@ -2657,11 +2685,13 @@
 				4CF824BC1767C6B4005739AD /* facebookpost.png in Resources */,
 				4C894DAC18AAAE6C00001623 /* hotelC14-icon-400x400_icon@2x.png in Resources */,
 				4C894CBE18A80D8300001623 /* Default-Portrait~ipad.png in Resources */,
+				4C894E1F18AD461E00001623 /* findactvitiesC14-icon-400x400_icon.png in Resources */,
 				4C2368A117FB114E001843B4 /* notesW14_icon_ipad.png in Resources */,
 				4C894CCC18A812DA00001623 /* navbarflatblue2.png in Resources */,
 				4CF824BD1767C6B4005739AD /* twitterpost.png in Resources */,
 				4C2368B617FB114E001843B4 /* ehscheduleW14_icon_ipad@2x.png in Resources */,
 				4CF824C01767D14E005739AD /* twitter.png in Resources */,
+				4C894E2518AD508300001623 /* findactvitiesC14-icon-400x400_icon_ipad.png in Resources */,
 				4CF824C11767D14E005739AD /* facebook.png in Resources */,
 				4CAA50121767F96B00FB11F2 /* backbutton_green.png in Resources */,
 				4C2368A317FB114E001843B4 /* favoritesW14_icon.png in Resources */,
@@ -2704,6 +2734,7 @@
 				4CCD3F6E1777F811002E11DC /* SVWebViewController.strings in Resources */,
 				4C23689E17FB114E001843B4 /* notesW14_icon.png in Resources */,
 				4CCD3F701777F811002E11DC /* SVWebViewController.bundle in Resources */,
+				4C894E2118AD506C00001623 /* findactvitiesC14-icon-400x400_icon@2x.png in Resources */,
 				4C76B09017F91A9A0017E71E /* social_tab_icon_unselected.png in Resources */,
 				4CBDD4B41848DA70007A9002 /* free_axez.png in Resources */,
 				4C894D9118AAAE6C00001623 /* notesC14-400x400_icon.png in Resources */,
@@ -2761,6 +2792,7 @@
 				4C23689C17FB114E001843B4 /* agendaW14_icon_ipad.png in Resources */,
 				4C2368FB17FB79D3001843B4 /* backbutton-default.png in Resources */,
 				4C2368AA17FB114E001843B4 /* exhibitorsW14_icon-568h@2x.png in Resources */,
+				4C894E2318AD507700001623 /* findactvitiesC14-icon-400x400_icon-568h@2x.png in Resources */,
 				4C2368B517FB114E001843B4 /* ehscheduleW14_icon_ipad.png in Resources */,
 				4CD6B57F1821F8440014A51D /* findactivitiesW14_icon-568h@2x.png in Resources */,
 				4C894CBB18A80D8300001623 /* Default-iOS7-Portrait@2x~ipad.png in Resources */,
@@ -2796,6 +2828,7 @@
 				4C894CCB18A812DA00001623 /* navbarflatblue-568h@2x.png in Resources */,
 				4C23689A17FB114E001843B4 /* agendaW14_icon@2x.png in Resources */,
 				4C894E1918AAB17B00001623 /* trainingC14-icon-400x400_icon-568h@2x.png in Resources */,
+				4C894E2718AD50A000001623 /* findactvitiesC14-icon-400x400_icon_ipad@2x.png in Resources */,
 				4C23684E17FB1115001843B4 /* techsupportW14_icon.png in Resources */,
 				4C23685617FB1115001843B4 /* programW14_icon_ipad.png in Resources */,
 				4C894CF418A96E6D00001623 /* speakersC14_icon-568h@2x.png in Resources */,
@@ -2929,6 +2962,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C894E2B18AD821E00001623 /* HotelWebViewController.m in Sources */,
 				4C2D6A05174541100053BCC0 /* main.m in Sources */,
 				4C2D6A09174541100053BCC0 /* Fall2013IOSAppAppDelegate.m in Sources */,
 				4C2D6A18174541100053BCC0 /* Fall2013IOSAppViewController.m in Sources */,
