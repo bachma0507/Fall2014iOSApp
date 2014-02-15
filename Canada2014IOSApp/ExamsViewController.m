@@ -65,4 +65,18 @@
     activity.hidden = TRUE;
 }
 
+-(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType;
+{
+    NSURL *requestURL =[ request URL ];
+    if ( ( [ [ requestURL scheme ] isEqualToString: @"http" ] || [ [ requestURL scheme ] isEqualToString: @"https" ] || [ [ requestURL scheme ] isEqualToString: @"mailto" ])
+        && ( navigationType == UIWebViewNavigationTypeLinkClicked ) ) {
+        return ![ [ UIApplication sharedApplication ] openURL: requestURL];
+        //SVWebViewController *webViewController = [[SVWebViewController alloc] initWithURL:requestURL];
+        //[self.navigationController pushViewController:webViewController animated:YES];
+    }
+    //[ requestURL release ];
+    return YES;
+}
+
+
 @end

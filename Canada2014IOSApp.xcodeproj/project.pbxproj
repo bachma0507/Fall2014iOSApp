@@ -403,6 +403,7 @@
 		4C894E3418AE5F9300001623 /* navbarflatwhite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C894E2F18AE5F9300001623 /* navbarflatwhite@2x.png */; };
 		4C894E3518AE5F9300001623 /* navbarflatwhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C894E3018AE5F9300001623 /* navbarflatwhite.png */; };
 		4C894E3718AE614E00001623 /* navbarflatwhite2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C894E3618AE614E00001623 /* navbarflatwhite2.png */; };
+		4C894E3A18AFE6E400001623 /* ComMeetingsMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C894E3918AFE6E400001623 /* ComMeetingsMainViewController.m */; };
 		4C8A8348177B7CC100022E03 /* exhibitors.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8A8347177B7CC100022E03 /* exhibitors.m */; };
 		4C8A834B177B7ECF00022E03 /* ExhibitorsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8A834A177B7ECF00022E03 /* ExhibitorsViewController.m */; };
 		4C8A834E177B80B800022E03 /* ExhibitorsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8A834D177B80B800022E03 /* ExhibitorsDetailViewController.m */; };
@@ -1029,6 +1030,8 @@
 		4C894E2F18AE5F9300001623 /* navbarflatwhite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navbarflatwhite@2x.png"; sourceTree = "<group>"; };
 		4C894E3018AE5F9300001623 /* navbarflatwhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navbarflatwhite.png; sourceTree = "<group>"; };
 		4C894E3618AE614E00001623 /* navbarflatwhite2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navbarflatwhite2.png; sourceTree = "<group>"; };
+		4C894E3818AFE6E400001623 /* ComMeetingsMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComMeetingsMainViewController.h; sourceTree = "<group>"; };
+		4C894E3918AFE6E400001623 /* ComMeetingsMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComMeetingsMainViewController.m; sourceTree = "<group>"; };
 		4C8A8346177B7CC100022E03 /* exhibitors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = exhibitors.h; sourceTree = "<group>"; };
 		4C8A8347177B7CC100022E03 /* exhibitors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = exhibitors.m; sourceTree = "<group>"; };
 		4C8A8349177B7ECF00022E03 /* ExhibitorsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExhibitorsViewController.h; sourceTree = "<group>"; };
@@ -1584,7 +1587,6 @@
 		4C2D69FE174541100053BCC0 /* Canada2014IOSApp */ = {
 			isa = PBXGroup;
 			children = (
-				4C894E2818AD548800001623 /* hotelWebview */,
 				4CCB78DD1843B65700D9D1C6 /* CEC */,
 				4CCB78EA1843B90300D9D1C6 /* CommitteeMeetings */,
 				4CCB78E41843B85900D9D1C6 /* ConferenceSchedule */,
@@ -1594,6 +1596,7 @@
 				4CCB78DE1843B66400D9D1C6 /* Exhibitors */,
 				4CCB78E81843B8DC00D9D1C6 /* FindAreaActivities */,
 				4CCB78DB1843B5FB00D9D1C6 /* Hotel */,
+				4C894E2818AD548800001623 /* hotelWebview */,
 				4CCB78E71843B8BC00D9D1C6 /* iPadGallery */,
 				4CCB78E61843B8AC00D9D1C6 /* iPhoneGallery */,
 				4CCB78E91843B8F500D9D1C6 /* LocateOnMap */,
@@ -2407,6 +2410,8 @@
 			children = (
 				4C17369C1835255B00B1D2E5 /* ComitteeMeetingsViewController.h */,
 				4C17369D1835255B00B1D2E5 /* ComitteeMeetingsViewController.m */,
+				4C894E3818AFE6E400001623 /* ComMeetingsMainViewController.h */,
+				4C894E3918AFE6E400001623 /* ComMeetingsMainViewController.m */,
 			);
 			name = CommitteeMeetings;
 			sourceTree = "<group>";
@@ -2997,6 +3002,7 @@
 				4CA2F58A1757819000C5474C /* ListViewController.m in Sources */,
 				4C3FD798175BBEFE00B381AA /* InfoDetailViewController.m in Sources */,
 				4C3FD79B175BBFAC00B381AA /* infoItems.m in Sources */,
+				4C894E3A18AFE6E400001623 /* ComMeetingsMainViewController.m in Sources */,
 				4CA7023D175FCB0600820E7B /* PlistViewController.m in Sources */,
 				4C3EC0CA17642207002E7415 /* SocialViewController.m in Sources */,
 				4C3EC0CD17642619002E7415 /* SocialDetailViewController.m in Sources */,

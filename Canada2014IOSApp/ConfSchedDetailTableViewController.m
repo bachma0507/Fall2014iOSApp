@@ -165,12 +165,14 @@
     
     [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"sessionDate == %@",cschedule.date]];
     
+    
     NSLog(@"cshedule date in refreshtable is: %@",cschedule.date);
     
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"startTime" ascending:YES];
     NSArray *sortDescriptors = [NSArray arrayWithObjects:sortDescriptor, nil];
     
     [fetchRequest setSortDescriptors:sortDescriptors];
+    
     
     NSArray *myResults = [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
     
