@@ -13,7 +13,7 @@
 @end
 
 @implementation ExamsViewController
-@synthesize webView;
+@synthesize webView, activity;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -34,15 +34,35 @@
     UIBarButtonItem *backButtonItem = [[UIBarButtonItem alloc] initWithTitle:@" " style:UIBarButtonItemStylePlain target:nil action:nil];
     self.navigationItem.backBarButtonItem = backButtonItem;
     
-    NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"trainingExams.html" ofType:nil]];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    [webView loadRequest:request];
+    webView.delegate = self;
+    
+//    NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"trainingExams.html" ofType:nil]];
+//    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+//    [webView loadRequest:request];
+    
+    NSString *httpSource = @"http://speedyreference.com/bicsiappcms/exams.html";
+    NSURL *fullUrl = [NSURL URLWithString:httpSource];
+    NSURLRequest *httpRequest = [NSURLRequest requestWithURL:fullUrl];
+    [webView loadRequest:httpRequest];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)webViewDidStartLoad:(UIWebView *)WebView
+{
+    [activity startAnimating];
+    
+    
+}
+
+-(void)webViewDidFinishLoad:(UIWebView *)WebView
+{
+    [activity stopAnimating];
+    activity.hidden = TRUE;
 }
 
 @end

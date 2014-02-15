@@ -20,6 +20,6 @@
 
 
 @property (strong, nonatomic) IBOutlet UIWebView *webView;
-//@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activity;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activity;
 
 @end

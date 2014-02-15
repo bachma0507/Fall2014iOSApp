@@ -13,7 +13,7 @@
 @end
 
 @implementation CECInfoViewController
-@synthesize webView,json, htmlArray, objects;
+@synthesize webView,json, htmlArray, objects, activity;
 
 
 
@@ -54,22 +54,19 @@
    // NSString *myURL = [[NSString alloc] initWithFormat:@"%@", [object valueForKey:@"url"]];
     //NSLog(@"Value for URL is: %@",myURL);
     
-    //webView.delegate = self;
+    webView.delegate = self;
     
     
-    NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"cec.html" ofType:nil]];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    [webView loadRequest:request];
+//    NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"cec.html" ofType:nil]];
+//    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+//    [webView loadRequest:request];
     
-//    NSString *httpSource = @"http://speedyreference.com/bicsiappcms/cec.html";
-//    NSURL *fullUrl = [NSURL URLWithString:httpSource];
-//    NSURLRequest *httpRequest = [NSURLRequest requestWithURL:fullUrl];
-//    [webView loadRequest:httpRequest];
+    NSString *httpSource = @"http://speedyreference.com/bicsiappcms/cec.html";
+    NSURL *fullUrl = [NSURL URLWithString:httpSource];
+    NSURLRequest *httpRequest = [NSURLRequest requestWithURL:fullUrl];
+    [webView loadRequest:httpRequest];
     
-//    NSString *httpSource = myURL;
-//    NSURL *fullUrl = [NSURL URLWithString:httpSource];
-//    NSURLRequest *httpRequest = [NSURLRequest requestWithURL:fullUrl];
-//    [webView loadRequest:httpRequest];
+
 }
 
 //-(void)getURL
@@ -102,18 +99,18 @@
     // Dispose of any resources that can be recreated.
 }
 
-//-(void)webViewDidStartLoad:(UIWebView *)WebView
-//{
-//    [activity startAnimating];
-//    
-//    
-//}
-//
-//-(void)webViewDidFinishLoad:(UIWebView *)WebView
-//{
-//    [activity stopAnimating];
-//    activity.hidden = TRUE;
-//}
+-(void)webViewDidStartLoad:(UIWebView *)WebView
+{
+    [activity startAnimating];
+    
+    
+}
+
+-(void)webViewDidFinishLoad:(UIWebView *)WebView
+{
+    [activity stopAnimating];
+    activity.hidden = TRUE;
+}
 
 @end
 

@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ExamsViewController : UIViewController
+@interface ExamsViewController : UIViewController <UIWebViewDelegate>
 @property (strong, nonatomic) IBOutlet UIWebView *webView;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activity;
 
 @end
