@@ -1431,7 +1431,7 @@
                                 <rect key="frame" x="50" y="64" width="217" height="145"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GIw-11-Onz">
-                                <rect key="frame" x="84" y="1" width="148" height="44"/>
+                                <rect key="frame" x="84" y="0.99999999999999989" width="148" height="44"/>
                                 <string key="text">Rosen Shingle Creek 9939 Universal Blvd  Orlando, FL 32819
 (407) 996-9933</string>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
@@ -1581,14 +1581,14 @@ If you have any questions, please do not hesitate to contact bicsi@bicsi.org.
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nBi-qS-IHh">
-                                                    <rect key="frame" x="15" y="13" width="34" height="22"/>
+                                                    <rect key="frame" x="15" y="16" width="27" height="16"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sqH-R0-nc2">
-                                                    <rect key="frame" x="15" y="35" width="43" height="15"/>
+                                                    <rect key="frame" x="15" y="32" width="43" height="15"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -2593,7 +2593,7 @@ Note: Exams are not included in the course fees. Exam application and applicable
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="9gr-SM-gTf">
-                                <rect key="frame" x="20" y="1" width="50" height="50"/>
+                                <rect key="frame" x="20" y="0.99999999999999989" width="50" height="50"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Presentations" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uqx-JN-0PA">
                                 <rect key="frame" x="20" y="216" width="83" height="21"/>
@@ -3437,7 +3437,7 @@ Note: Exams are not included in the course fees. Exam application and applicable
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NvZ-Lk-HoN">
-                                <rect key="frame" x="20" y="19.000000003940006" width="280" height="20"/>
+                                <rect key="frame" x="20" y="19" width="280" height="20"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.40000000000000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -3542,36 +3542,14 @@ Note: Exams are not included in the course fees. Exam application and applicable
     <resources>
         <image name="Rosen_hotel-iphone.png" width="217" height="145"/>
         <image name="add-notes.png" width="25" height="28"/>
-        <image name="add-notes.png" width="25" height="28"/>
-        <image name="add-notes.png" width="25" height="28"/>
-        <image name="add-notes.png" width="25" height="28"/>
         <image name="agendaC14-400x400_icon.png" width="50" height="50"/>
         <image name="backbutton-default.png" width="50" height="30"/>
         <image name="backbutton.png" width="50" height="30"/>
-        <image name="button-green.png" width="111" height="27"/>
-        <image name="button-green.png" width="111" height="27"/>
-        <image name="button-green.png" width="111" height="27"/>
-        <image name="button-green.png" width="111" height="27"/>
-        <image name="button-green.png" width="111" height="27"/>
-        <image name="button-green.png" width="111" height="27"/>
-        <image name="button-green.png" width="111" height="27"/>
-        <image name="button-green.png" width="111" height="27"/>
-        <image name="button-green.png" width="111" height="27"/>
-        <image name="button-green.png" width="111" height="27"/>
-        <image name="button-green.png" width="111" height="27"/>
-        <image name="button-green.png" width="111" height="27"/>
-        <image name="button-green.png" width="111" height="27"/>
-        <image name="button-green.png" width="111" height="27"/>
-        <image name="button-green.png" width="111" height="27"/>
-        <image name="button-green.png" width="111" height="27"/>
         <image name="button-green.png" width="111" height="27"/>
         <image name="cecC14-icon-400x400_icon.png" width="50" height="50"/>
         <image name="committeeC14-icon-400x400_icon.png" width="50" height="50"/>
         <image name="confschedC14_icon.png" width="50" height="50"/>
         <image name="contactusC14-icon-400x400_icon.png" width="50" height="50"/>
-        <image name="createuser_button.png" width="111" height="27"/>
-        <image name="createuser_button.png" width="111" height="27"/>
-        <image name="createuser_button.png" width="111" height="27"/>
         <image name="createuser_button.png" width="111" height="27"/>
         <image name="ehscheduleC14-400x400_icon.png" width="50" height="50"/>
         <image name="exhibitorsC14-400x400_icon.png" width="50" height="50"/>
@@ -3588,7 +3566,6 @@ Note: Exams are not included in the course fees. Exam application and applicable
         <image name="notesC14-400x400_icon.png" width="50" height="50"/>
         <image name="programC14-icon-400x400_icon.png" width="50" height="50"/>
         <image name="reload30x30.png" width="30" height="30"/>
-        <image name="reload30x30.png" width="30" height="30"/>
         <image name="sessionsC14-400x400_icon.png" width="50" height="50"/>
         <image name="shutterstock_cec-ipad.png" width="205" height="128"/>
         <image name="shutterstock_contact-us-ipad.png" width="265" height="128"/>
@@ -3598,21 +3575,12 @@ Note: Exams are not included in the course fees. Exam application and applicable
         <image name="speakersC14_icon.png" width="50" height="50"/>
         <image name="sponsorsC14-400x400_icon.png" width="50" height="50"/>
         <image name="take-survey.png" width="25" height="26"/>
-        <image name="take-survey.png" width="25" height="26"/>
-        <image name="take-survey.png" width="25" height="26"/>
-        <image name="take-survey.png" width="25" height="26"/>
         <image name="techsupportC14-icon-400x400_icon.png" width="50" height="50"/>
         <image name="trainingC14-icon-400x400_icon.png" width="50" height="50"/>
         <image name="twitter.png" width="64" height="64"/>
         <image name="twitterfeed.png" width="270" height="50"/>
         <image name="twitterpost.png" width="270" height="50"/>
         <image name="updatedata_button.png" width="222" height="65"/>
-        <image name="updatedata_button.png" width="222" height="65"/>
-        <image name="updatedata_button.png" width="222" height="65"/>
-        <image name="updatedata_button.png" width="222" height="65"/>
-        <image name="updatedata_button.png" width="222" height="65"/>
-        <image name="view_website_icon.png" width="25" height="25"/>
-        <image name="view_website_icon.png" width="25" height="25"/>
         <image name="view_website_icon.png" width="25" height="25"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
