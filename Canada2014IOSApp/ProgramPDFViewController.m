@@ -29,7 +29,7 @@
 {
     [super viewDidLoad];
     
-    [TestFlight passCheckpoint:@"PDFProgram-info-viewed"];
+    [TestFlight passCheckpoint:@"PDFPresentations-info-viewed"];
     
     UIBarButtonItem *backButtonItem = [[UIBarButtonItem alloc] initWithTitle:@" " style:UIBarButtonItemStylePlain target:nil action:nil];
     self.navigationItem.backBarButtonItem = backButtonItem;
@@ -38,7 +38,7 @@
     
     webView.delegate = self;
     
-    NSString *httpSource = @"http://speedyreference.com/bicsiappcms/conferenceprogram.html";
+    NSString *httpSource = @"http://www.speedyreference.com/presentationspdf.html";
     NSURL *fullUrl = [NSURL URLWithString:httpSource];
     NSURLRequest *httpRequest = [NSURLRequest requestWithURL:fullUrl];
     [webView loadRequest:httpRequest];

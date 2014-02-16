@@ -146,7 +146,7 @@
             </objects>
             <point key="canvasLocation" x="1108" y="1684"/>
         </scene>
-        <!--ProgramPDF View Controller - Conference Program-->
+        <!--ProgramPDF View Controller - Presentations-->
         <scene sceneID="8J5-ia-wtG">
             <objects>
                 <viewController id="24Z-AG-khO" customClass="ProgramPDFViewController" sceneMemberID="viewController">
@@ -174,7 +174,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationItem key="navigationItem" title="Conference Program" id="qxv-SE-4a1"/>
+                    <navigationItem key="navigationItem" title="Presentations" id="qxv-SE-4a1"/>
                     <connections>
                         <outlet property="activity" destination="e6e-wx-cGg" id="ILf-3D-ea9"/>
                         <outlet property="webView" destination="wgu-3R-5v6" id="NV9-Mq-eJf"/>
@@ -345,7 +345,7 @@
                                 <color key="textColor" red="0.50196078430000002" green="0.56078431370000004" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" text="Conference Program (PDF)" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XOb-st-3gP">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" text="Presentations (PDF)" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XOb-st-3gP">
                                 <rect key="frame" x="105" y="423" width="96" height="37"/>
                                 <fontDescription key="fontDescription" name="Lato-Hairline" family="Lato" pointSize="13"/>
                                 <color key="textColor" red="0.50196078430000002" green="0.56078431370000004" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
