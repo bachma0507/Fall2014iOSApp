@@ -116,6 +116,8 @@
     
     [fetchRequest setEntity:entity];
     
+    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"series CONTAINS 'CAN'"]];
+    
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"series" ascending:YES];
     NSArray *sortDescriptors = [NSArray arrayWithObjects:sortDescriptor, nil];
     

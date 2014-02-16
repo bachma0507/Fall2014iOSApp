@@ -38,7 +38,7 @@
     
     webView.delegate = self;
     
-    NSString *httpSource = @"http://www.speedyreference.com/presentationspdf.html";
+    NSString *httpSource = @"http://www.speedyreference.com/bicsiappcms/presentationspdf.html";
     NSURL *fullUrl = [NSURL URLWithString:httpSource];
     NSURLRequest *httpRequest = [NSURLRequest requestWithURL:fullUrl];
     [webView loadRequest:httpRequest];
