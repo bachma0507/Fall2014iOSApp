@@ -1431,7 +1431,7 @@
                                 <rect key="frame" x="50" y="64" width="217" height="145"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GIw-11-Onz">
-                                <rect key="frame" x="84" y="0.99999999999999989" width="148" height="44"/>
+                                <rect key="frame" x="84" y="1" width="148" height="44"/>
                                 <string key="text">Rosen Shingle Creek 9939 Universal Blvd  Orlando, FL 32819
 (407) 996-9933</string>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
@@ -1522,7 +1522,7 @@ If you have any questions, please do not hesitate to contact bicsi@bicsi.org.
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aaG-ry-CNn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3029" y="-1981"/>
+            <point key="canvasLocation" x="2979" y="-2061"/>
         </scene>
         <!--Contact Us View Controller - Contact Us-->
         <scene sceneID="h4k-ZR-0tc">
@@ -1576,7 +1576,7 @@ If you have any questions, please do not hesitate to contact bicsi@bicsi.org.
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="nBi-qS-IHh" detailTextLabel="sqH-R0-nc2" rowHeight="64" style="IBUITableViewCellStyleSubtitle" id="l1X-Sq-FMh">
                                         <rect key="frame" x="0.0" y="22" width="320" height="64"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="l1X-Sq-FMh">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="l1X-Sq-FMh" id="Q21-zu-Q89">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="63"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -1876,7 +1876,7 @@ Note: Exams are not included in the course fees. Exam application and applicable
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eHP-y2-LQm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2486" y="240"/>
+            <point key="canvasLocation" x="2082" y="60"/>
         </scene>
         <!--Exhibitors Detail View Controller-->
         <scene sceneID="Sae-KV-tv8">
@@ -2998,7 +2998,7 @@ Note: Exams are not included in the course fees. Exam application and applicable
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iCK-EN-nu4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1648" y="-1606"/>
+            <point key="canvasLocation" x="1730" y="-1867"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Pqw-qy-8fU">

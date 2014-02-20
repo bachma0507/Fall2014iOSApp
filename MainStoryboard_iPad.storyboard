@@ -214,7 +214,7 @@
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translucent="NO" id="eN5-0b-6xF">
                                 <rect key="frame" x="0.0" y="20" width="768" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask"/>
                                 <items>
                                     <navigationItem title="My BICSI" id="wwN-ak-eZZ">
                                         <barButtonItem key="leftBarButtonItem" id="Vu2-nd-b8U">
@@ -248,7 +248,7 @@
                                 </items>
                             </navigationBar>
                             <webView contentMode="scaleToFill" id="vWd-9a-Rod">
-                                <rect key="frame" x="0.0" y="64" width="768" height="960"/>
+                                <rect key="frame" x="0.0" y="64" width="768" height="910"/>
                                 <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
@@ -576,7 +576,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="epH-4l-obW">
                                 <rect key="frame" x="55" y="30" width="120" height="120"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" image="confschedW14_icon_ipad.png">
+                                <state key="normal" image="confschedC14_icon_ipad.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -588,16 +588,16 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" text="Conference Schedule" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wFA-lK-zGn">
-                                <rect key="frame" x="70" y="158" width="92" height="36"/>
+                                <rect key="frame" x="70" y="158" width="92" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                <color key="textColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.50196078430000002" green="0.56078431370000004" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="tAo-ch-0kC">
                                 <rect key="frame" x="335" y="27" width="99" height="120"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" image="speakersW14_icon_ipad.png">
+                                <state key="normal" image="sponsorsC14-400x400_icon_ipad.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -612,13 +612,13 @@
                                 <rect key="frame" x="341" y="154" width="92" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                <color key="textColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.50196078430000002" green="0.56078431370000004" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Sk9-84-A9Z">
                                 <rect key="frame" x="596" y="30" width="120" height="117"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" image="ehscheduleW14_icon_ipad.png">
+                                <state key="normal" image="ehscheduleC14-400x400_icon_ipad.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -633,13 +633,13 @@
                                 <rect key="frame" x="618" y="155" width="92" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                <color key="textColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.50196078430000002" green="0.56078431370000004" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6B9-cQ-T41">
                                 <rect key="frame" x="55" y="261" width="120" height="120"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" image="sponsorsW14_icon_ipad.png">
+                                <state key="normal" image="sponsorsC14-400x400_icon_ipad.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -653,13 +653,13 @@
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" text="Sponsors" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wyw-Jm-KL1">
                                 <rect key="frame" x="70" y="399" width="92" height="33"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                <color key="textColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.50196078430000002" green="0.56078431370000004" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="sEK-PO-uyY">
                                 <rect key="frame" x="596" y="261" width="120" height="120"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" image="exhibitorsW14_icon_ipad.png">
+                                <state key="normal" image="exhibitorsC14-400x400_icon_ipad.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -673,13 +673,13 @@
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" text="Exhibitors" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iJb-wz-iuN">
                                 <rect key="frame" x="603" y="393" width="91" height="34"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                <color key="textColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.50196078430000002" green="0.56078431370000004" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="b5J-3R-amJ">
                                 <rect key="frame" x="323" y="268" width="120" height="120"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" image="sessionsW14_icon_ipad.png">
+                                <state key="normal" image="sessionsC14-400x400_icon_ipad.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -693,13 +693,13 @@
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" text="Session Information" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="A8M-42-Cbx">
                                 <rect key="frame" x="329" y="398" width="109" height="46"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.50196078430000002" green="0.56078431370000004" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="K5I-51-Jdh">
                                 <rect key="frame" x="324" y="505" width="120" height="122"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" image="notesW14_icon_ipad.png">
+                                <state key="normal" image="notesC14-400x400_icon_ipad.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -713,13 +713,13 @@
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" text="My Session Notes" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gAc-5C-7cx">
                                 <rect key="frame" x="338" y="630" width="100" height="55"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.50196078430000002" green="0.56078431370000004" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="fgY-8q-MTS">
                                 <rect key="frame" x="588" y="502" width="120" height="121"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" image="agendaW14_icon_ipad.png">
+                                <state key="normal" image="agendaC14-400x400_icon_ipad.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -733,13 +733,13 @@
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" text="My Session Planner" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QW0-Tl-hyd">
                                 <rect key="frame" x="602" y="626" width="104" height="55"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.50196078430000002" green="0.56078431370000004" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="TfX-VQ-MZb">
                                 <rect key="frame" x="334" y="718" width="120" height="120"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" image="committeeW14_icon_ipad.png">
+                                <state key="normal" image="committeeC14-icon-400x400_icon_ipad.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -753,13 +753,13 @@
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" text="Committee Meetings" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gJN-nZ-Yfl">
                                 <rect key="frame" x="351" y="858" width="92" height="39"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.50196078430000002" green="0.56078431370000004" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="DpZ-jc-dEG">
                                 <rect key="frame" x="589" y="720" width="120" height="120"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" image="trainingW14_icon_ipad.png">
+                                <state key="normal" image="trainingC14-icon-400x400_icon_ipad.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -773,13 +773,13 @@
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" text="Training &amp; Exams" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IYV-0r-TfG">
                                 <rect key="frame" x="567" y="853" width="162" height="31"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.50196078430000002" green="0.56078431370000004" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="GBN-za-eFx">
                                 <rect key="frame" x="70" y="720" width="120" height="120"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" image="cecW14_icon_ipad.png">
+                                <state key="normal" image="cecC14-icon-400x400_icon_ipad.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -793,13 +793,13 @@
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" text="CEC Information" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="l0A-8i-fAj">
                                 <rect key="frame" x="92" y="861" width="92" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.50196078430000002" green="0.56078431370000004" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="mew-uY-Hs8">
                                 <rect key="frame" x="55" y="502" width="120" height="120"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" image="favoritesW14_icon_ipad.png">
+                                <state key="normal" image="favoritesC14-400x400_icon_ipad.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -813,7 +813,7 @@
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" text="My Favorite Exhibitors" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iy6-Mq-uTb">
                                 <rect key="frame" x="47" y="630" width="137" height="55"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.50196078430000002" green="0.56078431370000004" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YO6-sl-BIM">
@@ -846,131 +846,67 @@
             </objects>
             <point key="canvasLocation" x="-1019" y="-2656"/>
         </scene>
-        <!--View Controller - Contact Us-->
+        <!--Contact Us View Controller - Contact Us-->
         <scene sceneID="Xaf-P2-GsH">
             <objects>
-                <viewController id="gUn-MR-zlh" sceneMemberID="viewController">
+                <viewController id="gUn-MR-zlh" customClass="ContactUsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JmU-Z7-T2K">
                         <rect key="frame" x="0.0" y="64" width="768" height="960"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" textAlignment="center" id="xcv-W5-cGC">
-                                <rect key="frame" x="0.0" y="204" width="768" height="756"/>
-                                <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <string key="text">BICSI World Headquarters
-8610 Hidden River Pkwy | Tampa, FL 33637 USA
-Tel: +1 813.979.1991
-Toll-free: 800.242.7405
-Fax: +1 813.979.4311
-Email: customerservice@bicsi.org
-
-Melanie Hughes Younger, CMP
-Director, Conferences and Events
-Tel: +1 813.903.4726 
-Email: myounger@bicsi.org
-Kim Osterman, CMP
-Manager, Conferences and Events 
-Tel: +1 813.769.1841 
-Email: kosterman@bicsi.org
-
-Barbara Fett 
-Primary Contact at The Expo Group 
-Tel: +1 972.751.9622 
-Email: b.fett@tegwwm.com
-
-IT Department
-Technical Support
-Tel: +1 813.979.1991
-Email: itdepartment@bicsi.org  </string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
-                            </textView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shutterstock_contact-us-ipad.png" id="hIp-54-RqU">
                                 <rect key="frame" x="252" y="27" width="265" height="128"/>
                             </imageView>
+                            <webView contentMode="scaleToFill" id="9um-G4-bm6">
+                                <rect key="frame" x="0.0" y="163" width="768" height="797"/>
+                                <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" id="wqf-Kx-059">
+                                <rect key="frame" x="366" y="543" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" red="0.0" green="0.40000000000000002" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="Contact Us" id="CzR-5x-g4k"/>
+                    <connections>
+                        <outlet property="activity" destination="wqf-Kx-059" id="OeA-WG-DLL"/>
+                        <outlet property="webView" destination="9um-G4-bm6" id="wMJ-5L-Esc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lXg-Rf-kwx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3472" y="2615"/>
         </scene>
-        <!--Hotels View Controller - Hotel Information-->
+        <!--Hotel Web View Controller - Hotel Information-->
         <scene sceneID="w2h-49-aGE">
             <objects>
-                <viewController id="jEi-Wo-bfI" customClass="HotelsViewController" sceneMemberID="viewController">
+                <viewController id="jEi-Wo-bfI" customClass="HotelWebViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pjs-5K-DO8">
                         <rect key="frame" x="0.0" y="64" width="768" height="960"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xxn-ui-uDv">
-                                <rect key="frame" x="324" y="499" width="120" height="44"/>
-                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="View Website" backgroundImage="updatedata_button.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="buttonPressed:" destination="jEi-Wo-bfI" eventType="touchUpInside" id="UhG-vN-NSS"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Reservation Data" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2Nk-xA-0fd">
-                                <rect key="frame" x="20" y="562" width="728" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Jli-4T-qMC">
-                                <rect key="frame" x="304" y="602" width="160" height="44"/>
-                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Make Reservations" backgroundImage="updatedata_button.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="resButtonPressed:" destination="jEi-Wo-bfI" eventType="touchUpInside" id="W0l-1q-oWX"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cr4-Dm-vCP">
-                                <rect key="frame" x="189" y="654" width="390" height="44"/>
-                                <state key="normal" title="ALERT: Beware of Unauthorized Hotel Solicitations">
-                                    <color key="titleColor" red="0.59999999999999998" green="0.0" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="Snm-hW-fU4" kind="push" id="u9j-UD-sC5"/>
-                                </connections>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" id="fyP-j6-zKb">
-                                <rect key="frame" x="21" y="706" width="728" height="218"/>
-                                <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="0.32000000000000001" colorSpace="calibratedRGB"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NyO-ER-k3d">
-                                <rect key="frame" x="282" y="20" width="204" height="87"/>
-                                <string key="text">Rosen Shingle Creek 9939 Universal Blvd  Orlando, FL 32819
-(407) 996-9933</string>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rosen_hotel-ipad.png" id="mFh-F4-Fu8">
-                                <rect key="frame" x="122" y="123" width="525" height="350"/>
-                            </imageView>
+                            <webView contentMode="scaleToFill" id="RdG-eh-0Vm">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="960"/>
+                                <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" id="Vvk-dK-5fe">
+                                <rect key="frame" x="366" y="461" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" red="0.0" green="0.40000000000000002" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="Hotel Information" id="jAR-pm-TF7"/>
                     <connections>
-                        <outlet property="hotelDescTextView" destination="fyP-j6-zKb" id="WV2-lD-uXJ"/>
-                        <outlet property="hotelImageView" destination="mFh-F4-Fu8" id="lyZ-M6-02i"/>
-                        <outlet property="resDateLabel" destination="2Nk-xA-0fd" id="UmC-BO-GXd"/>
+                        <outlet property="activity" destination="Vvk-dK-5fe" id="8wA-7J-iiX"/>
+                        <outlet property="webview" destination="RdG-eh-0Vm" id="86y-JP-0Gl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0ze-F8-Vxy" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -982,11 +918,11 @@ Email: itdepartment@bicsi.org  </string>
             <objects>
                 <viewController id="Snm-hW-fU4" customClass="AlertLineViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RNr-tL-bk3">
-                        <rect key="frame" x="0.0" y="64" width="768" height="960"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" id="SDN-HR-Rdh">
-                                <rect key="frame" x="0.0" y="49" width="768" height="911"/>
+                                <rect key="frame" x="0.0" y="113" width="768" height="911"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1132,7 +1068,7 @@ Email: itdepartment@bicsi.org  </string>
             <objects>
                 <viewController id="g1p-6n-HyR" customClass="CECTransitionViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Faw-e3-2bO">
-                        <rect key="frame" x="0.0" y="64" width="768" height="960"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" id="wM3-CU-8B9">
@@ -1141,7 +1077,7 @@ Email: itdepartment@bicsi.org  </string>
                                 <color key="color" red="0.0" green="0.40000000000000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" id="vDE-nR-BAC">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="960"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                                 <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">Effective September 15, 2012, the BICSI Board of Directors approved a change to the way continuing education credits (CECs) are awarded to BICSI credential holders. All BICSI CECs are now classified as "ITS CECs," CECs, when earned by credential holders, are now applied equally to all credentials and BICSI will no longer categorize CECs based on the nature of the information technology systems (ITS) content provided.
@@ -1291,7 +1227,7 @@ If you have any questions, please do not hesitate to contact bicsi@bicsi.org.</s
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="KJf-xH-3Am">
                                 <rect key="frame" x="324" y="46" width="120" height="122"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" image="techsupportW14_icon_ipad.png">
+                                <state key="normal" image="techsupportC14-icon-400x400_icon_ipad.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1305,19 +1241,19 @@ If you have any questions, please do not hesitate to contact bicsi@bicsi.org.</s
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" text="Email Tech Support" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sbW-W5-evC">
                                 <rect key="frame" x="333" y="183" width="92" height="40"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.50196078430000002" green="0.56078431370000004" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" text="Contact Us" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Wyp-I1-N21">
                                 <rect key="frame" x="81" y="178" width="92" height="34"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.50196078430000002" green="0.56078431370000004" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hCF-r8-Ybd">
                                 <rect key="frame" x="51" y="66" width="152" height="120"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" image="contactusW14_icon_ipad.png">
+                                <state key="normal" image="contactusC14-icon-400x400_icon_ipad.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1331,7 +1267,7 @@ If you have any questions, please do not hesitate to contact bicsi@bicsi.org.</s
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="M98-ea-LZy">
                                 <rect key="frame" x="597" y="48" width="120" height="120"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" image="hotelW14_icon_ipad.png">
+                                <state key="normal" image="hotelC14-icon-400x400_icon_ipad.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1345,13 +1281,13 @@ If you have any questions, please do not hesitate to contact bicsi@bicsi.org.</s
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" text="Hotel Information" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7UO-2Z-zeB">
                                 <rect key="frame" x="611" y="183" width="92" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                <color key="textColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.50196078430000002" green="0.56078431370000004" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="fhm-dD-Q2N">
                                 <rect key="frame" x="72" y="306" width="101" height="120"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" image="floorplanW14_icon_ipad.png">
+                                <state key="normal" image="floorplanC14-icon-400x400_icon_ipad.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1365,19 +1301,19 @@ If you have any questions, please do not hesitate to contact bicsi@bicsi.org.</s
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" text="Exhibit Hall Floor Plan" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bxZ-u7-pyx">
                                 <rect key="frame" x="81" y="450" width="92" height="42"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                <color key="textColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.50196078430000002" green="0.56078431370000004" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" text="Conference Program (PDF)" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="r39-5b-ssJ">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" text="Presentations (PDF)" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="r39-5b-ssJ">
                                 <rect key="frame" x="324" y="444" width="121" height="48"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.50196078430000002" green="0.56078431370000004" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="EmH-jD-9UH">
                                 <rect key="frame" x="324" y="306" width="120" height="120"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" image="programW14_icon_ipad.png">
+                                <state key="normal" image="programC14-icon-400x400_icon_ipad.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1390,7 +1326,7 @@ If you have any questions, please do not hesitate to contact bicsi@bicsi.org.</s
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="IaN-wd-jsb">
                                 <rect key="frame" x="583" y="306" width="120" height="120"/>
-                                <state key="normal" image="findactivitiesW14_icon_ipad.png">
+                                <state key="normal" image="favoritesC14-400x400_icon_ipad.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -1400,7 +1336,7 @@ If you have any questions, please do not hesitate to contact bicsi@bicsi.org.</s
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" text="Find Area Activities" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WRS-fY-NHz">
                                 <rect key="frame" x="597" y="450" width="92" height="42"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.50196078430000002" green="0.56078431370000004" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -1466,7 +1402,7 @@ If you have any questions, please do not hesitate to contact bicsi@bicsi.org.</s
             </objects>
             <point key="canvasLocation" x="420" y="586"/>
         </scene>
-        <!--ProgramPDF View Controller - Conference Program-->
+        <!--ProgramPDF View Controller - Presentations (PDF)-->
         <scene sceneID="S2H-oP-XQd">
             <objects>
                 <viewController id="A4P-tb-Qo8" customClass="ProgramPDFViewController" sceneMemberID="viewController">
@@ -1493,7 +1429,7 @@ If you have any questions, please do not hesitate to contact bicsi@bicsi.org.</s
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationItem key="navigationItem" title="Conference Program" id="R6N-3h-lkj"/>
+                    <navigationItem key="navigationItem" title="Presentations (PDF)" id="R6N-3h-lkj"/>
                     <connections>
                         <outlet property="activity" destination="sZA-BK-LOP" id="U1a-qb-GkA"/>
                         <outlet property="webView" destination="TcA-CJ-1Yg" id="geH-mk-SGj"/>
@@ -2450,7 +2386,7 @@ If you have any questions, please do not hesitate to contact bicsi@bicsi.org.</s
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="phone" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Tgb-jz-iWg">
-                                <rect key="frame" x="20" y="49" width="728" height="21"/>
+                                <rect key="frame" x="20" y="49.00000000761721" width="728" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -2489,42 +2425,28 @@ If you have any questions, please do not hesitate to contact bicsi@bicsi.org.</s
                         <rect key="frame" x="0.0" y="64" width="768" height="960"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" id="KcW-KS-CVw">
-                                <rect key="frame" x="0.0" y="330" width="768" height="248"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <string key="text">Get the most out of your trip to the 2014 Winter Conference &amp; Exhibition in Orlando, Florida! BICSI has scheduled multiple courses before and after the conference. Maximize your conference investment by attending a class and exam to attain a new credential and earn valuable CECs. For more information or to register for any courses or exams listed, please follow the links below. </string>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="22"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="KdG-Xq-TEr">
-                                <rect key="frame" x="270" y="586" width="85" height="44"/>
-                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Courses" backgroundImage="updatedata_button.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="ioe-ol-5oX" kind="push" id="MEM-NS-1Gt"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="C8A-UX-ORG">
-                                <rect key="frame" x="406" y="586" width="122" height="44"/>
-                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Examinations" backgroundImage="updatedata_button.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="sSX-Ya-TiO" kind="push" id="tHr-zy-hzH"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shutterstock_training-ipad.png" id="WEm-NS-nru">
                                 <rect key="frame" x="186" y="13" width="397" height="298"/>
                             </imageView>
+                            <webView contentMode="scaleToFill" id="q4v-Rq-PFJ">
+                                <rect key="frame" x="0.0" y="319" width="768" height="641"/>
+                                <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" id="bXj-Ha-F3S">
+                                <rect key="frame" x="366" y="621" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" red="0.0" green="0.40000000000000002" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="Training &amp; Exams" id="q5P-jL-MyJ"/>
+                    <connections>
+                        <outlet property="activity" destination="bXj-Ha-F3S" id="Ih0-Vn-9mW"/>
+                        <outlet property="webView" destination="q4v-Rq-PFJ" id="ISD-oA-ctP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U1E-dD-JXJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2535,7 +2457,7 @@ If you have any questions, please do not hesitate to contact bicsi@bicsi.org.</s
             <objects>
                 <viewController id="ioe-ol-5oX" customClass="CoursesViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KTJ-o5-ZLj">
-                        <rect key="frame" x="0.0" y="64" width="768" height="960"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" id="LVb-fT-Sb6">
@@ -2561,11 +2483,11 @@ If you have any questions, please do not hesitate to contact bicsi@bicsi.org.</s
             <objects>
                 <viewController id="sSX-Ya-TiO" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bFe-AP-dOU">
-                        <rect key="frame" x="0.0" y="64" width="768" height="960"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" id="Bhg-Wm-mLH">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="960"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                                 <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">Register today to earn your credentials while attending the 2014 Winter Conference &amp; Exhibition. RCDD®, RITP™, RTPM, DCDC, ESS and OSP Examinations will be administered on site at the  Rosen Shingle Creek Resort during the Winter Conference from 8:30 a.m.-noon on Monday, February 3. Exam check-in is 8 a.m.
@@ -2586,29 +2508,59 @@ Note: Exams are not included in the course fees. Exam application and applicable
             </objects>
             <point key="canvasLocation" x="3608" y="-2577"/>
         </scene>
-        <!--Comittee Meetings View Controller - Committee Meetings-->
+        <!--Com Meetings Main View Controller - Committee Meetings-->
         <scene sceneID="nbL-Rf-b64">
             <objects>
-                <viewController id="c0G-tz-BGf" customClass="ComitteeMeetingsViewController" sceneMemberID="viewController">
+                <viewController id="c0G-tz-BGf" customClass="ComMeetingsMainViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Teq-mG-XVw">
                         <rect key="frame" x="0.0" y="64" width="768" height="960"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shutterstock_meeting-ipad.png" id="BSy-Fr-0cu">
-                                <rect key="frame" x="268" y="13" width="232" height="174"/>
-                            </imageView>
-                            <webView contentMode="scaleToFill" id="dCv-UZ-ERo">
-                                <rect key="frame" x="0.0" y="201" width="768" height="759"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="DgN-6k-Pif">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="960"/>
                                 <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </webView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="MZ2-iO-lAN" detailTextLabel="q31-sd-LNf" style="IBUITableViewCellStyleSubtitle" id="0Ha-W1-Xpn">
+                                        <rect key="frame" x="0.0" y="22" width="768" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0Ha-W1-Xpn" id="JRW-Po-AyD">
+                                            <rect key="frame" x="0.0" y="0.0" width="735" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MZ2-iO-lAN">
+                                                    <rect key="frame" x="15" y="3" width="36" height="22"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="q31-sd-LNf">
+                                                    <rect key="frame" x="15" y="25" width="43" height="15"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="bdb-bd-S2F" kind="push" identifier="sessionsDetailCell" id="1Pj-Cp-vD7"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="c0G-tz-BGf" id="6Ay-tk-PlH"/>
+                                    <outlet property="delegate" destination="c0G-tz-BGf" id="4Ub-q5-VeL"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="Committee Meetings" id="2kz-nI-z24"/>
                     <connections>
-                        <outlet property="webView" destination="dCv-UZ-ERo" id="HXJ-iv-7Zo"/>
+                        <outlet property="myTableView" destination="DgN-6k-Pif" id="Y84-bx-jSo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1rB-ZD-wqi" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2927,7 +2879,7 @@ Note: Exams are not included in the course fees. Exam application and applicable
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MIJ-ET-BmF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3649" y="-2638"/>
+            <point key="canvasLocation" x="1067" y="-1345"/>
         </scene>
         <!--Notes View Controller-->
         <scene sceneID="ZMN-zP-G22">
@@ -3011,7 +2963,7 @@ Note: Exams are not included in the course fees. Exam application and applicable
             </objects>
             <point key="canvasLocation" x="3430" y="636"/>
         </scene>
-        <!--Custom Pager View Controller - 2014 BICSI Winter Conference-->
+        <!--Custom Pager View Controller - 2014 BICSI Canadian Conference-->
         <scene sceneID="GxN-WP-Odb">
             <objects>
                 <viewController id="16S-XJ-r73" customClass="CustomPagerViewController" sceneMemberID="viewController">
@@ -3029,7 +2981,7 @@ Note: Exams are not included in the course fees. Exam application and applicable
                             </pageControl>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="vNv-K5-8u0">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="857"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <autoresizingMask key="autoresizingMask"/>
                                 <connections>
                                     <outlet property="delegate" destination="16S-XJ-r73" id="IFI-1V-JgL"/>
                                 </connections>
@@ -3038,7 +2990,7 @@ Note: Exams are not included in the course fees. Exam application and applicable
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationItem key="navigationItem" title="2014 BICSI Winter Conference" id="9DP-P9-gj0"/>
+                    <navigationItem key="navigationItem" title="2014 BICSI Canadian Conference" id="9DP-P9-gj0"/>
                     <connections>
                         <outlet property="pageControl" destination="Grc-WU-k3R" id="Axp-5d-W7f"/>
                         <outlet property="scrollView" destination="vNv-K5-8u0" id="zf9-9G-ugO"/>
@@ -3350,30 +3302,26 @@ Note: Exams are not included in the course fees. Exam application and applicable
                         <rect key="frame" x="0.0" y="64" width="768" height="960"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vGC-or-pE1">
-                                <rect key="frame" x="208" y="771" width="352" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Information Regarding Transition to ITS CECs" backgroundImage="updatedata_button.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="g1p-6n-HyR" kind="push" id="nHn-bF-Bx5"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shutterstock_cec-ipad.png" id="uKJ-Bc-1ON">
                                 <rect key="frame" x="282" y="7" width="205" height="128"/>
                             </imageView>
                             <webView contentMode="scaleToFill" id="QcU-Ej-7bv">
-                                <rect key="frame" x="0.0" y="143" width="768" height="535"/>
+                                <rect key="frame" x="0.0" y="143" width="768" height="817"/>
+                                <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" id="7Jh-NK-De8">
+                                <rect key="frame" x="366" y="533" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" red="0.0" green="0.40000000000000002" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="CEC Information" id="eGd-0y-f7M"/>
                     <connections>
+                        <outlet property="activity" destination="7Jh-NK-De8" id="pcb-cB-QiW"/>
                         <outlet property="webView" destination="QcU-Ej-7bv" id="E10-Nz-7O3"/>
                     </connections>
                 </viewController>
@@ -3383,39 +3331,35 @@ Note: Exams are not included in the course fees. Exam application and applicable
         </scene>
     </scenes>
     <resources>
-        <image name="Rosen_hotel-ipad.png" width="525" height="350"/>
         <image name="add-notes_ipad.png" width="70" height="78"/>
-        <image name="agendaW14_icon_ipad.png" width="120" height="120"/>
+        <image name="agendaC14-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="backbutton-default.png" width="50" height="30"/>
         <image name="backbutton.png" width="50" height="30"/>
         <image name="button-green_ipad.png" width="224" height="66"/>
-        <image name="cecW14_icon_ipad.png" width="120" height="120"/>
+        <image name="cecC14-icon-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="comm_meetings_icon_ipad.png" width="120" height="120"/>
-        <image name="committeeW14_icon_ipad.png" width="120" height="120"/>
-        <image name="confschedW14_icon_ipad.png" width="120" height="120"/>
-        <image name="contactusW14_icon_ipad.png" width="120" height="120"/>
+        <image name="committeeC14-icon-400x400_icon_ipad.png" width="120" height="120"/>
+        <image name="confschedC14_icon_ipad.png" width="120" height="120"/>
+        <image name="contactusC14-icon-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="createuser_button_ipad.png" width="224" height="66"/>
-        <image name="ehscheduleW14_icon_ipad.png" width="120" height="120"/>
-        <image name="exhibitorsW14_icon_ipad.png" width="120" height="120"/>
+        <image name="ehscheduleC14-400x400_icon_ipad.png" width="120" height="120"/>
+        <image name="exhibitorsC14-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="facebook_button_ipad.png" width="224" height="66"/>
         <image name="facebookpost_ipad.png" width="648" height="120"/>
-        <image name="favoritesW14_icon_ipad.png" width="120" height="120"/>
-        <image name="findactivitiesW14_icon_ipad.png" width="120" height="120"/>
-        <image name="floorplanW14_icon_ipad.png" width="120" height="120"/>
-        <image name="hotelW14_icon_ipad.png" width="120" height="120"/>
-        <image name="notesW14_icon_ipad.png" width="120" height="120"/>
-        <image name="programW14_icon_ipad.png" width="120" height="120"/>
+        <image name="favoritesC14-400x400_icon_ipad.png" width="120" height="120"/>
+        <image name="floorplanC14-icon-400x400_icon_ipad.png" width="120" height="120"/>
+        <image name="hotelC14-icon-400x400_icon_ipad.png" width="120" height="120"/>
+        <image name="notesC14-400x400_icon_ipad.png" width="120" height="120"/>
+        <image name="programC14-icon-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="reload30x30.png" width="30" height="30"/>
-        <image name="sessionsW14_icon_ipad.png" width="120" height="120"/>
+        <image name="sessionsC14-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="shutterstock_cec-ipad.png" width="205" height="128"/>
         <image name="shutterstock_contact-us-ipad.png" width="265" height="128"/>
-        <image name="shutterstock_meeting-ipad.png" width="232" height="174"/>
         <image name="shutterstock_training-ipad.png" width="397" height="298"/>
-        <image name="speakersW14_icon_ipad.png" width="120" height="120"/>
-        <image name="sponsorsW14_icon_ipad.png" width="120" height="120"/>
+        <image name="sponsorsC14-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="take-survey_ipad.png" width="70" height="72"/>
-        <image name="techsupportW14_icon_ipad.png" width="120" height="120"/>
-        <image name="trainingW14_icon_ipad.png" width="120" height="120"/>
+        <image name="techsupportC14-icon-400x400_icon_ipad.png" width="120" height="120"/>
+        <image name="trainingC14-icon-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="twitterfeed_ipad.png" width="648" height="120"/>
         <image name="twitterpost_ipad.png" width="648" height="120"/>
         <image name="updatedata_button.png" width="222" height="65"/>
@@ -3426,10 +3370,10 @@ Note: Exams are not included in the course fees. Exam application and applicable
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Ysf-Ju-HKO"/>
-        <segue reference="GEW-K7-fR7"/>
-        <segue reference="ZwN-mm-jT8"/>
-        <segue reference="SFt-NY-1lL"/>
         <segue reference="llJ-MJ-Tf6"/>
+        <segue reference="1Pj-Cp-vD7"/>
+        <segue reference="ZwN-mm-jT8"/>
+        <segue reference="Ysf-Ju-HKO"/>
+        <segue reference="SFt-NY-1lL"/>
     </inferredMetricsTieBreakers>
 </document>

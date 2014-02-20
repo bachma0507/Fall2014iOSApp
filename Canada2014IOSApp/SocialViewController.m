@@ -141,7 +141,7 @@ NSArray *thumbnails;
         socialComposerSheet = [[SLComposeViewController alloc] init];
         socialComposerSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
         //[socialComposerSheet setInitialText:[NSString stringWithFormat:@"#BICSI, #BICSIFALL",socialComposerSheet.serviceType]];
-        [socialComposerSheet setInitialText:[NSString stringWithFormat:@"#BICSI, #BICSIWINTER"]];
+        [socialComposerSheet setInitialText:[NSString stringWithFormat:@"#BICSI, #BICSICANADA"]];
         [self presentViewController:socialComposerSheet animated:YES completion:nil];
     }
     else {
