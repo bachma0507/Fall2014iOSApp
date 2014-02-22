@@ -479,6 +479,7 @@
 		4CCD3F711777F811002E11DC /* SVWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCD3F6B1777F811002E11DC /* SVWebViewController.m */; };
 		4CCEF9F617D281620024E854 /* ProgramPDFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCEF9F517D281620024E854 /* ProgramPDFViewController.m */; };
 		4CCEF9F817D28C1C0024E854 /* ProgramFall2013.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4CCEF9F717D28C1C0024E854 /* ProgramFall2013.pdf */; };
+		4CD3ADC418B8699700497309 /* PFNewsAlertsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD3ADC318B8699700497309 /* PFNewsAlertsViewController.m */; };
 		4CD40E381796DA71002052FC /* NotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD40E371796DA71002052FC /* NotesViewController.m */; };
 		4CD6B57D1821F8440014A51D /* findactivitiesW14_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CD6B5781821F8440014A51D /* findactivitiesW14_icon.png */; };
 		4CD6B57E1821F8440014A51D /* findactivitiesW14_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CD6B5791821F8440014A51D /* findactivitiesW14_icon@2x.png */; };
@@ -1185,6 +1186,8 @@
 		4CCEF9F417D281620024E854 /* ProgramPDFViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgramPDFViewController.h; sourceTree = "<group>"; };
 		4CCEF9F517D281620024E854 /* ProgramPDFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgramPDFViewController.m; sourceTree = "<group>"; };
 		4CCEF9F717D28C1C0024E854 /* ProgramFall2013.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ProgramFall2013.pdf; sourceTree = "<group>"; };
+		4CD3ADC218B8699700497309 /* PFNewsAlertsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFNewsAlertsViewController.h; sourceTree = "<group>"; };
+		4CD3ADC318B8699700497309 /* PFNewsAlertsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFNewsAlertsViewController.m; sourceTree = "<group>"; };
 		4CD40E361796DA71002052FC /* NotesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotesViewController.h; sourceTree = "<group>"; };
 		4CD40E371796DA71002052FC /* NotesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotesViewController.m; sourceTree = "<group>"; };
 		4CD6B5781821F8440014A51D /* findactivitiesW14_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = findactivitiesW14_icon.png; sourceTree = "<group>"; };
@@ -2150,6 +2153,8 @@
 			children = (
 				4CA2F5881757819000C5474C /* ListViewController.h */,
 				4CA2F5891757819000C5474C /* ListViewController.m */,
+				4CD3ADC218B8699700497309 /* PFNewsAlertsViewController.h */,
+				4CD3ADC318B8699700497309 /* PFNewsAlertsViewController.m */,
 			);
 			name = "News&Alerts";
 			sourceTree = "<group>";
@@ -3037,6 +3042,7 @@
 				4CC05AAB180C77190082A141 /* IpadWallPicturesViewController.m in Sources */,
 				4CCD3F711777F811002E11DC /* SVWebViewController.m in Sources */,
 				4C8A8348177B7CC100022E03 /* exhibitors.m in Sources */,
+				4CD3ADC418B8699700497309 /* PFNewsAlertsViewController.m in Sources */,
 				4C3C390A18219B6700927FFD /* MapPoint.m in Sources */,
 				4C8A834B177B7ECF00022E03 /* ExhibitorsViewController.m in Sources */,
 				4CBCB2C7180878EA008D4522 /* PFAlertViewController.m in Sources */,
