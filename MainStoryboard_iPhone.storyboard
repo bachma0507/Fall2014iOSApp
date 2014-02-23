@@ -3523,36 +3523,14 @@ Note: Exams are not included in the course fees. Exam application and applicable
     <resources>
         <image name="Rosen_hotel-iphone.png" width="217" height="145"/>
         <image name="add-notes.png" width="25" height="28"/>
-        <image name="add-notes.png" width="25" height="28"/>
-        <image name="add-notes.png" width="25" height="28"/>
-        <image name="add-notes.png" width="25" height="28"/>
         <image name="agendaC14-400x400_icon.png" width="50" height="50"/>
         <image name="backbutton-default.png" width="50" height="30"/>
         <image name="backbutton.png" width="50" height="30"/>
-        <image name="button-green.png" width="111" height="27"/>
-        <image name="button-green.png" width="111" height="27"/>
-        <image name="button-green.png" width="111" height="27"/>
-        <image name="button-green.png" width="111" height="27"/>
-        <image name="button-green.png" width="111" height="27"/>
-        <image name="button-green.png" width="111" height="27"/>
-        <image name="button-green.png" width="111" height="27"/>
-        <image name="button-green.png" width="111" height="27"/>
-        <image name="button-green.png" width="111" height="27"/>
-        <image name="button-green.png" width="111" height="27"/>
-        <image name="button-green.png" width="111" height="27"/>
-        <image name="button-green.png" width="111" height="27"/>
-        <image name="button-green.png" width="111" height="27"/>
-        <image name="button-green.png" width="111" height="27"/>
-        <image name="button-green.png" width="111" height="27"/>
-        <image name="button-green.png" width="111" height="27"/>
         <image name="button-green.png" width="111" height="27"/>
         <image name="cecC14-icon-400x400_icon.png" width="50" height="50"/>
         <image name="committeeC14-icon-400x400_icon.png" width="50" height="50"/>
         <image name="confschedC14_icon.png" width="50" height="50"/>
         <image name="contactusC14-icon-400x400_icon.png" width="50" height="50"/>
-        <image name="createuser_button.png" width="111" height="27"/>
-        <image name="createuser_button.png" width="111" height="27"/>
-        <image name="createuser_button.png" width="111" height="27"/>
         <image name="createuser_button.png" width="111" height="27"/>
         <image name="ehscheduleC14-400x400_icon.png" width="50" height="50"/>
         <image name="exhibitorsC14-400x400_icon.png" width="50" height="50"/>
@@ -3578,21 +3556,12 @@ Note: Exams are not included in the course fees. Exam application and applicable
         <image name="speakersC14_icon.png" width="50" height="50"/>
         <image name="sponsorsC14-400x400_icon.png" width="50" height="50"/>
         <image name="take-survey.png" width="25" height="26"/>
-        <image name="take-survey.png" width="25" height="26"/>
-        <image name="take-survey.png" width="25" height="26"/>
-        <image name="take-survey.png" width="25" height="26"/>
         <image name="techsupportC14-icon-400x400_icon.png" width="50" height="50"/>
         <image name="trainingC14-icon-400x400_icon.png" width="50" height="50"/>
         <image name="twitter.png" width="64" height="64"/>
         <image name="twitterfeed.png" width="270" height="50"/>
         <image name="twitterpost.png" width="270" height="50"/>
         <image name="updatedata_button.png" width="222" height="65"/>
-        <image name="updatedata_button.png" width="222" height="65"/>
-        <image name="updatedata_button.png" width="222" height="65"/>
-        <image name="updatedata_button.png" width="222" height="65"/>
-        <image name="updatedata_button.png" width="222" height="65"/>
-        <image name="view_website_icon.png" width="25" height="25"/>
-        <image name="view_website_icon.png" width="25" height="25"/>
         <image name="view_website_icon.png" width="25" height="25"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

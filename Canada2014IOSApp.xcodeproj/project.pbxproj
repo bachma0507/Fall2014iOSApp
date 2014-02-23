@@ -397,12 +397,6 @@
 		4C894E2518AD508300001623 /* findactvitiesC14-icon-400x400_icon_ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C894E2418AD508300001623 /* findactvitiesC14-icon-400x400_icon_ipad.png */; };
 		4C894E2718AD50A000001623 /* findactvitiesC14-icon-400x400_icon_ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C894E2618AD50A000001623 /* findactvitiesC14-icon-400x400_icon_ipad@2x.png */; };
 		4C894E2B18AD821E00001623 /* HotelWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C894E2A18AD821E00001623 /* HotelWebViewController.m */; };
-		4C894E3118AE5F9300001623 /* navbarflatwhite_ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C894E2C18AE5F9200001623 /* navbarflatwhite_ipad@2x.png */; };
-		4C894E3218AE5F9300001623 /* navbarflatwhite_ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C894E2D18AE5F9200001623 /* navbarflatwhite_ipad.png */; };
-		4C894E3318AE5F9300001623 /* navbarflatwhite-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C894E2E18AE5F9200001623 /* navbarflatwhite-568h@2x.png */; };
-		4C894E3418AE5F9300001623 /* navbarflatwhite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C894E2F18AE5F9300001623 /* navbarflatwhite@2x.png */; };
-		4C894E3518AE5F9300001623 /* navbarflatwhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C894E3018AE5F9300001623 /* navbarflatwhite.png */; };
-		4C894E3718AE614E00001623 /* navbarflatwhite2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C894E3618AE614E00001623 /* navbarflatwhite2.png */; };
 		4C894E3A18AFE6E400001623 /* ComMeetingsMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C894E3918AFE6E400001623 /* ComMeetingsMainViewController.m */; };
 		4C8A8348177B7CC100022E03 /* exhibitors.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8A8347177B7CC100022E03 /* exhibitors.m */; };
 		4C8A834B177B7ECF00022E03 /* ExhibitorsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8A834A177B7ECF00022E03 /* ExhibitorsViewController.m */; };
@@ -1025,12 +1019,6 @@
 		4C894E2618AD50A000001623 /* findactvitiesC14-icon-400x400_icon_ipad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "findactvitiesC14-icon-400x400_icon_ipad@2x.png"; sourceTree = "<group>"; };
 		4C894E2918AD821E00001623 /* HotelWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotelWebViewController.h; sourceTree = "<group>"; };
 		4C894E2A18AD821E00001623 /* HotelWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotelWebViewController.m; sourceTree = "<group>"; };
-		4C894E2C18AE5F9200001623 /* navbarflatwhite_ipad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navbarflatwhite_ipad@2x.png"; sourceTree = "<group>"; };
-		4C894E2D18AE5F9200001623 /* navbarflatwhite_ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navbarflatwhite_ipad.png; sourceTree = "<group>"; };
-		4C894E2E18AE5F9200001623 /* navbarflatwhite-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navbarflatwhite-568h@2x.png"; sourceTree = "<group>"; };
-		4C894E2F18AE5F9300001623 /* navbarflatwhite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navbarflatwhite@2x.png"; sourceTree = "<group>"; };
-		4C894E3018AE5F9300001623 /* navbarflatwhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navbarflatwhite.png; sourceTree = "<group>"; };
-		4C894E3618AE614E00001623 /* navbarflatwhite2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navbarflatwhite2.png; sourceTree = "<group>"; };
 		4C894E3818AFE6E400001623 /* ComMeetingsMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComMeetingsMainViewController.h; sourceTree = "<group>"; };
 		4C894E3918AFE6E400001623 /* ComMeetingsMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComMeetingsMainViewController.m; sourceTree = "<group>"; };
 		4C8A8346177B7CC100022E03 /* exhibitors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = exhibitors.h; sourceTree = "<group>"; };
@@ -1834,12 +1822,6 @@
 		4C894CC318A812AD00001623 /* Can_navbar_images */ = {
 			isa = PBXGroup;
 			children = (
-				4C894E3618AE614E00001623 /* navbarflatwhite2.png */,
-				4C894E2C18AE5F9200001623 /* navbarflatwhite_ipad@2x.png */,
-				4C894E2D18AE5F9200001623 /* navbarflatwhite_ipad.png */,
-				4C894E2E18AE5F9200001623 /* navbarflatwhite-568h@2x.png */,
-				4C894E2F18AE5F9300001623 /* navbarflatwhite@2x.png */,
-				4C894E3018AE5F9300001623 /* navbarflatwhite.png */,
 				4C894CC418A812DA00001623 /* navbarflatblue_ipad.png */,
 				4C894CC518A812DA00001623 /* navbarflatblue_ipad@2x.png */,
 				4C894CC618A812DA00001623 /* navbarflatblue-568h@2x.png */,
@@ -2611,7 +2593,6 @@
 				4C23689917FB114E001843B4 /* agendaW14_icon.png in Resources */,
 				4C3FD7AD175BC94100B381AA /* tabbar_selected@2x.png in Resources */,
 				4CBDD4C01848DA70007A9002 /* quicktron_silver.png in Resources */,
-				4C894E3718AE614E00001623 /* navbarflatwhite2.png in Resources */,
 				4CF08415181ECCCF00FF6978 /* facebook_button_ipad.png in Resources */,
 				4C894CBC18A80D8300001623 /* Default-iOS7-Portrait~ipad.png in Resources */,
 				4C894DCB18AAAE6C00001623 /* sessionsC14-400x400_icon-568h@2x.png in Resources */,
@@ -2679,7 +2660,6 @@
 				4C894CBF18A80D8300001623 /* Default.png in Resources */,
 				4CA0720D17F8EB7F007E856B /* MainStoryboard_iPhone.storyboard in Resources */,
 				4CD6B57E1821F8440014A51D /* findactivitiesW14_icon@2x.png in Resources */,
-				4C894E3318AE5F9300001623 /* navbarflatwhite-568h@2x.png in Resources */,
 				4C894DE518AAAE6C00001623 /* notesC14-400x400_icon_ipad.png in Resources */,
 				4C894D9218AAAE6C00001623 /* programC14-icon-400x400_icon.png in Resources */,
 				4C23686B17FB1115001843B4 /* contactusW14_icon_ipad@2x.png in Resources */,
@@ -2782,7 +2762,6 @@
 				4C76B09E17F91B1B0017E71E /* navbarflatgrey.png in Resources */,
 				4CC8DC471820A4C5007B79AC /* shutterstock_cec-ipad.png in Resources */,
 				4C2368D517FB2B35001843B4 /* take-survey@2x.png in Resources */,
-				4C894E3418AE5F9300001623 /* navbarflatwhite@2x.png in Resources */,
 				4C2FDA9D1779446D0056731B /* backbutton_blue.png in Resources */,
 				4C2368A217FB114E001843B4 /* notesW14_icon_ipad@2x.png in Resources */,
 				4C7EC26E1779DEE400A73C8D /* twitterfeed@2x.png in Resources */,
@@ -2847,7 +2826,6 @@
 				4CC8DC4D1820A4C5007B79AC /* shutterstock_contact-us-iphone.png in Resources */,
 				4CBDD4C31848DA70007A9002 /* transition_cups.png in Resources */,
 				4C894CE618A82CA600001623 /* ipadiOS7@2x.png in Resources */,
-				4C894E3218AE5F9300001623 /* navbarflatwhite_ipad.png in Resources */,
 				4CF45E581781F5E6000F6A5D /* twitterpost_ipad.png in Resources */,
 				4CF08422181ECE5800FF6978 /* createuser_button@2x.png in Resources */,
 				4C0629E3182C021B00818EB2 /* sponsorsW14.json in Resources */,
@@ -2872,7 +2850,6 @@
 				4CBDD4B01848DA70007A9002 /* brother_program.png in Resources */,
 				4C23685D17FB1115001843B4 /* trainingW14_icon.png in Resources */,
 				4C2735BA184BE52600383C2B /* THE BICSI 2014 WINTER CONFERENCE PROGRAM.pdf in Resources */,
-				4C894E3518AE5F9300001623 /* navbarflatwhite.png in Resources */,
 				4C894E0118AAAE6C00001623 /* notesC14-400x400_icon_ipad@2x.png in Resources */,
 				4C894DAF18AAAE6C00001623 /* sessionsC14-400x400_icon@2x.png in Resources */,
 				4C2368AD17FB114E001843B4 /* sessionsW14_icon.png in Resources */,
@@ -2901,7 +2878,6 @@
 				4C23685B17FB1115001843B4 /* hotelW14_icon_ipad.png in Resources */,
 				4CE1B37C178FA929006EF171 /* beep-beep.aiff in Resources */,
 				4C894CC218A8106E00001623 /* navbarflatblue.png in Resources */,
-				4C894E3118AE5F9300001623 /* navbarflatwhite_ipad@2x.png in Resources */,
 				4C23685A17FB1115001843B4 /* hotelW14_icon-568h@2x.png in Resources */,
 				4C894DE318AAAE6C00001623 /* floorplanC14-icon-400x400_icon_ipad.png in Resources */,
 				4C2368D417FB2B35001843B4 /* take-survey-568h@2x.png in Resources */,
