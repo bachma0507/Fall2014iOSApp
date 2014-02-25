@@ -1000,6 +1000,9 @@
                     </tableView>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="Sponsors" id="MxB-KK-G5L"/>
+                    <connections>
+                        <outlet property="myTableView" destination="2vo-Gu-cin" id="gjt-IS-P70"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k0o-J7-GNA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2380,7 +2383,7 @@ If you have any questions, please do not hesitate to contact bicsi@bicsi.org.</s
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="phone" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Tgb-jz-iWg">
-                                <rect key="frame" x="20" y="49" width="728" height="21"/>
+                                <rect key="frame" x="20" y="49.00000000761721" width="728" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>

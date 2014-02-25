@@ -51,7 +51,6 @@ int iNotificationCounter=0;
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
-
     // Setup TestFlight
     [TestFlight setDeviceIdentifier:[[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString]];
     [TestFlight takeOff:@"8425b2ed-652c-496e-b506-d0ce6243cc76"];
