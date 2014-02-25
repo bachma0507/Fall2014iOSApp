@@ -83,7 +83,8 @@ NSArray *thumbnails;
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     //cell.textLabel.font = [UIFont systemFontOfSize:14.0];//
     cell.textLabel.font = [UIFont fontWithName:@"Arial" size:15.0];
-    cell.textLabel.textColor = [UIColor brownColor];
+    cell.textLabel.textColor = [UIColor whiteColor];
+    cell.backgroundColor = [UIColor colorWithRed:135/255 green:157/255 blue:204/255 alpha:0];
     
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];

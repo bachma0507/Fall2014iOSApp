@@ -105,7 +105,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="85" sectionHeaderHeight="22" sectionFooterHeight="22" id="vGu-mU-q23">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="287"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.52941176470588236" green="0.61568627450980395" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="socialCell" textLabel="x6k-PN-bzz" rowHeight="85" style="IBUITableViewCellStyleDefault" id="Zqq-16-nj8">
                                         <rect key="frame" x="0.0" y="22" width="768" height="85"/>
@@ -122,7 +122,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.52941176470588236" green="0.61568627450980395" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <segue destination="inf-rm-4cQ" kind="push" identifier="socialDetailCell" id="Pxe-q8-rSD"/>
                                         </connections>
@@ -186,7 +186,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.52941176470588236" green="0.61568627450980395" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="Social Media" id="eKg-JD-b30"/>
@@ -317,7 +317,7 @@
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" selectable="NO" id="GG8-js-SZX">
                                 <rect key="frame" x="9" y="7" width="750" height="172"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.88627450980392153" green="0.98431372549019602" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">Already have a user account that allows you to upload your conference pics and view the gallery? Then sign in below. If not, create a user account.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -380,7 +380,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.88627450980392153" green="0.98431372549019602" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="Photo Gallery Log In" id="dey-pl-z8D"/>
@@ -828,7 +828,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.96862745098039216" blue="0.88627450980392153" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="xxV-Ff-vag"/>
@@ -1334,7 +1334,7 @@ If you have any questions, please do not hesitate to contact bicsi@bicsi.org.</s
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.96862745098039216" blue="0.88627450980392153" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="GrF-47-zA9"/>
@@ -2981,7 +2981,7 @@ Note: Exams are not included in the course fees. Exam application and applicable
                                 </connections>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.96862745098039216" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="2014 BICSI Canadian Conference" id="9DP-P9-gj0"/>
@@ -3326,29 +3326,9 @@ Note: Exams are not included in the course fees. Exam application and applicable
     </scenes>
     <resources>
         <image name="add-notes_ipad.png" width="70" height="78"/>
-        <image name="add-notes_ipad.png" width="70" height="78"/>
-        <image name="add-notes_ipad.png" width="70" height="78"/>
         <image name="agendaC14-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="backbutton-default.png" width="50" height="30"/>
         <image name="backbutton.png" width="50" height="30"/>
-        <image name="button-green_ipad.png" width="224" height="66"/>
-        <image name="button-green_ipad.png" width="224" height="66"/>
-        <image name="button-green_ipad.png" width="224" height="66"/>
-        <image name="button-green_ipad.png" width="224" height="66"/>
-        <image name="button-green_ipad.png" width="224" height="66"/>
-        <image name="button-green_ipad.png" width="224" height="66"/>
-        <image name="button-green_ipad.png" width="224" height="66"/>
-        <image name="button-green_ipad.png" width="224" height="66"/>
-        <image name="button-green_ipad.png" width="224" height="66"/>
-        <image name="button-green_ipad.png" width="224" height="66"/>
-        <image name="button-green_ipad.png" width="224" height="66"/>
-        <image name="button-green_ipad.png" width="224" height="66"/>
-        <image name="button-green_ipad.png" width="224" height="66"/>
-        <image name="button-green_ipad.png" width="224" height="66"/>
-        <image name="button-green_ipad.png" width="224" height="66"/>
-        <image name="button-green_ipad.png" width="224" height="66"/>
-        <image name="button-green_ipad.png" width="224" height="66"/>
-        <image name="button-green_ipad.png" width="224" height="66"/>
         <image name="button-green_ipad.png" width="224" height="66"/>
         <image name="cecC14-icon-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="comm_meetings_icon_ipad.png" width="120" height="120"/>
@@ -3356,38 +3336,26 @@ Note: Exams are not included in the course fees. Exam application and applicable
         <image name="confschedC14_icon_ipad.png" width="120" height="120"/>
         <image name="contactusC14-icon-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="createuser_button_ipad.png" width="224" height="66"/>
-        <image name="createuser_button_ipad.png" width="224" height="66"/>
-        <image name="createuser_button_ipad.png" width="224" height="66"/>
-        <image name="createuser_button_ipad.png" width="224" height="66"/>
         <image name="ehscheduleC14-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="exhibitorsC14-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="facebook_button_ipad.png" width="224" height="66"/>
         <image name="facebookpost_ipad.png" width="648" height="120"/>
-        <image name="favoritesC14-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="favoritesC14-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="floorplanC14-icon-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="hotelC14-icon-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="notesC14-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="programC14-icon-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="reload30x30.png" width="30" height="30"/>
-        <image name="reload30x30.png" width="30" height="30"/>
         <image name="sessionsC14-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="shutterstock_cec-ipad.png" width="205" height="128"/>
         <image name="shutterstock_contact-us-ipad.png" width="265" height="128"/>
         <image name="shutterstock_training-ipad.png" width="397" height="298"/>
         <image name="sponsorsC14-400x400_icon_ipad.png" width="120" height="120"/>
-        <image name="sponsorsC14-400x400_icon_ipad.png" width="120" height="120"/>
-        <image name="take-survey_ipad.png" width="70" height="72"/>
-        <image name="take-survey_ipad.png" width="70" height="72"/>
         <image name="take-survey_ipad.png" width="70" height="72"/>
         <image name="techsupportC14-icon-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="trainingC14-icon-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="twitterfeed_ipad.png" width="648" height="120"/>
         <image name="twitterpost_ipad.png" width="648" height="120"/>
-        <image name="updatedata_button.png" width="222" height="65"/>
-        <image name="updatedata_button.png" width="222" height="65"/>
-        <image name="updatedata_button.png" width="222" height="65"/>
-        <image name="updatedata_button.png" width="222" height="65"/>
         <image name="updatedata_button.png" width="222" height="65"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -3396,7 +3364,7 @@ Note: Exams are not included in the course fees. Exam application and applicable
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="llJ-MJ-Tf6"/>
+        <segue reference="SDK-bn-4vP"/>
         <segue reference="1Pj-Cp-vD7"/>
         <segue reference="ZwN-mm-jT8"/>
         <segue reference="Ysf-Ju-HKO"/>
