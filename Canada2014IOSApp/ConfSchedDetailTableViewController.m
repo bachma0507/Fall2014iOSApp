@@ -163,7 +163,9 @@
     
     [fetchRequest setEntity:entity];
     
-    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"sessionDate == %@",cschedule.date]];
+    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"NOT(sessionID CONTAINS 'BODMC') && sessionDate == %@",cschedule.date]];
+    
+    //[fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"NOT(sessionID CONTAINS 'BODMC')"]];
     
     
     NSLog(@"cshedule date in refreshtable is: %@",cschedule.date);
