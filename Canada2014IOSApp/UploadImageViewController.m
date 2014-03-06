@@ -188,9 +188,12 @@
         if (succeeded){
             
             //Add the image to the object, and add the comments, the user, and the geolocation (fake)
-            PFObject *imageObject = [PFObject objectWithClassName:WALL_OBJECT];
+            PFObject *imageObject =
+            
+            [PFObject objectWithClassName:WALL_OBJECT];
             [imageObject setObject:file forKey:KEY_IMAGE];
             [imageObject setObject:[PFUser currentUser].username forKey:KEY_USER];
+            
             [imageObject setObject:self.commentTextField.text forKey:KEY_COMMENT];
             
             PFGeoPoint *point = [PFGeoPoint geoPointWithLatitude:52 longitude:-4];
