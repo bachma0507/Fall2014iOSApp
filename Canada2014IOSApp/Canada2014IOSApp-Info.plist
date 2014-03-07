@@ -15,9 +15,6 @@
 			<key>CFBundleIconFiles</key>
 			<array>
 				<string>iphoneiOS7</string>
-				<string>iphone_ipod_W14_114x114</string>
-				<string>ipad_W14_144x144</string>
-				<string>iphone_appicon_W14_57x57</string>
 				<string>iphone_ipod_57x57.png</string>
 				<string>iphone_ipod_114x114@2x.png</string>
 				<string>ipad_72x72.png</string>
@@ -32,11 +29,6 @@
 			<key>CFBundleIconFiles</key>
 			<array>
 				<string>ipadiOS7</string>
-				<string>ipadiOS7W14</string>
-				<string>ipad_W14_72x72</string>
-				<string>iphone_ipod_W14_114x114</string>
-				<string>ipad_W14_144x144</string>
-				<string>iphone_appicon_W14_57x57</string>
 				<string>iphone_ipod_57x57.png</string>
 				<string>iphone_ipod_114x114@2x.png</string>
 				<string>ipad_72x72.png</string>
