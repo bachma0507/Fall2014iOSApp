@@ -12,6 +12,8 @@
 
 #import "Constants.h"
 
+#import <AudioToolbox/AudioToolbox.h>
+
 //#import "UIImage+ResizeAdditions.h"
 
 @interface UploadImageViewController ()
@@ -56,6 +58,8 @@
     layer.shadowOpacity = 0.5f;
     layer.shouldRasterize = YES;
     
+    
+    AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
     NSString *message = @"All photos and comments will be reviewed before being posted to the gallery.";
     UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"Notification"
                                                        message:message
