@@ -11,6 +11,8 @@
 //#import "StackMob.h"
 #import "AgendaCell.h"
 #import "NotesViewController.h"
+#import <AudioToolbox/AudioToolbox.h>
+
 
 
 @interface AgendaTableViewController ()
@@ -169,6 +171,14 @@
      NSArray *results = [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
     
     if (!results || !results.count) {
+        
+        AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+        
+        NSURL *fileURL = [NSURL URLWithString:@"/System/Library/Audio/UISounds/Modern/sms_alert_bamboo.caf"]; // see list below
+        SystemSoundID soundID;
+        AudioServicesCreateSystemSoundID((__bridge_retained CFURLRef)fileURL,&soundID);
+        AudioServicesPlaySystemSound(soundID);
+        
         NSString *message = @"You have not added any sessions to your planner. Please click on Add to Planner when viewing Session details. If you signed up for sessions when you registered, please click on the My BICSI icon and go to My Schedule.";
         UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"Notification"
                                                            message:message

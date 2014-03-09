@@ -60,6 +60,12 @@
     
     
     AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+    
+    NSURL *fileURL = [NSURL URLWithString:@"/System/Library/Audio/UISounds/Modern/sms_alert_bamboo.caf"]; // see list below
+    SystemSoundID soundID;
+    AudioServicesCreateSystemSoundID((__bridge_retained CFURLRef)fileURL,&soundID);
+    AudioServicesPlaySystemSound(soundID);
+    
     NSString *message = @"All photos and comments will be reviewed before being posted to the gallery.";
     UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"Notification"
                                                        message:message
