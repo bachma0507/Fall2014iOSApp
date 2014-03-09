@@ -336,10 +336,10 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="0F4-70-PsM" kind="push" id="zYT-cP-a7a"/>
+                                    <segue destination="cBX-aT-2Ui" kind="push" id="pmQ-9a-dGS"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" text="Exhibit Hall Floor Plan" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kmW-BX-Ouw">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" text="Interactive Floor Maps" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kmW-BX-Ouw">
                                 <rect key="frame" x="8" y="423" width="85" height="39"/>
                                 <fontDescription key="fontDescription" name="Lato-Hairline" family="Lato" pointSize="13"/>
                                 <color key="textColor" red="0.50196078430000002" green="0.56078431370000004" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -1434,7 +1434,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ahr-x6-1rB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1911" y="-623"/>
+            <point key="canvasLocation" x="2533" y="-240"/>
         </scene>
         <!--Alert Line View Controller - Alert-->
         <scene sceneID="kTi-Nb-l8E">
@@ -1829,6 +1829,38 @@ If you have any questions, please do not hesitate to contact bicsi@bicsi.org.
             </objects>
             <point key="canvasLocation" x="3735" y="-802"/>
         </scene>
+        <!--Entrance Hall Floor Plan View Controller - Main Hall Floor Map-->
+        <scene sceneID="DXN-wx-rrZ">
+            <objects>
+                <viewController id="Wvj-Fe-nCb" customClass="EntranceHallFloorPlanViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pt8-75-7jo">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" id="WAz-e1-gqd">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" id="2Mw-zK-tB8">
+                                <rect key="frame" x="142" y="233" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" red="0.0" green="0.40000000000000002" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" title="Main Hall Floor Map" id="YZ7-XU-laV"/>
+                    <connections>
+                        <outlet property="activity" destination="2Mw-zK-tB8" id="C4F-ry-fxF"/>
+                        <outlet property="webView" destination="WAz-e1-gqd" id="CKS-Va-gbb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lF1-Hv-lXN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1813" y="-122"/>
+        </scene>
         <!--View Controller - Examinations-->
         <scene sceneID="6u7-Ln-Vav">
             <objects>
@@ -1999,6 +2031,66 @@ Note: Exams are not included in the course fees. Exam application and applicable
             </objects>
             <point key="canvasLocation" x="3231" y="-651"/>
         </scene>
+        <!--Floor Maps View Controller - Floor Maps-->
+        <scene sceneID="6nX-uc-8jK">
+            <objects>
+                <viewController id="cBX-aT-2Ui" customClass="FloorMapsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UPl-gK-fTb">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="entrancehall_floorplan_icon_iphone.png" id="BPo-oe-jnp">
+                                <rect key="frame" x="40" y="33" width="145" height="189"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Main Hall Floor Map (Tap)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aWX-C3-bTk">
+                                <rect key="frame" x="40" y="4" width="238" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" red="0.50196078431372548" green="0.5607843137254902" blue="0.58823529411764708" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2fW-Vu-ZOs">
+                                <rect key="frame" x="42" y="4" width="145" height="223"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Wvj-Fe-nCb" kind="push" id="Zpd-Q8-3vg"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="exhibithall_floorplan_icon_iphone.png" id="7Wh-3a-nKp">
+                                <rect key="frame" x="42" y="294" width="145" height="135"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exhibit Hall Floor Map (Tap)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aZk-dJ-MfC">
+                                <rect key="frame" x="42" y="256" width="252" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" red="0.50196078430000002" green="0.56078431370000004" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="rvp-qH-zP9">
+                                <rect key="frame" x="40" y="263" width="145" height="160"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="0F4-70-PsM" kind="push" id="SGZ-hB-yeh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" title="Floor Maps" id="HA3-Na-IKR"/>
+                    <connections>
+                        <outlet property="imageView" destination="BPo-oe-jnp" id="cJ3-SD-xpO"/>
+                        <outlet property="imageView2" destination="7Wh-3a-nKp" id="IDM-nv-Du6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UFt-AL-JiU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1949" y="-773"/>
+        </scene>
         <!--Exhibit Hall Floor Plan View Controller - Exhibit Hall Floor Plan-->
         <scene sceneID="jRG-kd-Xn7">
             <objects>
@@ -2032,7 +2124,7 @@ Note: Exams are not included in the course fees. Exam application and applicable
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2OT-bK-93i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-341" y="-1687"/>
+            <point key="canvasLocation" x="2361" y="-802"/>
         </scene>
         <!--Sessions Main View Controller - Sessions-->
         <scene sceneID="SpV-UR-6Dh">
@@ -2574,7 +2666,7 @@ Note: Exams are not included in the course fees. Exam application and applicable
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="9gr-SM-gTf">
-                                <rect key="frame" x="20" y="1" width="50" height="50"/>
+                                <rect key="frame" x="20" y="0.99999999999999989" width="50" height="50"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Presentations" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uqx-JN-0PA">
                                 <rect key="frame" x="20" y="216" width="83" height="21"/>
@@ -3418,7 +3510,7 @@ Note: Exams are not included in the course fees. Exam application and applicable
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NvZ-Lk-HoN">
-                                <rect key="frame" x="20" y="19.000000003712916" width="280" height="20"/>
+                                <rect key="frame" x="20" y="19" width="280" height="20"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.40000000000000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -3523,16 +3615,40 @@ Note: Exams are not included in the course fees. Exam application and applicable
     <resources>
         <image name="Rosen_hotel-iphone.png" width="217" height="145"/>
         <image name="add-notes.png" width="25" height="28"/>
+        <image name="add-notes.png" width="25" height="28"/>
+        <image name="add-notes.png" width="25" height="28"/>
+        <image name="add-notes.png" width="25" height="28"/>
         <image name="agendaC14-400x400_icon.png" width="50" height="50"/>
         <image name="backbutton-default.png" width="50" height="30"/>
         <image name="backbutton.png" width="50" height="30"/>
+        <image name="button-green.png" width="111" height="27"/>
+        <image name="button-green.png" width="111" height="27"/>
+        <image name="button-green.png" width="111" height="27"/>
+        <image name="button-green.png" width="111" height="27"/>
+        <image name="button-green.png" width="111" height="27"/>
+        <image name="button-green.png" width="111" height="27"/>
+        <image name="button-green.png" width="111" height="27"/>
+        <image name="button-green.png" width="111" height="27"/>
+        <image name="button-green.png" width="111" height="27"/>
+        <image name="button-green.png" width="111" height="27"/>
+        <image name="button-green.png" width="111" height="27"/>
+        <image name="button-green.png" width="111" height="27"/>
+        <image name="button-green.png" width="111" height="27"/>
+        <image name="button-green.png" width="111" height="27"/>
+        <image name="button-green.png" width="111" height="27"/>
+        <image name="button-green.png" width="111" height="27"/>
         <image name="button-green.png" width="111" height="27"/>
         <image name="cecC14-icon-400x400_icon.png" width="50" height="50"/>
         <image name="committeeC14-icon-400x400_icon.png" width="50" height="50"/>
         <image name="confschedC14_icon.png" width="50" height="50"/>
         <image name="contactusC14-icon-400x400_icon.png" width="50" height="50"/>
         <image name="createuser_button.png" width="111" height="27"/>
+        <image name="createuser_button.png" width="111" height="27"/>
+        <image name="createuser_button.png" width="111" height="27"/>
+        <image name="createuser_button.png" width="111" height="27"/>
         <image name="ehscheduleC14-400x400_icon.png" width="50" height="50"/>
+        <image name="entrancehall_floorplan_icon_iphone.png" width="145" height="189"/>
+        <image name="exhibithall_floorplan_icon_iphone.png" width="145" height="135"/>
         <image name="exhibitorsC14-400x400_icon.png" width="50" height="50"/>
         <image name="facebook.png" width="64" height="64"/>
         <image name="facebook_button.png" width="111" height="27"/>
@@ -3556,12 +3672,21 @@ Note: Exams are not included in the course fees. Exam application and applicable
         <image name="speakersC14_icon.png" width="50" height="50"/>
         <image name="sponsorsC14-400x400_icon.png" width="50" height="50"/>
         <image name="take-survey.png" width="25" height="26"/>
+        <image name="take-survey.png" width="25" height="26"/>
+        <image name="take-survey.png" width="25" height="26"/>
+        <image name="take-survey.png" width="25" height="26"/>
         <image name="techsupportC14-icon-400x400_icon.png" width="50" height="50"/>
         <image name="trainingC14-icon-400x400_icon.png" width="50" height="50"/>
         <image name="twitter.png" width="64" height="64"/>
         <image name="twitterfeed.png" width="270" height="50"/>
         <image name="twitterpost.png" width="270" height="50"/>
         <image name="updatedata_button.png" width="222" height="65"/>
+        <image name="updatedata_button.png" width="222" height="65"/>
+        <image name="updatedata_button.png" width="222" height="65"/>
+        <image name="updatedata_button.png" width="222" height="65"/>
+        <image name="updatedata_button.png" width="222" height="65"/>
+        <image name="view_website_icon.png" width="25" height="25"/>
+        <image name="view_website_icon.png" width="25" height="25"/>
         <image name="view_website_icon.png" width="25" height="25"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
