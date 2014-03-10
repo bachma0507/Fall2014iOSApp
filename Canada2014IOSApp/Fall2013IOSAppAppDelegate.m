@@ -53,7 +53,7 @@ int iNotificationCounter=0;
 {
     
     // Setup TestFlight
-    //[TestFlight setDeviceIdentifier:[[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString]];
+    
     [TestFlight takeOff:@"8425b2ed-652c-496e-b506-d0ce6243cc76"];
     
     // Use this option to notifiy beta users of any updates
