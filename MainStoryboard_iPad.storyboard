@@ -94,6 +94,38 @@
             </objects>
             <point key="canvasLocation" x="812" y="2975"/>
         </scene>
+        <!--Entrance Hall Floor Plan View Controller - Main Floor Map-->
+        <scene sceneID="OB2-yv-tQH">
+            <objects>
+                <viewController id="jZU-sb-M1s" customClass="EntranceHallFloorPlanViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="otT-x9-5vK">
+                        <rect key="frame" x="0.0" y="64" width="768" height="960"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" id="W76-yL-hlO">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="960"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" id="3ND-tM-qJY">
+                                <rect key="frame" x="366" y="461" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" red="0.0" green="0.40000000000000002" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" title="Main Floor Map" id="O6z-DH-M5b"/>
+                    <connections>
+                        <outlet property="activity" destination="3ND-tM-qJY" id="oPQ-AX-3SI"/>
+                        <outlet property="webView" destination="W76-yL-hlO" id="xL8-uF-RM0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6aP-hZ-7bB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1396" y="1858"/>
+        </scene>
         <!--Social View Controller - Social Media-->
         <scene sceneID="z0X-Lg-3zj">
             <objects>
@@ -468,7 +500,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="-1478" y="2097"/>
+            <point key="canvasLocation" x="-2630" y="2153"/>
         </scene>
         <!--Ipad Register View Controller - Sign Up-->
         <scene sceneID="45d-Kj-kZ8">
@@ -1097,7 +1129,7 @@ If you have any questions, please do not hesitate to contact bicsi@bicsi.org.</s
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZAI-s9-bvS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-58" y="-1460"/>
+            <point key="canvasLocation" x="174" y="-1454"/>
         </scene>
         <!--Exhibit Hall Schedule View Controller - Exhibit Hall Schedule-->
         <scene sceneID="eC8-9i-KNu">
@@ -1191,7 +1223,7 @@ If you have any questions, please do not hesitate to contact bicsi@bicsi.org.</s
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="usx-Uv-aX4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-999" y="-892"/>
+            <point key="canvasLocation" x="-860" y="-872"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BMO-Qa-m71">
@@ -1292,10 +1324,10 @@ If you have any questions, please do not hesitate to contact bicsi@bicsi.org.</s
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="L9h-9p-2y1" kind="push" id="2zS-Om-6bk"/>
+                                    <segue destination="Zl7-of-6gl" kind="push" id="8kw-DG-toK"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" text="Exhibit Hall Floor Plan" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bxZ-u7-pyx">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" text="Interactive Floor Maps" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bxZ-u7-pyx">
                                 <rect key="frame" x="81" y="450" width="92" height="42"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <color key="textColor" red="0.50196078430000002" green="0.56078431370000004" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -1397,7 +1429,7 @@ If you have any questions, please do not hesitate to contact bicsi@bicsi.org.</s
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7wM-Wj-fug" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="420" y="586"/>
+            <point key="canvasLocation" x="656" y="1850"/>
         </scene>
         <!--ProgramPDF View Controller - Presentations (PDF)-->
         <scene sceneID="S2H-oP-XQd">
@@ -1495,7 +1527,7 @@ If you have any questions, please do not hesitate to contact bicsi@bicsi.org.</s
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sEu-j4-Mfi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-86" y="-761"/>
+            <point key="canvasLocation" x="130" y="-213"/>
         </scene>
         <!--Agenda Table View Controller - My Planner-->
         <scene sceneID="xXC-sT-Dot">
@@ -2174,7 +2206,66 @@ If you have any questions, please do not hesitate to contact bicsi@bicsi.org.</s
                     </connections>
                 </pinchGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-2368" y="2068"/>
+            <point key="canvasLocation" x="-2472" y="724"/>
+        </scene>
+        <!--Floor Maps View Controller - Floor Maps-->
+        <scene sceneID="vLv-2m-dkq">
+            <objects>
+                <viewController id="Zl7-of-6gl" customClass="FloorMapsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0N6-Yk-MbQ">
+                        <rect key="frame" x="0.0" y="64" width="768" height="960"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="entrancehall_floorplan_icon_ipad.png" id="6d9-6h-gwe">
+                                <rect key="frame" x="252" y="105" width="265" height="346"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UGE-vx-MpO">
+                                <rect key="frame" x="252" y="116" width="265" height="346"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="jZU-sb-M1s" kind="push" id="ZL9-KA-lE0"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="exhibithall_floorplan_icon_ipad.png" id="ef6-5c-weu">
+                                <rect key="frame" x="252" y="591" width="265" height="247"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="X69-h5-tD0">
+                                <rect key="frame" x="252" y="591" width="265" height="247"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="L9h-9p-2y1" kind="push" id="ZsS-yn-M2d"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap on Main Floor Map below" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fKK-Xr-4sy">
+                                <rect key="frame" x="270" y="52" width="268" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" red="0.50196078431372548" green="0.5607843137254902" blue="0.58823529411764708" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap on Exhibit Hall Floor Map Below" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PVK-SZ-w4t">
+                                <rect key="frame" x="242" y="548" width="304" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" red="0.50196078430000002" green="0.56078431370000004" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" title="Floor Maps" id="gRW-ze-Q5w"/>
+                    <connections>
+                        <outlet property="imageView" destination="6d9-6h-gwe" id="PwA-wb-ZDP"/>
+                        <outlet property="imageView2" destination="ef6-5c-weu" id="zgi-aB-1aM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ybN-Lw-XXy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1580" y="608"/>
         </scene>
         <!--Ipad Upload Image View Controller - Upload Photo-->
         <scene sceneID="dCm-hZ-nv5">
@@ -2383,7 +2474,7 @@ If you have any questions, please do not hesitate to contact bicsi@bicsi.org.</s
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="phone" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Tgb-jz-iWg">
-                                <rect key="frame" x="20" y="49.000000007450666" width="728" height="21"/>
+                                <rect key="frame" x="20" y="49.000000007450581" width="728" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -2995,7 +3086,7 @@ Note: Exams are not included in the course fees. Exam application and applicable
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zEK-0p-0Vm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1350" y="775"/>
+            <point key="canvasLocation" x="-2570" y="-441"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Lz9-69-D4T">
@@ -3329,9 +3420,29 @@ Note: Exams are not included in the course fees. Exam application and applicable
     </scenes>
     <resources>
         <image name="add-notes_ipad.png" width="70" height="78"/>
+        <image name="add-notes_ipad.png" width="70" height="78"/>
+        <image name="add-notes_ipad.png" width="70" height="78"/>
         <image name="agendaC14-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="backbutton-default.png" width="50" height="30"/>
         <image name="backbutton.png" width="50" height="30"/>
+        <image name="button-green_ipad.png" width="224" height="66"/>
+        <image name="button-green_ipad.png" width="224" height="66"/>
+        <image name="button-green_ipad.png" width="224" height="66"/>
+        <image name="button-green_ipad.png" width="224" height="66"/>
+        <image name="button-green_ipad.png" width="224" height="66"/>
+        <image name="button-green_ipad.png" width="224" height="66"/>
+        <image name="button-green_ipad.png" width="224" height="66"/>
+        <image name="button-green_ipad.png" width="224" height="66"/>
+        <image name="button-green_ipad.png" width="224" height="66"/>
+        <image name="button-green_ipad.png" width="224" height="66"/>
+        <image name="button-green_ipad.png" width="224" height="66"/>
+        <image name="button-green_ipad.png" width="224" height="66"/>
+        <image name="button-green_ipad.png" width="224" height="66"/>
+        <image name="button-green_ipad.png" width="224" height="66"/>
+        <image name="button-green_ipad.png" width="224" height="66"/>
+        <image name="button-green_ipad.png" width="224" height="66"/>
+        <image name="button-green_ipad.png" width="224" height="66"/>
+        <image name="button-green_ipad.png" width="224" height="66"/>
         <image name="button-green_ipad.png" width="224" height="66"/>
         <image name="cecC14-icon-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="comm_meetings_icon_ipad.png" width="120" height="120"/>
@@ -3339,26 +3450,40 @@ Note: Exams are not included in the course fees. Exam application and applicable
         <image name="confschedC14_icon_ipad.png" width="120" height="120"/>
         <image name="contactusC14-icon-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="createuser_button_ipad.png" width="224" height="66"/>
+        <image name="createuser_button_ipad.png" width="224" height="66"/>
+        <image name="createuser_button_ipad.png" width="224" height="66"/>
+        <image name="createuser_button_ipad.png" width="224" height="66"/>
         <image name="ehscheduleC14-400x400_icon_ipad.png" width="120" height="120"/>
+        <image name="entrancehall_floorplan_icon_ipad.png" width="265" height="346"/>
+        <image name="exhibithall_floorplan_icon_ipad.png" width="265" height="247"/>
         <image name="exhibitorsC14-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="facebook_button_ipad.png" width="224" height="66"/>
         <image name="facebookpost_ipad.png" width="648" height="120"/>
+        <image name="favoritesC14-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="favoritesC14-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="floorplanC14-icon-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="hotelC14-icon-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="notesC14-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="programC14-icon-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="reload30x30.png" width="30" height="30"/>
+        <image name="reload30x30.png" width="30" height="30"/>
         <image name="sessionsC14-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="shutterstock_cec-ipad.png" width="205" height="128"/>
         <image name="shutterstock_contact-us-ipad.png" width="265" height="128"/>
         <image name="shutterstock_training-ipad.png" width="397" height="298"/>
         <image name="sponsorsC14-400x400_icon_ipad.png" width="120" height="120"/>
+        <image name="sponsorsC14-400x400_icon_ipad.png" width="120" height="120"/>
+        <image name="take-survey_ipad.png" width="70" height="72"/>
+        <image name="take-survey_ipad.png" width="70" height="72"/>
         <image name="take-survey_ipad.png" width="70" height="72"/>
         <image name="techsupportC14-icon-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="trainingC14-icon-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="twitterfeed_ipad.png" width="648" height="120"/>
         <image name="twitterpost_ipad.png" width="648" height="120"/>
+        <image name="updatedata_button.png" width="222" height="65"/>
+        <image name="updatedata_button.png" width="222" height="65"/>
+        <image name="updatedata_button.png" width="222" height="65"/>
+        <image name="updatedata_button.png" width="222" height="65"/>
         <image name="updatedata_button.png" width="222" height="65"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -3367,10 +3492,10 @@ Note: Exams are not included in the course fees. Exam application and applicable
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="SDK-bn-4vP"/>
-        <segue reference="1Pj-Cp-vD7"/>
-        <segue reference="ZwN-mm-jT8"/>
+        <segue reference="GEW-K7-fR7"/>
         <segue reference="Ysf-Ju-HKO"/>
         <segue reference="SFt-NY-1lL"/>
+        <segue reference="ZwN-mm-jT8"/>
+        <segue reference="SDK-bn-4vP"/>
     </inferredMetricsTieBreakers>
 </document>
