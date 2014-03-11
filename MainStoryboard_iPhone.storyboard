@@ -2039,18 +2039,8 @@ Note: Exams are not included in the course fees. Exam application and applicable
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="entrancehall_floorplan_icon_iphone.png" id="BPo-oe-jnp">
-                                <rect key="frame" x="40" y="24" width="145" height="189"/>
-                            </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Main Hall Floor Map (Tap)" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aWX-C3-bTk">
-                                <rect key="frame" x="193" y="89" width="114" height="57"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                <color key="textColor" red="0.50196078431372548" green="0.5607843137254902" blue="0.58823529411764708" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2fW-Vu-ZOs">
-                                <rect key="frame" x="42" y="16" width="145" height="201"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="39" y="23" width="145" height="189"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -2058,17 +2048,17 @@ Note: Exams are not included in the course fees. Exam application and applicable
                                     <segue destination="Wvj-Fe-nCb" kind="push" id="Zpd-Q8-3vg"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="exhibithall_floorplan_icon_iphone.png" id="7Wh-3a-nKp">
-                                <rect key="frame" x="42" y="271" width="145" height="135"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="entrancehall_floorplan_icon_iphone.png" id="BPo-oe-jnp">
+                                <rect key="frame" x="40" y="23" width="145" height="189"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exhibit Hall Floor Map (Tap)" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aZk-dJ-MfC">
-                                <rect key="frame" x="193" y="310" width="114" height="57"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                <color key="textColor" red="0.50196078430000002" green="0.56078431370000004" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Main Hall Floor Map (Tap)" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aWX-C3-bTk">
+                                <rect key="frame" x="193" y="89" width="114" height="57"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.50196078431372548" green="0.5607843137254902" blue="0.58823529411764708" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="rvp-qH-zP9">
-                                <rect key="frame" x="40" y="271" width="145" height="244"/>
+                                <rect key="frame" x="42" y="271" width="145" height="135"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -2076,6 +2066,15 @@ Note: Exams are not included in the course fees. Exam application and applicable
                                     <segue destination="0F4-70-PsM" kind="push" id="SGZ-hB-yeh"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="exhibithall_floorplan_icon_iphone.png" id="7Wh-3a-nKp">
+                                <rect key="frame" x="42" y="271" width="145" height="135"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exhibit Hall Floor Map (Tap)" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aZk-dJ-MfC">
+                                <rect key="frame" x="193" y="310" width="114" height="57"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.50196078430000002" green="0.56078431370000004" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -3615,36 +3614,14 @@ Note: Exams are not included in the course fees. Exam application and applicable
     <resources>
         <image name="Rosen_hotel-iphone.png" width="217" height="145"/>
         <image name="add-notes.png" width="25" height="28"/>
-        <image name="add-notes.png" width="25" height="28"/>
-        <image name="add-notes.png" width="25" height="28"/>
-        <image name="add-notes.png" width="25" height="28"/>
         <image name="agendaC14-400x400_icon.png" width="50" height="50"/>
         <image name="backbutton-default.png" width="50" height="30"/>
         <image name="backbutton.png" width="50" height="30"/>
-        <image name="button-green.png" width="111" height="27"/>
-        <image name="button-green.png" width="111" height="27"/>
-        <image name="button-green.png" width="111" height="27"/>
-        <image name="button-green.png" width="111" height="27"/>
-        <image name="button-green.png" width="111" height="27"/>
-        <image name="button-green.png" width="111" height="27"/>
-        <image name="button-green.png" width="111" height="27"/>
-        <image name="button-green.png" width="111" height="27"/>
-        <image name="button-green.png" width="111" height="27"/>
-        <image name="button-green.png" width="111" height="27"/>
-        <image name="button-green.png" width="111" height="27"/>
-        <image name="button-green.png" width="111" height="27"/>
-        <image name="button-green.png" width="111" height="27"/>
-        <image name="button-green.png" width="111" height="27"/>
-        <image name="button-green.png" width="111" height="27"/>
-        <image name="button-green.png" width="111" height="27"/>
         <image name="button-green.png" width="111" height="27"/>
         <image name="cecC14-icon-400x400_icon.png" width="50" height="50"/>
         <image name="committeeC14-icon-400x400_icon.png" width="50" height="50"/>
         <image name="confschedC14_icon.png" width="50" height="50"/>
         <image name="contactusC14-icon-400x400_icon.png" width="50" height="50"/>
-        <image name="createuser_button.png" width="111" height="27"/>
-        <image name="createuser_button.png" width="111" height="27"/>
-        <image name="createuser_button.png" width="111" height="27"/>
         <image name="createuser_button.png" width="111" height="27"/>
         <image name="ehscheduleC14-400x400_icon.png" width="50" height="50"/>
         <image name="entrancehall_floorplan_icon_iphone.png" width="145" height="189"/>
@@ -3672,21 +3649,12 @@ Note: Exams are not included in the course fees. Exam application and applicable
         <image name="speakersC14_icon.png" width="50" height="50"/>
         <image name="sponsorsC14-400x400_icon.png" width="50" height="50"/>
         <image name="take-survey.png" width="25" height="26"/>
-        <image name="take-survey.png" width="25" height="26"/>
-        <image name="take-survey.png" width="25" height="26"/>
-        <image name="take-survey.png" width="25" height="26"/>
         <image name="techsupportC14-icon-400x400_icon.png" width="50" height="50"/>
         <image name="trainingC14-icon-400x400_icon.png" width="50" height="50"/>
         <image name="twitter.png" width="64" height="64"/>
         <image name="twitterfeed.png" width="270" height="50"/>
         <image name="twitterpost.png" width="270" height="50"/>
         <image name="updatedata_button.png" width="222" height="65"/>
-        <image name="updatedata_button.png" width="222" height="65"/>
-        <image name="updatedata_button.png" width="222" height="65"/>
-        <image name="updatedata_button.png" width="222" height="65"/>
-        <image name="updatedata_button.png" width="222" height="65"/>
-        <image name="view_website_icon.png" width="25" height="25"/>
-        <image name="view_website_icon.png" width="25" height="25"/>
         <image name="view_website_icon.png" width="25" height="25"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

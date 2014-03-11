@@ -3257,6 +3257,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Canada2014IOSApp/Canada2014IOSApp-Prefix.pch";
 				INFOPLIST_FILE = "Canada2014IOSApp/Canada2014IOSApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/barry/Desktop/appbackup/Testing\\ Code/Winter\\ App\\ iOS\\ 7/101013\\ -\\ testing\\ code\\ -\\ crittercism\\ upg/Winter2014IOSApp/CrittercismSDK",
@@ -3285,6 +3286,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Canada2014IOSApp/Canada2014IOSApp-Prefix.pch";
 				INFOPLIST_FILE = "Canada2014IOSApp/Canada2014IOSApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/barry/Desktop/appbackup/Testing\\ Code/Winter\\ App\\ iOS\\ 7/101013\\ -\\ testing\\ code\\ -\\ crittercism\\ upg/Winter2014IOSApp/CrittercismSDK",
