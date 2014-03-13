@@ -83,6 +83,13 @@ int iNotificationCounter=0;
     // Requests a device token from Apple
     [[UIApplication sharedApplication] registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert     | UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound];
     
+    // Register for Parse push notifications
+    [application registerForRemoteNotificationTypes:
+     UIRemoteNotificationTypeBadge |
+     UIRemoteNotificationTypeAlert |
+     UIRemoteNotificationTypeSound];
+    
+    
    //[[UINavigationBar appearance]setShadowImage:[[UIImage alloc] init]];
     
     if (SYSTEM_VERSION_LESS_THAN(@"7.0")) {
@@ -1255,6 +1262,13 @@ int iNotificationCounter=0;
 (NSData *)deviceToken
 {
     [[PushIOManager sharedInstance] didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
+    
+    
+    // Store the deviceToken in the current installation and save it to Parse.
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    [currentInstallation setDeviceTokenFromData:deviceToken];
+    [currentInstallation saveInBackground];
+    
 }
 
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
@@ -1264,6 +1278,8 @@ int iNotificationCounter=0;
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
 {
+    
+    
     //-------------------------------------//
     //For showing tabbar badge value
     //Added by Maaj
@@ -1273,6 +1289,8 @@ int iNotificationCounter=0;
     UITabBarItem *tabBarItem2 = [[[tabBarController tabBar] items] objectAtIndex:1];
     tabBarItem2.badgeValue = [NSString stringWithFormat:@"%d",iNotificationCounter];
     //-------------------------------------//
+    //Parse handle
+    [PFPush handlePush:userInfo];
     
     [[PushIOManager sharedInstance] didReceiveRemoteNotification:userInfo];
     
