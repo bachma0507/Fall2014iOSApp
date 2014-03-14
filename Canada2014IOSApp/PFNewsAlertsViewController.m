@@ -7,12 +7,17 @@
 //
 
 #import "PFNewsAlertsViewController.h"
+#import "Fall2013IOSAppAppDelegate.h"
+
+extern int iNotificationCounter;
 
 @interface PFNewsAlertsViewController ()
 
 @end
 
 @implementation PFNewsAlertsViewController
+
+//int iNotificationCounter=0;
 
 //- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 //{
@@ -45,6 +50,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     // Wipe out old user defaults
+    
+    
     if ([[NSUserDefaults standardUserDefaults] objectForKey:@"objectIDArray"]){
         [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"objectIDArray"];
     }
@@ -130,6 +137,23 @@
         cell.backgroundColor = [UIColor whiteColor];
     }
 }
+
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    
+    //[self refreshTable];
+    //[NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(refreshTable) userInfo:nil repeats:YES];
+    
+    //For reseting the tabbar badge value
+    //Added by Maaj
+    UITabBarController *tBar = (UITabBarController*)[[[UIApplication sharedApplication] keyWindow] rootViewController];
+    UITabBarItem *item=[[[tBar tabBar] items] objectAtIndex:1];
+    [item setBadgeValue:nil];
+    iNotificationCounter = 0;
+    //----------------------------------------------//
+    
+}
+
 
 
 @end
