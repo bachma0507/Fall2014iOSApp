@@ -60,7 +60,7 @@
     AudioServicesCreateSystemSoundID((__bridge_retained CFURLRef)fileURL,&soundID);
     AudioServicesPlaySystemSound(soundID);
     
-    NSString *message = @"All photos and comments will be reviewed before being posted to the gallery.";
+    NSString *message = @"All photos and comments will be reviewed before being posted to the gallery. Any photos with potential indecency issues will not be posted and your user account will be terminated.";
     UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"Notification"
                                                        message:message
                                                       delegate:self
