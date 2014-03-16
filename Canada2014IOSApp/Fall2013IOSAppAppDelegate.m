@@ -189,7 +189,7 @@ int iNotificationCounter=0;
         
             tabBarItem5.selectedImage = [[UIImage imageNamed:@"gallery_tab_icon_selected.png"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal ];
             tabBarItem5.image = [[UIImage imageNamed:@"gallery_tab_icon_unselected.png"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal ];
-            tabBarItem5.title = @"Gallery";
+            tabBarItem5.title = @"Photo Gallery";
 
         
     }

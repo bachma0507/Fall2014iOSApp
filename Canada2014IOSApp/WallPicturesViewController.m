@@ -153,7 +153,7 @@
         [df setDateFormat:@"MMM dd yyyy hh:mm a"];
         
         UILabel *infoLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 307, wallImageView.frame.size.width,15)];
-        infoLabel.text = [NSString stringWithFormat:@"Uploaded by: %@, %@", [wallObject objectForKey:KEY_USER], [df stringFromDate:creationDate]];
+        infoLabel.text = [NSString stringWithFormat:@"Pic ID:%@, Uploaded by: %@ on %@", wallObject.objectId,[wallObject objectForKey:KEY_USER], [df stringFromDate:creationDate]];
         infoLabel.font = [UIFont fontWithName:@"Arial-ItalicMT" size:9];
         infoLabel.textColor = [UIColor blackColor];
         infoLabel.backgroundColor = [UIColor clearColor];

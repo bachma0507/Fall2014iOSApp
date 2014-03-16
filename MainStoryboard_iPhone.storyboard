@@ -983,7 +983,57 @@
             </objects>
             <point key="canvasLocation" x="-711" y="-2308"/>
         </scene>
-        <!--Wall Pictures View Controller - Photo Gallery-->
+        <!--Report View Controller - Report Photo-->
+        <scene sceneID="Uu4-Ed-jWB">
+            <objects>
+                <viewController id="PSY-EL-2VH" customClass="ReportViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cJB-AQ-nbr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Report Objectionable Content" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ksT-rC-m26">
+                                <rect key="frame" x="42" y="78" width="236" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pic ID..." minimumFontSize="17" id="YVy-Sj-OyR">
+                                <rect key="frame" x="20" y="150" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter the Pic ID, located under photo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4sQ-Wg-FYy">
+                                <rect key="frame" x="20" y="121" width="286" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.50196078430000002" green="0.56078431370000004" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qFE-9S-9Wf">
+                                <rect key="frame" x="116" y="201" width="89" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Send">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="PSY-EL-2VH" eventType="touchUpInside" id="2Gm-Cm-Jq5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Report Photo" id="AJL-Fs-sBh"/>
+                    <connections>
+                        <outlet property="commentTextField" destination="YVy-Sj-OyR" id="57Q-hk-4Zc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XMp-RD-bf9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-29" y="-3196"/>
+        </scene>
+        <!--Wall Pictures View Controller-->
         <scene sceneID="44j-G1-icx">
             <objects>
                 <viewController id="wxH-JW-VAP" customClass="WallPicturesViewController" sceneMemberID="viewController">
@@ -1005,12 +1055,24 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationItem key="navigationItem" title="Photo Gallery" id="jhn-Kd-qIu">
+                    <navigationItem key="navigationItem" id="jhn-Kd-qIu">
+                        <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="uV8-AB-oGZ">
                             <connections>
                                 <action selector="logoutPressed:" destination="wxH-JW-VAP" id="d46-bN-rBf"/>
                             </connections>
                         </barButtonItem>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Qsn-PH-hmH">
+                            <rect key="frame" x="96" y="6" width="128" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal" title="Report Photo">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <segue destination="PSY-EL-2VH" kind="push" id="df8-e3-LEB"/>
+                            </connections>
+                        </button>
                         <barButtonItem key="rightBarButtonItem" title="Upload" id="MVp-SP-n9c">
                             <connections>
                                 <segue destination="yMd-s0-jtG" kind="push" id="txT-yD-NDu"/>
@@ -3614,36 +3676,14 @@ Note: Exams are not included in the course fees. Exam application and applicable
     <resources>
         <image name="Rosen_hotel-iphone.png" width="217" height="145"/>
         <image name="add-notes.png" width="25" height="28"/>
-        <image name="add-notes.png" width="25" height="28"/>
-        <image name="add-notes.png" width="25" height="28"/>
-        <image name="add-notes.png" width="25" height="28"/>
         <image name="agendaC14-400x400_icon.png" width="50" height="50"/>
         <image name="backbutton-default.png" width="50" height="30"/>
         <image name="backbutton.png" width="50" height="30"/>
-        <image name="button-green.png" width="111" height="27"/>
-        <image name="button-green.png" width="111" height="27"/>
-        <image name="button-green.png" width="111" height="27"/>
-        <image name="button-green.png" width="111" height="27"/>
-        <image name="button-green.png" width="111" height="27"/>
-        <image name="button-green.png" width="111" height="27"/>
-        <image name="button-green.png" width="111" height="27"/>
-        <image name="button-green.png" width="111" height="27"/>
-        <image name="button-green.png" width="111" height="27"/>
-        <image name="button-green.png" width="111" height="27"/>
-        <image name="button-green.png" width="111" height="27"/>
-        <image name="button-green.png" width="111" height="27"/>
-        <image name="button-green.png" width="111" height="27"/>
-        <image name="button-green.png" width="111" height="27"/>
-        <image name="button-green.png" width="111" height="27"/>
-        <image name="button-green.png" width="111" height="27"/>
         <image name="button-green.png" width="111" height="27"/>
         <image name="cecC14-icon-400x400_icon.png" width="50" height="50"/>
         <image name="committeeC14-icon-400x400_icon.png" width="50" height="50"/>
         <image name="confschedC14_icon.png" width="50" height="50"/>
         <image name="contactusC14-icon-400x400_icon.png" width="50" height="50"/>
-        <image name="createuser_button.png" width="111" height="27"/>
-        <image name="createuser_button.png" width="111" height="27"/>
-        <image name="createuser_button.png" width="111" height="27"/>
         <image name="createuser_button.png" width="111" height="27"/>
         <image name="ehscheduleC14-400x400_icon.png" width="50" height="50"/>
         <image name="entrancehall_floorplan_icon_iphone.png" width="145" height="189"/>
@@ -3671,21 +3711,12 @@ Note: Exams are not included in the course fees. Exam application and applicable
         <image name="speakersC14_icon.png" width="50" height="50"/>
         <image name="sponsorsC14-400x400_icon.png" width="50" height="50"/>
         <image name="take-survey.png" width="25" height="26"/>
-        <image name="take-survey.png" width="25" height="26"/>
-        <image name="take-survey.png" width="25" height="26"/>
-        <image name="take-survey.png" width="25" height="26"/>
         <image name="techsupportC14-icon-400x400_icon.png" width="50" height="50"/>
         <image name="trainingC14-icon-400x400_icon.png" width="50" height="50"/>
         <image name="twitter.png" width="64" height="64"/>
         <image name="twitterfeed.png" width="270" height="50"/>
         <image name="twitterpost.png" width="270" height="50"/>
         <image name="updatedata_button.png" width="222" height="65"/>
-        <image name="updatedata_button.png" width="222" height="65"/>
-        <image name="updatedata_button.png" width="222" height="65"/>
-        <image name="updatedata_button.png" width="222" height="65"/>
-        <image name="updatedata_button.png" width="222" height="65"/>
-        <image name="view_website_icon.png" width="25" height="25"/>
-        <image name="view_website_icon.png" width="25" height="25"/>
         <image name="view_website_icon.png" width="25" height="25"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
