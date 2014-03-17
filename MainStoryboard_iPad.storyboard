@@ -546,7 +546,57 @@
             </objects>
             <point key="canvasLocation" x="-860" y="-3914"/>
         </scene>
-        <!--Ipad Wall Pictures View Controller - Photo Gallery-->
+        <!--I Pad Report View Controller - Report Photo-->
+        <scene sceneID="08a-gr-HaJ">
+            <objects>
+                <viewController id="SIQ-Nx-bN4" customClass="iPadReportViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nhy-wt-POs">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Report Objectionable Content" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="v0V-qA-ssO">
+                                <rect key="frame" x="246" y="97" width="277" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter the Pic ID, located under the photo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Pfa-uD-xii">
+                                <rect key="frame" x="157" y="208" width="454" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.50196078430000002" green="0.56078431370000004" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pic ID..." minimumFontSize="17" id="z0W-sj-A9F">
+                                <rect key="frame" x="202" y="242" width="364" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Rm2-Xy-ebq">
+                                <rect key="frame" x="343" y="316" width="82" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Send">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="SIQ-Nx-bN4" eventType="touchUpInside" id="28u-Cz-KDc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Report Photo" id="3ym-ad-KFL"/>
+                    <connections>
+                        <outlet property="commentTextField" destination="z0W-sj-A9F" id="4y1-xj-w1D"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4SN-mc-eRs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-780" y="-5230"/>
+        </scene>
+        <!--Ipad Wall Pictures View Controller-->
         <scene sceneID="nYg-xY-woq">
             <objects>
                 <viewController id="aBX-ZR-poL" customClass="IpadWallPicturesViewController" sceneMemberID="viewController">
@@ -569,12 +619,24 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationItem key="navigationItem" title="Photo Gallery" id="5Ph-4k-Fhh">
+                    <navigationItem key="navigationItem" id="5Ph-4k-Fhh">
+                        <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="GLW-on-363">
                             <connections>
                                 <action selector="logoutPressed:" destination="aBX-ZR-poL" id="6Qn-pk-1T0"/>
                             </connections>
                         </barButtonItem>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="w6j-Wt-sNs">
+                            <rect key="frame" x="231" y="6" width="307" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal" title="Report Photo">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <segue destination="SIQ-Nx-bN4" kind="push" id="5mY-Z3-6FV"/>
+                            </connections>
+                        </button>
                         <barButtonItem key="rightBarButtonItem" title="Upload" id="I93-EX-caV">
                             <connections>
                                 <segue destination="b31-qf-aoc" kind="push" id="yFo-42-w4L"/>
@@ -588,7 +650,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EZM-qo-azV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-820" y="-5023"/>
+            <point key="canvasLocation" x="-768" y="-4113"/>
         </scene>
         <!--Start Page View Controller-->
         <scene sceneID="8Ge-6H-E4o">
@@ -2473,7 +2535,7 @@ If you have any questions, please do not hesitate to contact bicsi@bicsi.org.</s
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="phone" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Tgb-jz-iWg">
-                                <rect key="frame" x="20" y="49" width="728" height="21"/>
+                                <rect key="frame" x="20" y="49.00000000761721" width="728" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
