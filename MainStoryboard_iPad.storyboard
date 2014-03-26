@@ -315,39 +315,56 @@
                         <segue destination="Mqj-i3-nq9" kind="relationship" relationship="viewControllers" id="dao-6R-EBM"/>
                         <segue destination="qxI-TJ-rwd" kind="relationship" relationship="viewControllers" id="6H4-vi-H44"/>
                         <segue destination="bwS-LC-9Qw" kind="relationship" relationship="viewControllers" id="jaA-nA-gQf"/>
+                        <segue destination="KbC-rB-dbg" kind="relationship" relationship="viewControllers" id="IUP-fd-LYH"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l4b-Na-k6b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3611" y="-4091"/>
         </scene>
+        <!--Navigation Controller - Item-->
+        <scene sceneID="0Pc-ip-dNv">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="KbC-rB-dbg" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="B9f-mE-qpx"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6kc-Ns-4fT">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="aeL-WE-Tf9" kind="relationship" relationship="rootViewController" id="vCT-nh-4jb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QsS-tv-9bJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2706" y="-4969"/>
+        </scene>
         <!--Ipad Login View Controller - Photo Gallery Log In-->
         <scene sceneID="aC2-aj-jKu">
             <objects>
                 <viewController storyboardIdentifier="IpadLoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aeL-WE-Tf9" customClass="IpadLoginViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lwc-UE-wu6">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="64" width="768" height="911"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" selectable="NO" id="GG8-js-SZX">
-                                <rect key="frame" x="9" y="8" width="750" height="172"/>
+                                <rect key="frame" x="9" y="7" width="750" height="172"/>
                                 <color key="backgroundColor" red="0.88627450980392153" green="0.98431372549019602" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">Already have a user account that allows you to upload your conference pics and view the gallery? Then sign in below. If not, create a user account.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" id="9IL-je-o3l">
-                                <rect key="frame" x="115" y="275" width="539" height="30"/>
+                                <rect key="frame" x="115" y="244" width="539" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" id="dM1-A7-s60">
-                                <rect key="frame" x="115" y="358" width="539" height="30"/>
+                                <rect key="frame" x="115" y="317" width="539" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mP5-06-Vj9">
-                                <rect key="frame" x="278" y="422" width="213" height="30"/>
+                                <rect key="frame" x="278" y="374" width="213" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="Log In" backgroundImage="button-green_ipad.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -358,13 +375,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="U2B-C4-xPB">
-                                <rect key="frame" x="363" y="478" width="42" height="21"/>
+                                <rect key="frame" x="363" y="424" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xl8-ut-H6P">
-                                <rect key="frame" x="234" y="519" width="301" height="30"/>
+                                <rect key="frame" x="234" y="460" width="301" height="30"/>
                                 <color key="backgroundColor" red="0.14901960784313725" green="0.22745098039215686" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="Log in with facebook" backgroundImage="facebook_button_ipad.png">
@@ -376,13 +393,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Mhk-Zn-t6B">
-                                <rect key="frame" x="363" y="576" width="42" height="21"/>
+                                <rect key="frame" x="363" y="511" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1bX-DT-ya4">
-                                <rect key="frame" x="234" y="621" width="301" height="30"/>
+                                <rect key="frame" x="234" y="550" width="301" height="30"/>
                                 <color key="backgroundColor" red="0.24774749087591241" green="0.35757869525547448" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="Create a User Account" backgroundImage="createuser_button_ipad.png">
@@ -489,21 +506,21 @@
             <objects>
                 <viewController id="EU5-Xt-hyd" customClass="IpadRegisterViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ODC-4J-5eR">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="64" width="768" height="911"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" id="OwU-Gq-PY7">
-                                <rect key="frame" x="115" y="89" width="539" height="30"/>
+                                <rect key="frame" x="115" y="79" width="539" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" id="BPr-KV-XCG">
-                                <rect key="frame" x="115" y="177" width="539" height="30"/>
+                                <rect key="frame" x="115" y="157" width="539" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qN6-gL-DaJ">
-                                <rect key="frame" x="270" y="264" width="229" height="30"/>
+                                <rect key="frame" x="270" y="234" width="229" height="30"/>
                                 <color key="backgroundColor" red="0.24705882352941178" green="0.35686274509803922" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="Sign Up" backgroundImage="createuser_button_ipad.png">
@@ -580,11 +597,11 @@
             <objects>
                 <viewController id="aBX-ZR-poL" customClass="IpadWallPicturesViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="awV-wm-m7F">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="64" width="768" height="911"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="x0o-65-mEB">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="911"/>
                                 <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
                                 <subviews>
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" id="iSA-Z6-DDa">
@@ -2312,20 +2329,20 @@ If you have any questions, please do not hesitate to contact bicsi@bicsi.org.</s
             <objects>
                 <viewController id="b31-qf-aoc" customClass="IpadUploadImageViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zwv-gA-gvV">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="64" width="768" height="911"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Comment (Required)" minimumFontSize="17" id="RNP-c5-VEM">
-                                <rect key="frame" x="20" y="45" width="728" height="30"/>
+                                <rect key="frame" x="20" y="40" width="728" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="nYN-ZC-5Zz">
-                                <rect key="frame" x="20" y="135" width="728" height="600"/>
+                                <rect key="frame" x="20" y="99" width="728" height="600"/>
                                 <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="efY-Dg-nyY">
-                                <rect key="frame" x="20" y="856" width="256" height="30"/>
+                                <rect key="frame" x="20" y="759" width="256" height="30"/>
                                 <color key="backgroundColor" red="0.24705882352941178" green="0.35686274509803922" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="Select Photo" backgroundImage="createuser_button_ipad.png">
@@ -2337,7 +2354,7 @@ If you have any questions, please do not hesitate to contact bicsi@bicsi.org.</s
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="WeG-Wk-KKD">
-                                <rect key="frame" x="492" y="856" width="256" height="30"/>
+                                <rect key="frame" x="492" y="759" width="256" height="30"/>
                                 <color key="backgroundColor" red="0.24705882352941178" green="0.35686274509803922" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="Use Camera" backgroundImage="createuser_button_ipad.png">
@@ -2514,7 +2531,7 @@ If you have any questions, please do not hesitate to contact bicsi@bicsi.org.</s
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="phone" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Tgb-jz-iWg">
-                                <rect key="frame" x="20" y="49.000000007446857" width="728" height="21"/>
+                                <rect key="frame" x="20" y="49" width="728" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -3460,15 +3477,38 @@ Note: Exams are not included in the course fees. Exam application and applicable
     </scenes>
     <resources>
         <image name="add-notes_ipad.png" width="70" height="78"/>
+        <image name="add-notes_ipad.png" width="70" height="78"/>
+        <image name="add-notes_ipad.png" width="70" height="78"/>
         <image name="agendaC14-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="backbutton-default.png" width="50" height="30"/>
         <image name="backbutton.png" width="50" height="30"/>
+        <image name="button-green_ipad.png" width="224" height="66"/>
+        <image name="button-green_ipad.png" width="224" height="66"/>
+        <image name="button-green_ipad.png" width="224" height="66"/>
+        <image name="button-green_ipad.png" width="224" height="66"/>
+        <image name="button-green_ipad.png" width="224" height="66"/>
+        <image name="button-green_ipad.png" width="224" height="66"/>
+        <image name="button-green_ipad.png" width="224" height="66"/>
+        <image name="button-green_ipad.png" width="224" height="66"/>
+        <image name="button-green_ipad.png" width="224" height="66"/>
+        <image name="button-green_ipad.png" width="224" height="66"/>
+        <image name="button-green_ipad.png" width="224" height="66"/>
+        <image name="button-green_ipad.png" width="224" height="66"/>
+        <image name="button-green_ipad.png" width="224" height="66"/>
+        <image name="button-green_ipad.png" width="224" height="66"/>
+        <image name="button-green_ipad.png" width="224" height="66"/>
+        <image name="button-green_ipad.png" width="224" height="66"/>
+        <image name="button-green_ipad.png" width="224" height="66"/>
+        <image name="button-green_ipad.png" width="224" height="66"/>
         <image name="button-green_ipad.png" width="224" height="66"/>
         <image name="cecC14-icon-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="comm_meetings_icon_ipad.png" width="120" height="120"/>
         <image name="committeeC14-icon-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="confschedC14_icon_ipad.png" width="120" height="120"/>
         <image name="contactusC14-icon-400x400_icon_ipad.png" width="120" height="120"/>
+        <image name="createuser_button_ipad.png" width="224" height="66"/>
+        <image name="createuser_button_ipad.png" width="224" height="66"/>
+        <image name="createuser_button_ipad.png" width="224" height="66"/>
         <image name="createuser_button_ipad.png" width="224" height="66"/>
         <image name="ehscheduleC14-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="entrancehall_floorplan_icon_ipad.png" width="265" height="346"/>
@@ -3477,21 +3517,30 @@ Note: Exams are not included in the course fees. Exam application and applicable
         <image name="facebook_button_ipad.png" width="224" height="66"/>
         <image name="facebookpost_ipad.png" width="648" height="120"/>
         <image name="favoritesC14-400x400_icon_ipad.png" width="120" height="120"/>
+        <image name="favoritesC14-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="floorplanC14-icon-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="hotelC14-icon-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="notesC14-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="programC14-icon-400x400_icon_ipad.png" width="120" height="120"/>
+        <image name="reload30x30.png" width="30" height="30"/>
         <image name="reload30x30.png" width="30" height="30"/>
         <image name="sessionsC14-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="shutterstock_cec-ipad.png" width="205" height="128"/>
         <image name="shutterstock_contact-us-ipad.png" width="265" height="128"/>
         <image name="shutterstock_training-ipad.png" width="397" height="298"/>
         <image name="sponsorsC14-400x400_icon_ipad.png" width="120" height="120"/>
+        <image name="sponsorsC14-400x400_icon_ipad.png" width="120" height="120"/>
+        <image name="take-survey_ipad.png" width="70" height="72"/>
+        <image name="take-survey_ipad.png" width="70" height="72"/>
         <image name="take-survey_ipad.png" width="70" height="72"/>
         <image name="techsupportC14-icon-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="trainingC14-icon-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="twitterfeed_ipad.png" width="648" height="120"/>
         <image name="twitterpost_ipad.png" width="648" height="120"/>
+        <image name="updatedata_button.png" width="222" height="65"/>
+        <image name="updatedata_button.png" width="222" height="65"/>
+        <image name="updatedata_button.png" width="222" height="65"/>
+        <image name="updatedata_button.png" width="222" height="65"/>
         <image name="updatedata_button.png" width="222" height="65"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

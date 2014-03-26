@@ -140,21 +140,21 @@ int iNotificationCounter=0;
         UITabBarItem *tabBarItem2 = [tabBar.items objectAtIndex:1];
         UITabBarItem *tabBarItem3 = [tabBar.items objectAtIndex:2];
         UITabBarItem *tabBarItem4 = [tabBar.items objectAtIndex:3];
-        //UITabBarItem *tabBarItem5 = [tabBar.items objectAtIndex:4];
+        UITabBarItem *tabBarItem5 = [tabBar.items objectAtIndex:4];
         
         
         tabBarItem1.title = @"Home";
         tabBarItem2.title = @"Alerts";
         tabBarItem3.title = @"Social";
         tabBarItem4.title = @"My BICSI";
-        //tabBarItem5.title = @"Gallery";
+        tabBarItem5.title = @"Gallery";
         
         
         [tabBarItem1 setFinishedSelectedImage:[UIImage imageNamed:@"home_tab_icon_selected.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"home_tab_icon_unselected.png"]];
         [tabBarItem2 setFinishedSelectedImage:[UIImage imageNamed:@"news_tab_icon_selected.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"news_tab_icon_unselected.png"]];
         [tabBarItem3 setFinishedSelectedImage:[UIImage imageNamed:@"social_tab_icon_selected.png"]withFinishedUnselectedImage:[UIImage imageNamed:@"social_tab_icon_unselected.png"]];
         [tabBarItem4 setFinishedSelectedImage:[UIImage imageNamed:@"mybicsi_tab_icon_selected.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"mybicsi_tab_icon_unselected.png"]];
-        //[tabBarItem5 setFinishedSelectedImage:[UIImage imageNamed:@"gallery_tab_icon_selected.png"]withFinishedUnselectedImage:[UIImage imageNamed:@"gallery_tab_icon_unselected.png"]];
+        [tabBarItem5 setFinishedSelectedImage:[UIImage imageNamed:@"gallery_tab_icon_selected.png"]withFinishedUnselectedImage:[UIImage imageNamed:@"gallery_tab_icon_unselected.png"]];
 
     }
     
@@ -168,7 +168,7 @@ int iNotificationCounter=0;
             UITabBarItem *tabBarItem2 = [tabBar.items objectAtIndex:1];
             UITabBarItem *tabBarItem3 = [tabBar.items objectAtIndex:2];
             UITabBarItem *tabBarItem4 = [tabBar.items objectAtIndex:3];
-            //UITabBarItem *tabBarItem5 = [tabBar.items objectAtIndex:4];
+            UITabBarItem *tabBarItem5 = [tabBar.items objectAtIndex:4];
         //
         //
             tabBarItem1.selectedImage = [[UIImage imageNamed:@"home_tab_icon_selected.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal ];
@@ -187,9 +187,9 @@ int iNotificationCounter=0;
             tabBarItem4.image = [[UIImage imageNamed:@"mybicsi_tab_icon_unselected.png"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal ];
             tabBarItem4.title = @"My BICSI";
         
-            //tabBarItem5.selectedImage = [[UIImage imageNamed:@"gallery_tab_icon_selected.png"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal ];
-            //tabBarItem5.image = [[UIImage imageNamed:@"gallery_tab_icon_unselected.png"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal ];
-            //tabBarItem5.title = @"Photo Gallery";
+            tabBarItem5.selectedImage = [[UIImage imageNamed:@"gallery_tab_icon_selected.png"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal ];
+            tabBarItem5.image = [[UIImage imageNamed:@"gallery_tab_icon_unselected.png"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal ];
+            tabBarItem5.title = @"Photo Gallery";
 
         
     }
