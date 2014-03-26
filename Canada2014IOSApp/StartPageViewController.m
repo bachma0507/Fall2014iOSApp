@@ -39,8 +39,9 @@
     
     [TestFlight passCheckpoint:@"StartPage-viewed"];
     
-//    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"didDisplayHelpScreen"]) {
-//        UIWindow *window = [[[UIApplication sharedApplication] windows] lastObject];
+
+    
+
 //        
 //        UIImageView *imageView = [[UIImageView alloc] initWithFrame:window.bounds];
 //        imageView.image = [UIImage imageNamed:@"app_instructions"];
