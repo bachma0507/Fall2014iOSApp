@@ -648,6 +648,51 @@
             </objects>
             <point key="canvasLocation" x="-768" y="-4113"/>
         </scene>
+        <!--Eula View Controller-->
+        <scene sceneID="bgJ-jO-9mA">
+            <objects>
+                <viewController storyboardIdentifier="eulaview" id="lUg-Il-YSd" customClass="EulaViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8Vy-N8-GHs">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please read and agree to the EULA." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qpo-eR-ruM">
+                                <rect key="frame" x="238" y="53" width="292" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="s4t-wj-h3m">
+                                <rect key="frame" x="347" y="974" width="74" height="30"/>
+                                <state key="normal" title="I Agree">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="okPressed:" destination="lUg-Il-YSd" eventType="touchUpInside" id="Jjx-Vd-5Hx"/>
+                                </connections>
+                            </button>
+                            <webView contentMode="scaleToFill" id="WU1-Ye-h7G">
+                                <rect key="frame" x="0.0" y="82" width="768" height="884"/>
+                                <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" id="Gvr-Cm-va0">
+                                <rect key="frame" x="366" y="505" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" red="0.098039215690000001" green="0.35686274509999999" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="activity" destination="Gvr-Cm-va0" id="OZ0-eh-igV"/>
+                        <outlet property="webView" destination="WU1-Ye-h7G" id="jxo-Zc-7fq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Cs-63-X57" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2024" y="-2513"/>
+        </scene>
         <!--Start Page View Controller-->
         <scene sceneID="8Ge-6H-E4o">
             <objects>
@@ -923,11 +968,12 @@
                     <navigationItem key="navigationItem" id="xxV-Ff-vag"/>
                     <connections>
                         <outlet property="updateLabel" destination="YO6-sl-BIM" id="wAI-lJ-62u"/>
+                        <segue destination="lUg-Il-YSd" kind="modal" identifier="eulaview" animates="NO" id="1fT-t1-jby"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JcM-ru-DVi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1019" y="-2656"/>
+            <point key="canvasLocation" x="-991" y="-2577"/>
         </scene>
         <!--Contact Us View Controller - Contact Us-->
         <scene sceneID="Xaf-P2-GsH">
@@ -1889,7 +1935,7 @@ If you have any questions, please do not hesitate to contact bicsi@bicsi.org.</s
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KjM-fD-BTA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2797" y="-2643"/>
+            <point key="canvasLocation" x="-3657" y="-2095"/>
         </scene>
         <!--Conf Sched Table View Controller - Conference Schedule-->
         <scene sceneID="oNg-wY-Ylp">
@@ -1942,7 +1988,7 @@ If you have any questions, please do not hesitate to contact bicsi@bicsi.org.</s
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o7r-NH-Zzf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1907" y="-2656"/>
+            <point key="canvasLocation" x="-1887" y="-3640"/>
         </scene>
         <!--Sessions View Controller-->
         <scene sceneID="dwR-0l-1Os">
@@ -2531,7 +2577,7 @@ If you have any questions, please do not hesitate to contact bicsi@bicsi.org.</s
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="phone" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Tgb-jz-iWg">
-                                <rect key="frame" x="20" y="49" width="728" height="21"/>
+                                <rect key="frame" x="20" y="49.000000007450666" width="728" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -3162,7 +3208,7 @@ Note: Exams are not included in the course fees. Exam application and applicable
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="94f-HY-J6H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1801" y="-797"/>
+            <point key="canvasLocation" x="-1661" y="-349"/>
         </scene>
         <!--Navigation Controller - Item-->
         <scene sceneID="WIb-0O-kyD">
@@ -3477,15 +3523,38 @@ Note: Exams are not included in the course fees. Exam application and applicable
     </scenes>
     <resources>
         <image name="add-notes_ipad.png" width="70" height="78"/>
+        <image name="add-notes_ipad.png" width="70" height="78"/>
+        <image name="add-notes_ipad.png" width="70" height="78"/>
         <image name="agendaC14-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="backbutton-default.png" width="50" height="30"/>
         <image name="backbutton.png" width="50" height="30"/>
+        <image name="button-green_ipad.png" width="224" height="66"/>
+        <image name="button-green_ipad.png" width="224" height="66"/>
+        <image name="button-green_ipad.png" width="224" height="66"/>
+        <image name="button-green_ipad.png" width="224" height="66"/>
+        <image name="button-green_ipad.png" width="224" height="66"/>
+        <image name="button-green_ipad.png" width="224" height="66"/>
+        <image name="button-green_ipad.png" width="224" height="66"/>
+        <image name="button-green_ipad.png" width="224" height="66"/>
+        <image name="button-green_ipad.png" width="224" height="66"/>
+        <image name="button-green_ipad.png" width="224" height="66"/>
+        <image name="button-green_ipad.png" width="224" height="66"/>
+        <image name="button-green_ipad.png" width="224" height="66"/>
+        <image name="button-green_ipad.png" width="224" height="66"/>
+        <image name="button-green_ipad.png" width="224" height="66"/>
+        <image name="button-green_ipad.png" width="224" height="66"/>
+        <image name="button-green_ipad.png" width="224" height="66"/>
+        <image name="button-green_ipad.png" width="224" height="66"/>
+        <image name="button-green_ipad.png" width="224" height="66"/>
         <image name="button-green_ipad.png" width="224" height="66"/>
         <image name="cecC14-icon-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="comm_meetings_icon_ipad.png" width="120" height="120"/>
         <image name="committeeC14-icon-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="confschedC14_icon_ipad.png" width="120" height="120"/>
         <image name="contactusC14-icon-400x400_icon_ipad.png" width="120" height="120"/>
+        <image name="createuser_button_ipad.png" width="224" height="66"/>
+        <image name="createuser_button_ipad.png" width="224" height="66"/>
+        <image name="createuser_button_ipad.png" width="224" height="66"/>
         <image name="createuser_button_ipad.png" width="224" height="66"/>
         <image name="ehscheduleC14-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="entrancehall_floorplan_icon_ipad.png" width="265" height="346"/>
@@ -3494,21 +3563,30 @@ Note: Exams are not included in the course fees. Exam application and applicable
         <image name="facebook_button_ipad.png" width="224" height="66"/>
         <image name="facebookpost_ipad.png" width="648" height="120"/>
         <image name="favoritesC14-400x400_icon_ipad.png" width="120" height="120"/>
+        <image name="favoritesC14-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="floorplanC14-icon-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="hotelC14-icon-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="notesC14-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="programC14-icon-400x400_icon_ipad.png" width="120" height="120"/>
+        <image name="reload30x30.png" width="30" height="30"/>
         <image name="reload30x30.png" width="30" height="30"/>
         <image name="sessionsC14-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="shutterstock_cec-ipad.png" width="205" height="128"/>
         <image name="shutterstock_contact-us-ipad.png" width="265" height="128"/>
         <image name="shutterstock_training-ipad.png" width="397" height="298"/>
         <image name="sponsorsC14-400x400_icon_ipad.png" width="120" height="120"/>
+        <image name="sponsorsC14-400x400_icon_ipad.png" width="120" height="120"/>
+        <image name="take-survey_ipad.png" width="70" height="72"/>
+        <image name="take-survey_ipad.png" width="70" height="72"/>
         <image name="take-survey_ipad.png" width="70" height="72"/>
         <image name="techsupportC14-icon-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="trainingC14-icon-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="twitterfeed_ipad.png" width="648" height="120"/>
         <image name="twitterpost_ipad.png" width="648" height="120"/>
+        <image name="updatedata_button.png" width="222" height="65"/>
+        <image name="updatedata_button.png" width="222" height="65"/>
+        <image name="updatedata_button.png" width="222" height="65"/>
+        <image name="updatedata_button.png" width="222" height="65"/>
         <image name="updatedata_button.png" width="222" height="65"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -3517,10 +3595,10 @@ Note: Exams are not included in the course fees. Exam application and applicable
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="GEW-K7-fR7"/>
+        <segue reference="SDK-bn-4vP"/>
+        <segue reference="xWE-49-eAT"/>
+        <segue reference="ZwN-mm-jT8"/>
         <segue reference="Ysf-Ju-HKO"/>
         <segue reference="SFt-NY-1lL"/>
-        <segue reference="ZwN-mm-jT8"/>
-        <segue reference="SDK-bn-4vP"/>
     </inferredMetricsTieBreakers>
 </document>
