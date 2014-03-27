@@ -1160,7 +1160,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4vD-ll-hkL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1204" y="-1659"/>
+            <point key="canvasLocation" x="-1576" y="-1831"/>
         </scene>
         <!--Conf Sched Table View Controller - Conference Schedule-->
         <scene sceneID="xu6-k9-bFH">
@@ -2483,6 +2483,7 @@ Note: Exams are not included in the course fees. Exam application and applicable
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="updateLabel" destination="3Xw-no-QJ6" id="fxR-JO-y84"/>
+                        <segue destination="23E-uc-N9m" kind="modal" identifier="eulaview" animates="NO" id="urM-XD-5Mf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Gd-tk-mIu" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2600,6 +2601,52 @@ Note: Exams are not included in the course fees. Exam application and applicable
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HfR-Qk-q3E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2154" y="843"/>
+        </scene>
+        <!--Eula View Controller-->
+        <scene sceneID="pUp-ak-jCs">
+            <objects>
+                <viewController storyboardIdentifier="eulaview" id="23E-uc-N9m" customClass="EulaViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1LI-jw-RF9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nea-yp-aox">
+                                <rect key="frame" x="145" y="531" width="30" height="30"/>
+                                <state key="normal" title="Ok">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="okPressed:" destination="23E-uc-N9m" eventType="touchUpInside" id="7Xm-b0-JWm"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please read and agree to EULA by clicking OK." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kKn-ae-0bI">
+                                <rect key="frame" x="39" y="26" width="242" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" id="x8x-e7-RrR">
+                                <rect key="frame" x="0.0" y="49" width="320" height="474"/>
+                                <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <dataDetectorType key="dataDetectorTypes"/>
+                            </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" id="pOq-mb-P6s">
+                                <rect key="frame" x="142" y="261" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" red="0.098039215690000001" green="0.35686274509999999" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="activity" destination="pOq-mb-P6s" id="puj-RW-7EN"/>
+                        <outlet property="webView" destination="x8x-e7-RrR" id="ItJ-eA-0x6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2bF-ev-9oZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1147" y="575"/>
         </scene>
         <!--Speakers View Controller - Speakers-->
         <scene sceneID="JmC-iy-yx4">
@@ -3509,7 +3556,7 @@ Note: Exams are not included in the course fees. Exam application and applicable
         <!--Navigation Controller - Home-->
         <scene sceneID="d3b-FZ-dzI">
             <objects>
-                <navigationController id="gQh-H7-kxN" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="home" id="gQh-H7-kxN" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" image="home_tab_icon_unselected.png" id="vqJ-s9-bHs"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="EUi-fK-e2X">
@@ -3721,10 +3768,10 @@ Note: Exams are not included in the course fees. Exam application and applicable
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="FV1-tM-kMf"/>
-        <segue reference="94R-k8-XlG"/>
-        <segue reference="ia9-ZG-dp5"/>
         <segue reference="R22-dx-yzm"/>
         <segue reference="Dsf-md-SSX"/>
+        <segue reference="ia9-ZG-dp5"/>
+        <segue reference="94R-k8-XlG"/>
+        <segue reference="FV1-tM-kMf"/>
     </inferredMetricsTieBreakers>
 </document>

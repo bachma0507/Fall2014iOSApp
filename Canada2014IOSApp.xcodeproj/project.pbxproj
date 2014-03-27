@@ -293,6 +293,7 @@
 		4C86D43917FC42BE000C9812 /* add-notes_ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C86D43717FC42BE000C9812 /* add-notes_ipad@2x.png */; };
 		4C86D43C17FC42D7000C9812 /* take-survey_ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C86D43A17FC42D7000C9812 /* take-survey_ipad@2x.png */; };
 		4C86D43D17FC42D7000C9812 /* take-survey_ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C86D43B17FC42D7000C9812 /* take-survey_ipad.png */; };
+		4C874E1318E34AD90083F04E /* EulaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C874E1218E34AD90083F04E /* EulaViewController.m */; };
 		4C894CB218A75D0800001623 /* appalert.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4C894CB018A75D0800001623 /* appalert.xcdatamodeld */; };
 		4C894CBA18A80D8300001623 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C894CB318A80D8300001623 /* Default-568h@2x.png */; };
 		4C894CBB18A80D8300001623 /* Default-iOS7-Portrait@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C894CB418A80D8300001623 /* Default-iOS7-Portrait@2x~ipad.png */; };
@@ -931,6 +932,8 @@
 		4C86D43717FC42BE000C9812 /* add-notes_ipad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add-notes_ipad@2x.png"; sourceTree = "<group>"; };
 		4C86D43A17FC42D7000C9812 /* take-survey_ipad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "take-survey_ipad@2x.png"; sourceTree = "<group>"; };
 		4C86D43B17FC42D7000C9812 /* take-survey_ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "take-survey_ipad.png"; sourceTree = "<group>"; };
+		4C874E1118E34AD90083F04E /* EulaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EulaViewController.h; sourceTree = "<group>"; };
+		4C874E1218E34AD90083F04E /* EulaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EulaViewController.m; sourceTree = "<group>"; };
 		4C894CB118A75D0800001623 /* appalert.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = appalert.xcdatamodel; sourceTree = "<group>"; };
 		4C894CB318A80D8300001623 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		4C894CB418A80D8300001623 /* Default-iOS7-Portrait@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-iOS7-Portrait@2x~ipad.png"; sourceTree = "<group>"; };
@@ -2219,6 +2222,8 @@
 				4C474E1E1798D4F300953979 /* MoreViewController.m */,
 				4C06D6DD176A2FF300B6E24D /* StartPageViewController.h */,
 				4C06D6DE176A2FF300B6E24D /* StartPageViewController.m */,
+				4C874E1118E34AD90083F04E /* EulaViewController.h */,
+				4C874E1218E34AD90083F04E /* EulaViewController.m */,
 			);
 			name = StartPage;
 			sourceTree = "<group>";
@@ -3115,6 +3120,7 @@
 				4C088C67177F667500CFBC96 /* NSManagedObjectContext+MagicalSaves.m in Sources */,
 				4C088C68177F667500CFBC96 /* NSManagedObjectContext+MagicalThreading.m in Sources */,
 				4C088C69177F667500CFBC96 /* NSManagedObjectModel+MagicalRecord.m in Sources */,
+				4C874E1318E34AD90083F04E /* EulaViewController.m in Sources */,
 				4C018E3C1808F1F500A567C6 /* UploadImageViewController.m in Sources */,
 				4C088C6A177F667500CFBC96 /* NSPersistentStore+MagicalRecord.m in Sources */,
 				4C088C6B177F667500CFBC96 /* NSPersistentStoreCoordinator+MagicalRecord.m in Sources */,

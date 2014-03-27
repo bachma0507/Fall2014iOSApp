@@ -39,8 +39,12 @@
     
     [TestFlight passCheckpoint:@"StartPage-viewed"];
     
-
-    
+    if(![[NSUserDefaults standardUserDefaults] boolForKey:@"hasSeenTutorial"]){
+        NSLog(@"First time run");
+        
+        [self performSegueWithIdentifier: @"eulaview" sender: self];
+        
+    }
 
 //        
 //        UIImageView *imageView = [[UIImageView alloc] initWithFrame:window.bounds];
