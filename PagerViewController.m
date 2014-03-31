@@ -81,7 +81,7 @@
 - (void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
 	
-	for (NSUInteger i =0; i < [self.childViewControllers count]; i++) {
+	for (int i =0; i < [self.childViewControllers count]; i++) {
 		[self loadScrollViewWithPage:i];
 	}
 	
@@ -191,7 +191,7 @@
 }
 
 - (IBAction)changePage:(id)sender {
-    int page = ((UIPageControl *)sender).currentPage;
+    NSUInteger page = ((UIPageControl *)sender).currentPage;
 	
 	// update the scroll view to the appropriate page
     CGRect frame = self.scrollView.frame;

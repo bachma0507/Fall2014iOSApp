@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="HQR-0g-mm0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="HQR-0g-mm0">
     <dependencies>
         <deployment defaultVersion="1552" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--Social View Controller - Social Media-->
@@ -151,11 +151,11 @@
             <objects>
                 <viewController id="24Z-AG-khO" customClass="ProgramPDFViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iMm-7k-07U">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" id="wgu-3R-5v6">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
@@ -199,11 +199,11 @@
             <objects>
                 <viewController storyboardIdentifier="View2" id="bZW-aF-CLc" customClass="MoreViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dgy-Qg-d2v">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="mRc-ye-etm">
-                                <rect key="frame" x="240" y="180" width="50" height="50"/>
+                                <rect key="frame" x="240" y="205" width="50" height="50"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" image="techsupportC14-icon-400x400_icon.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -217,13 +217,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" text="Email Tech Support" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dVv-ii-TRQ">
-                                <rect key="frame" x="219" y="258" width="92" height="39"/>
+                                <rect key="frame" x="219" y="294" width="92" height="39"/>
                                 <fontDescription key="fontDescription" name="Lato-Hairline" family="Lato" pointSize="13"/>
                                 <color key="textColor" red="0.50196078430000002" green="0.56078431370000004" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="HJz-dU-f6d">
-                                <rect key="frame" x="16" y="23" width="55" height="44"/>
+                                <rect key="frame" x="16" y="26" width="55" height="44"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" image="cecC14-icon-400x400_icon.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -244,7 +244,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="UKV-xU-Znr">
-                                <rect key="frame" x="121" y="23" width="64" height="50"/>
+                                <rect key="frame" x="121" y="26" width="64" height="50"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" image="contactusC14-icon-400x400_icon.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -265,7 +265,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="dfw-dd-b3s">
-                                <rect key="frame" x="240" y="23" width="50" height="50"/>
+                                <rect key="frame" x="240" y="26" width="50" height="50"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Button" image="trainingC14-icon-400x400_icon.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -286,7 +286,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="RI0-MN-Oe9">
-                                <rect key="frame" x="20" y="180" width="50" height="50"/>
+                                <rect key="frame" x="20" y="205" width="50" height="50"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" image="committeeC14-icon-400x400_icon.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -300,19 +300,19 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" text="Committee Meetings" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5he-2P-ahR">
-                                <rect key="frame" x="4" y="257" width="83" height="33"/>
+                                <rect key="frame" x="4" y="292" width="83" height="33"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                 <color key="textColor" red="0.50196078430000002" green="0.56078431370000004" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" text="Hotel Information" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7DS-l4-dqE">
-                                <rect key="frame" x="115" y="254" width="76" height="39"/>
+                                <rect key="frame" x="115" y="289" width="76" height="39"/>
                                 <fontDescription key="fontDescription" name="Lato-Hairline" family="Lato" pointSize="13"/>
                                 <color key="textColor" red="0.50196078430000002" green="0.56078431370000004" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="o5W-yd-PEu">
-                                <rect key="frame" x="128" y="180" width="50" height="50"/>
+                                <rect key="frame" x="128" y="205" width="50" height="50"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Button" image="hotelC14-icon-400x400_icon.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -326,7 +326,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="iI5-b0-71U">
-                                <rect key="frame" x="25" y="349" width="42" height="50"/>
+                                <rect key="frame" x="25" y="398" width="42" height="50"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" image="floorplanC14-icon-400x400_icon.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -340,19 +340,19 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" text="Interactive Floor Maps" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kmW-BX-Ouw">
-                                <rect key="frame" x="8" y="423" width="85" height="39"/>
+                                <rect key="frame" x="8" y="481" width="85" height="39"/>
                                 <fontDescription key="fontDescription" name="Lato-Hairline" family="Lato" pointSize="13"/>
                                 <color key="textColor" red="0.50196078430000002" green="0.56078431370000004" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" text="Presentations (PDF)" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XOb-st-3gP">
-                                <rect key="frame" x="105" y="423" width="96" height="37"/>
+                                <rect key="frame" x="105" y="481" width="96" height="37"/>
                                 <fontDescription key="fontDescription" name="Lato-Hairline" family="Lato" pointSize="13"/>
                                 <color key="textColor" red="0.50196078430000002" green="0.56078431370000004" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="KxR-Rg-OFV">
-                                <rect key="frame" x="128" y="349" width="50" height="50"/>
+                                <rect key="frame" x="128" y="398" width="50" height="50"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" image="programC14-icon-400x400_icon.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -366,7 +366,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hX4-wb-a59">
-                                <rect key="frame" x="240" y="349" width="50" height="50"/>
+                                <rect key="frame" x="240" y="398" width="50" height="50"/>
                                 <state key="normal" image="findactvitiesC14-icon-400x400_icon.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -375,7 +375,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" text="Find Area Activities" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RsM-ud-dak">
-                                <rect key="frame" x="223" y="423" width="85" height="39"/>
+                                <rect key="frame" x="223" y="481" width="85" height="39"/>
                                 <fontDescription key="fontDescription" name="Lato-Hairline" family="Lato" pointSize="13"/>
                                 <color key="textColor" red="0.50196078430000002" green="0.56078431370000004" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -395,10 +395,10 @@
             <objects>
                 <viewController id="yOR-dG-9HU" customClass="GooglePlacesViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tBI-wS-Bia">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="FBf-Lf-G92">
-                                <rect key="frame" x="0.0" y="44" width="320" height="460"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                                 <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
                             </mapView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="BY7-B4-z8N">
@@ -442,7 +442,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bqA-VG-GxE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2511" y="-711"/>
+            <point key="canvasLocation" x="2679" y="-637"/>
         </scene>
         <!--Agenda Table View Controller - My Planner-->
         <scene sceneID="eML-0W-fyI">
@@ -508,7 +508,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oBK-fT-gbl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="316" y="134"/>
+            <point key="canvasLocation" x="544" y="210"/>
         </scene>
         <!--Agenda Detail View Controller-->
         <scene sceneID="1vx-zk-eY9">
@@ -642,7 +642,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rzz-B9-4QR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-277" y="45"/>
+            <point key="canvasLocation" x="-167" y="193"/>
         </scene>
         <!--Sponsors Table View Controller - Sponsors-->
         <scene sceneID="oOw-Fg-vTm">
@@ -936,7 +936,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wce-Pj-ASz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1184" y="-2734"/>
+            <point key="canvasLocation" x="-952" y="-3146"/>
         </scene>
         <!--Register View Controller - Sign Up-->
         <scene sceneID="Scs-vD-J8X">
@@ -981,7 +981,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kOR-KH-PGf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-711" y="-2308"/>
+            <point key="canvasLocation" x="-447" y="-3084"/>
         </scene>
         <!--Report View Controller - Report Photo-->
         <scene sceneID="Uu4-Ed-jWB">
@@ -1027,7 +1027,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XMp-RD-bf9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-29" y="-3196"/>
+            <point key="canvasLocation" x="1235" y="-3108"/>
         </scene>
         <!--Wall Pictures View Controller-->
         <scene sceneID="44j-G1-icx">
@@ -1083,7 +1083,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IoT-BG-Ai9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-20" y="-2521"/>
+            <point key="canvasLocation" x="44" y="-3113"/>
         </scene>
         <!--Upload Image View Controller - Upload Photo-->
         <scene sceneID="s9E-MQ-eca">
@@ -1144,7 +1144,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MAP-lu-UZi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="464" y="-2554"/>
+            <point key="canvasLocation" x="472" y="-3210"/>
         </scene>
         <!--Navigation Controller - Item-->
         <scene sceneID="z6M-0O-uYb">
@@ -1160,7 +1160,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4vD-ll-hkL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1576" y="-1831"/>
+            <point key="canvasLocation" x="-1724" y="-3167"/>
         </scene>
         <!--Conf Sched Table View Controller - Conference Schedule-->
         <scene sceneID="xu6-k9-bFH">
@@ -1213,7 +1213,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f4X-Bg-Y3Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-704" y="-1121"/>
+            <point key="canvasLocation" x="-1404" y="-2341"/>
         </scene>
         <!--Conf Sched Detail Table View Controller-->
         <scene sceneID="TIo-d8-YXG">
@@ -1338,7 +1338,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XaJ-CU-XB1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="763" y="-1986"/>
+            <point key="canvasLocation" x="-121" y="-2262"/>
         </scene>
         <!--Sponsors Detail View Controller-->
         <scene sceneID="a4N-Wl-xCZ">
@@ -1398,187 +1398,22 @@
             </objects>
             <point key="canvasLocation" x="2877" y="598"/>
         </scene>
-        <!--Hotels View Controller - Hotel Information-->
-        <scene sceneID="VtW-Gr-SK2">
-            <objects>
-                <viewController modalTransitionStyle="flipHorizontal" id="9il-gu-sOf" customClass="HotelsViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="NMN-Ni-QcN">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="B4A-Ap-54Y">
-                                <rect key="frame" x="112" y="252" width="96" height="23"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <state key="normal" title="View Website">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="buttonPressed:" destination="9il-gu-sOf" eventType="touchUpInside" id="K5s-iK-OVa"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="view_website_icon.png" id="7ZH-qL-M0H">
-                                <rect key="frame" x="92" y="247" width="25" height="25"/>
-                            </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="reservation data" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8I8-Y1-0P5">
-                                <rect key="frame" x="14" y="270" width="295" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ZDF-f6-AHm">
-                                <rect key="frame" x="74" y="297" width="171" height="20"/>
-                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
-                                <state key="normal" title="Make Reservations" backgroundImage="updatedata_button.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="resButtonPressed:" destination="9il-gu-sOf" eventType="touchUpInside" id="F6L-ic-Dok"/>
-                                </connections>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" id="CMg-BV-XBA">
-                                <rect key="frame" x="25" y="374" width="275" height="95"/>
-                                <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="0.32000000000000001" colorSpace="calibratedRGB"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="alert line" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rcs-uo-LTW">
-                                <rect key="frame" x="20" y="322" width="280" height="20"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                <color key="textColor" red="0.59999999999999998" green="0.0" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="78x-8M-kNX">
-                                <rect key="frame" x="24" y="322" width="271" height="23"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
-                                <state key="normal">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="QhF-BP-wNa" kind="push" id="HWO-Al-xAu"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rosen_hotel-iphone.png" id="Zgi-C0-Gly">
-                                <rect key="frame" x="50" y="64" width="217" height="145"/>
-                            </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GIw-11-Onz">
-                                <rect key="frame" x="84" y="1" width="148" height="44"/>
-                                <string key="text">Rosen Shingle Creek 9939 Universal Blvd  Orlando, FL 32819
-(407) 996-9933</string>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationItem key="navigationItem" title="Hotel Information" id="YnS-LF-sLT"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
-                    <connections>
-                        <outlet property="alertLineLabel" destination="rcs-uo-LTW" id="ysE-PJ-16a"/>
-                        <outlet property="hotelDescTextView" destination="CMg-BV-XBA" id="UFj-YZ-RxB"/>
-                        <outlet property="hotelImageView" destination="Zgi-C0-Gly" id="swf-hr-ExS"/>
-                        <outlet property="resDateLabel" destination="8I8-Y1-0P5" id="umc-Gs-FFu"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ahr-x6-1rB" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2533" y="-240"/>
-        </scene>
-        <!--Alert Line View Controller - Alert-->
-        <scene sceneID="kTi-Nb-l8E">
-            <objects>
-                <viewController id="QhF-BP-wNa" customClass="AlertLineViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="dv7-Tv-4zO">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" id="5qE-o4-Ry1">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationItem key="navigationItem" title="Alert" id="u5Z-G0-nVb"/>
-                    <connections>
-                        <outlet property="alertLineTextView" destination="5qE-o4-Ry1" id="D7D-ss-Ki6"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3Ro-eZ-tjj" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2844" y="947"/>
-        </scene>
-        <!--Transition View Controller - CEC Transition Info-->
-        <scene sceneID="d3t-aF-LVu">
-            <objects>
-                <viewController id="Qhu-qx-j7I" customClass="CECTransitionViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="dyG-Nx-2Op">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" id="eUP-sR-Hwz">
-                                <rect key="frame" x="142" y="233" width="37" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="color" red="0.0" green="0.40000000000000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </activityIndicatorView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" id="CgX-Ej-6po">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <string key="text">Effective September 15, 2012, the BICSI Board of Directors approved a change to the way continuing education credits (CECs) are awarded to BICSI credential holders. All BICSI CECs are now classified as "ITS CECs," CECs, when earned by credential holders, are now applied equally to all credentials and BICSI will no longer categorize CECs based on the nature of the information technology systems (ITS) content provided.
-
-As a result of this change, BICSI credential holders are no longer required to seek out and participate in activities that have been approved specifically for the credential(s) that they hold. Participation is any activity approved for BICSI ITS CECs will suffice. For example, an individual that holds an OSP Design credential can participate in a data center class and the BICSI ITS CECs awarded for participation in that class will apply to the OSP Design credential. In addition, all BICSI credential holders, including ITS Installers and Technicians, will now receive a fixed number of CECs for their attendance at a BICSI conference.
-
-If you have any questions, please do not hesitate to contact bicsi@bicsi.org.
-</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationItem key="navigationItem" title="CEC Transition Info" id="hb5-NT-Nvf"/>
-                    <connections>
-                        <outlet property="activity" destination="eUP-sR-Hwz" id="DlD-Ek-MPB"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aaG-ry-CNn" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2979" y="-2061"/>
-        </scene>
         <!--Contact Us View Controller - Contact Us-->
         <scene sceneID="h4k-ZR-0tc">
             <objects>
                 <viewController id="rfy-JX-O4t" customClass="ContactUsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TQA-ig-eao">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" id="avb-iB-nHQ">
-                                <rect key="frame" x="0.0" y="69" width="320" height="435"/>
+                                <rect key="frame" x="0.0" y="69" width="320" height="499"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
                             </webView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shutterstock_contact-us-ipad.png" id="ZmV-80-YmH">
-                                <rect key="frame" x="108" y="10" width="105" height="51"/>
+                                <rect key="frame" x="108" y="11" width="105" height="51"/>
                             </imageView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" id="0ip-JG-BSI">
                                 <rect key="frame" x="142" y="268" width="37" height="37"/>
@@ -1604,11 +1439,11 @@ If you have any questions, please do not hesitate to contact bicsi@bicsi.org.
             <objects>
                 <viewController id="ofm-aV-PzI" customClass="ComMeetingsMainViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="299-cF-2l8">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="64" sectionHeaderHeight="22" sectionFooterHeight="22" id="eV9-nW-wYc">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -1739,17 +1574,17 @@ If you have any questions, please do not hesitate to contact bicsi@bicsi.org.
             <objects>
                 <viewController id="bna-eu-eiX" customClass="ExamsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="33c-VF-4ms">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" id="6ij-2q-KrU">
-                                <rect key="frame" x="0.0" y="117" width="320" height="387"/>
+                                <rect key="frame" x="0.0" y="117" width="320" height="451"/>
                                 <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
                             </webView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shutterstock_training-ipad.png" id="7K9-Ao-tL1">
-                                <rect key="frame" x="88" y="4" width="145" height="109"/>
+                                <rect key="frame" x="88" y="5" width="145" height="109"/>
                             </imageView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" id="jSh-r3-zGm">
                                 <rect key="frame" x="142" y="272" width="37" height="37"/>
@@ -1858,45 +1693,18 @@ If you have any questions, please do not hesitate to contact bicsi@bicsi.org.
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yhb-Pc-dm5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2486" y="-306"/>
-        </scene>
-        <!--Courses View Controller - Courses-->
-        <scene sceneID="L7s-95-5Vl">
-            <objects>
-                <viewController id="dbi-aA-aKU" customClass="CoursesViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="0CY-pk-lJx">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <webView contentMode="scaleToFill" id="10Z-aV-Hd6">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <gestureRecognizers/>
-                            </webView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationItem key="navigationItem" title="Courses" id="bjR-X1-o8U"/>
-                    <connections>
-                        <outlet property="webView" destination="10Z-aV-Hd6" id="VyQ-tN-s0Z"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YeZ-cZ-XNA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3735" y="-802"/>
+            <point key="canvasLocation" x="1736" y="408"/>
         </scene>
         <!--Entrance Hall Floor Plan View Controller - Main Hall Floor Map-->
         <scene sceneID="DXN-wx-rrZ">
             <objects>
                 <viewController id="Wvj-Fe-nCb" customClass="EntranceHallFloorPlanViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pt8-75-7jo">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" scalesPageToFit="YES" id="WAz-e1-gqd">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
@@ -1917,37 +1725,7 @@ If you have any questions, please do not hesitate to contact bicsi@bicsi.org.
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lF1-Hv-lXN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1813" y="-122"/>
-        </scene>
-        <!--View Controller - Examinations-->
-        <scene sceneID="6u7-Ln-Vav">
-            <objects>
-                <viewController id="TxN-g5-zXY" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="OIB-zA-W2Y">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" id="V2x-Ra-vqg">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <string key="text">Register today to earn your credentials while attending the 2014 Winter Conference &amp; Exhibition. RCDD®, RITP™, RTPM, DCDC, ESS and OSP Examinations will be administered on site at the  Rosen Shingle Creek Resort during the Winter Conference from 8:30 a.m.-noon on Monday, February 3. Exam check-in is 8 a.m.
-
-Submit your exam applications to BICSI by Friday, December 27, 2013 for new applicants and Friday, January 17, 2014 for retakes (space permitting).
-
-Note: Exams are not included in the course fees. Exam application and applicable fees must be received at BICSI for processing at least 30 calendar days prior to the design exam date. </string>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationItem key="navigationItem" title="Examinations" id="qi7-GK-Unl"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eHP-y2-LQm" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2082" y="60"/>
+            <point key="canvasLocation" x="2211" y="-26"/>
         </scene>
         <!--Exhibitors Detail View Controller-->
         <scene sceneID="Sae-KV-tv8">
@@ -2055,7 +1833,7 @@ Note: Exams are not included in the course fees. Exam application and applicable
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qvj-Fd-31L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2803" y="-656"/>
+            <point key="canvasLocation" x="3029" y="-478"/>
         </scene>
         <!--Exhibitor Web View Controller-->
         <scene sceneID="ZRN-C5-UjI">
@@ -2087,18 +1865,18 @@ Note: Exams are not included in the course fees. Exam application and applicable
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7b7-ll-eTv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3231" y="-651"/>
+            <point key="canvasLocation" x="3315" y="-737"/>
         </scene>
         <!--Floor Maps View Controller - Floor Maps-->
         <scene sceneID="6nX-uc-8jK">
             <objects>
                 <viewController id="cBX-aT-2Ui" customClass="FloorMapsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UPl-gK-fTb">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2fW-Vu-ZOs">
-                                <rect key="frame" x="39" y="23" width="145" height="189"/>
+                                <rect key="frame" x="39" y="29" width="145" height="189"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -2107,16 +1885,16 @@ Note: Exams are not included in the course fees. Exam application and applicable
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="entrancehall_floorplan_icon_iphone.png" id="BPo-oe-jnp">
-                                <rect key="frame" x="40" y="23" width="145" height="189"/>
+                                <rect key="frame" x="40" y="29" width="145" height="189"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Main Hall Floor Map (Tap)" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aWX-C3-bTk">
-                                <rect key="frame" x="193" y="89" width="114" height="57"/>
+                                <rect key="frame" x="193" y="105" width="114" height="57"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.50196078431372548" green="0.5607843137254902" blue="0.58823529411764708" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="rvp-qH-zP9">
-                                <rect key="frame" x="42" y="271" width="145" height="135"/>
+                                <rect key="frame" x="42" y="333" width="145" height="135"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -2125,10 +1903,10 @@ Note: Exams are not included in the course fees. Exam application and applicable
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="exhibithall_floorplan_icon_iphone.png" id="7Wh-3a-nKp">
-                                <rect key="frame" x="42" y="271" width="145" height="135"/>
+                                <rect key="frame" x="42" y="333" width="145" height="135"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exhibit Hall Floor Map (Tap)" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aZk-dJ-MfC">
-                                <rect key="frame" x="193" y="310" width="114" height="57"/>
+                                <rect key="frame" x="193" y="365" width="114" height="57"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.50196078430000002" green="0.56078431370000004" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -2153,11 +1931,11 @@ Note: Exams are not included in the course fees. Exam application and applicable
             <objects>
                 <viewController id="0F4-70-PsM" customClass="ExhibitHallFloorPlanViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GDW-Uh-clH">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <webView multipleTouchEnabled="YES" contentMode="scaleToFill" scalesPageToFit="YES" id="LBL-Hb-aeQ">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
@@ -2166,7 +1944,7 @@ Note: Exams are not included in the course fees. Exam application and applicable
                                 </connections>
                             </webView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" animating="YES" style="whiteLarge" id="VFr-aT-Sgc">
-                                <rect key="frame" x="142" y="200" width="37" height="37"/>
+                                <rect key="frame" x="142" y="234" width="37" height="37"/>
                                 <color key="color" red="0.0" green="0.40000000000000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
                         </subviews>
@@ -2181,7 +1959,7 @@ Note: Exams are not included in the course fees. Exam application and applicable
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2OT-bK-93i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2361" y="-802"/>
+            <point key="canvasLocation" x="2319" y="-834"/>
         </scene>
         <!--Sessions Main View Controller - Sessions-->
         <scene sceneID="SpV-UR-6Dh">
@@ -2554,11 +2332,11 @@ Note: Exams are not included in the course fees. Exam application and applicable
             <objects>
                 <viewController id="h3Z-o4-esA" customClass="HotelWebViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JV6-cA-14Z">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" id="BMP-nU-Mfy">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
@@ -2580,7 +2358,7 @@ Note: Exams are not included in the course fees. Exam application and applicable
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ui1-j3-3CV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1116" y="-674"/>
+            <point key="canvasLocation" x="746" y="-532"/>
         </scene>
         <!--Navigation Controller - News & Alerts-->
         <scene sceneID="0fV-Do-6W7">
@@ -2607,11 +2385,11 @@ Note: Exams are not included in the course fees. Exam application and applicable
             <objects>
                 <viewController storyboardIdentifier="eulaview" id="23E-uc-N9m" customClass="EulaViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1LI-jw-RF9">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nea-yp-aox">
-                                <rect key="frame" x="128" y="531" width="64" height="30"/>
+                                <rect key="frame" x="128" y="444" width="64" height="30"/>
                                 <state key="normal" title="I Agree">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -2620,13 +2398,13 @@ Note: Exams are not included in the course fees. Exam application and applicable
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please read and agree to the EULA." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kKn-ae-0bI">
-                                <rect key="frame" x="39" y="26" width="242" height="21"/>
+                                <rect key="frame" x="39" y="21" width="242" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <webView contentMode="scaleToFill" scalesPageToFit="YES" id="x8x-e7-RrR">
-                                <rect key="frame" x="0.0" y="49" width="320" height="474"/>
+                                <rect key="frame" x="0.0" y="49" width="320" height="386"/>
                                 <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <dataDetectorType key="dataDetectorTypes"/>
@@ -2722,7 +2500,7 @@ Note: Exams are not included in the course fees. Exam application and applicable
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="27" y="-1405"/>
+            <point key="canvasLocation" x="-773" y="-2317"/>
         </scene>
         <!--Speaker Detail View Controller-->
         <scene sceneID="FOy-zt-Vp4">
@@ -2770,7 +2548,7 @@ Note: Exams are not included in the course fees. Exam application and applicable
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="9gr-SM-gTf">
-                                <rect key="frame" x="20" y="0.99999999999999989" width="50" height="50"/>
+                                <rect key="frame" x="20" y="1" width="50" height="50"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Presentations" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uqx-JN-0PA">
                                 <rect key="frame" x="20" y="216" width="83" height="21"/>
@@ -3145,56 +2923,7 @@ Note: Exams are not included in the course fees. Exam application and applicable
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8mr-Vr-sS8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1264" y="-1898"/>
-        </scene>
-        <!--Comittee Meetings View Controller - Committee Meetings-->
-        <scene sceneID="82x-Sk-urd">
-            <objects>
-                <viewController id="oau-b8-m8l" customClass="ComitteeMeetingsViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="a8W-Sh-lsg">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shutterstock_meeting-ipad.png" id="1CZ-X9-URs">
-                                <rect key="frame" x="96" y="5" width="129" height="97"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <webView contentMode="scaleToFill" id="Hr5-Wd-KJW">
-                                <rect key="frame" x="0.0" y="105" width="320" height="463"/>
-                                <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </webView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationItem key="navigationItem" title="Committee Meetings" id="1gm-qI-bTC"/>
-                    <connections>
-                        <outlet property="webView" destination="Hr5-Wd-KJW" id="FAo-jC-J2p"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iCK-EN-nu4" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1730" y="-1867"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Pqw-qy-8fU">
-            <objects>
-                <navigationController id="UYs-yi-wan" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" id="Hf2-OI-6x6"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OOv-si-RqM">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="YN0-vG-j3O" kind="relationship" relationship="rootViewController" id="gZI-g9-lxX"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0Ad-1V-Vkm" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-160" y="769"/>
+            <point key="canvasLocation" x="500" y="-2317"/>
         </scene>
         <!--Navigation Controller - Social-->
         <scene sceneID="eOI-CQ-PKc">
@@ -3474,26 +3203,7 @@ Note: Exams are not included in the course fees. Exam application and applicable
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VOq-uA-GmV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2924" y="-1302"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Grj-1B-x3B">
-            <objects>
-                <navigationController id="qXg-TJ-fEQ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" id="3KF-bs-YJK"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2fK-2s-rNa">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="bZW-aF-CLc" kind="relationship" relationship="rootViewController" id="Oyo-gR-lyw"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iTG-4x-IL3" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1153" y="383"/>
+            <point key="canvasLocation" x="3120" y="-1306"/>
         </scene>
         <!--My Favorites View Controller - My Favorites-->
         <scene sceneID="URR-GY-G1e">
@@ -3685,16 +3395,16 @@ Note: Exams are not included in the course fees. Exam application and applicable
             <objects>
                 <viewController id="xwd-ye-oBM" customClass="CECInfoViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="98v-7D-qDd">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <webView contentMode="scaleToFill" id="jYG-ef-alq">
-                                <rect key="frame" x="0.0" y="74" width="320" height="430"/>
+                                <rect key="frame" x="0.0" y="74" width="320" height="494"/>
                                 <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shutterstock_cec-ipad.png" id="McH-S5-hpc">
-                                <rect key="frame" x="107" y="4" width="106" height="66"/>
+                                <rect key="frame" x="107" y="5" width="106" height="66"/>
                             </imageView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" id="1JL-8V-FnB">
                                 <rect key="frame" x="142" y="246" width="37" height="37"/>
@@ -3713,11 +3423,10 @@ Note: Exams are not included in the course fees. Exam application and applicable
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DaH-SK-ZX1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2554" y="-1867"/>
+            <point key="canvasLocation" x="2790" y="-2003"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Rosen_hotel-iphone.png" width="217" height="145"/>
         <image name="add-notes.png" width="25" height="28"/>
         <image name="agendaC14-400x400_icon.png" width="50" height="50"/>
         <image name="backbutton-default.png" width="50" height="30"/>
@@ -3748,7 +3457,6 @@ Note: Exams are not included in the course fees. Exam application and applicable
         <image name="sessionsC14-400x400_icon.png" width="50" height="50"/>
         <image name="shutterstock_cec-ipad.png" width="205" height="128"/>
         <image name="shutterstock_contact-us-ipad.png" width="265" height="128"/>
-        <image name="shutterstock_meeting-ipad.png" width="232" height="174"/>
         <image name="shutterstock_training-ipad.png" width="397" height="298"/>
         <image name="social_tab_icon_unselected.png" width="22" height="22"/>
         <image name="speakersC14_icon.png" width="50" height="50"/>
@@ -3768,10 +3476,10 @@ Note: Exams are not included in the course fees. Exam application and applicable
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="R22-dx-yzm"/>
-        <segue reference="Dsf-md-SSX"/>
-        <segue reference="ia9-ZG-dp5"/>
         <segue reference="94R-k8-XlG"/>
-        <segue reference="FV1-tM-kMf"/>
+        <segue reference="Dsf-md-SSX"/>
+        <segue reference="R22-dx-yzm"/>
+        <segue reference="ia9-ZG-dp5"/>
+        <segue reference="c3F-Kc-Rge"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <PushIOManager/PushIOManager.h>
+//#import <PushIOManager/PushIOManager.h>
 #import <CoreData/CoreData.h>
 #import "Crittercism.h"
 #import "exhibitors.h"
@@ -24,7 +24,7 @@
 
 
 
-@interface Fall2013IOSAppAppDelegate : UIResponder <UIApplicationDelegate, PushIOManagerDelegate>
+@interface Fall2013IOSAppAppDelegate : UIResponder <UIApplicationDelegate>
 {
     Reachability *internetReach;
     UIImageView *splashView;

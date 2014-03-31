@@ -77,8 +77,8 @@ int iNotificationCounter=0;
     
     // Override point for customization after application launch.
     // Initial setup
-    [[PushIOManager sharedInstance] setDelegate:self];
-    [[PushIOManager sharedInstance] didFinishLaunchingWithOptions:launchOptions];
+    //[[PushIOManager sharedInstance] setDelegate:self];
+    //[[PushIOManager sharedInstance] didFinishLaunchingWithOptions:launchOptions];
     
     // Requests a device token from Apple
     [[UIApplication sharedApplication] registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert     | UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound];
@@ -1261,7 +1261,7 @@ int iNotificationCounter=0;
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:
 (NSData *)deviceToken
 {
-    [[PushIOManager sharedInstance] didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
+    //[[PushIOManager sharedInstance] didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
     
     
     // Store the deviceToken in the current installation and save it to Parse.
@@ -1273,7 +1273,7 @@ int iNotificationCounter=0;
 
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
 {
-    [[PushIOManager sharedInstance] didFailToRegisterForRemoteNotificationsWithError:error];
+    //[[PushIOManager sharedInstance] didFailToRegisterForRemoteNotificationsWithError:error];
 }
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
@@ -1292,7 +1292,7 @@ int iNotificationCounter=0;
     //Parse handle
     [PFPush handlePush:userInfo];
     
-    [[PushIOManager sharedInstance] didReceiveRemoteNotification:userInfo];
+    //[[PushIOManager sharedInstance] didReceiveRemoteNotification:userInfo];
     
     NSDictionary *payload = [userInfo objectForKey:@"aps"];
     
