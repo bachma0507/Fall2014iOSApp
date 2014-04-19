@@ -61,7 +61,7 @@
 //    NSURLRequest *request = [NSURLRequest requestWithURL:url];
 //    [webView loadRequest:request];
     
-    NSString *httpSource = @"http://speedyreference.com/bicsiappcms/cec.html";
+    NSString *httpSource = @"http://www.bicsi.org/directory/uplink/default.aspx?id=6918";
     NSURL *fullUrl = [NSURL URLWithString:httpSource];
     NSURLRequest *httpRequest = [NSURLRequest requestWithURL:fullUrl];
     [webView loadRequest:httpRequest];
@@ -110,6 +110,16 @@
 {
     [activity stopAnimating];
     activity.hidden = TRUE;
+    
+    [webView stringByEvaluatingJavaScriptFromString:@"var link = document.createElement('link');"
+     "link.type = 'text/css';"
+     "link.rel = 'stylesheet';"
+     "link.href = 'http://www.bicsi.org/m/themes/mobile_custom.css';"
+     "document.getElementsByTagName('head')[0].appendChild(link);"];
+    
+
+
+
 }
 
 @end
