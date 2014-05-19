@@ -5,36 +5,48 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>D950FBEE-F966-4C4E-B75A-9FBE913C08D5</string>
+	<string>50A2E6C9-39EC-4B59-8522-7D28BEE2B039</string>
 	<key>IDESourceControlProjectName</key>
 	<string>Canada2014IOSApp</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>67CECD68-D5DA-417D-8B14-EB9979EAD5B3</key>
-		<string>https://github.com/bachma0507/Canada2014IOSApp</string>
+		<key>4CA1B12F-5D2F-42AA-BB5F-F5279A66713E</key>
+		<string>https://github.com/bachma0507/Canada2014iOSApp</string>
+		<key>D2C80239-FFE7-4A33-9ECA-334E27F68DBB</key>
+		<string>https://github.com/bachma0507/Winter2014IOSApp</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Canada2014IOSApp.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>67CECD68-D5DA-417D-8B14-EB9979EAD5B3</key>
+		<key>4CA1B12F-5D2F-42AA-BB5F-F5279A66713E</key>
 		<string>../..</string>
+		<key>D2C80239-FFE7-4A33-9ECA-334E27F68DBB</key>
+		<string>../../../Winter2014IOSApp</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/bachma0507/Canada2014IOSApp</string>
+	<string>https://github.com/bachma0507/Canada2014iOSApp</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>67CECD68-D5DA-417D-8B14-EB9979EAD5B3</string>
+	<string>4CA1B12F-5D2F-42AA-BB5F-F5279A66713E</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>67CECD68-D5DA-417D-8B14-EB9979EAD5B3</string>
+			<string>4CA1B12F-5D2F-42AA-BB5F-F5279A66713E</string>
 			<key>IDESourceControlWCCName</key>
-			<string>Canada2014IOSApp</string>
+			<string>Canada2014IOSApp - gimbal</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D2C80239-FFE7-4A33-9ECA-334E27F68DBB</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Winter2014IOSApp</string>
 		</dict>
 	</array>
 </dict>

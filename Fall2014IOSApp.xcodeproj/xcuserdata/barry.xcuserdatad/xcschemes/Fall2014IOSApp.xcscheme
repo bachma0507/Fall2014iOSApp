@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4C2D69F4174541100053BCC0"
-               BuildableName = "Canada2014IOSApp.app"
-               BlueprintName = "Canada2014IOSApp"
-               ReferencedContainer = "container:Canada2014IOSApp.xcodeproj">
+               BuildableName = "Fall2014IOSApp.app"
+               BlueprintName = "Fall2014IOSApp"
+               ReferencedContainer = "container:Fall2014IOSApp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4C2D69F4174541100053BCC0"
-            BuildableName = "Canada2014IOSApp.app"
-            BlueprintName = "Canada2014IOSApp"
-            ReferencedContainer = "container:Canada2014IOSApp.xcodeproj">
+            BuildableName = "Fall2014IOSApp.app"
+            BlueprintName = "Fall2014IOSApp"
+            ReferencedContainer = "container:Fall2014IOSApp.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -52,9 +52,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4C2D69F4174541100053BCC0"
-            BuildableName = "Canada2014IOSApp.app"
-            BlueprintName = "Canada2014IOSApp"
-            ReferencedContainer = "container:Canada2014IOSApp.xcodeproj">
+            BuildableName = "Fall2014IOSApp.app"
+            BlueprintName = "Fall2014IOSApp"
+            ReferencedContainer = "container:Fall2014IOSApp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -70,9 +70,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4C2D69F4174541100053BCC0"
-            BuildableName = "Canada2014IOSApp.app"
-            BlueprintName = "Canada2014IOSApp"
-            ReferencedContainer = "container:Canada2014IOSApp.xcodeproj">
+            BuildableName = "Fall2014IOSApp.app"
+            BlueprintName = "Fall2014IOSApp"
+            ReferencedContainer = "container:Fall2014IOSApp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
