@@ -17,9 +17,9 @@
 #import "CSchedule.h"
 #import "EHSchedule.h"
 #import "Html.h"
-#import <FYX/FYX.h>
-#import <FYX/FYXVisitManager.h>
-#import <FYX/FYXTransmitter.h>
+//#import <FYX/FYX.h>
+//#import <FYX/FYXVisitManager.h>
+//#import <FYX/FYXTransmitter.h>
 
 //
 
@@ -28,14 +28,14 @@
 
 
 
-@interface Fall2013IOSAppAppDelegate : UIResponder <FYXServiceDelegate, FYXVisitDelegate,UIApplicationDelegate>
+@interface Fall2013IOSAppAppDelegate : UIResponder </*FYXServiceDelegate, FYXVisitDelegate,*/UIApplicationDelegate>
 {
     Reachability *internetReach;
     UIImageView *splashView;
     MBProgressHUD *HUD;
 }
 
-@property (nonatomic) FYXVisitManager *visitManager;
+//@property (nonatomic) FYXVisitManager *visitManager;
 @property (nonatomic, strong) NSMutableArray * json;
 @property (nonatomic, strong) NSMutableArray * exhibitorsArray;
 @property (nonatomic, strong) NSMutableArray * speakersArray;

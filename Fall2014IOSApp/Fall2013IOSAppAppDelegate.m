@@ -16,7 +16,7 @@
 #import "StartPageViewController.h"
 #import <AdSupport/AdSupport.h>
 #import "TestFlight.h"
-#import <FYX/FYX.h>
+//#import <FYX/FYX.h>
 
 
 @implementation Fall2013IOSAppAppDelegate
@@ -53,13 +53,13 @@ int iNotificationCounter=0;
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
-    [FYX setAppId:@"d17301d893728e50c4540b408387df0989ddf83147ad8f3617c61f8a281944d1" appSecret:@"7bb2bf821f6f71a9c37117fa7cab66e02ac353fa83c80163184aa33dc3d7ece0" callbackUrl:@"orgbicsicanada2014app://authcode"];
-    
-    [FYX startService:self];
-    
-    self.visitManager = [FYXVisitManager new];
-    self.visitManager.delegate = self;
-    [self.visitManager start];
+//    [FYX setAppId:@"d17301d893728e50c4540b408387df0989ddf83147ad8f3617c61f8a281944d1" appSecret:@"7bb2bf821f6f71a9c37117fa7cab66e02ac353fa83c80163184aa33dc3d7ece0" callbackUrl:@"orgbicsicanada2014app://authcode"];
+//    
+//    [FYX startService:self];
+//    
+//    self.visitManager = [FYXVisitManager new];
+//    self.visitManager.delegate = self;
+//    [self.visitManager start];
     
     // Setup TestFlight
     
@@ -1396,71 +1396,71 @@ int iNotificationCounter=0;
     NSLog(@"%@", error);
 }
 
-- (void)didArrive:(FYXVisit *)visit;
-{
-    if ([visit.transmitter.name isEqualToString:@"BICSIBeacon1"]) {
-        
-        
-        // this will be invoked when an authorized transmitter is sighted for the first time
-        NSLog(@"I arrived at a Gimbal Beacon!!! %@", visit.transmitter.name);
-        //
-        //UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alert" message:@"I arrived at a BICSIBeacon1!!!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
-        //[alert show];
-        
-        
-        
-        UIApplication *app                = [UIApplication sharedApplication];
-        UILocalNotification *notification = [[UILocalNotification alloc] init];
-        [[UIApplication sharedApplication] cancelAllLocalNotifications];
-        
-        
-        if (notification == nil)
-            return;
-        notification.alertBody = [NSString stringWithFormat: NSLocalizedString(@"Hi there! Please stop by the BICSI Cares booth and show your support.", nil) ];
-        notification.alertAction = NSLocalizedString (@"BICSI Cares", nil);
-        notification.soundName = UILocalNotificationDefaultSoundName;
-        notification.applicationIconBadgeNumber = 1;
-        [app presentLocalNotificationNow:notification];
-        
-    }
-    
-    if ([visit.transmitter.name isEqualToString:@"BICSIBeacon2"]){
-        
-        // this will be invoked when an authorized transmitter is sighted for the first time
-        NSLog(@"I arrived at a Gimbal Beacon!!! %@", visit.transmitter.name);
-        //
-        //UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alert" message:@"I arrived at a BICSIBeacon2!!!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
-        //[alert show];
-        
-        
-        
-        UIApplication *app                = [UIApplication sharedApplication];
-        UILocalNotification *notification = [[UILocalNotification alloc] init];
-        [[UIApplication sharedApplication] cancelAllLocalNotifications];
-        
-        
-        if (notification == nil)
-            return;
-        notification.alertBody = [NSString stringWithFormat: NSLocalizedString(@"Hi there! Please stop by the BICSI Store and check out the sales on gear and publications!", nil) ];
-        notification.alertAction = NSLocalizedString (@"BICSI Store", nil);
-        notification.soundName = UILocalNotificationDefaultSoundName;
-        notification.applicationIconBadgeNumber = 1;
-        [app presentLocalNotificationNow:notification];
-        
-    }
-    
-}
-- (void)receivedSighting:(FYXVisit *)visit updateTime:(NSDate *)updateTime RSSI:(NSNumber *)RSSI;
-{
-    // this will be invoked when an authorized transmitter is sighted during an on-going visit
-    NSLog(@"I received a sighting!!! %@", visit.transmitter.name);
-}
-- (void)didDepart:(FYXVisit *)visit;
-{
-    // this will be invoked when an authorized transmitter has not been sighted for some time
-    NSLog(@"I left the proximity of a Gimbal Beacon!!!! %@", visit.transmitter.name);
-    NSLog(@"I was around the beacon for %f seconds", visit.dwellTime);
-}
+//- (void)didArrive:(FYXVisit *)visit;
+//{
+//    if ([visit.transmitter.name isEqualToString:@"BICSIBeacon1"]) {
+//        
+//        
+//        // this will be invoked when an authorized transmitter is sighted for the first time
+//        NSLog(@"I arrived at a Gimbal Beacon!!! %@", visit.transmitter.name);
+//        //
+//        //UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alert" message:@"I arrived at a BICSIBeacon1!!!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+//        //[alert show];
+//        
+//        
+//        
+//        UIApplication *app                = [UIApplication sharedApplication];
+//        UILocalNotification *notification = [[UILocalNotification alloc] init];
+//        [[UIApplication sharedApplication] cancelAllLocalNotifications];
+//        
+//        
+//        if (notification == nil)
+//            return;
+//        notification.alertBody = [NSString stringWithFormat: NSLocalizedString(@"Hi there! Please stop by the BICSI Cares booth and show your support.", nil) ];
+//        notification.alertAction = NSLocalizedString (@"BICSI Cares", nil);
+//        notification.soundName = UILocalNotificationDefaultSoundName;
+//        notification.applicationIconBadgeNumber = 1;
+//        [app presentLocalNotificationNow:notification];
+//        
+//    }
+//    
+//    if ([visit.transmitter.name isEqualToString:@"BICSIBeacon2"]){
+//        
+//        // this will be invoked when an authorized transmitter is sighted for the first time
+//        NSLog(@"I arrived at a Gimbal Beacon!!! %@", visit.transmitter.name);
+//        //
+//        //UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alert" message:@"I arrived at a BICSIBeacon2!!!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+//        //[alert show];
+//        
+//        
+//        
+//        UIApplication *app                = [UIApplication sharedApplication];
+//        UILocalNotification *notification = [[UILocalNotification alloc] init];
+//        [[UIApplication sharedApplication] cancelAllLocalNotifications];
+//        
+//        
+//        if (notification == nil)
+//            return;
+//        notification.alertBody = [NSString stringWithFormat: NSLocalizedString(@"Hi there! Please stop by the BICSI Store and check out the sales on gear and publications!", nil) ];
+//        notification.alertAction = NSLocalizedString (@"BICSI Store", nil);
+//        notification.soundName = UILocalNotificationDefaultSoundName;
+//        notification.applicationIconBadgeNumber = 1;
+//        [app presentLocalNotificationNow:notification];
+//        
+//    }
+//    
+//}
+//- (void)receivedSighting:(FYXVisit *)visit updateTime:(NSDate *)updateTime RSSI:(NSNumber *)RSSI;
+//{
+//    // this will be invoked when an authorized transmitter is sighted during an on-going visit
+//    NSLog(@"I received a sighting!!! %@", visit.transmitter.name);
+//}
+//- (void)didDepart:(FYXVisit *)visit;
+//{
+//    // this will be invoked when an authorized transmitter has not been sighted for some time
+//    NSLog(@"I left the proximity of a Gimbal Beacon!!!! %@", visit.transmitter.name);
+//    NSLog(@"I was around the beacon for %f seconds", visit.dwellTime);
+//}
 
 
 //-(void)managedObjectFunction{
