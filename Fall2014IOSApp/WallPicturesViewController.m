@@ -194,7 +194,7 @@
     //    [query orderByDescending:KEY_CREATION_DATE];
     PFQuery *query = [PFQuery queryWithClassName:WALL_OBJECT];
     [query orderByDescending:KEY_CREATION_DATE];
-    [query whereKey:KEY_STATUS equalTo:@"CANapproved"];
+    [query whereKey:KEY_STATUS equalTo:@"F14approved"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         
         if (!error) {

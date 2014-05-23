@@ -214,19 +214,19 @@ int iNotificationCounter=0;
   //  /*NSTimer *time =*/ [NSTimer scheduledTimerWithTimeInterval:60 target:self selector:@selector(refreshTable) userInfo:nil repeats:NO];
 
     //[window addSubview:viewController.view];
-    [window makeKeyAndVisible];
-    
-    splashView = [[UIImageView alloc] initWithFrame:CGRectMake(0,0,window.frame.size.width,window.frame.size.height)];
-    splashView.image = [UIImage imageNamed:@"Default"];
-    [window addSubview:splashView];
-    [window bringSubviewToFront:splashView];
-    [UIView beginAnimations:nil context:nil];
-    [UIView setAnimationDuration:1.0];
-    [UIView setAnimationTransition:UIViewAnimationTransitionNone forView:window cache:YES];
-    [UIView setAnimationDelegate:self];
-    [UIView setAnimationDidStopSelector:@selector(startupAnimationDone:finished:context:)];
-    splashView.alpha = 0.0;
-    [UIView commitAnimations];
+//    [window makeKeyAndVisible];
+//    
+//    splashView = [[UIImageView alloc] initWithFrame:CGRectMake(0,0,window.frame.size.width,window.frame.size.height)];
+//    splashView.image = [UIImage imageNamed:@"LaunchImage"];
+//    [window addSubview:splashView];
+//    [window bringSubviewToFront:splashView];
+//    [UIView beginAnimations:nil context:nil];
+//    [UIView setAnimationDuration:1.0];
+//    [UIView setAnimationTransition:UIViewAnimationTransitionNone forView:window cache:YES];
+//    [UIView setAnimationDelegate:self];
+//    [UIView setAnimationDidStopSelector:@selector(startupAnimationDone:finished:context:)];
+//    splashView.alpha = 0.0;
+//    [UIView commitAnimations];
     
     
     [self updateAllData];
@@ -474,7 +474,7 @@ int iNotificationCounter=0;
         
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),^{
             
-            NSURL *url = [NSURL URLWithString:@"http://speedyreference.com/exhibitorsC14.php"];
+            NSURL *url = [NSURL URLWithString:@"http://speedyreference.com/exhibitorsF14.php"];
             NSData * data = [NSData dataWithContentsOfURL:url];
             
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -557,7 +557,7 @@ int iNotificationCounter=0;
         //CREATE SPEAKER OBJECTS
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),^{
             
-            NSURL *url = [NSURL URLWithString:@"http://speedyreference.com/speakersC14.php"];
+            NSURL *url = [NSURL URLWithString:@"http://speedyreference.com/speakersF14.php"];
             NSData * data = [NSData dataWithContentsOfURL:url];
             
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -673,7 +673,7 @@ int iNotificationCounter=0;
         //CREATE SESSION OBJECTS
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),^{
             
-            NSURL *url = [NSURL URLWithString:@"http://speedyreference.com/sessionsC14.php"];
+            NSURL *url = [NSURL URLWithString:@"http://speedyreference.com/sessionsF14.php"];
             NSData * data = [NSData dataWithContentsOfURL:url];
             
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -792,7 +792,7 @@ int iNotificationCounter=0;
         //CREATE SPONSOR OBJECTS
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),^{
             
-            NSURL *url = [NSURL URLWithString:@"http://speedyreference.com/sponsorsC14.php"];
+            NSURL *url = [NSURL URLWithString:@"http://speedyreference.com/sponsorsF14.php"];
             NSData * data = [NSData dataWithContentsOfURL:url];
             
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -869,7 +869,7 @@ int iNotificationCounter=0;
         
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),^{
             
-            NSURL *url = [NSURL URLWithString:@"http://speedyreference.com/cscheduleC14.php"];
+            NSURL *url = [NSURL URLWithString:@"http://speedyreference.com/cscheduleF14.php"];
             NSData * data = [NSData dataWithContentsOfURL:url];
             
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -945,7 +945,7 @@ int iNotificationCounter=0;
         
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),^{
             
-            NSURL *url = [NSURL URLWithString:@"http://speedyreference.com/ehscheduleC14.php"];
+            NSURL *url = [NSURL URLWithString:@"http://speedyreference.com/ehscheduleF14.php"];
             NSData * data = [NSData dataWithContentsOfURL:url];
             
             dispatch_async(dispatch_get_main_queue(), ^{
