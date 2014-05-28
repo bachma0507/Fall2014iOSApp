@@ -51,6 +51,17 @@ extern int iNotificationCounter;
 	// Do any additional setup after loading the view.
     // Wipe out old user defaults
     
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage new]
+                                                  forBarMetrics:UIBarMetricsDefault];
+    self.navigationController.navigationBar.shadowImage = [UIImage new];
+    self.navigationController.navigationBar.translucent = YES;
+    self.navigationController.view.backgroundColor = [UIColor clearColor];
+    
+    UIImageView *tempImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"scenery1"]];
+    [tempImageView setFrame:self.tableView.frame];
+    
+    self.tableView.backgroundView = tempImageView;
+    
     
     if ([[NSUserDefaults standardUserDefaults] objectForKey:@"objectIDArray"]){
         [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"objectIDArray"];
@@ -130,7 +141,7 @@ extern int iNotificationCounter;
 {
     
     if(indexPath.row % 2 == 0){
-        UIColor *altCellColor = [UIColor colorWithRed:235/255.0 green:240/255.0 blue:233/255.0 alpha:1.0];
+        UIColor *altCellColor = [UIColor colorWithRed:246/255.0 green:235/255.0 blue:253/255.0 alpha:1.0];
         cell.backgroundColor = altCellColor;
     }
     else{

@@ -62,6 +62,11 @@
     UIBarButtonItem *backButtonItem = [[UIBarButtonItem alloc] initWithTitle:@" " style:UIBarButtonItemStylePlain target:nil action:nil];
     self.navigationItem.backBarButtonItem = backButtonItem;
     
+    UIImageView *tempImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"scenery1"]];
+    [tempImageView setFrame:self.tableView.frame];
+    
+    self.tableView.backgroundView = tempImageView;
+    
 //        HUD = [[MBProgressHUD alloc] initWithView:self.view];
 //        HUD.labelText = @"Loading data...";
 //        //HUD.detailsLabelText = @"Just relax";
@@ -219,9 +224,12 @@
 //}
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row%2 == 0) {
-        UIColor *altCellColor = [UIColor colorWithWhite:0.7 alpha:0.1];
+    if(indexPath.row % 2 == 0){
+        UIColor *altCellColor = [UIColor colorWithRed:246/255.0 green:235/255.0 blue:253/255.0 alpha:1.0];
         cell.backgroundColor = altCellColor;
+    }
+    else{
+        cell.backgroundColor = [UIColor whiteColor];
     }
 }
 

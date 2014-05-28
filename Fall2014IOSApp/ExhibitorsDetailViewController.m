@@ -55,7 +55,7 @@
 //        }
 //    }
     
-    self.title = myExhibitors.name;
+    //self.title = myExhibitors.name;
     
     //set our labels
     nameLabel.text = myExhibitors.name;
