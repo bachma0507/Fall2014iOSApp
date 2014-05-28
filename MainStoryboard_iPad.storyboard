@@ -701,7 +701,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_blurry_ipad.png" id="iea-HQ-FEu">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_blurry2_ipad.png" id="iea-HQ-FEu">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
@@ -3348,7 +3348,7 @@
         <image name="agendaC14-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="backbutton-default.png" width="50" height="30"/>
         <image name="backbutton.png" width="50" height="30"/>
-        <image name="background_blurry_ipad.png" width="768" height="1024"/>
+        <image name="background_blurry2_ipad.png" width="768" height="1024"/>
         <image name="button-green_ipad.png" width="224" height="66"/>
         <image name="cecC14-icon-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="comm_meetings_icon_ipad.png" width="120" height="120"/>
