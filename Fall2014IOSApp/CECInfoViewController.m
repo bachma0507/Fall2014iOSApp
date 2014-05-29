@@ -45,7 +45,8 @@
     UIBarButtonItem *backButtonItem = [[UIBarButtonItem alloc] initWithTitle:@" " style:UIBarButtonItemStylePlain target:nil action:nil];
     self.navigationItem.backBarButtonItem = backButtonItem;
     
-    
+  
+        
     
     //[self getURL];
     
@@ -61,7 +62,8 @@
 //    NSURLRequest *request = [NSURLRequest requestWithURL:url];
 //    [webView loadRequest:request];
     
-    NSString *httpSource = @"http://www.bicsi.org/directory/uplink/default.aspx?id=6918";
+    //NSString *httpSource = @"http://www.bicsi.org/directory/uplink/default.aspx?id=6918";
+    NSString *httpSource = @"http://www.speedyreference.com/bicsiappcms/cec.html";
     NSURL *fullUrl = [NSURL URLWithString:httpSource];
     NSURLRequest *httpRequest = [NSURLRequest requestWithURL:fullUrl];
     [webView loadRequest:httpRequest];

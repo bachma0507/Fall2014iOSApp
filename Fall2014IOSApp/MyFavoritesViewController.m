@@ -11,6 +11,7 @@
 //#import "StackMob.h"
 #import "MyFavoritesDetailViewController.h"
 #import "MyFavoritesCell.h"
+#import <AudioToolbox/AudioToolbox.h>
 
 @interface MyFavoritesViewController ()
 
@@ -53,6 +54,11 @@
     
     UIBarButtonItem *backButtonItem = [[UIBarButtonItem alloc] initWithTitle:@" " style:UIBarButtonItemStylePlain target:nil action:nil];
     self.navigationItem.backBarButtonItem = backButtonItem;
+    
+    UIImageView *tempImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"scenery1"]];
+    [tempImageView setFrame:self.tableView.frame];
+    
+    self.tableView.backgroundView = tempImageView;
     
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc]
                                         init];
@@ -114,9 +120,13 @@
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row%2 == 0) {
-        UIColor *altCellColor = [UIColor colorWithWhite:0.7 alpha:0.1];
+    if(indexPath.row % 2 == 0){
+        //UIColor *altCellColor = [UIColor colorWithRed:235/255.0 green:240/255.0 blue:233/255.0 alpha:1.0];
+        UIColor *altCellColor = [UIColor colorWithRed:246/255.0 green:235/255.0 blue:253/255.0 alpha:1.0];
         cell.backgroundColor = altCellColor;
+    }
+    else{
+        cell.backgroundColor = [UIColor whiteColor];
     }
 }
 
@@ -145,6 +155,25 @@
     [fetchRequest setSortDescriptors:sortDescriptors];
     
     NSArray *results = [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
+    
+    if (!results || !results.count) {
+        
+        AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+        
+        NSURL *fileURL = [NSURL URLWithString:@"/System/Library/Audio/UISounds/Modern/sms_alert_bamboo.caf"]; // see list below
+        SystemSoundID soundID;
+        AudioServicesCreateSystemSoundID((__bridge_retained CFURLRef)fileURL,&soundID);
+        AudioServicesPlaySystemSound(soundID);
+        
+        NSString *message = @"You have not added any exhibitors to your Favorites. Please click on Add to Favorites when viewing Exhibitor details.";
+        UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"Notification"
+                                                           message:message
+                                                          delegate:self
+                                                 cancelButtonTitle:@"Ok"
+                                                 otherButtonTitles:nil,nil];
+        [alertView show];
+    }
+
     
     //[self.managedObjectContext executeFetchRequest:fetchRequest onSuccess:^(NSArray *results) {
     [self.refreshControl endRefreshing];
