@@ -133,12 +133,16 @@
     UIBarButtonItem *button = (UIBarButtonItem *)sender;
     NSString *buttonTitle = [button.title lowercaseString];
     
-    if ([buttonTitle isEqualToString:@"theme park"]) {
-        buttonTitle = @"amusement_park";
-    }
+//    if ([buttonTitle isEqualToString:@"theme park"]) {
+//        buttonTitle = @"amusement_park";
+//    }
     
     if ([buttonTitle isEqualToString:@"shop"]) {
         buttonTitle = @"shopping_mall";
+    }
+    
+    if ([buttonTitle isEqualToString:@"night life"]) {
+        buttonTitle = @"night_club";
     }
     
     //Use this title text to build the URL query and get the data from Google. Change the radius value to increase the size of the search area in meters. The max is 50,000.

@@ -449,7 +449,7 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="STK-1Y-Vt0"/>
-                                    <barButtonItem title="Theme Park" id="2k0-8a-DsL">
+                                    <barButtonItem title="Night Life" id="2k0-8a-DsL">
                                         <connections>
                                             <action selector="toolBarButtonPress:" destination="yOR-dG-9HU" id="65J-Ao-GzA"/>
                                         </connections>
