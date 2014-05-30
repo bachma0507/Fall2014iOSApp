@@ -53,6 +53,12 @@ int iNotificationCounter=0;
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
+    
+    self.customLocationManager = [[CLLocationManager alloc] init];
+    self.customLocationManager.desiredAccuracy = kCLLocationAccuracyKilometer;
+    self.customLocationManager.delegate = self;
+    [self.customLocationManager startUpdatingLocation];
+    
 //    [FYX setAppId:@"d17301d893728e50c4540b408387df0989ddf83147ad8f3617c61f8a281944d1" appSecret:@"7bb2bf821f6f71a9c37117fa7cab66e02ac353fa83c80163184aa33dc3d7ece0" callbackUrl:@"orgbicsicanada2014app://authcode"];
 //    
 //    [FYX startService:self];
@@ -138,11 +144,14 @@ int iNotificationCounter=0;
     
     [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
                                                            //[UIColor colorWithRed:237/255.0 green:28/255.0 blue:36/255.0 alpha:1.0], UITextAttributeTextColor,
+                                                    
                                                            [UIColor colorWithRed:193/255.0 green:70/255.0 blue:162/255.0 alpha:1.0], UITextAttributeTextColor,
                                                            [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.8],UITextAttributeTextShadowColor,
                                                            [NSValue valueWithUIOffset:UIOffsetMake(0, 0)],UITextAttributeTextShadowOffset,
                                                            //[UIFont fontWithName:@"HelveticaNeue-CondensedBlack"
                                                            [UIFont fontWithName:@"Arial"size:20.0], UITextAttributeFont, nil]];
+
+    
     
     if (SYSTEM_VERSION_LESS_THAN(@"7.0")) {
         UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
@@ -209,9 +218,7 @@ int iNotificationCounter=0;
     
     
     
-    
-    
-    
+  
     
     
     //maaj code 062313
@@ -1399,6 +1406,46 @@ int iNotificationCounter=0;
     // this will be called if the service has failed to start
     NSLog(@"%@", error);
 }
+
+# pragma mark - Updates user's current location
+
+-(void)updateCurrentLocation {
+    [self.customLocationManager startUpdatingLocation];
+}
+
+-(void)stopUpdatingCurrentLocation {
+    [self.customLocationManager stopUpdatingHeading];
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
+    self.currentUserLocation = newLocation;
+    
+    [self.customLocationManager stopUpdatingLocation];
+    self.currentUserLocation = [[CLLocation alloc] initWithLatitude:newLocation.coordinate.latitude
+                                                          longitude:newLocation.coordinate.longitude];
+}
+
+# pragma mark - Setup SpeechKit Connection
+
+- (void)setupSpeechKitConnection {
+    
+    [SpeechKit setupWithID:@"NMDPTRIAL_bjulien20140508222743"
+                      host:@"sandbox.nmdp.nuancemobility.net"
+                      port:443
+                    useSSL:NO
+                  delegate:nil];
+    
+    // Set earcons to play
+    SKEarcon* earconStart	= [SKEarcon earconWithName:@"earcon_listening.wav"];
+    SKEarcon* earconStop	= [SKEarcon earconWithName:@"earcon_done_listening.wav"];
+    SKEarcon* earconCancel	= [SKEarcon earconWithName:@"earcon_cancel.wav"];
+    
+    [SpeechKit setEarcon:earconStart forType:SKStartRecordingEarconType];
+    [SpeechKit setEarcon:earconStop forType:SKStopRecordingEarconType];
+    [SpeechKit setEarcon:earconCancel forType:SKCancelRecordingEarconType];
+}
+
+
 
 //- (void)didArrive:(FYXVisit *)visit;
 //{

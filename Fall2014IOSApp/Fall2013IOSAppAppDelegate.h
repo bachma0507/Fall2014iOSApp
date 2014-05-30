@@ -17,6 +17,7 @@
 #import "CSchedule.h"
 #import "EHSchedule.h"
 #import "Html.h"
+#import <SpeechKit/SpeechKit.h>
 //#import <FYX/FYX.h>
 //#import <FYX/FYXVisitManager.h>
 //#import <FYX/FYXTransmitter.h>
@@ -28,7 +29,7 @@
 
 
 
-@interface Fall2013IOSAppAppDelegate : UIResponder </*FYXServiceDelegate, FYXVisitDelegate,*/UIApplicationDelegate>
+@interface Fall2013IOSAppAppDelegate : UIResponder </*FYXServiceDelegate, FYXVisitDelegate,*/UIApplicationDelegate, CLLocationManagerDelegate>
 {
     Reachability *internetReach;
     UIImageView *splashView;
@@ -49,6 +50,13 @@
 @property (strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+
+@property (strong, nonatomic) CLLocationManager *customLocationManager;
+@property (strong, nonatomic) CLLocation *currentUserLocation;
+
+- (void)updateCurrentLocation;
+- (void)stopUpdatingCurrentLocation;
+- (void)setupSpeechKitConnection;
 
 - (void)startupAnimationDone:(NSString *)animationID finished:(NSNumber *)finished context:(void *)context;
 - (void)saveContext;
