@@ -246,15 +246,29 @@ const unsigned char SpeechKitApplicationKey[] = {0xfd, 0x41, 0x2f, 0x14, 0x90, 0
     // 1
     self.vocalizer = [[SKVocalizer alloc] initWithLanguage:@"en_US" delegate:self];
     
-    if ([self.tableViewDisplayDataArray count] > 0) {
+//    if (([self.searchCriteria isEqualToString:@"restaurants"]) && ([self.tableViewDisplayDataArray count] > 1)) {
+//        // 2
+//        [self.vocalizer speakString:[NSString stringWithFormat:@"I found %lu %@",
+//                                     (unsigned long)[self.tableViewDisplayDataArray count],
+//                                     self.searchCriteria]];
+//    }
+    
+    if ([self.tableViewDisplayDataArray count] == 1) {
         // 2
-        [self.vocalizer speakString:[NSString stringWithFormat:@"I found %lu %@",
+        [self.vocalizer speakString:[NSString stringWithFormat:@"I found %lu %@ restaurant",
+                                     (unsigned long)[self.tableViewDisplayDataArray count],
+                                     self.searchCriteria]];
+    }
+    
+    else if ([self.tableViewDisplayDataArray count] > 0) {
+        // 2
+        [self.vocalizer speakString:[NSString stringWithFormat:@"I found %lu %@ restaurants",
                                      (unsigned long)[self.tableViewDisplayDataArray count],
                                      self.searchCriteria]];
     }
     
     else {
-        [self.vocalizer speakString:[NSString stringWithFormat:@"I could not find any %@",
+        [self.vocalizer speakString:[NSString stringWithFormat:@"I could not find any %@ restaurants",
                                      self.searchCriteria]];
     }
 }
