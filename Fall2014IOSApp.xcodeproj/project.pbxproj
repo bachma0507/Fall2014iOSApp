@@ -725,6 +725,7 @@
 		4CD8E0B91938F58B00A4326C /* mic_off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CD8E0B71938F58B00A4326C /* mic_off@2x.png */; };
 		4CD8E0BC1938F5AA00A4326C /* mic_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CD8E0BA1938F5AA00A4326C /* mic_on.png */; };
 		4CD8E0BD1938F5AA00A4326C /* mic_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CD8E0BB1938F5AA00A4326C /* mic_on@2x.png */; };
+		4CD8E14C193E581C00A4326C /* SurveyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD8E14B193E581C00A4326C /* SurveyViewController.m */; };
 		4CE1B36F178F13F7006EF171 /* Session2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE1B36E178F13F7006EF171 /* Session2ViewController.m */; };
 		4CE1B37A178FA614006EF171 /* Sessions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE1B379178FA614006EF171 /* Sessions.m */; };
 		4CE1B37C178FA929006EF171 /* beep-beep.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 4CE1B37B178FA929006EF171 /* beep-beep.aiff */; };
@@ -1656,6 +1657,8 @@
 		4CD8E0B71938F58B00A4326C /* mic_off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mic_off@2x.png"; sourceTree = "<group>"; };
 		4CD8E0BA1938F5AA00A4326C /* mic_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mic_on.png; sourceTree = "<group>"; };
 		4CD8E0BB1938F5AA00A4326C /* mic_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mic_on@2x.png"; sourceTree = "<group>"; };
+		4CD8E14A193E581C00A4326C /* SurveyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SurveyViewController.h; sourceTree = "<group>"; };
+		4CD8E14B193E581C00A4326C /* SurveyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SurveyViewController.m; sourceTree = "<group>"; };
 		4CE1B36D178F13F7006EF171 /* Session2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Session2ViewController.h; sourceTree = "<group>"; };
 		4CE1B36E178F13F7006EF171 /* Session2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Session2ViewController.m; sourceTree = "<group>"; };
 		4CE1B378178FA614006EF171 /* Sessions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sessions.h; sourceTree = "<group>"; };
@@ -2051,18 +2054,19 @@
 		4C2D69FE174541100053BCC0 /* Fall2014IOSApp */ = {
 			isa = PBXGroup;
 			children = (
-				4CC5646318CC36910033B05A /* FloorMaps */,
-				4CC5645B18CC32020033B05A /* EntranceHallFloorPlan */,
 				4CCB78DD1843B65700D9D1C6 /* CEC */,
 				4CCB78EA1843B90300D9D1C6 /* CommitteeMeetings */,
 				4CCB78E41843B85900D9D1C6 /* ConferenceSchedule */,
 				4CCB78DC1843B62000D9D1C6 /* ContactUs */,
+				4CC5645B18CC32020033B05A /* EntranceHallFloorPlan */,
 				4CCB78D81843B59100D9D1C6 /* ExhibitHallFloorPlan */,
 				4CCB78D91843B5BA00D9D1C6 /* ExhibitHallSchedule */,
 				4CCB78DE1843B66400D9D1C6 /* Exhibitors */,
 				4CCB78E81843B8DC00D9D1C6 /* FindAreaActivities */,
+				4CC5646318CC36910033B05A /* FloorMaps */,
 				4CCB78DB1843B5FB00D9D1C6 /* Hotel */,
 				4C894E2818AD548800001623 /* hotelWebview */,
+				4C36C696192F766F0018AB39 /* Images.xcassets */,
 				4CCB78E71843B8BC00D9D1C6 /* iPadGallery */,
 				4CCB78E61843B8AC00D9D1C6 /* iPhoneGallery */,
 				4CCB78E91843B8F500D9D1C6 /* LocateOnMap */,
@@ -2079,9 +2083,9 @@
 				4CCB78DA1843B5D700D9D1C6 /* Sponsors */,
 				4CCB78D61843B53500D9D1C6 /* StartPage */,
 				4C2D69FF174541100053BCC0 /* Supporting Files */,
+				4CD8E149193E57F000A4326C /* Surveys */,
 				4CCB78DF1843B67400D9D1C6 /* Training&Exams */,
 				4CCB78ED1843B99600D9D1C6 /* UnusedViewControllers */,
-				4C36C696192F766F0018AB39 /* Images.xcassets */,
 			);
 			path = Fall2014IOSApp;
 			sourceTree = "<group>";
@@ -3241,6 +3245,15 @@
 			name = yelp;
 			sourceTree = "<group>";
 		};
+		4CD8E149193E57F000A4326C /* Surveys */ = {
+			isa = PBXGroup;
+			children = (
+				4CD8E14A193E581C00A4326C /* SurveyViewController.h */,
+				4CD8E14B193E581C00A4326C /* SurveyViewController.m */,
+			);
+			name = Surveys;
+			sourceTree = "<group>";
+		};
 		4CF45E1C1781BF63000F6A5D /* ipad */ = {
 			isa = PBXGroup;
 			children = (
@@ -4047,6 +4060,7 @@
 				4C3A0CF6177C6C1300DA1D7E /* ExamsViewController.m in Sources */,
 				4C088C59177F667500CFBC96 /* MagicalImportFunctions.m in Sources */,
 				4CC05AA5180C76DE0082A141 /* IpadLoginViewController.m in Sources */,
+				4CD8E14C193E581C00A4326C /* SurveyViewController.m in Sources */,
 				4C088C5A177F667500CFBC96 /* NSAttributeDescription+MagicalDataImport.m in Sources */,
 				4C088C5B177F667500CFBC96 /* NSEntityDescription+MagicalDataImport.m in Sources */,
 				4C088C5C177F667500CFBC96 /* NSNumber+MagicalDataImport.m in Sources */,

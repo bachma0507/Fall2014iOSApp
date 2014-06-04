@@ -39,6 +39,12 @@
     return self;
 }
 
+- (void)awakeFromNib
+{
+    self.preferredContentSize = CGSizeMake(320.0, 700.0);
+    [super awakeFromNib];
+}
+
 //- (Fall2013IOSAppAppDelegate *)appDelegate {
 //    return (Fall2013IOSAppAppDelegate *)[[UIApplication sharedApplication] delegate];
 //}

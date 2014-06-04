@@ -160,6 +160,19 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    SessionsDetailViewController *aViewController = [[SessionsDetailViewController alloc] initWithNibName:@"SessionsDetailViewController" bundle:nil];
+    UIPopoverController *popoverController = [[UIPopoverController alloc]
+                                              initWithContentViewController:aViewController];
+    
+    popoverController.popoverContentSize = CGSizeMake(320, 416);
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    [popoverController presentPopoverFromRect:cell.bounds inView:cell.contentView
+                     permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+}
+
 -(void)refreshTable{
     
     
@@ -204,20 +217,20 @@
 }
 
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([segue.identifier isEqualToString:@"sessionsDetailCell"])
-    {
-        
-                        
-            NSIndexPath * indexPath = [self.tableView indexPathForSelectedRow];
-            SessionsDetailViewController *destViewController = segue.destinationViewController;
-            destViewController.mySessions = [self.myObjects objectAtIndex:indexPath.row];
-            
-            
-        }
-    
-}
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+//{
+//    if ([segue.identifier isEqualToString:@"sessionsDetailCell"])
+//    {
+//        
+//                        
+//            NSIndexPath * indexPath = [self.tableView indexPathForSelectedRow];
+//            SessionsDetailViewController *destViewController = segue.destinationViewController;
+//            destViewController.mySessions = [self.myObjects objectAtIndex:indexPath.row];
+//            
+//            
+//        }
+//    
+//}
 
 
 /*
@@ -261,15 +274,15 @@
 
 #pragma mark - Table view delegate
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
-}
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    // Navigation logic may go here. Create and push another view controller.
+//    /*
+//     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
+//     // ...
+//     // Pass the selected object to the new view controller.
+//     [self.navigationController pushViewController:detailViewController animated:YES];
+//     */
+//}
 
 @end

@@ -1723,9 +1723,6 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="UbD-9V-zhX" kind="push" identifier="notesDetail" id="Pqf-ft-EUk"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="HFF-fj-fKo">
                                 <rect key="frame" x="229" y="351" width="310" height="44"/>
@@ -1832,7 +1829,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KjM-fD-BTA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3665" y="-1843"/>
+            <point key="canvasLocation" x="-3561" y="-1931"/>
         </scene>
         <!--Conf Sched Table View Controller - Conference Schedule-->
         <scene sceneID="oNg-wY-Ylp">
@@ -1885,7 +1882,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o7r-NH-Zzf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1887" y="-3640"/>
+            <point key="canvasLocation" x="-1801" y="-3686"/>
         </scene>
         <!--Sessions View Controller-->
         <scene sceneID="dwR-0l-1Os">
@@ -1946,9 +1943,6 @@
                                 <state key="normal" image="add-notes_ipad.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="UbD-9V-zhX" kind="push" identifier="notesDetail" id="0aH-og-aFY"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gIo-wk-fSC">
                                 <rect key="frame" x="65" y="959" width="180" height="44"/>
@@ -2086,9 +2080,6 @@
                                 <state key="normal" backgroundImage="add-notes_ipad.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="UbD-9V-zhX" kind="push" identifier="notesDetail" id="Ygi-Da-RkO"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="sXA-w5-hjI">
                                 <rect key="frame" x="65" y="959" width="180" height="44"/>
@@ -2538,7 +2529,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U1E-dD-JXJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3339" y="-1454"/>
+            <point key="canvasLocation" x="2339" y="-294"/>
         </scene>
         <!--Com Meetings Main View Controller - Committee Meetings-->
         <scene sceneID="nbL-Rf-b64">
@@ -2789,7 +2780,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="takeSurvey:" destination="bdb-bd-S2F" eventType="touchUpInside" id="dEl-I9-z0r"/>
+                                    <action selector="togglePopoverSurvey:" destination="bdb-bd-S2F" eventType="touchUpInside" id="e58-Mr-bBK"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Speaker2NameLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="G5n-IO-exM">
@@ -2828,7 +2819,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="UbD-9V-zhX" kind="push" identifier="notesDetail" id="ZwN-mm-jT8"/>
+                                    <action selector="togglePopover:" destination="bdb-bd-S2F" eventType="touchUpInside" id="CV8-v3-dcX"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="lo3-vC-Bl9">
@@ -2907,46 +2898,79 @@
                         <outlet property="speaker4NameLabel" destination="y81-HO-mAe" id="CIJ-IO-2j0"/>
                         <outlet property="speaker5NameLabel" destination="c3u-KR-qnj" id="U6n-dH-5Ht"/>
                         <outlet property="speaker6NameLabel" destination="bq2-S7-hhM" id="394-Fo-yce"/>
+                        <segue destination="UbD-9V-zhX" kind="popover" identifier="notesDetail" popoverAnchorView="diN-EA-6T3" id="fPP-35-TOg">
+                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                        </segue>
+                        <segue destination="PBz-IC-aE3" kind="popover" identifier="surveyDetail" popoverAnchorView="X88-y5-iic" id="uaS-LK-lnw">
+                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                        </segue>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MIJ-ET-BmF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1613" y="-2175"/>
         </scene>
+        <!--Survey View Controller-->
+        <scene sceneID="9gR-cX-pvT">
+            <objects>
+                <viewController id="PBz-IC-aE3" customClass="SurveyViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="X6L-6U-m4E">
+                        <rect key="frame" x="0.0" y="0.0" width="620" height="700"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" id="E1F-ZN-Nga">
+                                <rect key="frame" x="0.0" y="0.0" width="620" height="700"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" id="3db-bJ-wOq">
+                                <rect key="frame" x="374" y="502" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="activity" destination="3db-bJ-wOq" id="Hx9-LX-3xR"/>
+                        <outlet property="webView" destination="E1F-ZN-Nga" id="84N-OK-7YQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jX8-iu-o1Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2734" y="-2175"/>
+        </scene>
         <!--Notes View Controller-->
         <scene sceneID="ZMN-zP-G22">
             <objects>
                 <viewController id="UbD-9V-zhX" customClass="NotesViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="02K-Kr-j1W">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="700"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" text="SessionNamelabel" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4Pt-vG-87u">
-                                <rect key="frame" x="20" y="60" width="695" height="40"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="13" y="22" width="300" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cIg-ZG-3jU">
-                                <rect key="frame" x="368" y="135" width="0.0" height="0.0"/>
+                                <rect key="frame" x="368" y="92" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SQt-dg-ovo">
-                                <rect key="frame" x="27" y="135" width="695" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="29" y="62" width="263" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Notes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iEI-ll-ycJ">
-                                <rect key="frame" x="27" y="210" width="160" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="My Notes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iEI-ll-ycJ">
+                                <rect key="frame" x="27" y="92" width="77" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="D2g-Dy-wQk">
-                                <rect key="frame" x="582" y="199" width="73" height="44"/>
+                                <rect key="frame" x="198" y="95" width="73" height="28"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Save" backgroundImage="button-green_ipad.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -2957,19 +2981,19 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" id="bfY-6D-Pyp">
-                                <rect key="frame" x="23" y="274" width="721" height="423"/>
+                                <rect key="frame" x="10" y="131" width="300" height="372"/>
                                 <color key="backgroundColor" red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="sessionIDlabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gMl-Y2-qU1">
-                                <rect key="frame" x="51" y="912" width="260" height="21"/>
+                                <rect key="frame" x="33" y="548" width="260" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5j2-CM-uAT">
-                                <rect key="frame" x="319" y="797" width="110" height="44"/>
+                                <rect key="frame" x="115" y="511" width="110" height="31"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Email Notes" backgroundImage="button-green_ipad.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -3384,10 +3408,9 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="SDK-bn-4vP"/>
         <segue reference="SFt-NY-1lL"/>
-        <segue reference="xWE-49-eAT"/>
-        <segue reference="Ygi-Da-RkO"/>
         <segue reference="Ysf-Ju-HKO"/>
+        <segue reference="xWE-49-eAT"/>
+        <segue reference="SDK-bn-4vP"/>
     </inferredMetricsTieBreakers>
 </document>

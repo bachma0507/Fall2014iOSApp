@@ -10,6 +10,11 @@
 #import "Sessions.h"
 #import <MessageUI/MessageUI.h>
 
+@class NotesViewController;
+
+@protocol NotesViewControllerDelegate
+- (void)NotesViewControllerDidFinish:(NotesViewController *)controller;
+@end
 
 @interface NotesViewController : UIViewController <UITextViewDelegate,MFMailComposeViewControllerDelegate>
 
@@ -18,6 +23,8 @@
     UITextField * sessionIDlabelText;
     
 }
+
+@property (weak, nonatomic) id <NotesViewControllerDelegate> delegate;
 @property (strong, nonatomic) IBOutlet UILabel *sessionIDlabel;
 @property (strong, nonatomic) IBOutlet UILabel *sessionNamelabel;
 @property (strong, nonatomic) IBOutlet UITextView *notesTextField;
