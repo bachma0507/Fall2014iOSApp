@@ -124,7 +124,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6aP-hZ-7bB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1396" y="1858"/>
+            <point key="canvasLocation" x="-2608" y="3650"/>
         </scene>
         <!--Social View Controller - Social Media-->
         <scene sceneID="z0X-Lg-3zj">
@@ -446,7 +446,7 @@
                                     </connections>
                                 </searchBar>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="uO4-eV-TGK" detailTextLabel="Npe-ZW-3Uy" rowHeight="64" style="IBUITableViewCellStyleSubtitle" id="wmT-oD-f1k">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="uO4-eV-TGK" detailTextLabel="Npe-ZW-3Uy" rowHeight="64" style="IBUITableViewCellStyleSubtitle" id="wmT-oD-f1k" customClass="SessionsDetailTableViewCell">
                                         <rect key="frame" x="0.0" y="66" width="768" height="64"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wmT-oD-f1k" id="Edu-YO-b8F">
@@ -468,7 +468,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="bdb-bd-S2F" kind="push" identifier="sessionsDetailCell" id="GEW-K7-fR7"/>
+                                            <segue destination="bdb-bd-S2F" kind="push" identifier="sessionsDetailCell" id="x9l-yO-e2N"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -499,7 +499,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="-2630" y="2153"/>
+            <point key="canvasLocation" x="1178" y="-2369"/>
         </scene>
         <!--Ipad Register View Controller - Sign Up-->
         <scene sceneID="45d-Kj-kZ8">
@@ -2908,7 +2908,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MIJ-ET-BmF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1613" y="-2175"/>
+            <point key="canvasLocation" x="2081" y="-2369"/>
         </scene>
         <!--Survey View Controller-->
         <scene sceneID="9gR-cX-pvT">
@@ -2924,7 +2924,7 @@
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" id="3db-bJ-wOq">
-                                <rect key="frame" x="374" y="502" width="20" height="20"/>
+                                <rect key="frame" x="300" y="340" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
                         </subviews>
@@ -3408,9 +3408,9 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="x9l-yO-e2N"/>
         <segue reference="SFt-NY-1lL"/>
         <segue reference="Ysf-Ju-HKO"/>
-        <segue reference="xWE-49-eAT"/>
         <segue reference="SDK-bn-4vP"/>
     </inferredMetricsTieBreakers>
 </document>

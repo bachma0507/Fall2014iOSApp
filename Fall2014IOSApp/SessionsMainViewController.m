@@ -16,6 +16,7 @@
 
 
 
+
 @interface SessionsMainViewController ()
 
 @end
@@ -89,6 +90,9 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+
 
 -(void)searchThroughData
 {
@@ -299,6 +303,11 @@
     }
 
 }
+
+
+
+
+////////
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (self.searchDisplayController.isActive)
@@ -329,6 +338,7 @@
         }
     }
 }
+////////
 
 //-(void)updateData{
 //    StartPageViewController * startPage = [[StartPageViewController alloc] init];

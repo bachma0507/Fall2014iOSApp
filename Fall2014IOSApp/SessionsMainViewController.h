@@ -5,6 +5,7 @@
 #import <UIKit/UIKit.h>
 #import "Sessions.h"
 #import "SessionsViewController.h"
+
 @class MBProgressHUD;
 
 @interface SessionsMainViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UIAlertViewDelegate>
@@ -12,6 +13,8 @@
     MBProgressHUD *HUD;
     
 }
+
+
 
 @property (nonatomic, strong) NSMutableArray * results;
 
@@ -22,6 +25,7 @@
 
 @property (strong, nonatomic) IBOutlet UITableView *myTableView;
 @property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
+
 
 //-(void) retrieveData;
 
