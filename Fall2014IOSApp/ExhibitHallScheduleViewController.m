@@ -87,7 +87,7 @@
     
     [fetchRequest setEntity:entity];
     
-    NSSortDescriptor *sortDescriptor1 = [[NSSortDescriptor alloc] initWithKey:@"scheduleDate" ascending:YES];
+    NSSortDescriptor *sortDescriptor1 = [[NSSortDescriptor alloc] initWithKey:@"id" ascending:YES];
     NSSortDescriptor *sortDescriptor2 = [[NSSortDescriptor alloc] initWithKey:@"startTime" ascending:YES];
     NSArray *sortDescriptors = [NSArray arrayWithObjects:sortDescriptor1, sortDescriptor2, nil];
     

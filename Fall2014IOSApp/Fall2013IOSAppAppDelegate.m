@@ -69,7 +69,7 @@ int iNotificationCounter=0;
     
     // Setup TestFlight
     
-    [TestFlight takeOff:@"8425b2ed-652c-496e-b506-d0ce6243cc76"];
+    [TestFlight takeOff:@"216554ba-aef6-4ec1-a079-fb5751c82be6"];
     
     // Use this option to notifiy beta users of any updates
     [TestFlight setOptions:@{ TFOptionDisableInAppUpdates : @YES }];
@@ -80,7 +80,7 @@ int iNotificationCounter=0;
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
    
-    [Crittercism enableWithAppID: @"52f7167d97c8f24e8f000002"];
+    [Crittercism enableWithAppID: @"5395f5ac07229a4f2d000002"];
     
     [PFFacebookUtils initializeFacebook];
     

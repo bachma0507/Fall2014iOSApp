@@ -499,7 +499,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="1178" y="-2369"/>
+            <point key="canvasLocation" x="558" y="-1653"/>
         </scene>
         <!--Ipad Register View Controller - Sign Up-->
         <scene sceneID="45d-Kj-kZ8">
@@ -1203,7 +1203,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CKM-1w-inM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-110" y="-2649"/>
+            <point key="canvasLocation" x="42" y="-2817"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZBB-PN-fIt">
