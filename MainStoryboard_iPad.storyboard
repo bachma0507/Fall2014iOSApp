@@ -316,6 +316,7 @@
                         <segue destination="qxI-TJ-rwd" kind="relationship" relationship="viewControllers" id="6H4-vi-H44"/>
                         <segue destination="bwS-LC-9Qw" kind="relationship" relationship="viewControllers" id="jaA-nA-gQf"/>
                         <segue destination="KbC-rB-dbg" kind="relationship" relationship="viewControllers" id="IUP-fd-LYH"/>
+                        <segue destination="6wG-Ab-L8r" kind="relationship" relationship="viewControllers" id="KnG-as-2EK"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l4b-Na-k6b" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -691,7 +692,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Cs-63-X57" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2024" y="-2513"/>
+            <point key="canvasLocation" x="-1836" y="-2236"/>
         </scene>
         <!--Start Page View Controller-->
         <scene sceneID="8Ge-6H-E4o">
@@ -701,7 +702,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_blurry2_ipad.png" id="iea-HQ-FEu">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scenery5.png" id="iea-HQ-FEu">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
@@ -944,10 +945,16 @@
                                     <action selector="buttonPressed:" destination="d0P-H5-Pga" eventType="touchUpInside" id="L2t-K8-VqQ"/>
                                 </connections>
                             </button>
+                            <navigationBar contentMode="scaleToFill" id="kOF-cv-0Zm">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem id="aUi-J2-bz2"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.96862745098039216" blue="0.88627450980392153" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
                     </view>
-                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" id="xxV-Ff-vag"/>
                     <connections>
                         <outlet property="updateLabel" destination="YO6-sl-BIM" id="wAI-lJ-62u"/>
@@ -956,7 +963,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JcM-ru-DVi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-991" y="-2577"/>
+            <point key="canvasLocation" x="-737" y="-2643"/>
         </scene>
         <!--Contact Us View Controller - Contact Us-->
         <scene sceneID="Xaf-P2-GsH">
@@ -1203,7 +1210,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CKM-1w-inM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="42" y="-2817"/>
+            <point key="canvasLocation" x="750" y="-2829"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZBB-PN-fIt">
@@ -1829,7 +1836,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KjM-fD-BTA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3561" y="-1931"/>
+            <point key="canvasLocation" x="-3995" y="-1475"/>
         </scene>
         <!--Conf Sched Table View Controller - Conference Schedule-->
         <scene sceneID="oNg-wY-Ylp">
@@ -3054,7 +3061,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zEK-0p-0Vm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2570" y="-441"/>
+            <point key="canvasLocation" x="-1962" y="131"/>
         </scene>
         <!--Navigation Controller - Item-->
         <scene sceneID="WIb-0O-kyD">
@@ -3331,6 +3338,56 @@
             </objects>
             <point key="canvasLocation" x="4471" y="-3876"/>
         </scene>
+        <!--Navigation Controller - Item-->
+        <scene sceneID="A9y-2K-pke">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="6wG-Ab-L8r" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="2ux-TA-Cnu"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3Xd-oB-MM3">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="u66-Wt-FKv" kind="relationship" relationship="rootViewController" id="30d-ef-IvW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CHW-Sa-mxN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3837" y="-2743"/>
+        </scene>
+        <!--Menu View Controller - Item-->
+        <scene sceneID="UPP-m8-cTx">
+            <objects>
+                <viewController id="u66-Wt-FKv" customClass="MenuViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kzG-08-S3D">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Initial View" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0IA-NG-Sc1">
+                                <rect key="frame" x="230" y="149" width="308" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.29803921570000003" green="0.59215686270000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="CeI-tt-5mA"/>
+                    <navigationItem key="navigationItem" id="eak-gI-b50">
+                        <barButtonItem key="leftBarButtonItem" image="burger.png" id="H1M-yM-QdT">
+                            <connections>
+                                <action selector="onBurger:" destination="u66-Wt-FKv" id="lh6-oK-HiM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="9wc-aJ-10V" kind="push" identifier="segueToConfSched" id="ab8-DU-XzQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wey-ZC-Ts6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2706" y="-2783"/>
+        </scene>
         <!--Info View Controller - CEC Information-->
         <scene sceneID="pUn-sF-9Ql">
             <objects>
@@ -3372,7 +3429,7 @@
         <image name="agendaC14-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="backbutton-default.png" width="50" height="30"/>
         <image name="backbutton.png" width="50" height="30"/>
-        <image name="background_blurry2_ipad.png" width="768" height="1024"/>
+        <image name="burger.png" width="19" height="17"/>
         <image name="button-green_ipad.png" width="224" height="66"/>
         <image name="cecC14-icon-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="comm_meetings_icon_ipad.png" width="120" height="120"/>
@@ -3390,6 +3447,7 @@
         <image name="notesC14-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="programC14-icon-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="reload30x30.png" width="30" height="30"/>
+        <image name="scenery5.png" width="320" height="480"/>
         <image name="sessionsC14-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="shutterstock_cec-ipad.png" width="205" height="128"/>
         <image name="shutterstock_contact-us-ipad.png" width="265" height="128"/>
@@ -3408,9 +3466,10 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="SDK-bn-4vP"/>
+        <segue reference="Ysf-Ju-HKO"/>
+        <segue reference="XlX-TN-xJd"/>
         <segue reference="x9l-yO-e2N"/>
         <segue reference="SFt-NY-1lL"/>
-        <segue reference="Ysf-Ju-HKO"/>
-        <segue reference="SDK-bn-4vP"/>
     </inferredMetricsTieBreakers>
 </document>

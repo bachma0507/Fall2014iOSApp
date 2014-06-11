@@ -74,8 +74,8 @@ int iNotificationCounter=0;
     // Use this option to notifiy beta users of any updates
     [TestFlight setOptions:@{ TFOptionDisableInAppUpdates : @YES }];
     
-    [Parse setApplicationId:@"0iv5VkEwUmjDS7EQNB5uz5LTJIWcFCx5W9vZrbWp"
-                  clientKey:@"WfPgocTlT1Mxskh2lSpLjYXnP6fUujKi5vrORfqb"];
+    [Parse setApplicationId:@"nUvLNNLojaTc5sM6tDorVLEAXRhoasuUBsvM27xP"
+                  clientKey:@"BxrMznvDlbg8TPOsmLRFnxgLvxmccPKEOwXrJgcl"];
     
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
@@ -119,6 +119,7 @@ int iNotificationCounter=0;
 //    [[UINavigationBar appearance] setBackgroundImage:navBackgroundImage forBarMetrics:UIBarMetricsDefault];
     //[[UINavigationBar appearance] setBarTintColor:UIColorFromRGB(0x3[[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
         
+        
             }
     
     if (SYSTEM_VERSION_LESS_THAN(@"7.0")) {
@@ -143,9 +144,9 @@ int iNotificationCounter=0;
     
     
     [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
-                                                           //[UIColor colorWithRed:237/255.0 green:28/255.0 blue:36/255.0 alpha:1.0], UITextAttributeTextColor,
+                                                           [UIColor colorWithRed:255.0/255.0 green:255.0/255.0 blue:255.0/255.0 alpha:1.0], UITextAttributeTextColor,
                                                     
-                                                           [UIColor colorWithRed:193/255.0 green:70/255.0 blue:162/255.0 alpha:1.0], UITextAttributeTextColor,
+                                                           //[UIColor colorWithRed:193/255.0 green:70/255.0 blue:162/255.0 alpha:1.0], UITextAttributeTextColor,
                                                            [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.8],UITextAttributeTextShadowColor,
                                                            [NSValue valueWithUIOffset:UIOffsetMake(0, 0)],UITextAttributeTextShadowOffset,
                                                            //[UIFont fontWithName:@"HelveticaNeue-CondensedBlack"

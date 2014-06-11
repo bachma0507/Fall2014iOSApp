@@ -152,6 +152,13 @@
         NSDateFormatter *df = [[NSDateFormatter alloc] init];
         [df setDateFormat:@"MMM dd yyyy hh:mm a"];
         
+//        UITextField *infoText = [[UITextField alloc] initWithFrame:CGRectMake(0, 307, wallImageView.frame.size.width,15)];
+//        infoText.text = [NSString stringWithFormat:@"Pic ID:%@, Uploaded by: %@ on %@", wallObject.objectId,[wallObject objectForKey:KEY_USER], [df stringFromDate:creationDate]];
+//        infoText.font = [UIFont fontWithName:@"Arial-ItalicMT" size:9];
+//        infoText.textColor = [UIColor blackColor];
+//        infoText.backgroundColor = [UIColor clearColor];
+//        [wallImageView addSubview:infoText];
+        
         UILabel *infoLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 307, wallImageView.frame.size.width,15)];
         infoLabel.text = [NSString stringWithFormat:@"Pic ID:%@, Uploaded by: %@ on %@", wallObject.objectId,[wallObject objectForKey:KEY_USER], [df stringFromDate:creationDate]];
         infoLabel.font = [UIFont fontWithName:@"Arial-ItalicMT" size:9];

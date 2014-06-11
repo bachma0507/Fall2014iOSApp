@@ -9,12 +9,20 @@
 #import <UIKit/UIKit.h>
 #import "CSchedule.h"
 
+@class ConfSchedTableViewController;
+
+@protocol ConfSchedTableViewControllerDelegate
+
+@end
+
 @interface ConfSchedTableViewController : UITableViewController
 
 @property (nonatomic, strong) NSMutableArray * json;
 @property (nonatomic, strong) NSMutableArray * confSchedArray;
 @property (nonatomic, strong) NSMutableArray * results;
 //@property BOOL isFiltered;
+
+@property (weak, nonatomic) id <ConfSchedTableViewControllerDelegate> delegate;
 
 @property (strong, nonatomic) IBOutlet UITableView *myTableView;
 
