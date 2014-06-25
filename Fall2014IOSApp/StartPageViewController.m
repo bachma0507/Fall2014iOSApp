@@ -12,7 +12,7 @@
 #import "Fall2013IOSAppAppDelegate.h"
 
 @interface StartPageViewController ()
-
+@property (nonatomic, strong) NSMutableIndexSet *optionIndices;
 @end
 
 @implementation StartPageViewController
@@ -36,6 +36,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.optionIndices = [NSMutableIndexSet indexSetWithIndex:1];
     
     [TestFlight passCheckpoint:@"StartPage-viewed"];
     
@@ -62,6 +64,12 @@
     
     UIBarButtonItem *backButtonItem = [[UIBarButtonItem alloc] initWithTitle:@" " style:UIBarButtonItemStylePlain target:nil action:nil];
     self.navigationItem.backBarButtonItem = backButtonItem;
+    
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage new]
+                                                  forBarMetrics:UIBarMetricsDefault];
+    self.navigationController.navigationBar.shadowImage = [UIImage new];
+    self.navigationController.navigationBar.translucent = YES;
+    self.navigationController.view.backgroundColor = [UIColor clearColor];
     
     HUD = [[MBProgressHUD alloc] initWithView:self.view];
     HUD.labelText = @"Updating data...";
@@ -400,6 +408,78 @@
 
 
 }
+
+- (IBAction)onBurger:(id)sender {
+    NSArray *images = @[
+                        [UIImage imageNamed:@"hotelinfo"],
+                        [UIImage imageNamed:@"speakers"],
+                        [UIImage imageNamed:@"ehschedule"],
+                        [UIImage imageNamed:@"sponsors"],
+                        [UIImage imageNamed:@"sessions"],
+                        [UIImage imageNamed:@"exhibitors"],
+                        [UIImage imageNamed:@"favexhibitors"],
+                        [UIImage imageNamed:@"mynotes"],
+                        [UIImage imageNamed:@"myagenda"],
+                        [UIImage imageNamed:@"cecinfo"],
+                        [UIImage imageNamed:@"contactus"],
+                        [UIImage imageNamed:@"trainingexams"],
+                        ];
+    NSArray *colors = @[
+                        [UIColor colorWithRed:240/255.f green:159/255.f blue:254/255.f alpha:1],
+                        [UIColor colorWithRed:255/255.f green:137/255.f blue:167/255.f alpha:1],
+                        [UIColor colorWithRed:126/255.f green:242/255.f blue:195/255.f alpha:1],
+                        [UIColor colorWithRed:119/255.f green:152/255.f blue:255/255.f alpha:1],
+                        [UIColor colorWithRed:240/255.f green:159/255.f blue:254/255.f alpha:1],
+                        [UIColor colorWithRed:255/255.f green:137/255.f blue:167/255.f alpha:1],
+                        [UIColor colorWithRed:126/255.f green:242/255.f blue:195/255.f alpha:1],
+                        [UIColor colorWithRed:119/255.f green:152/255.f blue:255/255.f alpha:1],
+                        [UIColor colorWithRed:240/255.f green:159/255.f blue:254/255.f alpha:1],
+                        [UIColor colorWithRed:255/255.f green:137/255.f blue:167/255.f alpha:1],
+                        [UIColor colorWithRed:126/255.f green:242/255.f blue:195/255.f alpha:1],
+                        [UIColor colorWithRed:119/255.f green:152/255.f blue:255/255.f alpha:1],
+                        ];
+    
+    RNFrostedSidebar *callout = [[RNFrostedSidebar alloc] initWithImages:images selectedIndices:self.optionIndices borderColors:colors];
+    //    RNFrostedSidebar *callout = [[RNFrostedSidebar alloc] initWithImages:images];
+    callout.delegate = self;
+    //    callout.showFromRight = YES;
+    [callout show];
+}
+
+#pragma mark - RNFrostedSidebarDelegate
+
+- (void)sidebar:(RNFrostedSidebar *)sidebar didTapItemAtIndex:(NSUInteger)index {
+    NSLog(@"Tapped item at index %i",index);
+    if (index == 0) {
+        
+        [self performSegueWithIdentifier:@"segueToHotel" sender:self];
+        
+        [sidebar dismissAnimated:YES completion:nil];
+    }
+}
+
+- (void)sidebar:(RNFrostedSidebar *)sidebar didEnable:(BOOL)itemEnabled itemAtIndex:(NSUInteger)index {
+    if (itemEnabled) {
+        [self.optionIndices addIndex:index];
+    }
+    else {
+        [self.optionIndices removeIndex:index];
+    }
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    if ([segue.identifier isEqualToString:@"segueToHotel"]) {
+        
+        HotelWebViewController *destViewController = segue.destinationViewController;
+        destViewController.title = @"";
+        [[segue destinationViewController] setDelegate:self];
+        
+    }
+    
+    
+}
+
 
 
 

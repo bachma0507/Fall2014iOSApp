@@ -8,15 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
-
+#import "RNFrostedSidebar.h"
 #import "exhibitors.h"
 #import "Speakers.h"
 #import "Sessions.h"
+#import "HotelWebViewController.h"
 
 @class MBProgressHUD;
 @class Reachability;
 
-@interface StartPageViewController : UIViewController
+@interface StartPageViewController : UIViewController<RNFrostedSidebarDelegate, HotelWebViewControllerDelegate>
 {
     MBProgressHUD *HUD;
     Reachability *internetReach;

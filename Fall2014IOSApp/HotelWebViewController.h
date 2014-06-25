@@ -8,8 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+@class HotelWebViewController;
+
+@protocol HotelWebViewControllerDelegate
+
+@end
+
 @interface HotelWebViewController : UIViewController<UIWebViewDelegate>
 
+
+@property (weak, nonatomic) id <HotelWebViewControllerDelegate> delegate;
 @property (strong, nonatomic) IBOutlet UIWebView *webview;
 @property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activity;
 

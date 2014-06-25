@@ -72,8 +72,12 @@
          model, systemVersion, language, country, appVersion];
         NSLog(@"Device Specs --> %@",deviceSpecs);
         
-        NSString * emailNoteBody = [[NSString alloc] initWithFormat:@"Enter issue:\n \n My Device Specs: \n %@",deviceSpecs];
-        NSString * emailNoteSubject = [[NSString alloc] initWithFormat:@"Email BICSI Tech Support"];
+//        NSString * emailNoteBody = [[NSString alloc] initWithFormat:@"Enter issue:\n \n My Device Specs: \n %@",deviceSpecs];
+//        NSString * emailNoteSubject = [[NSString alloc] initWithFormat:@"Email BICSI Tech Support"];
+        
+        NSString * emailNoteBody = [[NSString alloc] initWithFormat:@"Enter your comments"];
+        NSString * emailNoteSubject = [[NSString alloc] initWithFormat:@"My Comments: 2014 Fall Conference"];
+
         
         // Email Subject
         NSString *emailTitle = emailNoteSubject;
