@@ -181,6 +181,8 @@
         
         else if ([[segue identifier] isEqualToString:@"surveyDetail"]) {
             
+            
+            
             //self.sessionName = sessionNameLabel.text;
             self.sessionId = mySessions.sessionID;
             SurveyViewController *destViewController = segue.destinationViewController;
@@ -194,6 +196,8 @@
             UIPopoverController *popoverController = [(UIStoryboardPopoverSegue *)segue popoverController];
             self.SurveyPopoverController = popoverController;
             popoverController.delegate = self;
+            
+            
         }
     }
 }
@@ -223,7 +227,20 @@
         [self.SurveyPopoverController dismissPopoverAnimated:YES];
         self.SurveyPopoverController = nil;
     } else {
+         NSString * sessIDStr = [[NSString alloc]initWithFormat:@"%@",self.mySessions.sessionID];
+        
+        if ([sessIDStr hasPrefix:@"BODM"]) {
+            NSString *message = @"Survey not applicable for this meeting.";
+            UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"Notification"
+                                                               message:message
+                                                              delegate:self
+                                                     cancelButtonTitle:@"Ok"
+                                                     otherButtonTitles:nil,nil];
+            [alertView show];
+        }
+        else{
         [self performSegueWithIdentifier:@"surveyDetail" sender:sender];
+        }
     }
 }
 

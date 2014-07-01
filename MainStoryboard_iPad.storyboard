@@ -9,7 +9,7 @@
         <scene sceneID="sHK-gU-yHB">
             <objects>
                 <tableViewController id="jFh-Dj-pkF" customClass="PFNewsAlertsViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" id="lnT-Tl-XBD">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" id="lnT-Tl-XBD">
                         <rect key="frame" x="0.0" y="64" width="768" height="911"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -18,11 +18,11 @@
                                 <rect key="frame" x="0.0" y="22" width="768" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iXt-pK-Vrn" id="SmV-LG-uvi">
-                                    <rect key="frame" x="0.0" y="0.0" width="768" height="59"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="60"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6tt-2h-iMc">
-                                            <rect key="frame" x="15" y="0.0" width="738" height="59"/>
+                                            <rect key="frame" x="15" y="0.0" width="738" height="60"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
@@ -36,22 +36,8 @@
                             <outlet property="delegate" destination="jFh-Dj-pkF" id="I7M-w6-TBY"/>
                         </connections>
                     </tableView>
-                    <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationItem key="navigationItem" title="Notifications" id="XqS-uc-1Fc">
-                        <barButtonItem key="rightBarButtonItem" id="6LW-6s-UwW">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ylB-XP-61c">
-                                <rect key="frame" x="722" y="7" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" image="reload30x30.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="buttonPressed:" destination="jFh-Dj-pkF" eventType="touchUpInside" id="vsB-bN-ZPS"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
-                    </navigationItem>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <navigationItem key="navigationItem" title="Notifications" id="XqS-uc-1Fc"/>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="O82-Vh-w9G">
                         <autoresizingMask key="autoresizingMask"/>
                     </refreshControl>
@@ -60,52 +46,18 @@
             </objects>
             <point key="canvasLocation" x="5549" y="1528"/>
         </scene>
-        <!--Social Detail View Controller-->
-        <scene sceneID="bDT-Re-uM8">
-            <objects>
-                <viewController id="inf-rm-4cQ" customClass="SocialDetailViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="0e7-VN-7J5">
-                        <rect key="frame" x="0.0" y="64" width="768" height="911"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <webView contentMode="scaleToFill" id="12g-Rs-2nh">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="911"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <outlet property="delegate" destination="inf-rm-4cQ" id="ji9-fI-1yW"/>
-                                </connections>
-                            </webView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" animating="YES" style="whiteLarge" id="5El-bL-HR8">
-                                <rect key="frame" x="366" y="445" width="37" height="37"/>
-                                <color key="color" red="0.57186706509999996" green="0.93949558420000001" blue="0.56136621419999999" alpha="1" colorSpace="calibratedRGB"/>
-                            </activityIndicatorView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationItem key="navigationItem" id="hOi-HS-FJF"/>
-                    <connections>
-                        <outlet property="activity" destination="5El-bL-HR8" id="EN8-oI-vu3"/>
-                        <outlet property="webView" destination="12g-Rs-2nh" id="jM6-rO-O0i"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7SP-fm-LfS" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="812" y="2975"/>
-        </scene>
         <!--Entrance Hall Floor Plan View Controller - Main Floor Map-->
         <scene sceneID="OB2-yv-tQH">
             <objects>
                 <viewController id="jZU-sb-M1s" customClass="EntranceHallFloorPlanViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="otT-x9-5vK">
-                        <rect key="frame" x="0.0" y="64" width="768" height="911"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="975"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" scalesPageToFit="YES" id="W76-yL-hlO">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="911"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="975"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.63137254899999995" green="0.73333333329999995" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" id="3ND-tM-qJY">
                                 <rect key="frame" x="366" y="461" width="37" height="37"/>
@@ -115,7 +67,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <navigationItem key="navigationItem" title="Main Floor Map" id="O6z-DH-M5b"/>
                     <connections>
                         <outlet property="activity" destination="3ND-tM-qJY" id="oPQ-AX-3SI"/>
@@ -131,43 +83,17 @@
             <objects>
                 <viewController id="XTa-96-trG" customClass="SocialViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WgM-xd-CoV">
-                        <rect key="frame" x="0.0" y="64" width="768" height="911"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="975"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="85" sectionHeaderHeight="22" sectionFooterHeight="22" id="vGu-mU-q23">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="287"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.52941176470588236" green="0.61568627450980395" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
-                                <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="socialCell" textLabel="x6k-PN-bzz" rowHeight="85" style="IBUITableViewCellStyleDefault" id="Zqq-16-nj8">
-                                        <rect key="frame" x="0.0" y="22" width="768" height="85"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zqq-16-nj8" id="ZiY-KZ-ldi">
-                                            <rect key="frame" x="0.0" y="0.0" width="768" height="85"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="x6k-PN-bzz">
-                                                    <rect key="frame" x="15" y="0.0" width="738" height="85"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.52941176470588236" green="0.61568627450980395" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
-                                        <connections>
-                                            <segue destination="inf-rm-4cQ" kind="push" identifier="socialDetailCell" id="Pxe-q8-rSD"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="XTa-96-trG" id="sxz-Lm-j6S"/>
-                                    <outlet property="delegate" destination="XTa-96-trG" id="sKA-xl-kXJ"/>
-                                </connections>
-                            </tableView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Twitter and Facebook apps must already be installed on your device." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cJk-Dh-VWS">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scenery5.png" id="SFS-f0-owm">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1007"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" text="Twitter and Facebook apps must already be installed on your device." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cJk-Dh-VWS">
                                 <rect key="frame" x="125" y="206" width="546" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -217,14 +143,29 @@
                                     <segue destination="ou8-Oi-pyv" kind="push" id="n8C-me-ohm"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="x7x-Qu-PUT">
+                                <rect key="frame" x="20" y="90" width="64" height="64"/>
+                                <state key="normal" image="facebook.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="facebookPressed:" destination="XTa-96-trG" eventType="touchUpInside" id="hUD-Xo-s72"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="sI5-24-Zh9">
+                                <rect key="frame" x="684" y="90" width="64" height="64"/>
+                                <state key="normal" image="twitter.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="twitterPressed:" destination="XTa-96-trG" eventType="touchUpInside" id="CaZ-BX-DIg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.52941176470588236" green="0.61568627450980395" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <navigationItem key="navigationItem" title="Social Media" id="eKg-JD-b30"/>
-                    <connections>
-                        <outlet property="tableView" destination="vGu-mU-q23" id="Kgv-FE-7An"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zha-WD-nxb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -240,6 +181,8 @@
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translucent="NO" id="eN5-0b-6xF">
                                 <rect key="frame" x="0.0" y="20" width="768" height="44"/>
+                                <color key="backgroundColor" red="0.63137254899999995" green="0.73333333329999995" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" red="0.63137254899999995" green="0.73333333329999995" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
                                     <navigationItem title="My BICSI" id="wwN-ak-eZZ">
                                         <barButtonItem key="leftBarButtonItem" id="Vu2-nd-b8U">
@@ -275,7 +218,7 @@
                             <webView contentMode="scaleToFill" id="vWd-9a-Rod">
                                 <rect key="frame" x="0.0" y="64" width="768" height="911"/>
                                 <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.63137254899999995" green="0.73333333329999995" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="delegate" destination="bwS-LC-9Qw" id="Oob-si-8Ju"/>
                                 </connections>
@@ -285,7 +228,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.63137254899999995" green="0.73333333329999995" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <tabBarItem key="tabBarItem" title="" id="cie-8u-56y"/>
@@ -343,28 +286,32 @@
             <objects>
                 <viewController storyboardIdentifier="IpadLoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aeL-WE-Tf9" customClass="IpadLoginViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lwc-UE-wu6">
-                        <rect key="frame" x="0.0" y="64" width="768" height="911"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="975"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" selectable="NO" id="GG8-js-SZX">
-                                <rect key="frame" x="9" y="7" width="750" height="172"/>
-                                <color key="backgroundColor" red="0.88627450980392153" green="0.98431372549019602" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scenery5.png" id="LtS-DR-UTj">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="975"/>
+                                <color key="backgroundColor" red="0.63137254899999995" green="0.73333333329999995" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999999999999996" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" textAlignment="center" selectable="NO" id="GG8-js-SZX">
+                                <rect key="frame" x="9" y="110" width="750" height="111"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">Already have a user account that allows you to upload your conference pics and view the gallery? Then sign in below. If not, create a user account.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" id="9IL-je-o3l">
-                                <rect key="frame" x="115" y="244" width="539" height="30"/>
+                                <rect key="frame" x="115" y="361" width="539" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" id="dM1-A7-s60">
-                                <rect key="frame" x="115" y="317" width="539" height="30"/>
+                                <rect key="frame" x="115" y="439" width="539" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mP5-06-Vj9">
-                                <rect key="frame" x="278" y="374" width="213" height="30"/>
+                                <rect key="frame" x="278" y="500" width="213" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="Log In" backgroundImage="button-green_ipad.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -375,13 +322,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="U2B-C4-xPB">
-                                <rect key="frame" x="363" y="424" width="42" height="21"/>
+                                <rect key="frame" x="363" y="553" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.75686274509999996" green="0.27450980390000002" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xl8-ut-H6P">
-                                <rect key="frame" x="234" y="460" width="301" height="30"/>
+                                <rect key="frame" x="234" y="592" width="301" height="30"/>
                                 <color key="backgroundColor" red="0.14901960784313725" green="0.22745098039215686" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="Log in with facebook" backgroundImage="facebook_button_ipad.png">
@@ -393,13 +340,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Mhk-Zn-t6B">
-                                <rect key="frame" x="363" y="511" width="42" height="21"/>
+                                <rect key="frame" x="363" y="647" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.75686274509999996" green="0.27450980390000002" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1bX-DT-ya4">
-                                <rect key="frame" x="234" y="550" width="301" height="30"/>
+                                <rect key="frame" x="234" y="689" width="301" height="30"/>
                                 <color key="backgroundColor" red="0.24774749087591241" green="0.35757869525547448" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="Create a User Account" backgroundImage="createuser_button_ipad.png">
@@ -411,9 +358,9 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.88627450980392153" green="0.98431372549019602" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.63137254899999995" green="0.73333333329999995" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <navigationItem key="navigationItem" title="Photo Gallery Log In" id="dey-pl-z8D"/>
                     <connections>
                         <outlet property="passwordTextField" destination="dM1-A7-s60" id="q83-qt-TTE"/>
@@ -506,21 +453,21 @@
             <objects>
                 <viewController id="EU5-Xt-hyd" customClass="IpadRegisterViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ODC-4J-5eR">
-                        <rect key="frame" x="0.0" y="64" width="768" height="911"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="975"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" id="OwU-Gq-PY7">
-                                <rect key="frame" x="115" y="79" width="539" height="30"/>
+                                <rect key="frame" x="115" y="167" width="539" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" id="BPr-KV-XCG">
-                                <rect key="frame" x="115" y="157" width="539" height="30"/>
+                                <rect key="frame" x="115" y="250" width="539" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qN6-gL-DaJ">
-                                <rect key="frame" x="270" y="234" width="229" height="30"/>
+                                <rect key="frame" x="270" y="333" width="229" height="30"/>
                                 <color key="backgroundColor" red="0.24705882352941178" green="0.35686274509803922" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="Sign Up" backgroundImage="createuser_button_ipad.png">
@@ -532,9 +479,9 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.63137254899999995" green="0.73333333329999995" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <navigationItem key="navigationItem" title="Sign Up" id="l7E-bR-Pnx"/>
                     <connections>
                         <outlet property="passwordRegisterTextField" destination="BPr-KV-XCG" id="xbd-J0-DZz"/>
@@ -581,7 +528,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.63137254899999995" green="0.73333333329999995" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Report Photo" id="3ym-ad-KFL"/>
                     <connections>
@@ -597,11 +544,11 @@
             <objects>
                 <viewController id="aBX-ZR-poL" customClass="IpadWallPicturesViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="awV-wm-m7F">
-                        <rect key="frame" x="0.0" y="64" width="768" height="911"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="975"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="x0o-65-mEB">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="911"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="975"/>
                                 <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
                                 <subviews>
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" id="iSA-Z6-DDa">
@@ -614,7 +561,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <navigationItem key="navigationItem" id="5Ph-4k-Fhh">
                         <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="GLW-on-363">
@@ -705,28 +652,28 @@
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WCp-U8-vTA">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.59999999999999987" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WCp-U8-vTA">
                                 <rect key="frame" x="35" y="77" width="700" height="160"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999998807907104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="USM-Rb-TZW">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="USM-Rb-TZW">
                                 <rect key="frame" x="34" y="291" width="700" height="160"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999998807907104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Hq0-jW-aH8">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Hq0-jW-aH8">
                                 <rect key="frame" x="34" y="507" width="700" height="160"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999998807907104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2hz-Bc-eTb">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2hz-Bc-eTb">
                                 <rect key="frame" x="34" y="733" width="700" height="160"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -996,7 +943,7 @@
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <tabBarItem key="tabBarItem" title="Item" id="ODB-De-a59"/>
                     <navigationItem key="navigationItem" id="xxV-Ff-vag">
-                        <barButtonItem key="leftBarButtonItem" image="burger.png" id="qxl-ez-Ep9">
+                        <barButtonItem key="leftBarButtonItem" image="burger-alt2.png" id="qxl-ez-Ep9">
                             <connections>
                                 <action selector="onBurger:" destination="d0P-H5-Pga" id="j1V-nj-20H"/>
                             </connections>
@@ -1532,16 +1479,16 @@
         <scene sceneID="W0D-oK-p0A">
             <objects>
                 <tableViewController id="jct-ik-9ha" customClass="AllMyNotesViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="124" sectionHeaderHeight="22" sectionFooterHeight="22" id="jCc-4j-dQf">
-                        <rect key="frame" x="0.0" y="64" width="768" height="911"/>
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="124" sectionHeaderHeight="22" sectionFooterHeight="22" id="jCc-4j-dQf">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="975"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="124" id="qJx-1C-A2L" customClass="AllNotesCell">
-                                <rect key="frame" x="0.0" y="22" width="768" height="124"/>
+                                <rect key="frame" x="0.0" y="86" width="768" height="124"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qJx-1C-A2L" id="grX-4E-slX">
-                                    <rect key="frame" x="0.0" y="0.0" width="768" height="123"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="124"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" text="sessionNoteLabel" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" id="PAO-4U-0wH">
@@ -1572,7 +1519,7 @@
                             <outlet property="delegate" destination="jct-ik-9ha" id="Nnb-bW-k6g"/>
                         </connections>
                     </tableView>
-                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <navigationItem key="navigationItem" title="My Notes" id="HZb-ZU-d59"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sEu-j4-Mfi" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1640,24 +1587,24 @@
             <objects>
                 <viewController id="ou8-Oi-pyv" customClass="TwitterFeedViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4nf-Jb-XlF">
-                        <rect key="frame" x="0.0" y="64" width="768" height="911"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="975"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" id="RfC-jP-PEw">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="911"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="943"/>
+                                <color key="backgroundColor" red="0.63137254899999995" green="0.73333333329999995" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="delegate" destination="ou8-Oi-pyv" id="mPF-yJ-uYc"/>
                                 </connections>
                             </webView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" animating="YES" style="whiteLarge" id="bKU-AG-ngX">
-                                <rect key="frame" x="366" y="413" width="37" height="37"/>
+                                <rect key="frame" x="366" y="443" width="37" height="37"/>
                                 <color key="color" red="0.57186706509999996" green="0.93949558420000001" blue="0.56136621419999999" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.63137254899999995" green="0.73333333329999995" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <navigationItem key="navigationItem" title="Twitter Feed" id="H5I-bS-PkY"/>
                     <connections>
                         <outlet property="activity" destination="bKU-AG-ngX" id="R8a-8l-AC3"/>
@@ -1832,7 +1779,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1c9-Ub-XAw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4010" y="-193"/>
+            <point key="canvasLocation" x="4058" y="1239"/>
         </scene>
         <!--Conf Sched Detail Table View Controller-->
         <scene sceneID="AXJ-cc-KRF">
@@ -2150,7 +2097,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="takeSurvey:" destination="6rM-fV-jvP" eventType="touchUpInside" id="Sfp-Ng-AwS"/>
+                                    <action selector="togglePopoverSurvey:" destination="6rM-fV-jvP" eventType="touchUpInside" id="Yn1-1g-7fM"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="OrL-sL-vVw">
@@ -2158,6 +2105,9 @@
                                 <state key="normal" backgroundImage="add-notes_ipad.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="togglePopover:" destination="6rM-fV-jvP" eventType="touchUpInside" id="5v2-U0-UUZ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="sXA-w5-hjI">
                                 <rect key="frame" x="65" y="911" width="180" height="44"/>
@@ -2230,24 +2180,30 @@
                         <outlet property="session2Label" destination="tSo-bG-kaC" id="AjS-pq-4O6"/>
                         <outlet property="session2TimeLabel" destination="CAZ-xY-mat" id="dNF-9r-3Lb"/>
                         <outlet property="speakerNameLabel" destination="8Ef-v5-voR" id="OB8-mn-iuu"/>
+                        <segue destination="UbD-9V-zhX" kind="popover" identifier="notesDetail" popoverAnchorView="OrL-sL-vVw" id="dNQ-6z-78T">
+                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                        </segue>
+                        <segue destination="PBz-IC-aE3" kind="popover" identifier="surveyDetail" popoverAnchorView="Uja-yP-Zvh" id="B1M-CE-Msm">
+                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                        </segue>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sY4-gv-IfA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6183" y="-271"/>
+            <point key="canvasLocation" x="4611" y="77"/>
         </scene>
         <!--Exhibit Hall Floor Plan View Controller - Exhibit Hall Floor Plan-->
         <scene sceneID="8wT-pB-XfN">
             <objects>
                 <viewController id="L9h-9p-2y1" customClass="ExhibitHallFloorPlanViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wqi-0k-Z7q">
-                        <rect key="frame" x="0.0" y="64" width="768" height="911"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="975"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" scalesPageToFit="YES" id="Tzw-l0-ZBV">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="911"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="975"/>
                                 <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.63137254899999995" green="0.73333333329999995" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="mnc-hJ-xcS" appends="YES" id="I6T-bs-EXK"/>
@@ -2261,7 +2217,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <navigationItem key="navigationItem" title="Exhibit Hall Floor Plan" id="Kx4-2e-hFV"/>
                     <connections>
                         <outlet property="activity" destination="CbL-sD-aMA" id="2uA-4Q-Oen"/>
@@ -2282,7 +2238,7 @@
             <objects>
                 <viewController id="Zl7-of-6gl" customClass="FloorMapsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0N6-Yk-MbQ">
-                        <rect key="frame" x="0.0" y="64" width="768" height="911"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="975"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UGE-vx-MpO">
@@ -2296,10 +2252,10 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="entrancehall_floorplan_icon_ipad.png" id="6d9-6h-gwe">
-                                <rect key="frame" x="252" y="97" width="265" height="346"/>
+                                <rect key="frame" x="252" y="108" width="265" height="346"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="X69-h5-tD0">
-                                <rect key="frame" x="252" y="553" width="265" height="247"/>
+                                <rect key="frame" x="252" y="606" width="265" height="247"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -2308,24 +2264,24 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="exhibithall_floorplan_icon_ipad.png" id="ef6-5c-weu">
-                                <rect key="frame" x="252" y="550" width="265" height="247"/>
+                                <rect key="frame" x="252" y="603" width="265" height="247"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap on Main Floor Map below" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fKK-Xr-4sy">
-                                <rect key="frame" x="270" y="50" width="268" height="21"/>
+                                <rect key="frame" x="270" y="53" width="268" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" red="0.50196078431372548" green="0.5607843137254902" blue="0.58823529411764708" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap on Exhibit Hall Floor Map Below" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PVK-SZ-w4t">
-                                <rect key="frame" x="242" y="519" width="304" height="21"/>
+                                <rect key="frame" x="242" y="556" width="304" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" red="0.50196078430000002" green="0.56078431370000004" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.63137254899999995" green="0.73333333329999995" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <navigationItem key="navigationItem" title="Floor Maps" id="gRW-ze-Q5w"/>
                     <connections>
                         <outlet property="imageView" destination="6d9-6h-gwe" id="PwA-wb-ZDP"/>
@@ -2341,20 +2297,20 @@
             <objects>
                 <viewController id="b31-qf-aoc" customClass="IpadUploadImageViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zwv-gA-gvV">
-                        <rect key="frame" x="0.0" y="64" width="768" height="911"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="975"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Comment (Required)" minimumFontSize="17" id="RNP-c5-VEM">
-                                <rect key="frame" x="20" y="40" width="728" height="30"/>
+                                <rect key="frame" x="20" y="120" width="728" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="nYN-ZC-5Zz">
-                                <rect key="frame" x="20" y="99" width="728" height="600"/>
+                                <rect key="frame" x="20" y="196" width="728" height="600"/>
                                 <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="efY-Dg-nyY">
-                                <rect key="frame" x="20" y="759" width="256" height="30"/>
+                                <rect key="frame" x="20" y="891" width="256" height="30"/>
                                 <color key="backgroundColor" red="0.24705882352941178" green="0.35686274509803922" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="Select Photo" backgroundImage="createuser_button_ipad.png">
@@ -2366,7 +2322,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="WeG-Wk-KKD">
-                                <rect key="frame" x="492" y="759" width="256" height="30"/>
+                                <rect key="frame" x="492" y="891" width="256" height="30"/>
                                 <color key="backgroundColor" red="0.24705882352941178" green="0.35686274509803922" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="Use Camera" backgroundImage="createuser_button_ipad.png">
@@ -2378,9 +2334,9 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.63137254899999995" green="0.73333333329999995" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <navigationItem key="navigationItem" title="Upload Photo" id="gAo-zF-gHc">
                         <barButtonItem key="rightBarButtonItem" title="Send" id="PgS-lG-7OU">
                             <connections>
@@ -2403,15 +2359,15 @@
             <objects>
                 <viewController id="mji-7h-fBd" customClass="ExhibitorsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BxI-Z1-x5s">
-                        <rect key="frame" x="0.0" y="64" width="768" height="911"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="975"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="QsR-jF-rER">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="911"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="QsR-jF-rER">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="975"/>
                                 <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <searchBar key="tableHeaderView" contentMode="redraw" id="e6Q-DA-UTd">
-                                    <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                                    <rect key="frame" x="0.0" y="64" width="768" height="44"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     <textInputTraits key="textInputTraits"/>
                                     <connections>
@@ -2420,20 +2376,20 @@
                                 </searchBar>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="bl2-zb-Bc8" detailTextLabel="B1b-bH-Oem" style="IBUITableViewCellStyleSubtitle" id="oTq-Hi-hgL">
-                                        <rect key="frame" x="0.0" y="66" width="768" height="44"/>
+                                        <rect key="frame" x="0.0" y="130" width="768" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oTq-Hi-hgL" id="fxJ-0U-8Ac">
-                                            <rect key="frame" x="0.0" y="0.0" width="735" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="735" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bl2-zb-Bc8">
-                                                    <rect key="frame" x="15" y="2" width="36" height="22"/>
+                                                    <rect key="frame" x="15" y="3" width="36" height="22"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="B1b-bH-Oem">
-                                                    <rect key="frame" x="15" y="24" width="50" height="17"/>
+                                                    <rect key="frame" x="15" y="25" width="50" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -2453,7 +2409,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <navigationItem key="navigationItem" title="Exhibitors" id="yKv-Z7-akv"/>
                     <connections>
                         <outlet property="myTableView" destination="QsR-jF-rER" id="gIp-iM-fgr"/>
@@ -2479,29 +2435,29 @@
             <objects>
                 <viewController id="nBx-wX-Rgb" customClass="ExhibitorsDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="u5a-dJ-neB">
-                        <rect key="frame" x="0.0" y="64" width="768" height="911"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="975"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tEH-Tc-TAN">
-                                <rect key="frame" x="20" y="19" width="728" height="21"/>
+                                <rect key="frame" x="20" y="20" width="728" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Booth Number: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WFV-di-hOV">
-                                <rect key="frame" x="285" y="99" width="128" height="21"/>
+                                <rect key="frame" x="285" y="106" width="128" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="900" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KvX-Hn-3T3">
-                                <rect key="frame" x="421" y="99" width="52" height="21"/>
+                                <rect key="frame" x="421" y="106" width="52" height="21"/>
                                 <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="saw-s5-4gX">
-                                <rect key="frame" x="289" y="146" width="191" height="44"/>
+                                <rect key="frame" x="289" y="157" width="191" height="44"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Remove from Favorites" backgroundImage="button-green_ipad.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -2512,7 +2468,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="yeJ-DH-HDJ">
-                                <rect key="frame" x="351" y="200" width="66" height="44"/>
+                                <rect key="frame" x="351" y="215" width="66" height="44"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Notes" backgroundImage="button-green_ipad.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -2523,16 +2479,16 @@
                                 </connections>
                             </button>
                             <webView contentMode="scaleToFill" id="Yix-gS-d33">
-                                <rect key="frame" x="0.0" y="320" width="768" height="591"/>
+                                <rect key="frame" x="0.0" y="320" width="768" height="655"/>
                                 <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <dataDetectorType key="dataDetectorTypes"/>
                             </webView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" animating="YES" style="gray" id="JFn-1b-PcL">
-                                <rect key="frame" x="374" y="584" width="20" height="20"/>
+                                <rect key="frame" x="374" y="626" width="20" height="20"/>
                             </activityIndicatorView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="SEz-o3-KYj">
-                                <rect key="frame" x="289" y="252" width="191" height="44"/>
+                                <rect key="frame" x="289" y="271" width="191" height="44"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Locate on Floor Map" backgroundImage="button-green_ipad.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -2543,21 +2499,21 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="phone" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Tgb-jz-iWg">
-                                <rect key="frame" x="20" y="46" width="728" height="21"/>
+                                <rect key="frame" x="20" y="49" width="728" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="url" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mAK-VJ-pUc">
-                                <rect key="frame" x="20" y="72" width="728" height="21"/>
+                                <rect key="frame" x="20" y="77" width="728" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.89411771299999998" green="0.94117653369999998" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="backgroundColor" red="0.63137254899999995" green="0.73333333329999995" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <navigationItem key="navigationItem" id="tLM-GT-8sP"/>
                     <connections>
                         <outlet property="activity" destination="JFn-1b-PcL" id="PrE-VP-VII"/>
@@ -2614,30 +2570,30 @@
             <objects>
                 <viewController id="c0G-tz-BGf" customClass="ComMeetingsMainViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Teq-mG-XVw">
-                        <rect key="frame" x="0.0" y="64" width="768" height="911"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="975"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="DgN-6k-Pif">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="911"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="DgN-6k-Pif">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="975"/>
                                 <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="MZ2-iO-lAN" detailTextLabel="q31-sd-LNf" style="IBUITableViewCellStyleSubtitle" id="0Ha-W1-Xpn">
-                                        <rect key="frame" x="0.0" y="22" width="768" height="44"/>
+                                        <rect key="frame" x="0.0" y="86" width="768" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0Ha-W1-Xpn" id="JRW-Po-AyD">
-                                            <rect key="frame" x="0.0" y="0.0" width="735" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="735" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MZ2-iO-lAN">
-                                                    <rect key="frame" x="15" y="3" width="36" height="22"/>
+                                                    <rect key="frame" x="15" y="4" width="36" height="22"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="q31-sd-LNf">
-                                                    <rect key="frame" x="15" y="25" width="43" height="15"/>
+                                                    <rect key="frame" x="15" y="26" width="43" height="15"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -2658,7 +2614,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <navigationItem key="navigationItem" title="Committee Meetings" id="2kz-nI-z24"/>
                     <connections>
                         <outlet property="myTableView" destination="DgN-6k-Pif" id="Y84-bx-jSo"/>
@@ -3121,41 +3077,41 @@
             <objects>
                 <viewController id="myi-ZO-w1c" customClass="ExhibitorNotesViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2ZC-mE-xRi">
-                        <rect key="frame" x="0.0" y="64" width="768" height="911"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="975"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" text="exhibitorNameLabel" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Nxs-rJ-XY8">
-                                <rect key="frame" x="20" y="64" width="695" height="33"/>
+                                <rect key="frame" x="20" y="69" width="695" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.40000000000000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.63137254899999995" green="0.73333333329999995" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="bothNumberLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="w5I-eZ-WKx">
-                                <rect key="frame" x="172" y="38" width="260" height="21"/>
+                                <rect key="frame" x="172" y="41" width="260" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="z7l-Xo-zvK">
-                                <rect key="frame" x="368" y="120" width="0.0" height="0.0"/>
+                                <rect key="frame" x="368" y="128" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="21P-mN-Kbd">
-                                <rect key="frame" x="27" y="120" width="695" height="21"/>
+                                <rect key="frame" x="27" y="129" width="695" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Notes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RS8-q2-X5F">
-                                <rect key="frame" x="27" y="186" width="160" height="21"/>
+                                <rect key="frame" x="27" y="199" width="160" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="APq-J1-Fj8">
-                                <rect key="frame" x="582" y="176" width="73" height="44"/>
+                                <rect key="frame" x="582" y="189" width="73" height="44"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Save" backgroundImage="button-green_ipad.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -3166,13 +3122,13 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" id="qg0-Np-7c9">
-                                <rect key="frame" x="23" y="222" width="721" height="423"/>
-                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="23" y="251" width="721" height="423"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="MyO-Ka-7IH">
-                                <rect key="frame" x="313" y="705" width="110" height="44"/>
+                                <rect key="frame" x="313" y="757" width="110" height="44"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Email Notes" backgroundImage="button-green_ipad.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -3190,9 +3146,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.63137254899999995" green="0.73333333329999995" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <navigationItem key="navigationItem" id="fU9-PL-AIb"/>
                     <connections>
                         <outlet property="boothNumberlabel" destination="w5I-eZ-WKx" id="FiL-6a-YRB"/>
@@ -3209,16 +3165,16 @@
         <scene sceneID="Rcc-lU-s9i">
             <objects>
                 <tableViewController id="gd2-p2-fFv" customClass="MyFavoritesViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="64" sectionHeaderHeight="22" sectionFooterHeight="22" id="6Ue-Ck-OvN">
-                        <rect key="frame" x="0.0" y="64" width="768" height="911"/>
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="64" sectionHeaderHeight="22" sectionFooterHeight="22" id="6Ue-Ck-OvN">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="975"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="64" id="eWn-Pv-JNV" customClass="MyFavoritesCell">
-                                <rect key="frame" x="0.0" y="22" width="768" height="64"/>
+                                <rect key="frame" x="0.0" y="86" width="768" height="64"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eWn-Pv-JNV" id="GTR-fc-M7q">
-                                    <rect key="frame" x="0.0" y="0.0" width="735" height="63"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="735" height="64"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="exhibitorNameLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HqG-3M-PeQ">
@@ -3256,7 +3212,7 @@
                             <outlet property="delegate" destination="gd2-p2-fFv" id="wkU-lU-nbm"/>
                         </connections>
                     </tableView>
-                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <navigationItem key="navigationItem" title="My Favorites" id="ITA-Yf-Ws9"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eKy-NU-aYK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3268,13 +3224,13 @@
             <objects>
                 <viewController id="4eO-Mp-E6M" customClass="LocateOnMapViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YXQ-Xb-Ou2">
-                        <rect key="frame" x="0.0" y="64" width="768" height="911"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="975"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" scalesPageToFit="YES" id="j3i-k4-VaM">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="911"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="975"/>
                                 <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.63137254899999995" green="0.73333333329999995" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" id="fVN-mR-1QU">
                                 <rect key="frame" x="366" y="461" width="37" height="37"/>
@@ -3284,7 +3240,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <navigationItem key="navigationItem" id="bCK-rT-kyF"/>
                     <connections>
                         <outlet property="activity" destination="fVN-mR-1QU" id="E0Y-SQ-9KX"/>
@@ -3300,23 +3256,23 @@
             <objects>
                 <viewController id="Ved-ax-1ff" customClass="MyFavoritesDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0h7-Ge-00p">
-                        <rect key="frame" x="0.0" y="64" width="768" height="911"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="975"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Jir-Dg-nzh">
-                                <rect key="frame" x="20" y="28" width="728" height="21"/>
+                                <rect key="frame" x="20" y="30" width="728" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                <color key="textColor" red="0.0" green="0.40000000000000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.63137254899999995" green="0.73333333329999995" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Booth Number:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="a0e-ko-q1b">
-                                <rect key="frame" x="324" y="151" width="136" height="21"/>
+                                <rect key="frame" x="324" y="162" width="136" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="boothNumberLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="91a-hT-cmK">
-                                <rect key="frame" x="459" y="151" width="180" height="21"/>
+                                <rect key="frame" x="459" y="162" width="180" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -3334,19 +3290,19 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="phone" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9ZS-dU-xVv">
-                                <rect key="frame" x="20" y="56" width="728" height="21"/>
+                                <rect key="frame" x="20" y="60" width="728" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="url" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="v6g-nO-DiJ">
-                                <rect key="frame" x="20" y="83" width="728" height="21"/>
+                                <rect key="frame" x="20" y="89" width="728" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="tCD-vJ-da7">
-                                <rect key="frame" x="289" y="382" width="191" height="44"/>
+                                <rect key="frame" x="289" y="410" width="191" height="44"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Locate on Floor Map" backgroundImage="button-green_ipad.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -3357,9 +3313,9 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.63137254899999995" green="0.73333333329999995" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <navigationItem key="navigationItem" id="9wo-gr-p5m"/>
                     <connections>
                         <outlet property="boothNumberLabel" destination="91a-hT-cmK" id="a3C-pv-VJl"/>
@@ -3412,7 +3368,7 @@
         <image name="add-notes_ipad.png" width="70" height="78"/>
         <image name="backbutton-default.png" width="50" height="30"/>
         <image name="backbutton.png" width="50" height="30"/>
-        <image name="burger.png" width="19" height="17"/>
+        <image name="burger-alt2.png" width="38" height="38"/>
         <image name="button-green_ipad.png" width="224" height="66"/>
         <image name="comm_meetings_icon_ipad.png" width="120" height="120"/>
         <image name="committee-ipad.png" width="120" height="120"/>
@@ -3427,6 +3383,7 @@
         <image name="exhibithall_floorplan_icon_ipad.png" width="265" height="247"/>
         <image name="exhibitors-ipad.png" width="120" height="120"/>
         <image name="exhibitorsglow-ipad.png" width="120" height="120"/>
+        <image name="facebook.png" width="64" height="64"/>
         <image name="facebook_button_ipad.png" width="224" height="66"/>
         <image name="facebookpost_ipad.png" width="648" height="120"/>
         <image name="favexhibitors-ipad.png" width="120" height="120"/>
@@ -3455,6 +3412,7 @@
         <image name="sponsorsglow-ipad.png" width="120" height="120"/>
         <image name="take-survey_ipad.png" width="70" height="72"/>
         <image name="techsupportC14-icon-400x400_icon_ipad.png" width="120" height="120"/>
+        <image name="twitter.png" width="64" height="64"/>
         <image name="twitterfeed_ipad.png" width="648" height="120"/>
         <image name="twitterpost_ipad.png" width="648" height="120"/>
         <image name="updatedata_button.png" width="222" height="65"/>
@@ -3465,11 +3423,11 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="SDK-bn-4vP"/>
-        <segue reference="SFt-NY-1lL"/>
-        <segue reference="Wll-oD-v1N"/>
-        <segue reference="AV2-4O-mek"/>
-        <segue reference="Ysf-Ju-HKO"/>
-        <segue reference="xWE-49-eAT"/>
+        <segue reference="llJ-MJ-Tf6"/>
+        <segue reference="eyd-89-hvr"/>
+        <segue reference="zdp-PR-IH3"/>
+        <segue reference="Gmd-RU-haQ"/>
+        <segue reference="muH-WA-dU8"/>
+        <segue reference="1Pj-Cp-vD7"/>
     </inferredMetricsTieBreakers>
 </document>

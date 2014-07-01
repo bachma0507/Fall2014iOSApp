@@ -452,109 +452,208 @@
 #pragma mark - RNFrostedSidebarDelegate
 
 - (void)sidebar:(RNFrostedSidebar *)sidebar didTapItemAtIndex:(NSUInteger)index {
-    NSLog(@"Tapped item at index %i",index);
-    if (index == 0) {
-        
-        [self performSegueWithIdentifier:@"segueToHotel" sender:self];
-        
-        [sidebar dismissAnimated:YES completion:nil];
+    NSLog(@"Tapped item at index %lu",index);
+    switch (index) {
+        case 0:
+            [self performSegueWithIdentifier:@"segueToHotel" sender:self];
+            
+            [sidebar dismissAnimated:YES completion:nil];
+            break;
+            
+        case 1:
+            [self performSegueWithIdentifier:@"segueToContactUs" sender:self];
+            
+            [sidebar dismissAnimated:YES completion:nil];
+            break;
+            
+        case 2:
+            [self performSegueWithIdentifier:@"segueToCECInfo" sender:self];
+            
+            [sidebar dismissAnimated:YES completion:nil];
+            break;
+            
+        case 3:
+            [self performSegueWithIdentifier:@"segueToExams" sender:self];
+            
+            [sidebar dismissAnimated:YES completion:nil];
+            break;
+            
+        case 4:
+            if ([MFMailComposeViewController canSendMail])
+            {
+                NSUUID *id = [[UIDevice currentDevice] identifierForVendor];
+                NSString *deviceID = [[NSString alloc] initWithFormat:@"%@",id];
+                NSString *newDeviceID = [deviceID substringWithRange:NSMakeRange(30, [deviceID length]-30)];
+                
+                NSLog(@"Untruncated Device ID is: %@", deviceID);
+                NSLog(@"Truncated Device ID is: %@", newDeviceID);
+                
+                
+                UIDevice *currentDevice = [UIDevice currentDevice];
+                NSString *model = [currentDevice model];
+                NSString *systemVersion = [currentDevice systemVersion];
+                
+                NSArray *languageArray = [NSLocale preferredLanguages];
+                NSString *language = [languageArray objectAtIndex:0];
+                NSLocale *locale = [NSLocale currentLocale];
+                NSString *country = [locale localeIdentifier];
+                
+                NSString *appVersion = [[NSBundle mainBundle]
+                                        objectForInfoDictionaryKey:(NSString *)kCFBundleVersionKey];
+                
+                NSString *deviceSpecs =
+                [NSString stringWithFormat:@"Model: %@ \n System Version: %@ \n Language: %@ \n Country: %@ \n App Version: %@",
+                 model, systemVersion, language, country, appVersion];
+                NSLog(@"Device Specs --> %@",deviceSpecs);
+                
+                //        NSString * emailNoteBody = [[NSString alloc] initWithFormat:@"Enter issue:\n \n My Device Specs: \n %@",deviceSpecs];
+                //        NSString * emailNoteSubject = [[NSString alloc] initWithFormat:@"Email BICSI Tech Support"];
+                
+                NSString * emailNoteBody = [[NSString alloc] initWithFormat:@"Enter your comments"];
+                NSString * emailNoteSubject = [[NSString alloc] initWithFormat:@"My Comments: 2014 Fall Conference"];
+                
+                
+                // Email Subject
+                NSString *emailTitle = emailNoteSubject;
+                // Email Content
+                NSString *messageBody = emailNoteBody;
+                // To address
+                NSArray *toRecipents = [NSArray arrayWithObject:@"support@bicsi.org"];
+                
+                MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
+                mc.mailComposeDelegate = self;
+                [mc setSubject:emailTitle];
+                [mc setMessageBody:messageBody isHTML:NO];
+                [mc setToRecipients:toRecipents];
+                
+                // Present mail view controller on screen
+                [self presentViewController:mc animated:YES completion:NULL];
+                
+            }
+            else
+            {
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Failure"
+                                                                message:@"Your device doesn't support the composer sheet"
+                                                               delegate:nil
+                                                      cancelButtonTitle:@"OK"
+                                                      otherButtonTitles: nil];
+                [alert show];
+                
+            }
+            [sidebar dismissAnimated:YES completion:nil];
+            break;
+            
+        case 5:
+            [self performSegueWithIdentifier:@"segueToPresentations" sender:self];
+            
+            [sidebar dismissAnimated:YES completion:nil];
+            break;
+        default:
+            break;
     }
     
-    if (index == 1) {
-        
-        [self performSegueWithIdentifier:@"segueToContactUs" sender:self];
-        
-        [sidebar dismissAnimated:YES completion:nil];
-    }
-    
-    if (index == 2) {
-        
-        [self performSegueWithIdentifier:@"segueToCECInfo" sender:self];
-        
-        [sidebar dismissAnimated:YES completion:nil];
-    }
-    
-    if (index == 3) {
-        
-        [self performSegueWithIdentifier:@"segueToExams" sender:self];
-        
-        [sidebar dismissAnimated:YES completion:nil];
-    }
-    
-    if (index == 4) {
-        
-        if ([MFMailComposeViewController canSendMail])
-        {
-            NSUUID *id = [[UIDevice currentDevice] identifierForVendor];
-            NSString *deviceID = [[NSString alloc] initWithFormat:@"%@",id];
-            NSString *newDeviceID = [deviceID substringWithRange:NSMakeRange(30, [deviceID length]-30)];
-            
-            NSLog(@"Untruncated Device ID is: %@", deviceID);
-            NSLog(@"Truncated Device ID is: %@", newDeviceID);
-            
-            
-            UIDevice *currentDevice = [UIDevice currentDevice];
-            NSString *model = [currentDevice model];
-            NSString *systemVersion = [currentDevice systemVersion];
-            
-            NSArray *languageArray = [NSLocale preferredLanguages];
-            NSString *language = [languageArray objectAtIndex:0];
-            NSLocale *locale = [NSLocale currentLocale];
-            NSString *country = [locale localeIdentifier];
-            
-            NSString *appVersion = [[NSBundle mainBundle]
-                                    objectForInfoDictionaryKey:(NSString *)kCFBundleVersionKey];
-            
-            NSString *deviceSpecs =
-            [NSString stringWithFormat:@"Model: %@ \n System Version: %@ \n Language: %@ \n Country: %@ \n App Version: %@",
-             model, systemVersion, language, country, appVersion];
-            NSLog(@"Device Specs --> %@",deviceSpecs);
-            
-            //        NSString * emailNoteBody = [[NSString alloc] initWithFormat:@"Enter issue:\n \n My Device Specs: \n %@",deviceSpecs];
-            //        NSString * emailNoteSubject = [[NSString alloc] initWithFormat:@"Email BICSI Tech Support"];
-            
-            NSString * emailNoteBody = [[NSString alloc] initWithFormat:@"Enter your comments"];
-            NSString * emailNoteSubject = [[NSString alloc] initWithFormat:@"My Comments: 2014 Fall Conference"];
-            
-            
-            // Email Subject
-            NSString *emailTitle = emailNoteSubject;
-            // Email Content
-            NSString *messageBody = emailNoteBody;
-            // To address
-            NSArray *toRecipents = [NSArray arrayWithObject:@"support@bicsi.org"];
-            
-            MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
-            mc.mailComposeDelegate = self;
-            [mc setSubject:emailTitle];
-            [mc setMessageBody:messageBody isHTML:NO];
-            [mc setToRecipients:toRecipents];
-            
-            // Present mail view controller on screen
-            [self presentViewController:mc animated:YES completion:NULL];
-            
-        }
-        else
-        {
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Failure"
-                                                            message:@"Your device doesn't support the composer sheet"
-                                                           delegate:nil
-                                                  cancelButtonTitle:@"OK"
-                                                  otherButtonTitles: nil];
-            [alert show];
-            
-        }
-        [sidebar dismissAnimated:YES completion:nil];
-    }
-    
-    
-    
-    if (index == 5) {
-        
-        [self performSegueWithIdentifier:@"segueToPresentations" sender:self];
-        
-        [sidebar dismissAnimated:YES completion:nil];
-    }
+//    if (index == 0) {
+//        
+//        [self performSegueWithIdentifier:@"segueToHotel" sender:self];
+//        
+//        [sidebar dismissAnimated:YES completion:nil];
+//    }
+//    
+//    if (index == 1) {
+//        
+//        [self performSegueWithIdentifier:@"segueToContactUs" sender:self];
+//        
+//        [sidebar dismissAnimated:YES completion:nil];
+//    }
+//    
+//    if (index == 2) {
+//        
+//        [self performSegueWithIdentifier:@"segueToCECInfo" sender:self];
+//        
+//        [sidebar dismissAnimated:YES completion:nil];
+//    }
+//    
+//    if (index == 3) {
+//        
+//        [self performSegueWithIdentifier:@"segueToExams" sender:self];
+//        
+//        [sidebar dismissAnimated:YES completion:nil];
+//    }
+//    
+//    if (index == 4) {
+//        
+//        if ([MFMailComposeViewController canSendMail])
+//        {
+//            NSUUID *id = [[UIDevice currentDevice] identifierForVendor];
+//            NSString *deviceID = [[NSString alloc] initWithFormat:@"%@",id];
+//            NSString *newDeviceID = [deviceID substringWithRange:NSMakeRange(30, [deviceID length]-30)];
+//            
+//            NSLog(@"Untruncated Device ID is: %@", deviceID);
+//            NSLog(@"Truncated Device ID is: %@", newDeviceID);
+//            
+//            
+//            UIDevice *currentDevice = [UIDevice currentDevice];
+//            NSString *model = [currentDevice model];
+//            NSString *systemVersion = [currentDevice systemVersion];
+//            
+//            NSArray *languageArray = [NSLocale preferredLanguages];
+//            NSString *language = [languageArray objectAtIndex:0];
+//            NSLocale *locale = [NSLocale currentLocale];
+//            NSString *country = [locale localeIdentifier];
+//            
+//            NSString *appVersion = [[NSBundle mainBundle]
+//                                    objectForInfoDictionaryKey:(NSString *)kCFBundleVersionKey];
+//            
+//            NSString *deviceSpecs =
+//            [NSString stringWithFormat:@"Model: %@ \n System Version: %@ \n Language: %@ \n Country: %@ \n App Version: %@",
+//             model, systemVersion, language, country, appVersion];
+//            NSLog(@"Device Specs --> %@",deviceSpecs);
+//            
+//            //        NSString * emailNoteBody = [[NSString alloc] initWithFormat:@"Enter issue:\n \n My Device Specs: \n %@",deviceSpecs];
+//            //        NSString * emailNoteSubject = [[NSString alloc] initWithFormat:@"Email BICSI Tech Support"];
+//            
+//            NSString * emailNoteBody = [[NSString alloc] initWithFormat:@"Enter your comments"];
+//            NSString * emailNoteSubject = [[NSString alloc] initWithFormat:@"My Comments: 2014 Fall Conference"];
+//            
+//            
+//            // Email Subject
+//            NSString *emailTitle = emailNoteSubject;
+//            // Email Content
+//            NSString *messageBody = emailNoteBody;
+//            // To address
+//            NSArray *toRecipents = [NSArray arrayWithObject:@"support@bicsi.org"];
+//            
+//            MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
+//            mc.mailComposeDelegate = self;
+//            [mc setSubject:emailTitle];
+//            [mc setMessageBody:messageBody isHTML:NO];
+//            [mc setToRecipients:toRecipents];
+//            
+//            // Present mail view controller on screen
+//            [self presentViewController:mc animated:YES completion:NULL];
+//            
+//        }
+//        else
+//        {
+//            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Failure"
+//                                                            message:@"Your device doesn't support the composer sheet"
+//                                                           delegate:nil
+//                                                  cancelButtonTitle:@"OK"
+//                                                  otherButtonTitles: nil];
+//            [alert show];
+//            
+//        }
+//        [sidebar dismissAnimated:YES completion:nil];
+//    }
+//    
+//    
+//    
+//    if (index == 5) {
+//        
+//        [self performSegueWithIdentifier:@"segueToPresentations" sender:self];
+//        
+//        [sidebar dismissAnimated:YES completion:nil];
+//    }
 }
 
 - (void) mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error

@@ -73,7 +73,7 @@
 #pragma mark - RNFrostedSidebarDelegate
 
 - (void)sidebar:(RNFrostedSidebar *)sidebar didTapItemAtIndex:(NSUInteger)index {
-    NSLog(@"Tapped item at index %i",index);
+    NSLog(@"Tapped item at index %lu",index);
     if (index == 0) {
         
         [self performSegueWithIdentifier:@"segueToConfSched" sender:self];
