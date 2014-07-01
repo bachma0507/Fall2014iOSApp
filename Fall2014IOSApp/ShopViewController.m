@@ -1,22 +1,22 @@
 //
-//  BarViewController.m
-//  YelpNearby
+//  ShopViewController.m
+//  Fall2014IOSApp
 //
-//  Created by Barry on 5/14/14.
-//  Copyright (c) 2014 Subh. All rights reserved.
+//  Created by Barry on 7/1/14.
+//  Copyright (c) 2014 BICSI. All rights reserved.
 //
 
-#import "BarViewController.h"
+#import "ShopViewController.h"
 #import "Restaurant.h"
 #import "ResultTableViewCell.h"
 
-@interface BarViewController ()
+@interface ShopViewController ()
 
 @end
 
-const unsigned char SpeechKitApplicationKey2[] = {0xfd, 0x41, 0x2f, 0x14, 0x90, 0x1a, 0x36, 0x10, 0xa5, 0x19, 0x20, 0x70, 0x22, 0x29, 0x5a, 0x33, 0xdb, 0x27, 0x4c, 0xb3, 0x73, 0x41, 0xda, 0x9a, 0x74, 0xf9, 0x7f, 0xd7, 0xa1, 0xf8, 0x9c, 0x9e, 0x39, 0xcb, 0xb3, 0xc9, 0xe5, 0xe9, 0xd9, 0x8a, 0x02, 0xfa, 0xfa, 0x24, 0x23, 0x55, 0x58, 0xff, 0x7c, 0xa4, 0xb2, 0xef, 0xe5, 0x8d, 0x89, 0x59, 0x86, 0x08, 0x30, 0x27, 0x01, 0xcc, 0xc5, 0x3a};
+const unsigned char SpeechKitApplicationKey3[] = {0xfd, 0x41, 0x2f, 0x14, 0x90, 0x1a, 0x36, 0x10, 0xa5, 0x19, 0x20, 0x70, 0x22, 0x29, 0x5a, 0x33, 0xdb, 0x27, 0x4c, 0xb3, 0x73, 0x41, 0xda, 0x9a, 0x74, 0xf9, 0x7f, 0xd7, 0xa1, 0xf8, 0x9c, 0x9e, 0x39, 0xcb, 0xb3, 0xc9, 0xe5, 0xe9, 0xd9, 0x8a, 0x02, 0xfa, 0xfa, 0x24, 0x23, 0x55, 0x58, 0xff, 0x7c, 0xa4, 0xb2, 0xef, 0xe5, 0x8d, 0x89, 0x59, 0x86, 0x08, 0x30, 0x27, 0x01, 0xcc, 0xc5, 0x3a};
 
-@implementation BarViewController
+@implementation ShopViewController
 
 - (void)viewDidLoad
 {
@@ -170,9 +170,9 @@ const unsigned char SpeechKitApplicationKey2[] = {0xfd, 0x41, 0x2f, 0x14, 0x90, 
 - (NSString *)getYelpCategoryFromSearchText {
     NSString *categoryFilter;
     
-    if ([[self.searchTextField.text componentsSeparatedByString:@" bar"] count] > 1) {
+    if ([[self.searchTextField.text componentsSeparatedByString:@" shop"] count] > 1) {
         NSCharacterSet *separator = [NSCharacterSet whitespaceAndNewlineCharacterSet];
-        NSArray *trimmedWordArray = [[[self.searchTextField.text componentsSeparatedByString:@"bar"] firstObject] componentsSeparatedByCharactersInSet:separator];
+        NSArray *trimmedWordArray = [[[self.searchTextField.text componentsSeparatedByString:@"shop"] firstObject] componentsSeparatedByCharactersInSet:separator];
         
         if ([trimmedWordArray count] > 2) {
             int objectIndex = (int)[trimmedWordArray count] - 2;
@@ -184,7 +184,7 @@ const unsigned char SpeechKitApplicationKey2[] = {0xfd, 0x41, 0x2f, 0x14, 0x90, 
         }
     }
     
-    else if (([[self.searchTextField.text componentsSeparatedByString:@" bar"] count] <= 1)
+    else if (([[self.searchTextField.text componentsSeparatedByString:@" shop"] count] <= 1)
              && self.searchTextField.text &&  self.searchTextField.text.length > 0){
         categoryFilter = self.searchTextField.text;
     }
@@ -204,7 +204,7 @@ const unsigned char SpeechKitApplicationKey2[] = {0xfd, 0x41, 0x2f, 0x14, 0x90, 
             self.messageLabel.text = @"Fetching results..";
             self.activityIndicator.hidden = NO;
             
-            self.yelpService = [[YelpAPIServiceBars alloc] init];
+            self.yelpService = [[YelpAPIServiceShop alloc] init];
             self.yelpService.delegate = self;
             
             self.searchCriteria = categoryFilter;
@@ -249,20 +249,20 @@ const unsigned char SpeechKitApplicationKey2[] = {0xfd, 0x41, 0x2f, 0x14, 0x90, 
     
     if ([self.tableViewDisplayDataArray count] == 1) {
         // 2
-        [self.vocalizer speakString:[NSString stringWithFormat:@"I found %lu %@ bar",
+        [self.vocalizer speakString:[NSString stringWithFormat:@"I found %lu %@ shop",
                                      (unsigned long)[self.tableViewDisplayDataArray count],
                                      self.searchCriteria]];
     }
     
     else if ([self.tableViewDisplayDataArray count] > 0) {
         // 2
-        [self.vocalizer speakString:[NSString stringWithFormat:@"I found %lu %@ bars",
+        [self.vocalizer speakString:[NSString stringWithFormat:@"I found %lu %@ shops",
                                      (unsigned long)[self.tableViewDisplayDataArray count],
                                      self.searchCriteria]];
     }
     
     else {
-        [self.vocalizer speakString:[NSString stringWithFormat:@"I could not find any %@ bars",
+        [self.vocalizer speakString:[NSString stringWithFormat:@"I could not find any %@ shops",
                                      self.searchCriteria]];
     }
 }

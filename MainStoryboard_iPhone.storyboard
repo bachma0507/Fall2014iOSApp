@@ -441,6 +441,27 @@
                                 <state key="normal" title="Bars">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="MFq-Y0-y1Q" kind="push" id="0zS-jb-rOr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ud9-wZ-S6U">
+                                <rect key="frame" x="130" y="225" width="60" height="30"/>
+                                <state key="normal" title="Shops">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Kxf-xZ-uNI" kind="push" id="Zb4-lW-JQU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="U6b-k1-QLP">
+                                <rect key="frame" x="112" y="291" width="97" height="30"/>
+                                <state key="normal" title="Night Life">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="8Yb-3c-qFt" kind="push" id="iZi-AK-Xaw"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.63137254899999995" green="0.73333333329999995" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
@@ -553,7 +574,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rCN-i0-d86" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2610" y="-3289"/>
+            <point key="canvasLocation" x="2569" y="-3294"/>
         </scene>
         <!--Google Places View Controller - Find Area Activities-->
         <scene sceneID="sDp-ks-qws">
@@ -607,7 +628,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bqA-VG-GxE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2623" y="-2607"/>
+            <point key="canvasLocation" x="2778" y="-2223"/>
         </scene>
         <!--Agenda Table View Controller - My Planner-->
         <scene sceneID="eML-0W-fyI">
@@ -3667,6 +3688,318 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DaH-SK-ZX1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2790" y="-2003"/>
+        </scene>
+        <!--Bar View Controller-->
+        <scene sceneID="Dm8-3c-K4u">
+            <objects>
+                <viewController id="MFq-Y0-y1Q" customClass="BarViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bEL-LM-WLy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" id="CL3-9v-Xrz">
+                                <rect key="frame" x="20" y="79" width="242" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="MFq-Y0-y1Q" id="c63-5g-nFy"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nearby Bars" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QQ3-jW-MBq">
+                                <rect key="frame" x="50" y="38" width="221" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap on the mic to record" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7re-lE-96B">
+                                <rect key="frame" x="20" y="117" width="227" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="1PI-XR-Axv">
+                                <rect key="frame" x="262" y="70" width="50" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" image="mic_off.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="mic_on"/>
+                                <state key="highlighted" image="mic_on"/>
+                                <connections>
+                                    <action selector="recordButtonTapped:" destination="MFq-Y0-y1Q" eventType="touchUpInside" id="yeG-fq-rpP"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="64" sectionHeaderHeight="22" sectionFooterHeight="22" id="5If-Ax-MRK">
+                                <rect key="frame" x="0.0" y="147" width="320" height="333"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="SearchResultTableViewCell" rowHeight="73" id="Is2-wF-JxR" customClass="ResultTableViewCell">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="73"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Is2-wF-JxR" id="rn9-7M-bLD">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="73"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="clE-CO-y0n">
+                                                    <rect key="frame" x="0.0" y="1" width="72" height="71"/>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yL0-sH-ogU">
+                                                    <rect key="frame" x="80" y="0.0" width="207" height="27"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="2Ce-he-DYu">
+                                                    <rect key="frame" x="80" y="28" width="84" height="17"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="h1J-mg-6QP">
+                                                    <rect key="frame" x="80" y="50" width="232" height="15"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="addressLabel" destination="h1J-mg-6QP" id="ZHv-C2-lGb"/>
+                                            <outlet property="nameLabel" destination="yL0-sH-ogU" id="c6d-B7-pky"/>
+                                            <outlet property="ratingImage" destination="2Ce-he-DYu" id="lCD-b9-zhK"/>
+                                            <outlet property="thumbImage" destination="clE-CO-y0n" id="sww-3B-4Ej"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="MFq-Y0-y1Q" id="oKg-8E-ciS"/>
+                                    <outlet property="delegate" destination="MFq-Y0-y1Q" id="UmP-RX-kJ8"/>
+                                </connections>
+                            </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" id="79s-t7-vWe">
+                                <rect key="frame" x="262" y="118" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <navigationItem key="navigationItem" id="43P-cI-1bz"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="79s-t7-vWe" id="keL-gd-dIt"/>
+                        <outlet property="messageLabel" destination="7re-lE-96B" id="kDN-MG-MW8"/>
+                        <outlet property="recordButton" destination="1PI-XR-Axv" id="Ry0-4L-RcY"/>
+                        <outlet property="resultTableView" destination="5If-Ax-MRK" id="Lud-G9-BbT"/>
+                        <outlet property="searchTextField" destination="CL3-9v-Xrz" id="GH4-oR-Tk0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LJq-NQ-TBu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2951" y="-3289"/>
+        </scene>
+        <!--Shop View Controller-->
+        <scene sceneID="g6b-QV-e3v">
+            <objects>
+                <viewController id="Kxf-xZ-uNI" customClass="ShopViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1A5-BI-KYh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" id="JKt-Z3-T2k">
+                                <rect key="frame" x="20" y="79" width="242" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Kxf-xZ-uNI" id="BFS-Rs-mJV"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nearby Shops" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hGD-gn-EHf">
+                                <rect key="frame" x="50" y="38" width="221" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap on the mic to record" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UD0-Df-037">
+                                <rect key="frame" x="20" y="117" width="227" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="cad-nO-Db9">
+                                <rect key="frame" x="262" y="70" width="50" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" image="mic_off.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="mic_on"/>
+                                <state key="highlighted" image="mic_on"/>
+                                <connections>
+                                    <action selector="recordButtonTapped:" destination="Kxf-xZ-uNI" eventType="touchUpInside" id="AwT-23-mVt"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="64" sectionHeaderHeight="22" sectionFooterHeight="22" id="xZw-H9-nUX">
+                                <rect key="frame" x="0.0" y="147" width="320" height="333"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="SearchResultTableViewCell" rowHeight="73" id="rZl-z3-lKj" customClass="ResultTableViewCell">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="73"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rZl-z3-lKj" id="Nrg-u4-xll">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="73"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="4Va-5E-0Mu">
+                                                    <rect key="frame" x="0.0" y="1" width="72" height="71"/>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zBH-0M-TKk">
+                                                    <rect key="frame" x="80" y="0.0" width="207" height="27"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="AaU-aA-zZT">
+                                                    <rect key="frame" x="80" y="28" width="84" height="17"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QrJ-6m-9Ce">
+                                                    <rect key="frame" x="80" y="50" width="232" height="15"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="addressLabel" destination="QrJ-6m-9Ce" id="LOx-lF-m5b"/>
+                                            <outlet property="nameLabel" destination="zBH-0M-TKk" id="jD0-MX-R7g"/>
+                                            <outlet property="ratingImage" destination="AaU-aA-zZT" id="32s-Wj-nJJ"/>
+                                            <outlet property="thumbImage" destination="4Va-5E-0Mu" id="POc-at-7i3"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Kxf-xZ-uNI" id="obB-mx-Ntf"/>
+                                    <outlet property="delegate" destination="Kxf-xZ-uNI" id="cdp-MK-8uS"/>
+                                </connections>
+                            </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" id="ued-jN-fpV">
+                                <rect key="frame" x="262" y="118" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <navigationItem key="navigationItem" id="vRf-cf-d0I"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="ued-jN-fpV" id="ZwA-6D-5F0"/>
+                        <outlet property="messageLabel" destination="UD0-Df-037" id="0MP-PF-lbe"/>
+                        <outlet property="recordButton" destination="cad-nO-Db9" id="Yef-H9-koF"/>
+                        <outlet property="resultTableView" destination="xZw-H9-nUX" id="AuC-Qn-i4R"/>
+                        <outlet property="searchTextField" destination="JKt-Z3-T2k" id="Rzh-ta-pYI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9P5-bu-QSK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2951" y="-2706"/>
+        </scene>
+        <!--Night View Controller-->
+        <scene sceneID="x1g-Tb-sWU">
+            <objects>
+                <viewController id="8Yb-3c-qFt" customClass="NightViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WwF-9h-dAm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" id="Thv-4a-aR2">
+                                <rect key="frame" x="20" y="79" width="242" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="8Yb-3c-qFt" id="4M5-Ze-Cdq"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nearby Night Life" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="D3c-Yx-Oke">
+                                <rect key="frame" x="50" y="38" width="221" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap on the mic to record" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iNW-PX-6rv">
+                                <rect key="frame" x="20" y="117" width="227" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6h3-4G-fBL">
+                                <rect key="frame" x="262" y="70" width="50" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" image="mic_off.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="mic_on"/>
+                                <state key="highlighted" image="mic_on"/>
+                                <connections>
+                                    <action selector="recordButtonTapped:" destination="8Yb-3c-qFt" eventType="touchUpInside" id="OKM-Bl-mNR"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="64" sectionHeaderHeight="22" sectionFooterHeight="22" id="qLZ-lR-uBW">
+                                <rect key="frame" x="0.0" y="147" width="320" height="333"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="SearchResultTableViewCell" rowHeight="73" id="3nz-0d-QHr" customClass="ResultTableViewCell">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="73"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3nz-0d-QHr" id="127-WX-hQa">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="73"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="hbc-RP-IxX">
+                                                    <rect key="frame" x="0.0" y="1" width="72" height="71"/>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hQV-LO-KoG">
+                                                    <rect key="frame" x="80" y="0.0" width="207" height="27"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="m69-TY-zL4">
+                                                    <rect key="frame" x="80" y="28" width="84" height="17"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0XF-Pq-F8N">
+                                                    <rect key="frame" x="80" y="50" width="232" height="15"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="addressLabel" destination="0XF-Pq-F8N" id="UWg-9h-Nvn"/>
+                                            <outlet property="nameLabel" destination="hQV-LO-KoG" id="Dz1-TL-Fex"/>
+                                            <outlet property="ratingImage" destination="m69-TY-zL4" id="DeC-Cs-PbT"/>
+                                            <outlet property="thumbImage" destination="hbc-RP-IxX" id="waU-C3-vOG"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="8Yb-3c-qFt" id="qeg-GN-jxz"/>
+                                    <outlet property="delegate" destination="8Yb-3c-qFt" id="nWZ-00-L4M"/>
+                                </connections>
+                            </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" id="5Nw-uz-DPh">
+                                <rect key="frame" x="262" y="118" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <navigationItem key="navigationItem" id="jdV-x7-mr6"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="5Nw-uz-DPh" id="IYR-7g-Qzz"/>
+                        <outlet property="messageLabel" destination="iNW-PX-6rv" id="G0O-AI-uwa"/>
+                        <outlet property="recordButton" destination="6h3-4G-fBL" id="Si7-9f-jHo"/>
+                        <outlet property="resultTableView" destination="qLZ-lR-uBW" id="A8A-EQ-9iQ"/>
+                        <outlet property="searchTextField" destination="Thv-4a-aR2" id="lAp-sH-w6C"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F17-y2-wqF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2569" y="-2706"/>
         </scene>
     </scenes>
     <resources>

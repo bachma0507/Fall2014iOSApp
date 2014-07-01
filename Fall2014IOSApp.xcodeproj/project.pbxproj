@@ -202,6 +202,10 @@
 		4C326EAE1962F0C6006D4B76 /* burger-alt2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C326EAC1962F0C6006D4B76 /* burger-alt2@2x.png */; };
 		4C326EB01962F1FA006D4B76 /* presentations-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C326EAF1962F1FA006D4B76 /* presentations-ipad.png */; };
 		4C326EB21962F202006D4B76 /* presentations-ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C326EB11962F202006D4B76 /* presentations-ipad@2x.png */; };
+		4C326EB51963406A006D4B76 /* ShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C326EB41963406A006D4B76 /* ShopViewController.m */; };
+		4C326EB81963407B006D4B76 /* NightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C326EB71963407B006D4B76 /* NightViewController.m */; };
+		4C326EBB19634139006D4B76 /* YelpAPIServiceShop.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C326EBA19634139006D4B76 /* YelpAPIServiceShop.m */; };
+		4C326EBE1963414F006D4B76 /* YelpAPIServiceNight.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C326EBD1963414F006D4B76 /* YelpAPIServiceNight.m */; };
 		4C36453D180875BC00882ECA /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C36453C180875BC00882ECA /* Parse.framework */; };
 		4C36453F180875CC00882ECA /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C36453E180875CC00882ECA /* StoreKit.framework */; };
 		4C36C697192F766F0018AB39 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C36C696192F766F0018AB39 /* Images.xcassets */; };
@@ -1034,6 +1038,14 @@
 		4C326EAC1962F0C6006D4B76 /* burger-alt2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "burger-alt2@2x.png"; sourceTree = "<group>"; };
 		4C326EAF1962F1FA006D4B76 /* presentations-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "presentations-ipad.png"; sourceTree = "<group>"; };
 		4C326EB11962F202006D4B76 /* presentations-ipad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "presentations-ipad@2x.png"; sourceTree = "<group>"; };
+		4C326EB31963406A006D4B76 /* ShopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopViewController.h; sourceTree = "<group>"; };
+		4C326EB41963406A006D4B76 /* ShopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopViewController.m; sourceTree = "<group>"; };
+		4C326EB61963407B006D4B76 /* NightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NightViewController.h; sourceTree = "<group>"; };
+		4C326EB71963407B006D4B76 /* NightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NightViewController.m; sourceTree = "<group>"; };
+		4C326EB919634139006D4B76 /* YelpAPIServiceShop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YelpAPIServiceShop.h; sourceTree = "<group>"; };
+		4C326EBA19634139006D4B76 /* YelpAPIServiceShop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YelpAPIServiceShop.m; sourceTree = "<group>"; };
+		4C326EBC1963414F006D4B76 /* YelpAPIServiceNight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YelpAPIServiceNight.h; sourceTree = "<group>"; };
+		4C326EBD1963414F006D4B76 /* YelpAPIServiceNight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YelpAPIServiceNight.m; sourceTree = "<group>"; };
 		4C36453C180875BC00882ECA /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		4C36453E180875CC00882ECA /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		4C36C696192F766F0018AB39 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -3261,6 +3273,10 @@
 				4CD8E0901937E78300A4326C /* YelpAPIService.m */,
 				4CD8E0911937E78300A4326C /* YelpAPIServiceBars.h */,
 				4CD8E0921937E78300A4326C /* YelpAPIServiceBars.m */,
+				4C326EB919634139006D4B76 /* YelpAPIServiceShop.h */,
+				4C326EBA19634139006D4B76 /* YelpAPIServiceShop.m */,
+				4C326EBC1963414F006D4B76 /* YelpAPIServiceNight.h */,
+				4C326EBD1963414F006D4B76 /* YelpAPIServiceNight.m */,
 			);
 			path = Yelp_API_Request;
 			sourceTree = "<group>";
@@ -3274,6 +3290,10 @@
 				4CD8E09A1938121600A4326C /* ResultTableViewCell.m */,
 				4CD8E09B1938121600A4326C /* ViewController.h */,
 				4CD8E09C1938121600A4326C /* ViewController.m */,
+				4C326EB31963406A006D4B76 /* ShopViewController.h */,
+				4C326EB41963406A006D4B76 /* ShopViewController.m */,
+				4C326EB61963407B006D4B76 /* NightViewController.h */,
+				4C326EB71963407B006D4B76 /* NightViewController.m */,
 			);
 			name = yelp;
 			sourceTree = "<group>";
@@ -4077,6 +4097,7 @@
 				4C68386818A75B4A00CB650C /* bicsi.xcdatamodeld in Sources */,
 				4CE1C0081774D5E0000218CE /* hotels.m in Sources */,
 				4CD8E07C1937E42F00A4326C /* sha1.c in Sources */,
+				4C326EBB19634139006D4B76 /* YelpAPIServiceShop.m in Sources */,
 				4CC5646618CC36B80033B05A /* FloorMapsViewController.m in Sources */,
 				4CD8E0801937E42F00A4326C /* OADataFetcher.m in Sources */,
 				4CACEAC21776B5D400E90BD8 /* MBProgressHUD.m in Sources */,
@@ -4118,6 +4139,7 @@
 				4CD8E0851937E42F00A4326C /* OARequestParameter.m in Sources */,
 				4C088C66177F667500CFBC96 /* NSManagedObjectContext+MagicalRecord.m in Sources */,
 				4C088C67177F667500CFBC96 /* NSManagedObjectContext+MagicalSaves.m in Sources */,
+				4C326EB81963407B006D4B76 /* NightViewController.m in Sources */,
 				4C088C68177F667500CFBC96 /* NSManagedObjectContext+MagicalThreading.m in Sources */,
 				4CD8E0811937E42F00A4326C /* OAHMAC_SHA1SignatureProvider.m in Sources */,
 				4C088C69177F667500CFBC96 /* NSManagedObjectModel+MagicalRecord.m in Sources */,
@@ -4161,6 +4183,7 @@
 				4C24FD5C179F56DC006C017E /* AgendaDetailViewController.m in Sources */,
 				4CD8E07A1937E42F00A4326C /* Base64Transcoder.c in Sources */,
 				4C547E3017A1777A00400428 /* PlistTableViewController.m in Sources */,
+				4C326EBE1963414F006D4B76 /* YelpAPIServiceNight.m in Sources */,
 				4C384F3817A46009003C9063 /* ExhibitorNotesViewController.m in Sources */,
 				4CD8E0931937E78300A4326C /* Restaurant.m in Sources */,
 				4C7C0F6217A4A21100726FC3 /* MyFavoritesViewController.m in Sources */,
@@ -4179,6 +4202,7 @@
 				4CCEF9F617D281620024E854 /* ProgramPDFViewController.m in Sources */,
 				4CD8E0821937E42F00A4326C /* OAMutableURLRequest.m in Sources */,
 				4CD8E0781937E42F00A4326C /* NSString+URLEncoding.m in Sources */,
+				4C326EB51963406A006D4B76 /* ShopViewController.m in Sources */,
 				4C28488217D2BB5600F6C6B2 /* confSchedDetailViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
