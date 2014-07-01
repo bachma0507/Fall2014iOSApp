@@ -317,18 +317,116 @@
 
 
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"notesDetail"]) {
-        self.sessionName = session1Label.text;
-    
-        NotesViewController *destViewController = segue.destinationViewController;
-        destViewController.title = session1Label.text;
-        destViewController.sessionName = self.sessionName;
-        destViewController.sessionId = self.sessionId;
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+//    if ([segue.identifier isEqualToString:@"notesDetail"]) {
+//        self.sessionName = session1Label.text;
+//    
+//        NotesViewController *destViewController = segue.destinationViewController;
+//        destViewController.title = session1Label.text;
+//        destViewController.sessionName = self.sessionName;
+//        destViewController.sessionId = self.sessionId;
+//        
+//        NSLog(@"Session ID is %@", self.sessionId);
+//    }
+//}
+
+
+#pragma mark - Notes View Controller
+
+- (void)NotesViewControllerDidFinish:(NotesViewController *)controller
+{
+    [self.NotesPopoverController dismissPopoverAnimated:YES];
+}
+
+- (void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController
+{
+    self.NotesPopoverController = nil;
+    self.SurveyPopoverController = nil;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone){
         
-        NSLog(@"Session ID is %@", self.sessionId);
+        if ([segue.identifier isEqualToString:@"notesDetail"]) {
+            self.sessionName = session1Label.text;
+            
+                    NotesViewController *destViewController = segue.destinationViewController;
+                    destViewController.title = session1Label.text;
+                    destViewController.sessionName = self.sessionName;
+                    destViewController.sessionId = self.sessionId;
+            
+                    NSLog(@"Session ID is %@", self.sessionId);
+        }
+        
+        
+        
+    }
+    else if([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad){
+        if ([[segue identifier] isEqualToString:@"notesDetail"]) {
+            
+            self.sessionName = session1Label.text;
+            
+            NotesViewController *destViewController = segue.destinationViewController;
+            destViewController.title = session1Label.text;
+            destViewController.sessionName = self.sessionName;
+            destViewController.sessionId = self.sessionId;
+            
+            
+            [[segue destinationViewController] setDelegate:self];
+            UIPopoverController *popoverController = [(UIStoryboardPopoverSegue *)segue popoverController];
+            self.NotesPopoverController = popoverController;
+            popoverController.delegate = self;
+        }
+        
+        else if ([[segue identifier] isEqualToString:@"surveyDetail"]) {
+            
+            //self.sessionName = sessionNameLabel.text;
+            //self.sessionId = mySessions.sessionID;
+            SurveyViewController *destViewController = segue.destinationViewController;
+            //destViewController.title = sessionNameLabel.text;
+            //destViewController.sessionName = self.sessionName;
+            destViewController.sessionId = self.sessionId;
+            
+            NSLog(@"****SessionID in SessionsViewController popover segue to SurveyViewController is %@",self.sessionId);
+            
+            [[segue destinationViewController] setDelegate:self];
+            UIPopoverController *popoverController = [(UIStoryboardPopoverSegue *)segue popoverController];
+            self.SurveyPopoverController = popoverController;
+            popoverController.delegate = self;
+        }
     }
 }
+
+
+- (IBAction)togglePopover:(id)sender
+{
+    if (self.NotesPopoverController) {
+        [self.NotesPopoverController dismissPopoverAnimated:YES];
+        self.NotesPopoverController = nil;
+    } else {
+        [self performSegueWithIdentifier:@"notesDetail" sender:sender];
+    }
+}
+
+#pragma mark - Survey View Controller
+
+- (void)SurveyViewControllerDidFinish:(SurveyViewController *)controller
+{
+    [self.SurveyPopoverController dismissPopoverAnimated:YES];
+}
+
+
+- (IBAction)togglePopoverSurvey:(id)sender
+{
+    if (self.SurveyPopoverController) {
+        [self.SurveyPopoverController dismissPopoverAnimated:YES];
+        self.SurveyPopoverController = nil;
+    } else {
+        [self performSegueWithIdentifier:@"surveyDetail" sender:sender];
+    }
+}
+
 
 - (IBAction)AddEvent:(id)sender {
     

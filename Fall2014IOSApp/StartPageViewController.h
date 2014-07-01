@@ -13,11 +13,16 @@
 #import "Speakers.h"
 #import "Sessions.h"
 #import "HotelWebViewController.h"
+#import "ContactUsViewController.h"
+#import "CECInfoViewController.h"
+#import "ExamsViewController.h"
+#import <MessageUI/MessageUI.h>
+#import "ProgramPDFViewController.h"
 
 @class MBProgressHUD;
 @class Reachability;
 
-@interface StartPageViewController : UIViewController<RNFrostedSidebarDelegate, HotelWebViewControllerDelegate>
+@interface StartPageViewController : UIViewController<RNFrostedSidebarDelegate, HotelWebViewControllerDelegate, ContactUsViewControllerDelegate, CECInfoViewControllerDelegate, ExamsViewControllerDelegate,MFMailComposeViewControllerDelegate, ProgramPDFViewControllerDelegate>
 {
     MBProgressHUD *HUD;
     Reachability *internetReach;

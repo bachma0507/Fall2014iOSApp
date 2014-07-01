@@ -8,7 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@class ContactUsViewController;
+
+@protocol ContactUsViewControllerDelegate
+
+@end
+
 @interface ContactUsViewController : UIViewController <UIWebViewDelegate>
+
+@property (weak, nonatomic) id <ContactUsViewControllerDelegate> delegate;
 @property (strong, nonatomic) IBOutlet UIWebView *webView;
 @property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activity;
 

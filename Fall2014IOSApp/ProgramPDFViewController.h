@@ -8,7 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@class ProgramPDFViewController;
+
+@protocol ProgramPDFViewControllerDelegate
+
+@end
+
 @interface ProgramPDFViewController : UIViewController <UIWebViewDelegate>
+
+@property (weak, nonatomic) id <ProgramPDFViewControllerDelegate> delegate;
 @property (strong, nonatomic) IBOutlet UIWebView *webView;
 @property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activity;
 

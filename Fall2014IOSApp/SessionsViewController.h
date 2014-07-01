@@ -11,9 +11,9 @@
 #import "NotesViewController.h"
 #import <CoreData/CoreData.h>
 #import <EventKit/EventKit.h>
+#import "SurveyViewController.h"
 
-
-@interface SessionsViewController : UIViewController
+@interface SessionsViewController : UIViewController <NotesViewControllerDelegate, SurveyViewControllerDelegate,UIPopoverControllerDelegate>
 
 {
     UITextField * session1LabelText;
@@ -24,6 +24,8 @@
     
     
 }
+@property (strong, nonatomic) UIPopoverController *NotesPopoverController;
+@property (strong, nonatomic) UIPopoverController *SurveyPopoverController;
 @property (strong, nonatomic) IBOutlet UILabel *session1Label;
 @property (strong, nonatomic) IBOutlet UILabel *session1DateLabel;
 @property (strong, nonatomic) IBOutlet UILabel *session1TimeLabel;

@@ -9,8 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "NotesViewController.h"
 #import <CoreData/CoreData.h>
+#import "SurveyViewController.h"
 
-@interface AgendaDetailViewController : UIViewController
+@interface AgendaDetailViewController : UIViewController <NotesViewControllerDelegate, SurveyViewControllerDelegate,UIPopoverControllerDelegate>
+
+@property (strong, nonatomic) UIPopoverController *NotesPopoverController;
+@property (strong, nonatomic) UIPopoverController *SurveyPopoverController;
 
 @property (strong, nonatomic) IBOutlet UILabel *sessionNameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *sessionIdLabel;
