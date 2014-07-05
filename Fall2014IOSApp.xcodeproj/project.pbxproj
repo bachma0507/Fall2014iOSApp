@@ -457,6 +457,10 @@
 		4CAE7661179B1F6D004FF2FE /* PagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CAE7660179B1F6D004FF2FE /* PagerViewController.m */; };
 		4CAE7664179B206D004FF2FE /* CustomPagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CAE7663179B206D004FF2FE /* CustomPagerViewController.m */; };
 		4CAE7667179D86F1004FF2FE /* AllNotesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CAE7666179D86F1004FF2FE /* AllNotesCell.m */; };
+		4CBA1B231965A45300CC792B /* f14_exhibithall_floorplan_icon_iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CBA1B1F1965A45300CC792B /* f14_exhibithall_floorplan_icon_iphone.png */; };
+		4CBA1B241965A45300CC792B /* f14_exhibithall_floorplan_icon_iphone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CBA1B201965A45300CC792B /* f14_exhibithall_floorplan_icon_iphone@2x.png */; };
+		4CBA1B251965A45300CC792B /* f14_exhibithall_floorplan_icon_ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CBA1B211965A45300CC792B /* f14_exhibithall_floorplan_icon_ipad.png */; };
+		4CBA1B261965A45300CC792B /* f14_exhibithall_floorplan_icon_ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CBA1B221965A45300CC792B /* f14_exhibithall_floorplan_icon_ipad@2x.png */; };
 		4CBCB2C7180878EA008D4522 /* PFAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBCB2C6180878EA008D4522 /* PFAlertViewController.m */; };
 		4CBDD4AF1848DA70007A9002 /* axis.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CBDD4941848DA70007A9002 /* axis.png */; };
 		4CBDD4B01848DA70007A9002 /* brother_program.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CBDD4951848DA70007A9002 /* brother_program.png */; };
@@ -1361,6 +1365,10 @@
 		4CAE7663179B206D004FF2FE /* CustomPagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPagerViewController.m; sourceTree = "<group>"; };
 		4CAE7665179D86F1004FF2FE /* AllNotesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllNotesCell.h; sourceTree = "<group>"; };
 		4CAE7666179D86F1004FF2FE /* AllNotesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllNotesCell.m; sourceTree = "<group>"; };
+		4CBA1B1F1965A45300CC792B /* f14_exhibithall_floorplan_icon_iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = f14_exhibithall_floorplan_icon_iphone.png; sourceTree = "<group>"; };
+		4CBA1B201965A45300CC792B /* f14_exhibithall_floorplan_icon_iphone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "f14_exhibithall_floorplan_icon_iphone@2x.png"; sourceTree = "<group>"; };
+		4CBA1B211965A45300CC792B /* f14_exhibithall_floorplan_icon_ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = f14_exhibithall_floorplan_icon_ipad.png; sourceTree = "<group>"; };
+		4CBA1B221965A45300CC792B /* f14_exhibithall_floorplan_icon_ipad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "f14_exhibithall_floorplan_icon_ipad@2x.png"; sourceTree = "<group>"; };
 		4CBCB2C5180878EA008D4522 /* PFAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFAlertViewController.h; sourceTree = "<group>"; };
 		4CBCB2C6180878EA008D4522 /* PFAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFAlertViewController.m; sourceTree = "<group>"; };
 		4CBDD4941848DA70007A9002 /* axis.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = axis.png; sourceTree = "<group>"; };
@@ -2146,6 +2154,10 @@
 		4C36C691192E68940018AB39 /* Fall_2014_icons */ = {
 			isa = PBXGroup;
 			children = (
+				4CBA1B1F1965A45300CC792B /* f14_exhibithall_floorplan_icon_iphone.png */,
+				4CBA1B201965A45300CC792B /* f14_exhibithall_floorplan_icon_iphone@2x.png */,
+				4CBA1B211965A45300CC792B /* f14_exhibithall_floorplan_icon_ipad.png */,
+				4CBA1B221965A45300CC792B /* f14_exhibithall_floorplan_icon_ipad@2x.png */,
 				4C326EAB1962F0C6006D4B76 /* burger-alt2.png */,
 				4C326EAC1962F0C6006D4B76 /* burger-alt2@2x.png */,
 				4C326EA71962EF2A006D4B76 /* burger-alt.png */,
@@ -3443,6 +3455,7 @@
 				4C43CE991747421A008AAA9D /* pushio_config.json in Resources */,
 				4C894CF518A96E6D00001623 /* speakersC14_icon.png in Resources */,
 				4CD8DFAD193781C900A4326C /* speakers_568h@2x.png in Resources */,
+				4CBA1B261965A45300CC792B /* f14_exhibithall_floorplan_icon_ipad@2x.png in Resources */,
 				4C2368A517FB114E001843B4 /* favoritesW14_icon-568h@2x.png in Resources */,
 				4C76B09817F91A9A0017E71E /* home_tab_icon_unselected@2x.png in Resources */,
 				4CC1522C1935189700336A3C /* background_blurry2.png in Resources */,
@@ -3622,6 +3635,7 @@
 				4CAA50121767F96B00FB11F2 /* backbutton_green.png in Resources */,
 				4C326EA21962E714006D4B76 /* email-ipad.png in Resources */,
 				4C2368A317FB114E001843B4 /* favoritesW14_icon.png in Resources */,
+				4CBA1B241965A45300CC792B /* f14_exhibithall_floorplan_icon_iphone@2x.png in Resources */,
 				4CD8DF1F1937818900A4326C /* trainingexams@2x.png in Resources */,
 				4C2368B117FB114E001843B4 /* sessionsW14_icon_ipad@2x.png in Resources */,
 				4C23685C17FB1115001843B4 /* hotelW14_icon_ipad@2x.png in Resources */,
@@ -3732,6 +3746,7 @@
 				4C894E1B18AAB18500001623 /* trainingC14-icon-400x400_icon@2x.png in Resources */,
 				4CD8DED01937816600A4326C /* sessions.png in Resources */,
 				4C7EC2711779DEF200A73C8D /* facebookpost@2x.png in Resources */,
+				4CBA1B251965A45300CC792B /* f14_exhibithall_floorplan_icon_ipad.png in Resources */,
 				4CD6B57D1821F8440014A51D /* findactivitiesW14_icon.png in Resources */,
 				4CC1525919363FA500336A3C /* scenery1blur.png in Resources */,
 				4CD8DF1E1937818900A4326C /* sponsorsglow@2x.png in Resources */,
@@ -3804,6 +3819,7 @@
 				4CD8DEBD1937816600A4326C /* ehscheduleglow.png in Resources */,
 				4C894E0018AAAE6C00001623 /* hotelC14-icon-400x400_icon_ipad@2x.png in Resources */,
 				4CC8DC4A1820A4C5007B79AC /* shutterstock_meeting-iphone.png in Resources */,
+				4CBA1B231965A45300CC792B /* f14_exhibithall_floorplan_icon_iphone.png in Resources */,
 				4C2368CC17FB116E001843B4 /* confschedW14_icon@2x.png in Resources */,
 				4CD8DFE6193781E300A4326C /* favexhibitors-ipad@2x.png in Resources */,
 				4CD8DF52193781AB00A4326C /* exhibitors-ipad.png in Resources */,

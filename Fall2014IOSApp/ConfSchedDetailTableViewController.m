@@ -160,18 +160,18 @@
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    
-    SessionsDetailViewController *aViewController = [[SessionsDetailViewController alloc] initWithNibName:@"SessionsDetailViewController" bundle:nil];
-    UIPopoverController *popoverController = [[UIPopoverController alloc]
-                                              initWithContentViewController:aViewController];
-    
-    popoverController.popoverContentSize = CGSizeMake(320, 416);
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    [popoverController presentPopoverFromRect:cell.bounds inView:cell.contentView
-                     permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
-}
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    
+//    SessionsDetailViewController *aViewController = [[SessionsDetailViewController alloc] initWithNibName:@"SessionsDetailViewController" bundle:nil];
+//    UIPopoverController *popoverController = [[UIPopoverController alloc]
+//                                              initWithContentViewController:aViewController];
+//    
+//    popoverController.popoverContentSize = CGSizeMake(320, 416);
+//    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+//    [popoverController presentPopoverFromRect:cell.bounds inView:cell.contentView
+//                     permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+//}
 
 -(void)refreshTable{
     
@@ -217,20 +217,20 @@
 }
 
 
-//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-//{
-//    if ([segue.identifier isEqualToString:@"sessionsDetailCell"])
-//    {
-//        
-//                        
-//            NSIndexPath * indexPath = [self.tableView indexPathForSelectedRow];
-//            SessionsDetailViewController *destViewController = segue.destinationViewController;
-//            destViewController.mySessions = [self.myObjects objectAtIndex:indexPath.row];
-//            
-//            
-//        }
-//    
-//}
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"sessionsDetailCell"])
+    {
+        
+                        
+            NSIndexPath * indexPath = [self.tableView indexPathForSelectedRow];
+            SessionsDetailViewController *destViewController = segue.destinationViewController;
+            destViewController.mySessions = [self.myObjects objectAtIndex:indexPath.row];
+            
+            
+        }
+    
+}
 
 
 /*
