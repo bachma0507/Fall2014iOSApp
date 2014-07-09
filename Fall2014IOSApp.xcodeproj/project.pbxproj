@@ -433,6 +433,7 @@
 		4C894E2718AD50A000001623 /* findactvitiesC14-icon-400x400_icon_ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C894E2618AD50A000001623 /* findactvitiesC14-icon-400x400_icon_ipad@2x.png */; };
 		4C894E2B18AD821E00001623 /* HotelWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C894E2A18AD821E00001623 /* HotelWebViewController.m */; };
 		4C894E3A18AFE6E400001623 /* ComMeetingsMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C894E3918AFE6E400001623 /* ComMeetingsMainViewController.m */; };
+		4C8A593D196D6BF600F5E01D /* FindAreaActivitiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8A593C196D6BF600F5E01D /* FindAreaActivitiesViewController.m */; };
 		4C8A8348177B7CC100022E03 /* exhibitors.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8A8347177B7CC100022E03 /* exhibitors.m */; };
 		4C8A834B177B7ECF00022E03 /* ExhibitorsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8A834A177B7ECF00022E03 /* ExhibitorsViewController.m */; };
 		4C8A834E177B80B800022E03 /* ExhibitorsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8A834D177B80B800022E03 /* ExhibitorsDetailViewController.m */; };
@@ -1327,6 +1328,8 @@
 		4C894E2A18AD821E00001623 /* HotelWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotelWebViewController.m; sourceTree = "<group>"; };
 		4C894E3818AFE6E400001623 /* ComMeetingsMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComMeetingsMainViewController.h; sourceTree = "<group>"; };
 		4C894E3918AFE6E400001623 /* ComMeetingsMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComMeetingsMainViewController.m; sourceTree = "<group>"; };
+		4C8A593B196D6BF600F5E01D /* FindAreaActivitiesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindAreaActivitiesViewController.h; sourceTree = "<group>"; };
+		4C8A593C196D6BF600F5E01D /* FindAreaActivitiesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindAreaActivitiesViewController.m; sourceTree = "<group>"; };
 		4C8A8346177B7CC100022E03 /* exhibitors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = exhibitors.h; sourceTree = "<group>"; };
 		4C8A8347177B7CC100022E03 /* exhibitors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = exhibitors.m; sourceTree = "<group>"; };
 		4C8A8349177B7ECF00022E03 /* ExhibitorsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExhibitorsViewController.h; sourceTree = "<group>"; };
@@ -2936,6 +2939,8 @@
 				4CD8E096193811D700A4326C /* yelp */,
 				4C3C390518219B2600927FFD /* GooglePlacesViewController.h */,
 				4C3C390618219B2600927FFD /* GooglePlacesViewController.m */,
+				4C8A593B196D6BF600F5E01D /* FindAreaActivitiesViewController.h */,
+				4C8A593C196D6BF600F5E01D /* FindAreaActivitiesViewController.m */,
 			);
 			name = FindAreaActivities;
 			sourceTree = "<group>";
@@ -4170,6 +4175,7 @@
 				4C088C6F177F667500CFBC96 /* MagicalRecord+Options.m in Sources */,
 				4CD8E0771937E42F00A4326C /* NSMutableURLRequest+Parameters.m in Sources */,
 				4C088C70177F667500CFBC96 /* MagicalRecord+Setup.m in Sources */,
+				4C8A593D196D6BF600F5E01D /* FindAreaActivitiesViewController.m in Sources */,
 				4C088C71177F667500CFBC96 /* MagicalRecord+ShorthandSupport.m in Sources */,
 				4C5D81B418D77ECE0085C451 /* iPadReportViewController.m in Sources */,
 				4C088C72177F667500CFBC96 /* MagicalRecord.m in Sources */,

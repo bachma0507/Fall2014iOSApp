@@ -209,9 +209,10 @@
     
     [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"NOT (sessionID CONTAINS 'BODM')"]];
     
-    NSSortDescriptor *sortDescriptor1 = [[NSSortDescriptor alloc] initWithKey:@"sessionDate" ascending:YES];
+    NSSortDescriptor *sortDescriptor1 = [[NSSortDescriptor alloc] initWithKey:@"trueDate" ascending:YES];
     NSSortDescriptor *sortDescriptor2 = [[NSSortDescriptor alloc] initWithKey:@"startTime" ascending:YES];
     NSArray *sortDescriptors = [NSArray arrayWithObjects:sortDescriptor1, sortDescriptor2, nil];
+
     
     [fetchRequest setSortDescriptors:sortDescriptors];
     
@@ -241,18 +242,22 @@
     
     tempDict = nil;
     tempDict = [[NSMutableDictionary alloc] init];
+        
+
     
-    NSString *strPrevDate= [[myResults objectAtIndex:0] valueForKey:@"sessionDate"];
+    NSString *strPrevDate= [[myResults objectAtIndex:0] valueForKey:@"sessionDay"];
     NSString *strCurrDate = nil;
     NSMutableArray *tempArray = [[NSMutableArray alloc] init];
     //Add the Similar Date data in An Array then add this array to Dictionary
     //With date name as a Key. It helps to easily create section in table.
     for(int i=0; i< [myResults count]; i++)
     {
-        strCurrDate = [[myResults objectAtIndex:i] valueForKey:@"sessionDate"];
+        
+        strCurrDate = [[myResults objectAtIndex:i] valueForKey:@"sessionDay"];
         
         if ([strCurrDate isEqualToString:strPrevDate])
-        {
+         {
+    
             [tempArray addObject:[myResults objectAtIndex:i]];
         }
         else

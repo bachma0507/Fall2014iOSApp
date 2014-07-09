@@ -470,7 +470,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hrk-mx-Ief" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2190" y="-3102"/>
+            <point key="canvasLocation" x="2284" y="-3197"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Ab1-y2-rlm">
@@ -1584,16 +1584,22 @@
             </objects>
             <point key="canvasLocation" x="2877" y="598"/>
         </scene>
-        <!--View Controller-->
+        <!--Find Area Activities View Controller-->
         <scene sceneID="uqb-mT-THj">
             <objects>
-                <viewController id="dy6-g4-Jyw" sceneMemberID="viewController">
+                <viewController id="dy6-g4-Jyw" customClass="FindAreaActivitiesViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zgF-p3-YTu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999998807907104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2sQ-k1-fHb">
+                                <rect key="frame" x="12" y="162" width="295" height="263"/>
+                                <color key="backgroundColor" red="0.63137254899999995" green="0.73333333329999995" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Y5d-Iu-VqP">
-                                <rect key="frame" x="60" y="115" width="176" height="30"/>
+                                <rect key="frame" x="60" y="225" width="176" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="Touch Commands">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1603,7 +1609,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nqn-xh-voF">
-                                <rect key="frame" x="58" y="184" width="180" height="30"/>
+                                <rect key="frame" x="58" y="294" width="180" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="Voice Commands">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1613,22 +1619,41 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find area activities by:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hjF-kI-1Qb">
-                                <rect key="frame" x="58" y="64" width="226" height="29"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <rect key="frame" x="58" y="191" width="226" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Powered By Yelp" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="t97-5B-8hD">
-                                <rect key="frame" x="100" y="205" width="97" height="21"/>
+                                <rect key="frame" x="100" y="315" width="97" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yelp_logo.png" id="uir-3m-ihK">
-                                <rect key="frame" x="97" y="222" width="100" height="50"/>
+                                <rect key="frame" x="97" y="332" width="100" height="50"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="powered-by-google-on-white.png" id="ekl-8O-gbS">
-                                <rect key="frame" x="95" y="141" width="104" height="16"/>
+                                <rect key="frame" x="95" y="251" width="104" height="16"/>
                             </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vkP-e9-DOA">
+                                <rect key="frame" x="13" y="82" width="295" height="72"/>
+                                <color key="backgroundColor" red="0.63137254899999995" green="0.73333333329999995" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" id="Qsw-MT-2MS">
+                                <rect key="frame" x="9" y="81" width="303" height="43"/>
+                                <state key="normal" title="BICSI Welcomes You to Anaheim/Orange County!"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="dy6-g4-Jyw" eventType="touchUpInside" id="y5g-Ca-HBS"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap link above for more info" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="D2u-by-vzu">
+                                <rect key="frame" x="37" y="122" width="245" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>

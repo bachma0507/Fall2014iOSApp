@@ -706,6 +706,7 @@ int iNotificationCounter=0;
                     NSString * sStatus = [[json objectAtIndex:i] objectForKey:@"sessionStatus"];
                     NSString * sDay = [[json objectAtIndex:i] objectForKey:@"sessionDay"];
                     NSString * sDate = [[json objectAtIndex:i] objectForKey:@"sessionDate"];
+                    NSString * tDate = [[json objectAtIndex:i] objectForKey:@"trueDate"];
                     NSString * sTime = [[json objectAtIndex:i] objectForKey:@"sessionTime"];
                     NSString * sName = [[json objectAtIndex:i] objectForKey:@"sessionName"];
                     NSString * sSpeaker1 = [[json objectAtIndex:i] objectForKey:@"sessionSpeaker1"];
@@ -728,7 +729,7 @@ int iNotificationCounter=0;
                     NSString * sLocation = [[json objectAtIndex:i] objectForKey:@"location"];
                     NSString * sStartTimeStr = [[json objectAtIndex:i] objectForKey:@"startTimeStr"];
                     
-                    Sessions * mySessions = [[Sessions alloc] initWithID:sID andSessionStatus:sStatus andSessionDay:sDay andSessionDate:sDate andSessionTime:sTime andSessionName:sName andSessionSpeaker1:sSpeaker1 andSpeaker1Company:sSpeaker1Company andSessionSpeaker2:sSpeaker2 andSpeaker2Company:sSpeaker2Company andSessionSpeaker3:sSpeaker3 andSpeaker3Company:sSpeaker3Company andSessionSpeaker4:sSpeaker4 andSpeaker4Company:sSpeaker4Company andSessionSpeaker5:sSpeaker5 andSpeaker5Company:sSpeaker5Company andSessionSpeaker6:sSpeaker6 andSpeaker6Company:sSpeaker6Company andSessionDesc:sDesc andITSCECS:sITSCECS andSessionID:sSessionID andStartTime:sStartTime andEndTime:sEndTime andLocation:sLocation andStartTimeStr:sStartTimeStr];
+                    Sessions * mySessions = [[Sessions alloc] initWithID:sID andSessionStatus:sStatus andSessionDay:sDay andSessionDate:sDate andTrueDate:tDate andSessionTime:sTime andSessionName:sName andSessionSpeaker1:sSpeaker1 andSpeaker1Company:sSpeaker1Company andSessionSpeaker2:sSpeaker2 andSpeaker2Company:sSpeaker2Company andSessionSpeaker3:sSpeaker3 andSpeaker3Company:sSpeaker3Company andSessionSpeaker4:sSpeaker4 andSpeaker4Company:sSpeaker4Company andSessionSpeaker5:sSpeaker5 andSpeaker5Company:sSpeaker5Company andSessionSpeaker6:sSpeaker6 andSpeaker6Company:sSpeaker6Company andSessionDesc:sDesc andITSCECS:sITSCECS andSessionID:sSessionID andStartTime:sStartTime andEndTime:sEndTime andLocation:sLocation andStartTimeStr:sStartTimeStr];
                     
                     //Add our sessions object to our sessionsArray
                     [sessionsArray addObject:mySessions];
@@ -755,6 +756,16 @@ int iNotificationCounter=0;
                         [newManagedObject setValue:mySessions.sessionStatus forKey:@"sessionStatus"];
                         [newManagedObject setValue:mySessions.sessionDay forKey:@"sessionDay"];
                         [newManagedObject setValue:mySessions.sessionDate forKey:@"sessionDate"];
+                        NSDateFormatter *dft = [[NSDateFormatter alloc] init];
+                        [dft setDateFormat:@"MMM dd yyyy"];
+                        NSDate *stDate = [dft dateFromString: mySessions.trueDate];
+                        [newManagedObject setValue:stDate forKey:@"trueDate"];
+                        
+//                        NSDateFormatter *dfy = [[NSDateFormatter alloc] init];
+//                        [dfy setDateFormat:@"MMM d yyyy"];
+//                        NSDate *sessDate = [dfy dateFromString: mySessions.sessionDate];
+//                        [newManagedObject setValue:sessDate forKey:@"sessionDate"];
+                        
                         [newManagedObject setValue:mySessions.sessionTime forKey:@"sessionTime"];
                         [newManagedObject setValue:mySessions.sessionSpeaker1 forKey:@"sessionSpeaker1"];
                         [newManagedObject setValue:mySessions.sessionSpeaker2 forKey:@"sessionSpeaker2"];
@@ -772,10 +783,12 @@ int iNotificationCounter=0;
                         [newManagedObject setValue:mySessions.sessionDesc forKey:@"sessionDesc"];
                         [newManagedObject setValue:mySessions.sessionID forKey:@"sessionID"];
                         //[newManagedObject setValue:mySessions.startTime forKey:@"startTime"];
+                        
                         NSDateFormatter *df = [[NSDateFormatter alloc] init];
                         [df setDateFormat:@"hh:mm a"];
                         NSDate *sessTime = [df dateFromString: mySessions.startTime];
                         [newManagedObject setValue:sessTime forKey:@"startTime"];
+                        
                         [newManagedObject setValue:mySessions.endTime forKey:@"endTime"];
                         NSString * myLocation3 = [[NSString alloc] initWithFormat:@"%@",mySessions.location];
                         [newManagedObject setValue:myLocation3 forKey:@"location"];
@@ -803,7 +816,16 @@ int iNotificationCounter=0;
             });
         });
         
+//        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+//        [formatter setDateFormat:@"MMM d yyyy"];
+//        NSString* string=@"Sep 28 2014";
+//        NSDate *dat = [formatter dateFromString:string];
+//        
+//        NSString *dateString = [formatter stringFromDate:dat];
+//        
+//        NSLog(@"The formatted date is:%@", dateString);
         
+        //[formatter setDateFormat:@"dd MM yyyy"];
         
         //-------------------------
         

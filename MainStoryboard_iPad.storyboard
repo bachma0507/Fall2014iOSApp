@@ -638,7 +638,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Cs-63-X57" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="278" y="-1254"/>
+            <point key="canvasLocation" x="1426" y="98"/>
         </scene>
         <!--Start Page View Controller - Item-->
         <scene sceneID="8Ge-6H-E4o">
@@ -879,7 +879,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="mae-r4-sCs" kind="push" id="AAf-Dv-7Lb"/>
+                                    <segue destination="oab-hX-C0D" kind="push" id="ubP-CQ-Zih"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" text="Committee Meetings" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gJN-nZ-Yfl">
@@ -1372,6 +1372,69 @@
             </objects>
             <point key="canvasLocation" x="484" y="-2494"/>
         </scene>
+        <!--Find Area Activities View Controller-->
+        <scene sceneID="RS1-ee-KWv">
+            <objects>
+                <viewController id="oab-hX-C0D" customClass="FindAreaActivitiesViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KTd-Ji-ejz">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="P5g-eN-6tO">
+                                <rect key="frame" x="146" y="182" width="476" height="83"/>
+                                <color key="backgroundColor" red="0.63137254899999995" green="0.73333333329999995" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999998807907104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9hu-NA-qW2">
+                                <rect key="frame" x="146" y="398" width="476" height="118"/>
+                                <color key="backgroundColor" red="0.63137254899999995" green="0.73333333329999995" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="img-gb-7gs">
+                                <rect key="frame" x="146" y="188" width="476" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="BICSI Welcomes You to Anaheim/Orange County!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="oab-hX-C0D" eventType="touchUpInside" id="l7a-xb-hZz"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap link above for more info" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2pb-88-OCz">
+                                <rect key="frame" x="247" y="226" width="274" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="LFB-pa-lY8">
+                                <rect key="frame" x="222" y="440" width="324" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Touch Commands">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="mae-r4-sCs" kind="push" id="H9C-0a-AvU"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find area activites by using:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rqi-bk-FAK">
+                                <rect key="frame" x="239" y="411" width="291" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="powered-by-google-on-white.png" id="6ZH-BQ-R7J">
+                                <rect key="frame" x="332" y="478" width="104" height="16"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="z9T-ln-Mhy"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ojQ-UJ-OM9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-526" y="-1318"/>
+        </scene>
         <!--Google Places View Controller - Find Area Activities-->
         <scene sceneID="5vE-Pz-nvo">
             <objects>
@@ -1423,7 +1486,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7wM-Wj-fug" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="236" y="-2082"/>
+            <point key="canvasLocation" x="494" y="-1318"/>
         </scene>
         <!--ProgramPDF View Controller - Presentations (PDF)-->
         <scene sceneID="S2H-oP-XQd">
@@ -1524,7 +1587,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sEu-j4-Mfi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="484" y="-139"/>
+            <point key="canvasLocation" x="-304" y="-95"/>
         </scene>
         <!--Agenda Table View Controller - My Planner-->
         <scene sceneID="xXC-sT-Dot">
@@ -3399,6 +3462,7 @@
         <image name="myagendaglow-ipad.png" width="120" height="120"/>
         <image name="mynotes-ipad.png" width="120" height="120"/>
         <image name="mynotesglow-ipad.png" width="120" height="120"/>
+        <image name="powered-by-google-on-white.png" width="104" height="16"/>
         <image name="programC14-icon-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="reload30x30.png" width="30" height="30"/>
         <image name="scenery5.png" width="320" height="480"/>

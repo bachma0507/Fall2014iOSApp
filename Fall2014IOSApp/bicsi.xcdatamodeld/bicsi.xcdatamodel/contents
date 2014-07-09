@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3396" systemVersion="12F45" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5063" systemVersion="12F45" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Cschedule" syncable="YES">
         <attribute name="date" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="day" optional="YES" attributeType="String" syncable="YES"/>
@@ -63,6 +63,7 @@
         <attribute name="speaker6Company" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="startTime" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="startTimeStr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="trueDate" optional="YES" attributeType="Date" syncable="YES"/>
     </entity>
     <entity name="Sessnotes" syncable="YES">
         <attribute name="agenda" optional="YES" attributeType="String" syncable="YES"/>
@@ -70,6 +71,7 @@
         <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="notes" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="sessiondate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sessionday" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="sessionID" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="sessionname" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="sessiontime" optional="YES" attributeType="String" syncable="YES"/>
@@ -122,16 +124,16 @@
         <attribute name="todoId" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Exhibitors" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Favorites" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Sessions" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Sessnotes" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Speakers" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Timeinterval" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Todo" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Sponsors" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Cschedule" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Ehschedule" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Html" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Cschedule" positionX="0" positionY="0" width="128" height="105"/>
+        <element name="Ehschedule" positionX="0" positionY="0" width="128" height="120"/>
+        <element name="Exhibitors" positionX="0" positionY="0" width="128" height="165"/>
+        <element name="Favorites" positionX="0" positionY="0" width="128" height="150"/>
+        <element name="Html" positionX="0" positionY="0" width="128" height="90"/>
+        <element name="Sessions" positionX="0" positionY="0" width="128" height="433"/>
+        <element name="Sessnotes" positionX="0" positionY="0" width="128" height="208"/>
+        <element name="Speakers" positionX="0" positionY="0" width="128" height="420"/>
+        <element name="Sponsors" positionX="0" positionY="0" width="128" height="165"/>
+        <element name="Timeinterval" positionX="0" positionY="0" width="128" height="60"/>
+        <element name="Todo" positionX="0" positionY="0" width="128" height="90"/>
     </elements>
 </model>

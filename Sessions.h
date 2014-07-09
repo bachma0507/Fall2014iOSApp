@@ -14,6 +14,7 @@
 @property (nonatomic, strong) NSString * sessionStatus;
 @property (nonatomic, strong) NSString * sessionDay;
 @property (nonatomic, strong) NSString * sessionDate;
+@property (nonatomic, strong) NSString * trueDate;
 @property (nonatomic, strong) NSString * sessionTime;
 @property (nonatomic, strong) NSString * sessionName;
 @property (nonatomic, strong) NSString * sessionSpeaker1;
@@ -39,6 +40,6 @@
 
 
 //methods
--(id) initWithID: (NSString *) sID andSessionStatus: (NSString *) sStatus andSessionDay: (NSString *) sDay andSessionDate: (NSString *) sDate andSessionTime: (NSString *) sTime andSessionName: (NSString *) sName andSessionSpeaker1: (NSString *) sSpeaker1 andSpeaker1Company: (NSString *) sSpeaker1Company andSessionSpeaker2: (NSString *) sSpeaker2 andSpeaker2Company: (NSString *) sSpeaker2Company andSessionSpeaker3: (NSString *) sSpeaker3 andSpeaker3Company: (NSString *) sSpeaker3Company andSessionSpeaker4: (NSString *) sSpeaker4 andSpeaker4Company: (NSString *) sSpeaker4Company andSessionSpeaker5: (NSString *) sSpeaker5 andSpeaker5Company: (NSString *) sSpeaker5Company andSessionSpeaker6: (NSString *) sSpeaker6 andSpeaker6Company: (NSString *) sSpeaker6Company andSessionDesc: (NSString *) sDesc andITSCECS: (NSString *) sITSCECS andSessionID: (NSString *) sSessionID andStartTime: (NSString *) sStartTime andEndTime: (NSString *) sEndTime andLocation: (NSString *) sLocation andStartTimeStr: (NSString *) sStartTimeStr;
+-(id) initWithID: (NSString *) sID andSessionStatus: (NSString *) sStatus andSessionDay: (NSString *) sDay andSessionDate: (NSString *) sDate andTrueDate: (NSString *) tDate andSessionTime: (NSString *) sTime andSessionName: (NSString *) sName andSessionSpeaker1: (NSString *) sSpeaker1 andSpeaker1Company: (NSString *) sSpeaker1Company andSessionSpeaker2: (NSString *) sSpeaker2 andSpeaker2Company: (NSString *) sSpeaker2Company andSessionSpeaker3: (NSString *) sSpeaker3 andSpeaker3Company: (NSString *) sSpeaker3Company andSessionSpeaker4: (NSString *) sSpeaker4 andSpeaker4Company: (NSString *) sSpeaker4Company andSessionSpeaker5: (NSString *) sSpeaker5 andSpeaker5Company: (NSString *) sSpeaker5Company andSessionSpeaker6: (NSString *) sSpeaker6 andSpeaker6Company: (NSString *) sSpeaker6Company andSessionDesc: (NSString *) sDesc andITSCECS: (NSString *) sITSCECS andSessionID: (NSString *) sSessionID andStartTime: (NSString *) sStartTime andEndTime: (NSString *) sEndTime andLocation: (NSString *) sLocation andStartTimeStr: (NSString *) sStartTimeStr;
 
 @end

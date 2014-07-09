@@ -92,7 +92,7 @@
 //        [self.pollButton setHidden:YES];
 //    }
     
-    if ([mySessions.sessionDay  isEqual: @""]) {
+    if (![mySessions.sessionDay  isEqual: @""]) {
         [self.pollButton setHidden:YES];
     }
     
@@ -277,6 +277,7 @@
         [newManagedObject setValue:self.mySessions.sessionID forKey:@"sessionID"];
         [newManagedObject setValue:self.sessionNameLabel.text forKey:@"sessionname"];
         [newManagedObject setValue:self.sessionDateLabel.text forKey:@"sessiondate"];
+        [newManagedObject setValue:self.mySessions.sessionDay forKey:@"sessionday"];
         [newManagedObject setValue:self.sessionTimeLabel.text forKey:@"sessiontime"];
         [newManagedObject setValue:self.locationLabel.text forKey:@"location"];
         //[newManagedObject setValue:self.mySessions.startTime forKey:@"starttime"];
