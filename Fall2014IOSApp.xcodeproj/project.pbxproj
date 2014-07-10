@@ -181,7 +181,7 @@
 		4C2D69FD174541100053BCC0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C2D69FC174541100053BCC0 /* CoreGraphics.framework */; };
 		4C2D6A03174541100053BCC0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C2D6A01174541100053BCC0 /* InfoPlist.strings */; };
 		4C2D6A05174541100053BCC0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2D6A04174541100053BCC0 /* main.m */; };
-		4C2D6A09174541100053BCC0 /* Fall2013IOSAppAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2D6A08174541100053BCC0 /* Fall2013IOSAppAppDelegate.m */; };
+		4C2D6A09174541100053BCC0 /* Fall2013IOSAppAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2D6A08174541100053BCC0 /* Fall2013IOSAppAppDelegate.m */; settings = {COMPILER_FLAGS = "-w"; }; };
 		4C2D6A18174541100053BCC0 /* Fall2013IOSAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2D6A17174541100053BCC0 /* Fall2013IOSAppViewController.m */; };
 		4C2D6A35174697D80053BCC0 /* AppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2D6A34174697D80053BCC0 /* AppViewController.m */; };
 		4C2D6A3817469DE00053BCC0 /* notificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2D6A3717469DE00053BCC0 /* notificationViewController.m */; };
@@ -454,7 +454,7 @@
 		4CA8A0E217ACA54E006957DB /* home_icon_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CA8A0DE17ACA54E006957DB /* home_icon_selected.png */; };
 		4CA8A0E317ACA54E006957DB /* home_icon_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CA8A0DF17ACA54E006957DB /* home_icon_selected@2x.png */; };
 		4CAA50121767F96B00FB11F2 /* backbutton_green.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CAA50111767F96B00FB11F2 /* backbutton_green.png */; };
-		4CACEAC21776B5D400E90BD8 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CACEAC11776B5D400E90BD8 /* MBProgressHUD.m */; };
+		4CACEAC21776B5D400E90BD8 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CACEAC11776B5D400E90BD8 /* MBProgressHUD.m */; settings = {COMPILER_FLAGS = "-w"; }; };
 		4CAE7661179B1F6D004FF2FE /* PagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CAE7660179B1F6D004FF2FE /* PagerViewController.m */; };
 		4CAE7664179B206D004FF2FE /* CustomPagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CAE7663179B206D004FF2FE /* CustomPagerViewController.m */; };
 		4CAE7667179D86F1004FF2FE /* AllNotesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CAE7666179D86F1004FF2FE /* AllNotesCell.m */; };
@@ -4333,7 +4333,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Fall2014IOSApp/Fall2014IOSApp-Prefix.pch";
 				INFOPLIST_FILE = "Fall2014IOSApp/Fall2014IOSApp-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/CrittercismSDK",
@@ -4360,7 +4360,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Fall2014IOSApp/Fall2014IOSApp-Prefix.pch";
 				INFOPLIST_FILE = "Fall2014IOSApp/Fall2014IOSApp-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/CrittercismSDK",
