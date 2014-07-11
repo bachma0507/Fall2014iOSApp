@@ -37,7 +37,7 @@
     webView.delegate = self;
     
     
-    NSString *httpSource = @"http://barrycjulien.com/floormap/entrancehallinfocan14.htm";
+    NSString *httpSource = @"http://barrycjulien.com/floormap/sessionroomsfall14.htm";
     NSURL *fullUrl = [NSURL URLWithString:httpSource];
     NSURLRequest *httpRequest = [NSURLRequest requestWithURL:fullUrl];
     [webView loadRequest:httpRequest];

@@ -113,11 +113,11 @@
     [activity stopAnimating];
     activity.hidden = TRUE;
     
-    [webView stringByEvaluatingJavaScriptFromString:@"var link = document.createElement('link');"
-     "link.type = 'text/css';"
-     "link.rel = 'stylesheet';"
-     "link.href = 'http://www.bicsi.org/m/themes/mobile_custom.css';"
-     "document.getElementsByTagName('head')[0].appendChild(link);"];
+//    [webView stringByEvaluatingJavaScriptFromString:@"var link = document.createElement('link');"
+//     "link.type = 'text/css';"
+//     "link.rel = 'stylesheet';"
+//     "link.href = 'http://www.bicsi.org/m/themes/mobile_custom.css';"
+//     "document.getElementsByTagName('head')[0].appendChild(link);"];
     
 
 

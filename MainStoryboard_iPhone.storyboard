@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="HQR-0g-mm0">
     <dependencies>
-        <deployment defaultVersion="1552" identifier="iOS"/>
+        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
@@ -1962,7 +1962,7 @@
             </objects>
             <point key="canvasLocation" x="1736" y="408"/>
         </scene>
-        <!--Entrance Hall Floor Plan View Controller - Main Hall Floor Map-->
+        <!--Entrance Hall Floor Plan View Controller - Session Rooms Floor Map-->
         <scene sceneID="DXN-wx-rrZ">
             <objects>
                 <viewController id="Wvj-Fe-nCb" customClass="EntranceHallFloorPlanViewController" sceneMemberID="viewController">
@@ -1984,7 +1984,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
-                    <navigationItem key="navigationItem" title="Main Hall Floor Map" id="YZ7-XU-laV"/>
+                    <navigationItem key="navigationItem" title="Session Rooms Floor Map" id="YZ7-XU-laV"/>
                     <connections>
                         <outlet property="activity" destination="2Mw-zK-tB8" id="C4F-ry-fxF"/>
                         <outlet property="webView" destination="WAz-e1-gqd" id="CKS-Va-gbb"/>
@@ -2144,7 +2144,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2fW-Vu-ZOs">
-                                <rect key="frame" x="11" y="216" width="145" height="132"/>
+                                <rect key="frame" x="88" y="68" width="145" height="38"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -2152,17 +2152,17 @@
                                     <segue destination="Wvj-Fe-nCb" kind="push" id="Zpd-Q8-3vg"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="entrancehall_floorplan_icon_iphone.png" id="BPo-oe-jnp">
-                                <rect key="frame" x="11" y="216" width="144" height="133"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fall2014_session_rooms_iphone.png" id="BPo-oe-jnp">
+                                <rect key="frame" x="88" y="68" width="145" height="38"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Main Hall Floor Map (Tap)" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aWX-C3-bTk">
-                                <rect key="frame" x="26" y="357" width="114" height="57"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Session Rooms Floor Map (Tap)" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aWX-C3-bTk">
+                                <rect key="frame" x="103" y="101" width="114" height="57"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="rvp-qH-zP9">
-                                <rect key="frame" x="162" y="105" width="145" height="243"/>
+                                <rect key="frame" x="88" y="163" width="145" height="243"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -2171,10 +2171,10 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="f14_exhibithall_floorplan_icon_iphone.png" id="7Wh-3a-nKp">
-                                <rect key="frame" x="162" y="105" width="145" height="244"/>
+                                <rect key="frame" x="88" y="177" width="145" height="244"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exhibit Hall Floor Map (Tap)" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aZk-dJ-MfC">
-                                <rect key="frame" x="177" y="357" width="114" height="57"/>
+                                <rect key="frame" x="103" y="415" width="114" height="57"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -4045,13 +4045,13 @@
         <image name="ehscheduleglow.png" width="50" height="50"/>
         <image name="email.png" width="50" height="50"/>
         <image name="emailglow.png" width="50" height="50"/>
-        <image name="entrancehall_floorplan_icon_iphone.png" width="145" height="189"/>
         <image name="exhibitors.png" width="50" height="50"/>
         <image name="exhibitorsglow.png" width="50" height="50"/>
         <image name="f14_exhibithall_floorplan_icon_iphone.png" width="145" height="244"/>
         <image name="facebook.png" width="64" height="64"/>
         <image name="facebook_button.png" width="111" height="27"/>
         <image name="facebookpost.png" width="270" height="50"/>
+        <image name="fall2014_session_rooms_iphone.png" width="145" height="38"/>
         <image name="favexhibitors.png" width="50" height="50"/>
         <image name="favexhibitorsglow.png" width="50" height="50"/>
         <image name="findactivity.png" width="50" height="50"/>

@@ -119,6 +119,21 @@
     return 1;
 }
 
+
+- (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section
+{
+    // Set the text color of our header/footer text.
+    UITableViewHeaderFooterView *header = (UITableViewHeaderFooterView *)view;
+    [header.textLabel setTextColor:[UIColor blackColor]];
+    
+    // Set the background color of our header/footer.
+    header.contentView.backgroundColor = [UIColor colorWithRed:249/255.0 green:255/255.0 blue:235/255.0 alpha:1.0];;
+    
+    // You can also do this to set the background color of our header/footer,
+    //    but the gradients/other effects will be retained.
+    // view.tintColor = [UIColor blackColor];
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.

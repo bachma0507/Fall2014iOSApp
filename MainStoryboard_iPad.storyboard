@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="12F45" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="xsZ-21-97U">
     <dependencies>
-        <deployment defaultVersion="1552" identifier="iOS"/>
+        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
@@ -46,7 +46,7 @@
             </objects>
             <point key="canvasLocation" x="5549" y="1528"/>
         </scene>
-        <!--Entrance Hall Floor Plan View Controller - Main Floor Map-->
+        <!--Entrance Hall Floor Plan View Controller - Session Rooms Floor Map-->
         <scene sceneID="OB2-yv-tQH">
             <objects>
                 <viewController id="jZU-sb-M1s" customClass="EntranceHallFloorPlanViewController" sceneMemberID="viewController">
@@ -68,7 +68,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
-                    <navigationItem key="navigationItem" title="Main Floor Map" id="O6z-DH-M5b"/>
+                    <navigationItem key="navigationItem" title="Session Rooms Floor Map" id="O6z-DH-M5b"/>
                     <connections>
                         <outlet property="activity" destination="3ND-tM-qJY" id="oPQ-AX-3SI"/>
                         <outlet property="webView" destination="W76-yL-hlO" id="xL8-uF-RM0"/>
@@ -1908,7 +1908,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KjM-fD-BTA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3379" y="553"/>
+            <point key="canvasLocation" x="-4903" y="613"/>
         </scene>
         <!--Conf Sched Table View Controller - Conference Schedule-->
         <scene sceneID="oNg-wY-Ylp">
@@ -2305,7 +2305,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UGE-vx-MpO">
-                                <rect key="frame" x="252" y="98" width="265" height="346"/>
+                                <rect key="frame" x="252" y="158" width="265" height="69"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -2314,11 +2314,11 @@
                                     <segue destination="jZU-sb-M1s" kind="push" id="ZL9-KA-lE0"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="entrancehall_floorplan_icon_ipad.png" id="6d9-6h-gwe">
-                                <rect key="frame" x="252" y="98" width="265" height="346"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fall2014_session_rooms_ipad.png" id="6d9-6h-gwe">
+                                <rect key="frame" x="252" y="158" width="265" height="69"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="X69-h5-tD0">
-                                <rect key="frame" x="252" y="606" width="265" height="247"/>
+                                <rect key="frame" x="252" y="532" width="265" height="247"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -2327,18 +2327,18 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="f14_exhibithall_floorplan_icon_ipad.png" id="ef6-5c-weu">
-                                <rect key="frame" x="252" y="503" width="265" height="446"/>
+                                <rect key="frame" x="252" y="429" width="265" height="446"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap on Main Floor Map below" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fKK-Xr-4sy">
-                                <rect key="frame" x="250" y="67" width="268" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap on Session Rooms Floor Map below" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fKK-Xr-4sy">
+                                <rect key="frame" x="215" y="129" width="339" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <color key="textColor" red="0.50196078431372548" green="0.5607843137254902" blue="0.58823529411764708" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap on Exhibit Hall Floor Map Below" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PVK-SZ-w4t">
-                                <rect key="frame" x="232" y="474" width="304" height="21"/>
+                                <rect key="frame" x="232" y="400" width="304" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <color key="textColor" red="0.50196078430000002" green="0.56078431370000004" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -2636,27 +2636,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="975"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="DgN-6k-Pif">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="54" sectionHeaderHeight="22" sectionFooterHeight="22" id="DgN-6k-Pif">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="975"/>
                                 <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="MZ2-iO-lAN" detailTextLabel="q31-sd-LNf" style="IBUITableViewCellStyleSubtitle" id="0Ha-W1-Xpn">
-                                        <rect key="frame" x="0.0" y="86" width="768" height="44"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="MZ2-iO-lAN" detailTextLabel="q31-sd-LNf" rowHeight="54" style="IBUITableViewCellStyleSubtitle" id="0Ha-W1-Xpn">
+                                        <rect key="frame" x="0.0" y="86" width="768" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0Ha-W1-Xpn" id="JRW-Po-AyD">
-                                            <rect key="frame" x="0.0" y="0.0" width="735" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="735" height="54"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MZ2-iO-lAN">
-                                                    <rect key="frame" x="15" y="4" width="36" height="22"/>
+                                                    <rect key="frame" x="15" y="9" width="36" height="22"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="q31-sd-LNf">
-                                                    <rect key="frame" x="15" y="26" width="43" height="15"/>
+                                                    <rect key="frame" x="15" y="31" width="43" height="15"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -3442,13 +3442,13 @@
         <image name="createuser_button_ipad.png" width="224" height="66"/>
         <image name="ehschedule-ipad.png" width="120" height="120"/>
         <image name="ehscheduleglow-ipad.png" width="120" height="120"/>
-        <image name="entrancehall_floorplan_icon_ipad.png" width="265" height="346"/>
         <image name="exhibitors-ipad.png" width="120" height="120"/>
         <image name="exhibitorsglow-ipad.png" width="120" height="120"/>
         <image name="f14_exhibithall_floorplan_icon_ipad.png" width="265" height="446"/>
         <image name="facebook.png" width="64" height="64"/>
         <image name="facebook_button_ipad.png" width="224" height="66"/>
         <image name="facebookpost_ipad.png" width="648" height="120"/>
+        <image name="fall2014_session_rooms_ipad.png" width="265" height="69"/>
         <image name="favexhibitors-ipad.png" width="120" height="120"/>
         <image name="favexhibitorsglow-ipad.png" width="120" height="120"/>
         <image name="favoritesC14-400x400_icon_ipad.png" width="120" height="120"/>
@@ -3488,10 +3488,10 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="llJ-MJ-Tf6"/>
+        <segue reference="muH-WA-dU8"/>
         <segue reference="eyd-89-hvr"/>
         <segue reference="zdp-PR-IH3"/>
+        <segue reference="xWE-49-eAT"/>
         <segue reference="SFt-NY-1lL"/>
-        <segue reference="muH-WA-dU8"/>
-        <segue reference="1Pj-Cp-vD7"/>
     </inferredMetricsTieBreakers>
 </document>
