@@ -971,11 +971,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="975"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scenery5.png" id="8zG-59-soy">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="contactus_background_ipad.png" id="8zG-59-soy">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="1007"/>
                             </imageView>
-                            <webView alpha="0.79999999999999982" contentMode="scaleToFill" id="9um-G4-bm6">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="976"/>
+                            <webView alpha="0.89999999999999991" contentMode="scaleToFill" id="9um-G4-bm6">
+                                <rect key="frame" x="42" y="93" width="684" height="789"/>
                                 <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
@@ -1496,11 +1496,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="975"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scenery5.png" id="adP-Wk-46z">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="presentation_background_ipad.png" id="adP-Wk-46z">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="1007"/>
                             </imageView>
-                            <webView alpha="0.79999999999999982" contentMode="scaleToFill" id="TcA-CJ-1Yg">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="976"/>
+                            <webView alpha="0.89999999999999991" contentMode="scaleToFill" id="TcA-CJ-1Yg">
+                                <rect key="frame" x="42" y="109" width="684" height="789"/>
                                 <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
@@ -2601,11 +2601,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="975"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shutterstock_training-ipad.png" id="WEm-NS-nru">
-                                <rect key="frame" x="186" y="13" width="397" height="298"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="training_background_ipad.png" id="2DA-5H-s2Z">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <webView contentMode="scaleToFill" id="q4v-Rq-PFJ">
-                                <rect key="frame" x="0.0" y="319" width="768" height="656"/>
+                            <webView alpha="0.90000000000000013" contentMode="scaleToFill" id="q4v-Rq-PFJ">
+                                <rect key="frame" x="42" y="117" width="684" height="789"/>
                                 <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
@@ -3399,11 +3400,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="975"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shutterstock_cec-ipad.png" id="uKJ-Bc-1ON">
-                                <rect key="frame" x="282" y="8" width="205" height="128"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cec_background_ipad.png" id="uKJ-Bc-1ON">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1023"/>
                             </imageView>
-                            <webView contentMode="scaleToFill" id="QcU-Ej-7bv">
-                                <rect key="frame" x="0.0" y="143" width="768" height="832"/>
+                            <webView alpha="0.89999999999999991" contentMode="scaleToFill" id="QcU-Ej-7bv">
+                                <rect key="frame" x="42" y="117" width="684" height="789"/>
                                 <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
@@ -3433,12 +3434,14 @@
         <image name="backbutton.png" width="50" height="30"/>
         <image name="burger-alt2.png" width="38" height="38"/>
         <image name="button-green_ipad.png" width="224" height="66"/>
+        <image name="cec_background_ipad.png" width="768" height="1024"/>
         <image name="comm_meetings_icon_ipad.png" width="120" height="120"/>
         <image name="committee-ipad.png" width="120" height="120"/>
         <image name="committeeglow-ipad.png" width="120" height="120"/>
         <image name="confsched-ipad.png" width="120" height="120"/>
         <image name="confschedglow-ipad.png" width="120" height="120"/>
         <image name="contactusC14-icon-400x400_icon_ipad.png" width="120" height="120"/>
+        <image name="contactus_background_ipad.png" width="768" height="1024"/>
         <image name="createuser_button_ipad.png" width="224" height="66"/>
         <image name="ehschedule-ipad.png" width="120" height="120"/>
         <image name="ehscheduleglow-ipad.png" width="120" height="120"/>
@@ -3463,19 +3466,19 @@
         <image name="mynotes-ipad.png" width="120" height="120"/>
         <image name="mynotesglow-ipad.png" width="120" height="120"/>
         <image name="powered-by-google-on-white.png" width="104" height="16"/>
+        <image name="presentation_background_ipad.png" width="768" height="1024"/>
         <image name="programC14-icon-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="reload30x30.png" width="30" height="30"/>
         <image name="scenery5.png" width="320" height="480"/>
         <image name="sessions-ipad.png" width="120" height="120"/>
         <image name="sessionsglow-ipad.png" width="120" height="120"/>
-        <image name="shutterstock_cec-ipad.png" width="205" height="128"/>
-        <image name="shutterstock_training-ipad.png" width="397" height="298"/>
         <image name="speakers-ipad.png" width="120" height="120"/>
         <image name="speakersglow-ipad.png" width="120" height="120"/>
         <image name="sponsors-ipad.png" width="120" height="120"/>
         <image name="sponsorsglow-ipad.png" width="120" height="120"/>
         <image name="take-survey_ipad.png" width="70" height="72"/>
         <image name="techsupportC14-icon-400x400_icon_ipad.png" width="120" height="120"/>
+        <image name="training_background_ipad.png" width="768" height="1024"/>
         <image name="twitter.png" width="64" height="64"/>
         <image name="twitterfeed_ipad.png" width="648" height="120"/>
         <image name="twitterpost_ipad.png" width="648" height="120"/>
