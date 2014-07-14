@@ -2152,7 +2152,7 @@
                                     <segue destination="Wvj-Fe-nCb" kind="push" id="Zpd-Q8-3vg"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fall2014_session_rooms_iphone.png" id="BPo-oe-jnp">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fall2014_new_session_rooms_iphone.png" id="BPo-oe-jnp">
                                 <rect key="frame" x="88" y="68" width="145" height="38"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Session Rooms Floor Map (Tap)" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aWX-C3-bTk">
@@ -4051,7 +4051,7 @@
         <image name="facebook.png" width="64" height="64"/>
         <image name="facebook_button.png" width="111" height="27"/>
         <image name="facebookpost.png" width="270" height="50"/>
-        <image name="fall2014_session_rooms_iphone.png" width="145" height="38"/>
+        <image name="fall2014_new_session_rooms_iphone.png" width="145" height="39"/>
         <image name="favexhibitors.png" width="50" height="50"/>
         <image name="favexhibitorsglow.png" width="50" height="50"/>
         <image name="findactivity.png" width="50" height="50"/>

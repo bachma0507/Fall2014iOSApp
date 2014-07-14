@@ -2314,7 +2314,7 @@
                                     <segue destination="jZU-sb-M1s" kind="push" id="ZL9-KA-lE0"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fall2014_session_rooms_ipad.png" id="6d9-6h-gwe">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fall2014_new_session_rooms_ipad.png" id="6d9-6h-gwe">
                                 <rect key="frame" x="252" y="158" width="265" height="69"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="X69-h5-tD0">
@@ -3451,7 +3451,7 @@
         <image name="facebook.png" width="64" height="64"/>
         <image name="facebook_button_ipad.png" width="224" height="66"/>
         <image name="facebookpost_ipad.png" width="648" height="120"/>
-        <image name="fall2014_session_rooms_ipad.png" width="265" height="69"/>
+        <image name="fall2014_new_session_rooms_ipad.png" width="265" height="71"/>
         <image name="favexhibitors-ipad.png" width="120" height="120"/>
         <image name="favexhibitorsglow-ipad.png" width="120" height="120"/>
         <image name="favoritesC14-400x400_icon_ipad.png" width="120" height="120"/>

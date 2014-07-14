@@ -300,6 +300,10 @@
 		4C6CFCF0197036A900AEB8B2 /* cec_background_ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C6CFCEA197036A900AEB8B2 /* cec_background_ipad@2x.png */; };
 		4C6CFCF1197036A900AEB8B2 /* contactus_background_ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C6CFCEB197036A900AEB8B2 /* contactus_background_ipad.png */; };
 		4C6CFCF2197036A900AEB8B2 /* contactus_background_ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C6CFCEC197036A900AEB8B2 /* contactus_background_ipad@2x.png */; };
+		4C6CFCF719743DDA00AEB8B2 /* fall2014_new_session_rooms_iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C6CFCF319743DDA00AEB8B2 /* fall2014_new_session_rooms_iphone.png */; };
+		4C6CFCF819743DDA00AEB8B2 /* fall2014_new_session_rooms_iphone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C6CFCF419743DDA00AEB8B2 /* fall2014_new_session_rooms_iphone@2x.png */; };
+		4C6CFCF919743DDA00AEB8B2 /* fall2014_new_session_rooms_ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C6CFCF519743DDA00AEB8B2 /* fall2014_new_session_rooms_ipad.png */; };
+		4C6CFCFA19743DDA00AEB8B2 /* fall2014_new_session_rooms_ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C6CFCF619743DDA00AEB8B2 /* fall2014_new_session_rooms_ipad@2x.png */; };
 		4C74593317567FF800A76417 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C74593217567FF800A76417 /* Security.framework */; };
 		4C7459351756801600A76417 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7459341756801600A76417 /* CoreData.framework */; };
 		4C7459371756802F00A76417 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7459361756802F00A76417 /* MobileCoreServices.framework */; };
@@ -1201,6 +1205,10 @@
 		4C6CFCEA197036A900AEB8B2 /* cec_background_ipad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cec_background_ipad@2x.png"; sourceTree = "<group>"; };
 		4C6CFCEB197036A900AEB8B2 /* contactus_background_ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = contactus_background_ipad.png; sourceTree = "<group>"; };
 		4C6CFCEC197036A900AEB8B2 /* contactus_background_ipad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "contactus_background_ipad@2x.png"; sourceTree = "<group>"; };
+		4C6CFCF319743DDA00AEB8B2 /* fall2014_new_session_rooms_iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fall2014_new_session_rooms_iphone.png; sourceTree = "<group>"; };
+		4C6CFCF419743DDA00AEB8B2 /* fall2014_new_session_rooms_iphone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fall2014_new_session_rooms_iphone@2x.png"; sourceTree = "<group>"; };
+		4C6CFCF519743DDA00AEB8B2 /* fall2014_new_session_rooms_ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fall2014_new_session_rooms_ipad.png; sourceTree = "<group>"; };
+		4C6CFCF619743DDA00AEB8B2 /* fall2014_new_session_rooms_ipad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fall2014_new_session_rooms_ipad@2x.png"; sourceTree = "<group>"; };
 		4C74593217567FF800A76417 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		4C7459341756801600A76417 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		4C7459361756802F00A76417 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
@@ -2181,6 +2189,10 @@
 		4C36C691192E68940018AB39 /* Fall_2014_icons */ = {
 			isa = PBXGroup;
 			children = (
+				4C6CFCF319743DDA00AEB8B2 /* fall2014_new_session_rooms_iphone.png */,
+				4C6CFCF419743DDA00AEB8B2 /* fall2014_new_session_rooms_iphone@2x.png */,
+				4C6CFCF519743DDA00AEB8B2 /* fall2014_new_session_rooms_ipad.png */,
+				4C6CFCF619743DDA00AEB8B2 /* fall2014_new_session_rooms_ipad@2x.png */,
 				4C6CFCE7197036A900AEB8B2 /* training_background_ipad.png */,
 				4C6CFCE8197036A900AEB8B2 /* training_background_ipad@2x.png */,
 				4C6CFCE9197036A900AEB8B2 /* cec_background_ipad.png */,
@@ -3516,6 +3528,7 @@
 				4C894DCB18AAAE6C00001623 /* sessionsC14-400x400_icon-568h@2x.png in Resources */,
 				4C23686217FB1115001843B4 /* committeeW14_icon.png in Resources */,
 				4CD8DFAB193781C900A4326C /* sessions_568h@2x.png in Resources */,
+				4C6CFCF819743DDA00AEB8B2 /* fall2014_new_session_rooms_iphone@2x.png in Resources */,
 				4C42864E1948A163007A5A11 /* scenery5_ipad@2x.png in Resources */,
 				4CD8DF021937818900A4326C /* confschedglow@2x.png in Resources */,
 				4C2368B317FB114E001843B4 /* ehscheduleW14_icon@2x.png in Resources */,
@@ -3663,6 +3676,7 @@
 				4CF824B91767C1E4005739AD /* connect_unselected.jpg in Resources */,
 				4C2368E917FB3708001843B4 /* button-green-568h@2x.png in Resources */,
 				4C894CEA18A82CA600001623 /* iphoneiOS7@2x.png in Resources */,
+				4C6CFCF719743DDA00AEB8B2 /* fall2014_new_session_rooms_iphone.png in Resources */,
 				4CF824BC1767C6B4005739AD /* facebookpost.png in Resources */,
 				4C894DAC18AAAE6C00001623 /* hotelC14-icon-400x400_icon@2x.png in Resources */,
 				4C894E1F18AD461E00001623 /* findactvitiesC14-icon-400x400_icon.png in Resources */,
@@ -3980,6 +3994,7 @@
 				4C6CFCE5197031EE00AEB8B2 /* presentation_background_ipad.png in Resources */,
 				4C246220178C9A2F00F0165B /* exams.html in Resources */,
 				4C76B09A17F91A9A0017E71E /* home_tab_icon_selected@2x.png in Resources */,
+				4C6CFCF919743DDA00AEB8B2 /* fall2014_new_session_rooms_ipad.png in Resources */,
 				4C23685B17FB1115001843B4 /* hotelW14_icon_ipad.png in Resources */,
 				4CD8DFEE193781E300A4326C /* myagenda-ipad@2x.png in Resources */,
 				4CE1B37C178FA929006EF171 /* beep-beep.aiff in Resources */,
@@ -4108,6 +4123,7 @@
 				4CC1522A1935189700336A3C /* background_blurry2_ipad@2x.png in Resources */,
 				4C6CFCE6197031EE00AEB8B2 /* presentation_background_ipad@2x.png in Resources */,
 				4C326EA91962EF2B006D4B76 /* burger-alt.png in Resources */,
+				4C6CFCFA19743DDA00AEB8B2 /* fall2014_new_session_rooms_ipad@2x.png in Resources */,
 				4C76B09917F91A9A0017E71E /* home_tab_icon_selected.png in Resources */,
 				4CFE26BB192FC41000597411 /* background_blurry_ipad.png in Resources */,
 				4C156C1A17D7E909008919A9 /* reload30x30.png in Resources */,
