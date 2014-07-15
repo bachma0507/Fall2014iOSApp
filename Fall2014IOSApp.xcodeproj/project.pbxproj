@@ -196,6 +196,8 @@
 		4C6CFCF819743DDA00AEB8B2 /* fall2014_new_session_rooms_iphone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C6CFCF419743DDA00AEB8B2 /* fall2014_new_session_rooms_iphone@2x.png */; };
 		4C6CFCF919743DDA00AEB8B2 /* fall2014_new_session_rooms_ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C6CFCF519743DDA00AEB8B2 /* fall2014_new_session_rooms_ipad.png */; };
 		4C6CFCFA19743DDA00AEB8B2 /* fall2014_new_session_rooms_ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C6CFCF619743DDA00AEB8B2 /* fall2014_new_session_rooms_ipad@2x.png */; };
+		4C6CFCFD19758E8D00AEB8B2 /* hotel_background_ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C6CFCFB19758E8D00AEB8B2 /* hotel_background_ipad.png */; };
+		4C6CFCFE19758E8D00AEB8B2 /* hotel_background_ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C6CFCFC19758E8D00AEB8B2 /* hotel_background_ipad@2x.png */; };
 		4C74593317567FF800A76417 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C74593217567FF800A76417 /* Security.framework */; };
 		4C7459351756801600A76417 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7459341756801600A76417 /* CoreData.framework */; };
 		4C7459371756802F00A76417 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7459361756802F00A76417 /* MobileCoreServices.framework */; };
@@ -844,6 +846,8 @@
 		4C6CFCF419743DDA00AEB8B2 /* fall2014_new_session_rooms_iphone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fall2014_new_session_rooms_iphone@2x.png"; sourceTree = "<group>"; };
 		4C6CFCF519743DDA00AEB8B2 /* fall2014_new_session_rooms_ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fall2014_new_session_rooms_ipad.png; sourceTree = "<group>"; };
 		4C6CFCF619743DDA00AEB8B2 /* fall2014_new_session_rooms_ipad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fall2014_new_session_rooms_ipad@2x.png"; sourceTree = "<group>"; };
+		4C6CFCFB19758E8D00AEB8B2 /* hotel_background_ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hotel_background_ipad.png; sourceTree = "<group>"; };
+		4C6CFCFC19758E8D00AEB8B2 /* hotel_background_ipad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hotel_background_ipad@2x.png"; sourceTree = "<group>"; };
 		4C74593217567FF800A76417 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		4C7459341756801600A76417 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		4C7459361756802F00A76417 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
@@ -1573,6 +1577,8 @@
 		4C36C691192E68940018AB39 /* Fall_2014_icons */ = {
 			isa = PBXGroup;
 			children = (
+				4C6CFCFB19758E8D00AEB8B2 /* hotel_background_ipad.png */,
+				4C6CFCFC19758E8D00AEB8B2 /* hotel_background_ipad@2x.png */,
 				4C6CFCF319743DDA00AEB8B2 /* fall2014_new_session_rooms_iphone.png */,
 				4C6CFCF419743DDA00AEB8B2 /* fall2014_new_session_rooms_iphone@2x.png */,
 				4C6CFCF519743DDA00AEB8B2 /* fall2014_new_session_rooms_ipad.png */,
@@ -2729,6 +2735,7 @@
 				4CF824AD1767B57B005739AD /* notification_tabbar_icon_unselected@2x.png in Resources */,
 				4CD8DFF7193781E300A4326C /* speakersglow-ipad@2x.png in Resources */,
 				4CD8DFE7193781E300A4326C /* favexhibitorsglow-ipad@2x.png in Resources */,
+				4C6CFCFD19758E8D00AEB8B2 /* hotel_background_ipad.png in Resources */,
 				4CBDD4B11848DA70007A9002 /* commscope.png in Resources */,
 				4CD8DF9F193781C900A4326C /* findactivity_568h@2x.png in Resources */,
 				4CF824AE1767B57B005739AD /* ConfApp_Tabbar_icon_selected@2x.png in Resources */,
@@ -2997,6 +3004,7 @@
 				4CD8DF9D193781C900A4326C /* favexhibitors_568h@2x.png in Resources */,
 				4C10D24317D0BC050048FD9D /* confschedule.json in Resources */,
 				4CCEF9F817D28C1C0024E854 /* ProgramFall2013.pdf in Resources */,
+				4C6CFCFE19758E8D00AEB8B2 /* hotel_background_ipad@2x.png in Resources */,
 				4C8F683D18330CD3007D7CA3 /* comm_meetings_icon_ipad.png in Resources */,
 				4CF08423181ECE5800FF6978 /* createuser_button.png in Resources */,
 				4C42864D1948A163007A5A11 /* scenery5_ipad.png in Resources */,

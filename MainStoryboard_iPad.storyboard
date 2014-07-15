@@ -1006,12 +1006,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="975"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scenery5.png" id="sF0-WY-cYo">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hotel_background_ipad.png" id="sF0-WY-cYo">
                                 <rect key="frame" x="0.0" y="-32" width="768" height="1007"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
-                            <webView alpha="0.80000000000000004" contentMode="scaleToFill" id="RdG-eh-0Vm">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="975"/>
+                            <webView alpha="0.90000000000000013" contentMode="scaleToFill" id="RdG-eh-0Vm">
+                                <rect key="frame" x="42" y="93" width="684" height="789"/>
                                 <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
@@ -3461,6 +3461,7 @@
         <image name="floormapsglow-ipad.png" width="120" height="120"/>
         <image name="floorplanC14-icon-400x400_icon_ipad.png" width="120" height="120"/>
         <image name="hotelC14-icon-400x400_icon_ipad.png" width="120" height="120"/>
+        <image name="hotel_background_ipad.png" width="768" height="1024"/>
         <image name="myagenda-ipad.png" width="120" height="120"/>
         <image name="myagendaglow-ipad.png" width="120" height="120"/>
         <image name="mynotes-ipad.png" width="120" height="120"/>
