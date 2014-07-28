@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="12F45" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="xsZ-21-97U">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="12F45" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="xsZ-21-97U">
     <dependencies>
         <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
@@ -1536,7 +1536,7 @@
                     </connections>
                 </pinchGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="404" y="-2937"/>
+            <point key="canvasLocation" x="662" y="-2913"/>
         </scene>
         <!--All My Notes View Controller - My Notes-->
         <scene sceneID="W0D-oK-p0A">
@@ -3492,10 +3492,10 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="llJ-MJ-Tf6"/>
+        <segue reference="SFt-NY-1lL"/>
         <segue reference="muH-WA-dU8"/>
+        <segue reference="xWE-49-eAT"/>
         <segue reference="eyd-89-hvr"/>
         <segue reference="zdp-PR-IH3"/>
-        <segue reference="xWE-49-eAT"/>
-        <segue reference="SFt-NY-1lL"/>
     </inferredMetricsTieBreakers>
 </document>
