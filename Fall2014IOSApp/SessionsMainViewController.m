@@ -14,18 +14,11 @@
 #import "StartPageViewController.h"
 #import "SVWebViewController.h"
 
-
-
-
 @interface SessionsMainViewController ()
 
 @end
 
-
 @implementation SessionsMainViewController
-
-
-
 
 @synthesize myTableView;
 @synthesize results;
@@ -42,6 +35,7 @@
     }
     return self;
 }
+
 
 - (NSManagedObjectContext *)managedObjectContext
 {
@@ -76,8 +70,6 @@
                                         init];
     [refreshControl addTarget:self action:@selector(refreshTable) forControlEvents:UIControlEventValueChanged];
     
-    //self.refreshControl  = refreshControl;
-    
     [refreshControl beginRefreshing];
     
     
@@ -86,14 +78,106 @@
 }
 
 
+-(void)refreshTable{
+    
+    printf("\n Refresh Table is called \n");
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Sessions" inManagedObjectContext:self.managedObjectContext];
+    
+    [fetchRequest setEntity:entity];
+    
+    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"sessionID CONTAINS 'CONCSES'"]];
+    
+    NSSortDescriptor *sortDescriptor1 = [[NSSortDescriptor alloc] initWithKey:@"sessionDate" ascending:YES];
+    NSSortDescriptor *sortDescriptor2 = [[NSSortDescriptor alloc] initWithKey:@"startTime" ascending:YES];
+    NSArray *sortDescriptors = [NSArray arrayWithObjects:sortDescriptor1, sortDescriptor2, nil];
+    [fetchRequest setSortDescriptors:sortDescriptors];
+    
+    NSArray *myResults = [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
+    
+    
+    if (!myResults || !myResults.count) {
+        NSString *message = @"There seems to have been an error updating data. Please go back to the Home screen and press the Update Data button at the bottom of the screen.";
+        UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"Data Update Error"
+                                                           message:message
+                                                          delegate:self
+                                                 cancelButtonTitle:@"Ok"
+                                                 otherButtonTitles:nil,nil];
+        [alertView show];
+    }
+    else{
+        
+        UIRefreshControl *refreshControl = [[UIRefreshControl alloc]
+                                            init];
+        
+        [refreshControl endRefreshing];
+        self.objects = myResults;
+        
+        NSLog(@"sessionName is: %@", [objects valueForKey:@"sessionName"]);
+        
+        tempDict = nil;
+        tempDict = [[NSMutableDictionary alloc] init];
+        
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
+        
+        NSDate *date = (NSDate*) [[myResults objectAtIndex:0] valueForKey:@"sessionDate"];
+        
+        NSString *stringDate = [dateFormatter stringFromDate:date];
+        
+            NSString *strPrevDate= stringDate;
+            NSString *strCurrDate = nil;
+            NSMutableArray *tempArray = [[NSMutableArray alloc] init];
+            //Add the Similar Date data in An Array then add this array to Dictionary
+            //With date name as a Key. It helps to easily create section in table.
+            for(int i=0; i< [myResults count]; i++)
+            {
+        
+                NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+                [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
+                
+                NSDate *date = (NSDate*) [[myResults objectAtIndex:i] valueForKey:@"sessionDate"];
+                
+                NSString *stringDate2 = [dateFormatter stringFromDate:date];
+                
+                strCurrDate = stringDate2;
+        
+                if ([strCurrDate isEqualToString:strPrevDate])
+                 {
+        
+                    [tempArray addObject:[myResults objectAtIndex:i]];
+                }
+                else
+                {
+                    [tempDict setValue:[tempArray copy] forKey:strPrevDate];
+        
+                    strPrevDate = strCurrDate;
+                    [tempArray removeAllObjects];
+                    [tempArray addObject:[myResults objectAtIndex:i]];
+                }
+            }
+            //Set the last date array in dictionary
+            [tempDict setValue:[tempArray copy] forKey:strPrevDate];
+        
+            NSArray *tArray = [tempDict allKeys];
+            //Sort the array in ascending order
+            dateArray = [tArray sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+        //NSSortDescriptor* sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:nil ascending:NO selector:@selector(localizedCompare:)];
+        //dateArray = [tArray sortedArrayUsingDescriptors:[NSArray arrayWithObject:sortDescriptor]];
+
+        
+        [self.myTableView reloadData];
+    }
+}
+
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
-
 
 -(void)searchThroughData
 {
@@ -110,16 +194,13 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    //#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    if (tableView == self.myTableView)
-    {
-        return [dateArray count];
-    }
     
+        if (tableView == self.myTableView)
+        {
+            return [dateArray count];
+        }
     return 1;
 }
-
 
 - (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section
 {
@@ -171,17 +252,22 @@
     
 }//End
 
+
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *simpleTableIdentifier = @"Cell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    static NSString *CellIdentifier = @"Cell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if (!cell)
     {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:simpleTableIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
+    
+    
     
     if (tableView == self.myTableView)
     {
@@ -190,7 +276,35 @@
         
         NSManagedObject *object = [dateSection objectAtIndex:indexPath.row];
         cell.textLabel.text = [object valueForKey:@"sessionName"];
-        cell.detailTextLabel.text = [object valueForKey:@"sessionTime"];
+        
+        
+        
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        //[dateFormatter setDateFormat:@"MM/dd/yy hh:mm"];
+        [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
+        
+        NSDate *date = (NSDate*) [object valueForKey:@"sessionDate"];
+        
+        NSString *stringDate = [dateFormatter stringFromDate:date];
+        
+        NSLog(@"Session Date is: %@", stringDate);
+        
+        NSDateFormatter *timeFormatter1 = [[NSDateFormatter alloc] init];
+        [timeFormatter1 setDateFormat:@"hh:mm a"];
+        
+        NSDate *time1 = (NSDate*) [object valueForKey:@"startTime"];
+        
+        NSString *stringStartTime = [timeFormatter1 stringFromDate:time1];
+        
+        NSDateFormatter *timeFormatter2 = [[NSDateFormatter alloc] init];
+        [timeFormatter2 setDateFormat:@"hh:mm a"];
+        
+        NSDate *time2 = (NSDate*) [object valueForKey:@"endTime"];
+        
+        NSString *stringEndTime = [timeFormatter2 stringFromDate:time2];
+        
+        NSString *sessionTime = [[NSString alloc] initWithFormat:@"%@ - %@", stringStartTime,stringEndTime];
+        cell.detailTextLabel.text = sessionTime;
         //cell.detailTextLabel.font = [UIFont fontWithName:@"Arial" size:10.0];
         //cell.textLabel.font = [UIFont fontWithName:@"Arial-Bold" size:10.0];
         //cell.textLabel.textColor = [UIColor brownColor];
@@ -205,7 +319,34 @@
     {
         NSManagedObject *object = [self.results objectAtIndex:indexPath.row];
         cell.textLabel.text = [object valueForKey:@"sessionName"];
-        cell.detailTextLabel.text = [object valueForKey:@"sessionTime"];
+        
+        
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        //[dateFormatter setDateFormat:@"MM/dd/yy hh:mm"];
+        [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
+        
+        NSDate *date = (NSDate*) [object valueForKey:@"sessionDate"];
+        
+        NSString *stringDate = [dateFormatter stringFromDate:date];
+        
+        NSLog(@"Session Date is: %@", stringDate);
+        
+        NSDateFormatter *timeFormatter1 = [[NSDateFormatter alloc] init];
+        [timeFormatter1 setDateFormat:@"hh:mm a"];
+        
+        NSDate *time1 = (NSDate*) [object valueForKey:@"startTime"];
+        
+        NSString *stringStartTime = [timeFormatter1 stringFromDate:time1];
+        
+        NSDateFormatter *timeFormatter2 = [[NSDateFormatter alloc] init];
+        [timeFormatter2 setDateFormat:@"hh:mm a"];
+        
+        NSDate *time2 = (NSDate*) [object valueForKey:@"endTime"];
+        
+        NSString *stringEndTime = [timeFormatter2 stringFromDate:time2];
+        
+        NSString *sessionTime = [[NSString alloc] initWithFormat:@"%@ - %@", stringStartTime,stringEndTime];
+        cell.detailTextLabel.text = sessionTime;
         //cell.detailTextLabel.font = [UIFont fontWithName:@"Arial" size:11.0];
         //cell.textLabel.font = [UIFont fontWithName:@"Arial-Bold" size:10.0];
         //cell.textLabel.textColor = [UIColor brownColor];
@@ -216,106 +357,9 @@
         //cell.textLabel.lineBreakMode = NSLineBreakByWordWrapping;
     }
     
+    
     return cell;
 }
-
--(void)refreshTable{
-    
-    printf("\n Refresh Table is called \n");
-    
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Sessions" inManagedObjectContext:self.managedObjectContext];
-    
-    [fetchRequest setEntity:entity];
-    
-    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"NOT (sessionID CONTAINS 'BODM')"]];
-    
-    NSSortDescriptor *sortDescriptor1 = [[NSSortDescriptor alloc] initWithKey:@"trueDate" ascending:YES];
-    NSSortDescriptor *sortDescriptor2 = [[NSSortDescriptor alloc] initWithKey:@"startTime" ascending:YES];
-    NSArray *sortDescriptors = [NSArray arrayWithObjects:sortDescriptor1, sortDescriptor2, nil];
-
-    
-    [fetchRequest setSortDescriptors:sortDescriptors];
-    
-    NSArray *myResults = [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
-    
-    
-    if (!myResults || !myResults.count) {
-        NSString *message = @"There seems to have been an error updating data. Please go back to the Home screen and press the Update Data button at the bottom of the screen.";
-        UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"Data Update Error"
-                                                           message:message
-                                                          delegate:self
-                                                 cancelButtonTitle:@"Ok"
-                                                 otherButtonTitles:nil,nil];
-        [alertView show];
-    }
-    else{
-    
-    UIRefreshControl *refreshControl = [[UIRefreshControl alloc]
-                                        init];
-    
-    [refreshControl endRefreshing];
-    self.objects = myResults;
-    
-    
-
-    
-    
-    tempDict = nil;
-    tempDict = [[NSMutableDictionary alloc] init];
-        
-
-    
-    NSString *strPrevDate= [[myResults objectAtIndex:0] valueForKey:@"sessionDay"];
-    NSString *strCurrDate = nil;
-    NSMutableArray *tempArray = [[NSMutableArray alloc] init];
-    //Add the Similar Date data in An Array then add this array to Dictionary
-    //With date name as a Key. It helps to easily create section in table.
-    for(int i=0; i< [myResults count]; i++)
-    {
-        
-        strCurrDate = [[myResults objectAtIndex:i] valueForKey:@"sessionDay"];
-        
-        if ([strCurrDate isEqualToString:strPrevDate])
-         {
-    
-            [tempArray addObject:[myResults objectAtIndex:i]];
-        }
-        else
-        {
-            [tempDict setValue:[tempArray copy] forKey:strPrevDate];
-            
-            strPrevDate = strCurrDate;
-            [tempArray removeAllObjects];
-            [tempArray addObject:[myResults objectAtIndex:i]];
-        }
-    }
-    //Set the last date array in dictionary
-    [tempDict setValue:[tempArray copy] forKey:strPrevDate];
-    
-    NSArray *tArray = [tempDict allKeys];
-    //Sort the array in ascending order
-    dateArray = [tArray sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
-    
-    [self.myTableView reloadData];
-}
-}
-
-//-(void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-//    
-//    //u need to change 0 to other value(,1,2,3) if u have more buttons.then u can check which button was pressed.
-//    
-//    if (buttonIndex == 0) {
-//        
-//        [self updateData];
-//        
-//            
-//    }
-//    
-//    
-//    
-//}
 
 
 - (void)tableView: (UITableView*)tableView willDisplayCell: (UITableViewCell*)cell forRowAtIndexPath: (NSIndexPath*)indexPath
@@ -331,17 +375,6 @@
 
 }
 
-
-
-
-////////
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (self.searchDisplayController.isActive)
-    {
-        [self performSegueWithIdentifier:@"sessionsDetailCell" sender:self];
-    }
-}
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
@@ -365,15 +398,6 @@
         }
     }
 }
-////////
 
-//-(void)updateData{
-//    StartPageViewController * startPage = [[StartPageViewController alloc] init];
-//    
-//    [startPage updateAllData];
-//    
-//    
-//    
-//}
 
 @end

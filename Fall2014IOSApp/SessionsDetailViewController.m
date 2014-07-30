@@ -59,27 +59,61 @@
     
     sessionNameLabel.text = mySessions.sessionName;
     sessionIdLabel.text = mySessions.sessionID;
-    sessionDateLabel.text = mySessions.sessionDate;
-    sessionTimeLabel.text = mySessions.sessionTime;
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    //[dateFormatter setDateFormat:@"MM/dd/yy hh:mm"];
+    [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
+    
+    NSDate *date = (NSDate*) mySessions.sessionDate;
+    
+    NSString *stringDate = [dateFormatter stringFromDate:date];
+    
+    sessionDateLabel.text = stringDate;
+    
+    NSDateFormatter *timeFormatter1 = [[NSDateFormatter alloc] init];
+    [timeFormatter1 setDateFormat:@"hh:mm a"];
+    
+    NSDate *time1 = (NSDate*) mySessions.startTime;
+    
+    NSString *stringStartTime = [timeFormatter1 stringFromDate:time1];
+    
+    NSDateFormatter *timeFormatter2 = [[NSDateFormatter alloc] init];
+    [timeFormatter2 setDateFormat:@"hh:mm a"];
+    
+    NSDate *time2 = (NSDate*) mySessions.endTime;
+    
+    NSString *stringEndTime = [timeFormatter2 stringFromDate:time2];
+    
+    NSString *sessionTime = [[NSString alloc] initWithFormat:@"%@ - %@", stringStartTime,stringEndTime];
+    
+    NSString *speaker1name = [[NSString alloc] initWithFormat:@"%@ %@", mySessions.sessionSpeaker1,mySessions.sessionSpeaker1lastname];
+    NSString *speaker2name = [[NSString alloc] initWithFormat:@"%@ %@", mySessions.sessionSpeaker2,mySessions.sessionSpeaker2lastname];
+    NSString *speaker3name = [[NSString alloc] initWithFormat:@"%@ %@", mySessions.sessionSpeaker3,mySessions.sessionSpeaker3lastname];
+    NSString *speaker4name = [[NSString alloc] initWithFormat:@"%@ %@", mySessions.sessionSpeaker4,mySessions.sessionSpeaker4lastname];
+    NSString *speaker5name = [[NSString alloc] initWithFormat:@"%@ %@", mySessions.sessionSpeaker5,mySessions.sessionSpeaker5lastname];
+    NSString *speaker6name = [[NSString alloc] initWithFormat:@"%@ %@", mySessions.sessionSpeaker6,mySessions.sessionSpeaker6lastname];
+    
+    sessionTimeLabel.text = sessionTime;
     sessionDescTextField.text = mySessions.sessionDesc;
-    speaker1NameLabel.text = mySessions.sessionSpeaker1;
-    speaker2NameLabel.text = mySessions.sessionSpeaker2;
-    speaker3NameLabel.text = mySessions.sessionSpeaker3;
-    speaker4NameLabel.text = mySessions.sessionSpeaker4;
-    speaker5NameLabel.text = mySessions.sessionSpeaker5;
-    speaker6NameLabel.text = mySessions.sessionSpeaker6;
+    speaker1NameLabel.text = speaker1name;
+    speaker2NameLabel.text = speaker2name;
+    speaker3NameLabel.text = speaker3name;
+    speaker4NameLabel.text = speaker4name;
+    speaker5NameLabel.text = speaker5name;
+    speaker6NameLabel.text = speaker6name;
+
     locationLabel.text = mySessions.location;
     
-    startTimeStr = mySessions.startTimeStr;
+    //startTimeStr = mySessions.startTimeStr;
     endTime = mySessions.endTime;
     location = mySessions.location;
-    sessionDay = mySessions.sessionDay;
+    //sessionDay = mySessions.sessionDay;
     
 
     
     NSLog(@"Session Id 1 is: %@", mySessions.sessionID);
-    NSLog(@"Session startTime is: %@", mySessions.startTimeStr);
-    NSLog(@"Session day is: %@", mySessions.sessionDay);
+    //NSLog(@"Session startTime is: %@", mySessions.startTimeStr);
+    //NSLog(@"Session day is: %@", mySessions.sessionDay);
     
     
     [[sessionDescTextField layer] setBorderColor:[[UIColor colorWithRed:48/256.0 green:134/256.0 blue:174/256.0 alpha:1.0] CGColor]];
@@ -87,14 +121,15 @@
     [[sessionDescTextField layer] setCornerRadius:10];
     [sessionDescTextField setClipsToBounds: YES];
     
+    [self.pollButton setHidden:YES];
     
 //    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad){
 //        [self.pollButton setHidden:YES];
 //    }
     
-    if (![mySessions.sessionDay  isEqual: @""]) {
-        [self.pollButton setHidden:YES];
-    }
+//    if (![mySessions.sessionDay  isEqual: @""]) {
+//        [self.pollButton setHidden:YES];
+//    }
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     // Edit the entity name as appropriate.
@@ -283,8 +318,8 @@
         //[newManagedObject setValue:self.mySessions.startTime forKey:@"starttime"];
         NSDateFormatter *df = [[NSDateFormatter alloc] init];
         [df setDateFormat:@"hh:mm a"];
-        NSDate *sessTime = [df dateFromString: mySessions.startTimeStr];
-        [newManagedObject setValue:sessTime forKey:@"starttime"];
+        //NSDate *sessTime = [df dateFromString: mySessions.startTimeStr];
+        //[newManagedObject setValue:sessTime forKey:@"starttime"];
         [newManagedObject setValue:newDeviceID forKey:@"deviceowner"];
         [newManagedObject setValue:@"Yes" forKey:@"agenda"];
         
@@ -438,13 +473,13 @@
 -(BOOL)createEvent:(EKEventStore*)eventStore{
     
     NSString *myDateStr = [[NSString alloc]initWithFormat:@"%@",mySessions.sessionDate];
-    NSString *myStartTimeStr = [[NSString alloc]initWithFormat:@"%@",mySessions.startTimeStr];
+    //NSString *myStartTimeStr = [[NSString alloc]initWithFormat:@"%@",mySessions.startTimeStr];
     NSString *myEndTimeStr = [[NSString alloc]initWithFormat:@"%@",mySessions.endTime];
     NSLog(@"myDateStr is: %@", myDateStr);
-    NSLog(@"myStartTimeStr is: %@", myStartTimeStr);
+    //NSLog(@"myStartTimeStr is: %@", myStartTimeStr);
     NSLog(@"myEndTimeStr is: %@", myEndTimeStr);
     
-    NSString *sessDateStr = [[NSString alloc]initWithFormat:@"%@ %@",myDateStr,myStartTimeStr];
+    //NSString *sessDateStr = [[NSString alloc]initWithFormat:@"%@ %@",myDateStr,myStartTimeStr];
     NSString *sessEndDateStr = [[NSString alloc]initWithFormat:@"%@ %@",myDateStr, myEndTimeStr];
     NSString *sessNameStr = [[NSString alloc]initWithFormat:@"%@", mySessions.sessionName];
     NSString *sessLocationStr = [[NSString alloc]initWithFormat:@"%@", mySessions.location];
@@ -452,8 +487,8 @@
     
     NSDateFormatter *df = [[NSDateFormatter alloc] init];
     [df setDateFormat:@"MMM dd yyyy hh:mm a"];
-    NSDate *sessDate = [df dateFromString: sessDateStr];
-    NSLog(@"sessDate is: %@", sessDate);
+    //NSDate *sessDate = [df dateFromString: sessDateStr];
+    //NSLog(@"sessDate is: %@", sessDate);
     
     NSDateFormatter *dfEnd = [[NSDateFormatter alloc] init];
     [dfEnd setDateFormat:@"MMM dd yyyy hh:mm a"];
@@ -463,7 +498,7 @@
     
     EKEvent *event = [EKEvent eventWithEventStore:eventStore];
     event.title = sessNameStr;
-    event.startDate = sessDate;
+    //event.startDate = sessDate;
     //event.endDate = [event.startDate dateByAddingTimeInterval:3600];
     event.endDate = sessEndDate;
     event.location = sessLocationStr;

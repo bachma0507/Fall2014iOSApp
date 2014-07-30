@@ -691,7 +691,7 @@ int iNotificationCounter=0;
         //CREATE SESSION OBJECTS
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),^{
             
-            NSURL *url = [NSURL URLWithString:@"http://speedyreference.com/sessionsF14.php"];
+            NSURL *url = [NSURL URLWithString:@"http://www.speedyreference.com/bicsi/convertcsv1.json"];
             NSData * data = [NSData dataWithContentsOfURL:url];
             
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -702,34 +702,36 @@ int iNotificationCounter=0;
                 
                 for (int i = 0; i < json.count; i++) {
                     //create sessions object
-                    NSString * sID = [[json objectAtIndex:i] objectForKey:@"id"];
-                    NSString * sStatus = [[json objectAtIndex:i] objectForKey:@"sessionStatus"];
-                    NSString * sDay = [[json objectAtIndex:i] objectForKey:@"sessionDay"];
-                    NSString * sDate = [[json objectAtIndex:i] objectForKey:@"sessionDate"];
-                    NSString * tDate = [[json objectAtIndex:i] objectForKey:@"trueDate"];
-                    NSString * sTime = [[json objectAtIndex:i] objectForKey:@"sessionTime"];
-                    NSString * sName = [[json objectAtIndex:i] objectForKey:@"sessionName"];
-                    NSString * sSpeaker1 = [[json objectAtIndex:i] objectForKey:@"sessionSpeaker1"];
-                    NSString * sSpeaker1Company = [[json objectAtIndex:i] objectForKey:@"speaker1Company"];
-                    NSString * sSpeaker2 = [[json objectAtIndex:i] objectForKey:@"sessionSpeaker2"];
-                    NSString * sSpeaker2Company = [[json objectAtIndex:i] objectForKey:@"speaker2Company"];
-                    NSString * sSpeaker3 = [[json objectAtIndex:i] objectForKey:@"sessionSpeaker3"];
-                    NSString * sSpeaker3Company = [[json objectAtIndex:i] objectForKey:@"speaker3Company"];
-                    NSString * sSpeaker4 = [[json objectAtIndex:i] objectForKey:@"sessionSpeaker4"];
-                    NSString * sSpeaker4Company = [[json objectAtIndex:i] objectForKey:@"speaker4Company"];
-                    NSString * sSpeaker5 = [[json objectAtIndex:i] objectForKey:@"sessionSpeaker5"];
-                    NSString * sSpeaker5Company = [[json objectAtIndex:i] objectForKey:@"speaker5Company"];
-                    NSString * sSpeaker6 = [[json objectAtIndex:i] objectForKey:@"sessionSpeaker6"];
-                    NSString * sSpeaker6Company = [[json objectAtIndex:i] objectForKey:@"speaker6Company"];
-                    NSString * sDesc = [[json objectAtIndex:i] objectForKey:@"sessionDesc"];
-                    NSString * sITSCECS = [[json objectAtIndex:i] objectForKey:@"ITSCECS"];
-                    NSString * sSessionID = [[json objectAtIndex:i] objectForKey:@"sessionID"];
-                    NSString * sStartTime = [[json objectAtIndex:i] objectForKey:@"startTime"];
-                    NSString * sEndTime = [[json objectAtIndex:i] objectForKey:@"endTime"];
-                    NSString * sLocation = [[json objectAtIndex:i] objectForKey:@"location"];
-                    NSString * sStartTimeStr = [[json objectAtIndex:i] objectForKey:@"startTimeStr"];
                     
-                    Sessions * mySessions = [[Sessions alloc] initWithID:sID andSessionStatus:sStatus andSessionDay:sDay andSessionDate:sDate andTrueDate:tDate andSessionTime:sTime andSessionName:sName andSessionSpeaker1:sSpeaker1 andSpeaker1Company:sSpeaker1Company andSessionSpeaker2:sSpeaker2 andSpeaker2Company:sSpeaker2Company andSessionSpeaker3:sSpeaker3 andSpeaker3Company:sSpeaker3Company andSessionSpeaker4:sSpeaker4 andSpeaker4Company:sSpeaker4Company andSessionSpeaker5:sSpeaker5 andSpeaker5Company:sSpeaker5Company andSessionSpeaker6:sSpeaker6 andSpeaker6Company:sSpeaker6Company andSessionDesc:sDesc andITSCECS:sITSCECS andSessionID:sSessionID andStartTime:sStartTime andEndTime:sEndTime andLocation:sLocation andStartTimeStr:sStartTimeStr];
+                    NSString * sDate = [[json objectAtIndex:i] objectForKey:@"fucntioindate"];
+                    NSString * sName = [[json objectAtIndex:i] objectForKey:@"functiontitle"];
+                    NSString * sSpeaker1 = [[json objectAtIndex:i] objectForKey:@"trainer1firstname"];
+                    NSString * sSpeaker1Company = [[json objectAtIndex:i] objectForKey:@"trainer1org"];
+                    NSString * sSpeaker2 = [[json objectAtIndex:i] objectForKey:@"trainer2firstname"];
+                    NSString * sSpeaker2Company = [[json objectAtIndex:i] objectForKey:@"trainer2org"];
+                    NSString * sSpeaker3 = [[json objectAtIndex:i] objectForKey:@"trainer3firstname"];
+                    NSString * sSpeaker3Company = [[json objectAtIndex:i] objectForKey:@"trainer3org"];
+                    NSString * sSpeaker4 = [[json objectAtIndex:i] objectForKey:@"trainer4firstname"];
+                    NSString * sSpeaker4Company = [[json objectAtIndex:i] objectForKey:@"trainer4org"];
+                    NSString * sSpeaker5 = [[json objectAtIndex:i] objectForKey:@"trainer5firstname"];
+                    NSString * sSpeaker5Company = [[json objectAtIndex:i] objectForKey:@"trainer5org"];
+                    NSString * sSpeaker6 = [[json objectAtIndex:i] objectForKey:@"trainer6firstname"];
+                    NSString * sSpeaker6Company = [[json objectAtIndex:i] objectForKey:@"trainer6org"];
+                    NSString * sDesc = [[json objectAtIndex:i] objectForKey:@"functiondescription"];
+                    NSString * sSessionID = [[json objectAtIndex:i] objectForKey:@"FUNCTIONCD"];
+                    NSString * sStartTime = [[json objectAtIndex:i] objectForKey:@"functionStartTime"];
+                    NSString * sEndTime = [[json objectAtIndex:i] objectForKey:@"functionEndTime"];
+                    NSString * sLocation = [[json objectAtIndex:i] objectForKey:@"LOCATIONNAME"];
+                    NSString * sSpeaker1lastname = [[json objectAtIndex:i] objectForKey:@"trainer1lastname"];
+                    NSString * sSpeaker2lastname = [[json objectAtIndex:i] objectForKey:@"trainer2lastname"];
+                    NSString * sSpeaker3lastname = [[json objectAtIndex:i] objectForKey:@"trainer3lastname"];
+                    NSString * sSpeaker4lastname = [[json objectAtIndex:i] objectForKey:@"trainer4lastname"];
+                    NSString * sSpeaker5lastname = [[json objectAtIndex:i] objectForKey:@"trainer5lastname"];
+                    NSString * sSpeaker6lastname = [[json objectAtIndex:i] objectForKey:@"trainer6lastname"];
+
+                    
+                    
+                    Sessions * mySessions = [[Sessions alloc] initWithSessionDate:sDate andSessionName:sName andSessionSpeaker1:sSpeaker1 andSpeaker1Company:sSpeaker1Company andSessionSpeaker2:sSpeaker2 andSpeaker2Company:sSpeaker2Company andSessionSpeaker3:sSpeaker3 andSpeaker3Company:sSpeaker3Company andSessionSpeaker4:sSpeaker4 andSpeaker4Company:sSpeaker4Company andSessionSpeaker5:sSpeaker5 andSpeaker5Company:sSpeaker5Company andSessionSpeaker6:sSpeaker6 andSpeaker6Company:sSpeaker6Company andSessionDesc:sDesc andSessionID:sSessionID andStartTime:sStartTime andEndTime:sEndTime andLocation:sLocation andSessionSpeaker1lastname:sSpeaker1lastname andSessionSpeaker2lastname:sSpeaker2lastname andSessionSpeaker3lastname:sSpeaker3lastname andSessionSpeaker4lastname:sSpeaker4lastname andSessionSpeaker5lastname:sSpeaker5lastname andSessionSpeaker6lastname:sSpeaker6lastname];
                     
                     //Add our sessions object to our sessionsArray
                     [sessionsArray addObject:mySessions];
@@ -753,20 +755,19 @@ int iNotificationCounter=0;
                         NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:@"Sessions" inManagedObjectContext:context];
                         
                         [newManagedObject setValue:mySessions.sessionName forKey:@"sessionName"];
-                        [newManagedObject setValue:mySessions.sessionStatus forKey:@"sessionStatus"];
-                        [newManagedObject setValue:mySessions.sessionDay forKey:@"sessionDay"];
-                        [newManagedObject setValue:mySessions.sessionDate forKey:@"sessionDate"];
+                        //[newManagedObject setValue:mySessions.sessionDay forKey:@"sessionDay"];
+                        //[newManagedObject setValue:mySessions.sessionDate forKey:@"sessionDate"];
                         NSDateFormatter *dft = [[NSDateFormatter alloc] init];
-                        [dft setDateFormat:@"MMM dd yyyy"];
-                        NSDate *stDate = [dft dateFromString: mySessions.trueDate];
-                        [newManagedObject setValue:stDate forKey:@"trueDate"];
+                        [dft setDateFormat:@"MM/dd/yy hh:mm"];
+                        NSDate *stDate = [dft dateFromString: mySessions.sessionDate];
+                        [newManagedObject setValue:stDate forKey:@"sessionDate"];
                         
 //                        NSDateFormatter *dfy = [[NSDateFormatter alloc] init];
 //                        [dfy setDateFormat:@"MMM d yyyy"];
 //                        NSDate *sessDate = [dfy dateFromString: mySessions.sessionDate];
 //                        [newManagedObject setValue:sessDate forKey:@"sessionDate"];
                         
-                        [newManagedObject setValue:mySessions.sessionTime forKey:@"sessionTime"];
+                        
                         [newManagedObject setValue:mySessions.sessionSpeaker1 forKey:@"sessionSpeaker1"];
                         [newManagedObject setValue:mySessions.sessionSpeaker2 forKey:@"sessionSpeaker2"];
                         [newManagedObject setValue:mySessions.sessionSpeaker3 forKey:@"sessionSpeaker3"];
@@ -779,20 +780,30 @@ int iNotificationCounter=0;
                         [newManagedObject setValue:mySessions.speaker4Company forKey:@"speaker4Company"];
                         [newManagedObject setValue:mySessions.speaker5Company forKey:@"speaker5Company"];
                         [newManagedObject setValue:mySessions.speaker6Company forKey:@"speaker6Company"];
-                        [newManagedObject setValue:mySessions.ITSCECS forKey:@"itscecs"];
+                        [newManagedObject setValue:mySessions.sessionSpeaker1lastname forKey:@"sessionSpeaker1lastname"];
+                        [newManagedObject setValue:mySessions.sessionSpeaker2lastname forKey:@"sessionSpeaker2lastname"];
+                        [newManagedObject setValue:mySessions.sessionSpeaker3lastname forKey:@"sessionSpeaker3lastname"];
+                        [newManagedObject setValue:mySessions.sessionSpeaker4lastname forKey:@"sessionSpeaker4lastname"];
+                        [newManagedObject setValue:mySessions.sessionSpeaker5lastname forKey:@"sessionSpeaker5lastname"];
+                        [newManagedObject setValue:mySessions.sessionSpeaker6lastname forKey:@"sessionSpeaker6lastname"];
+
+                        
                         [newManagedObject setValue:mySessions.sessionDesc forKey:@"sessionDesc"];
                         [newManagedObject setValue:mySessions.sessionID forKey:@"sessionID"];
                         //[newManagedObject setValue:mySessions.startTime forKey:@"startTime"];
                         
                         NSDateFormatter *df = [[NSDateFormatter alloc] init];
                         [df setDateFormat:@"hh:mm a"];
-                        NSDate *sessTime = [df dateFromString: mySessions.startTime];
-                        [newManagedObject setValue:sessTime forKey:@"startTime"];
+                        NSDate *startTime = [df dateFromString: mySessions.startTime];
+                        [newManagedObject setValue:startTime forKey:@"startTime"];
                         
-                        [newManagedObject setValue:mySessions.endTime forKey:@"endTime"];
+                        NSDateFormatter *df2 = [[NSDateFormatter alloc] init];
+                        [df2 setDateFormat:@"hh:mm a"];
+                        NSDate *endTime = [df dateFromString: mySessions.endTime];
+                        [newManagedObject setValue:endTime forKey:@"endTime"];
+                        
                         NSString * myLocation3 = [[NSString alloc] initWithFormat:@"%@",mySessions.location];
                         [newManagedObject setValue:myLocation3 forKey:@"location"];
-                        [newManagedObject setValue:mySessions.startTimeStr forKey:@"startTimeStr"];
                         
                         
                         
@@ -803,7 +814,7 @@ int iNotificationCounter=0;
                         if (![context save:&error]) {
                             NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
                         }
-                        NSLog(@"You created a new Session object!");
+                        NSLog(@"You created a new Session object! Session ID: %@",mySessions.sessionID);
                         //NSLog(@"Object created sessionName is: %@",mySessions.sessionName);
                     }
                     
