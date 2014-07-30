@@ -17,7 +17,7 @@
 @end
 
 @implementation SessionsDetailViewController
-@synthesize sessionDateLabel, sessionDescTextField, sessionIdLabel, sessionNameLabel, sessionTimeLabel, speaker1NameLabel,speaker2NameLabel, speaker3NameLabel, speaker4NameLabel, speaker5NameLabel, speaker6NameLabel, mySessions, sessionId, sessionName, agendaButton, locationLabel, location, endTime, startTimeStr, sessionDay, pollButton;
+@synthesize sessionDateLabel, sessionDescTextField, sessionIdLabel, sessionNameLabel, sessionTimeLabel, speaker1NameLabel,speaker2NameLabel, speaker3NameLabel, speaker4NameLabel, speaker5NameLabel, speaker6NameLabel, mySessions, sessionId, sessionName, agendaButton, locationLabel, location, endTime, startTime, startTimeStr, sessionDay, pollButton;
 
 - (NSManagedObjectContext *)managedObjectContext {
     NSManagedObjectContext *context = nil;
@@ -107,6 +107,7 @@
     //startTimeStr = mySessions.startTimeStr;
     endTime = mySessions.endTime;
     location = mySessions.location;
+    startTime = mySessions.startTime;
     //sessionDay = mySessions.sessionDay;
     
 
@@ -312,14 +313,14 @@
         [newManagedObject setValue:self.mySessions.sessionID forKey:@"sessionID"];
         [newManagedObject setValue:self.sessionNameLabel.text forKey:@"sessionname"];
         [newManagedObject setValue:self.sessionDateLabel.text forKey:@"sessiondate"];
-        [newManagedObject setValue:self.mySessions.sessionDay forKey:@"sessionday"];
+        //[newManagedObject setValue:self.mySessions.sessionDay forKey:@"sessionday"];
         [newManagedObject setValue:self.sessionTimeLabel.text forKey:@"sessiontime"];
         [newManagedObject setValue:self.locationLabel.text forKey:@"location"];
-        //[newManagedObject setValue:self.mySessions.startTime forKey:@"starttime"];
-        NSDateFormatter *df = [[NSDateFormatter alloc] init];
-        [df setDateFormat:@"hh:mm a"];
-        //NSDate *sessTime = [df dateFromString: mySessions.startTimeStr];
-        //[newManagedObject setValue:sessTime forKey:@"starttime"];
+        
+//        NSDateFormatter *df = [[NSDateFormatter alloc] init];
+//        [df setDateFormat:@"hh:mm a"];
+//        NSDate *sessStartTime = [df dateFromString: startTime];
+        [newManagedObject setValue:startTime forKey:@"starttime"];
         [newManagedObject setValue:newDeviceID forKey:@"deviceowner"];
         [newManagedObject setValue:@"Yes" forKey:@"agenda"];
         

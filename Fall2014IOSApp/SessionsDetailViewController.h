@@ -58,6 +58,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *sessionIdLabel;
 @property (nonatomic, strong) NSString * startTimeStr;
 @property (nonatomic, strong) NSString * endTime;
+@property (nonatomic, strong) NSString * startTime;
 @property (nonatomic, strong) NSString * location;
 @property (nonatomic, strong) NSString * sessionDay;
 
