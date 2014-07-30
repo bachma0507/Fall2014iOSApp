@@ -88,7 +88,7 @@
     
     [fetchRequest setEntity:entity];
     
-    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"sessionID CONTAINS 'COM'"]];
+    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"sessionID CONTAINS 'ATT'"]];
     
     NSSortDescriptor *sortDescriptor1 = [[NSSortDescriptor alloc] initWithKey:@"sessionDate" ascending:YES];
     NSSortDescriptor *sortDescriptor2 = [[NSSortDescriptor alloc] initWithKey:@"startTime" ascending:YES];

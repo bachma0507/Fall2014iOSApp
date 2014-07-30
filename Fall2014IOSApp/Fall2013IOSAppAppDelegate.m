@@ -691,13 +691,26 @@ int iNotificationCounter=0;
         //CREATE SESSION OBJECTS
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),^{
             
-            NSURL *url = [NSURL URLWithString:@"http://www.speedyreference.com/bicsi/convertcsv1.json"];
+            //NSURL *url = [NSURL URLWithString:@"http://www.speedyreference.com/bicsi/convertcsv1.json"];
             //NSURL *url = [NSURL URLWithString:@"https://dev-webservice.bicsi.org/json/reply/MobSession?SessionAltCd=CN-FALL-CA-0914"];
+            NSURL *url = [NSURL URLWithString:@"http://speedyreference.com/bicsi/testtrunc2.json"];
             NSData * data = [NSData dataWithContentsOfURL:url];
+            
+            
+            //NSString *dataStr = [[NSString alloc] initWithFormat:@"%@",data];
+            NSString * dataStr = [[NSString alloc] initWithData: data encoding:NSUTF8StringEncoding];
+            NSString *newDataStr = [dataStr substringWithRange:NSMakeRange(13, [dataStr length]-13)];
+            NSString *truncDataStr = [newDataStr substringToIndex:[ newDataStr length]-1 ];
+            
+            
+            NSLog(@"After truncated from front: %@", newDataStr);
+            NSLog(@"After truncated from end: %@", truncDataStr);
+            
+            NSData* truncData = [truncDataStr dataUsingEncoding:NSUTF8StringEncoding];
             
             dispatch_async(dispatch_get_main_queue(), ^{
                 
-                json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+                json = [NSJSONSerialization JSONObjectWithData:truncData options:kNilOptions error:nil];
                 //Set up our sessions array
                 sessionsArray = [[NSMutableArray alloc] init];
                 
