@@ -116,7 +116,13 @@
     NSManagedObject *object = [self.objects objectAtIndex:indexPath.row];
     cell.sessionNameLabel.text = [object valueForKey:@"sessionname"];
     cell.sessionNameLabel.textColor = [UIColor brownColor];
-    cell.sessionDateLabel.text = [object valueForKey:@"sessiondate"];
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
+    NSDate *date = (NSDate*) [object valueForKey:@"sessiondate"];
+    NSString *stringDate = [dateFormatter stringFromDate:date];
+    
+    cell.sessionDateLabel.text = stringDate;
     cell.sessionDateLabel.textColor = [UIColor blackColor];
     cell.sessionTimeLabel.text = [object valueForKey:@"sessiontime"];
     cell.sessionTimeLabel.textColor = [UIColor blackColor];

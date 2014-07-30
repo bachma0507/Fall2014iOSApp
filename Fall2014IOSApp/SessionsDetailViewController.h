@@ -46,7 +46,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *locationLabel;
 //@property (strong, nonatomic) IBOutlet UILabel *itscecsLabel;
 @property (nonatomic, strong) NSString * sessionName;
-//@property (nonatomic, strong) NSString * sessionDate;
+@property (nonatomic, strong) NSString * sessionDate;
 //@property (nonatomic, strong) NSString * sessionTime;
 //@property (nonatomic, strong) NSString * name1;
 //@property (nonatomic, strong) NSString * name2;

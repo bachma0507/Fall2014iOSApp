@@ -69,7 +69,7 @@
         <attribute name="deviceowner" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="notes" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="sessiondate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sessiondate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="sessionday" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="sessionID" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="sessionname" optional="YES" attributeType="String" syncable="YES"/>
@@ -129,7 +129,7 @@
         <element name="Favorites" positionX="0" positionY="0" width="128" height="150"/>
         <element name="Html" positionX="0" positionY="0" width="128" height="90"/>
         <element name="Sessions" positionX="0" positionY="0" width="128" height="420"/>
-        <element name="Sessnotes" positionX="0" positionY="0" width="128" height="208"/>
+        <element name="Sessnotes" positionX="0" positionY="0" width="128" height="210"/>
         <element name="Speakers" positionX="0" positionY="0" width="128" height="420"/>
         <element name="Sponsors" positionX="0" positionY="0" width="128" height="165"/>
         <element name="Timeinterval" positionX="0" positionY="0" width="128" height="60"/>

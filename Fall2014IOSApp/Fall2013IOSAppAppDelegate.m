@@ -692,6 +692,7 @@ int iNotificationCounter=0;
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),^{
             
             NSURL *url = [NSURL URLWithString:@"http://www.speedyreference.com/bicsi/convertcsv1.json"];
+            //NSURL *url = [NSURL URLWithString:@"https://dev-webservice.bicsi.org/json/reply/MobSession?SessionAltCd=CN-FALL-CA-0914"];
             NSData * data = [NSData dataWithContentsOfURL:url];
             
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -703,8 +704,8 @@ int iNotificationCounter=0;
                 for (int i = 0; i < json.count; i++) {
                     //create sessions object
                     
-                    NSString * sDate = [[json objectAtIndex:i] objectForKey:@"fucntioindate"];
                     NSString * sName = [[json objectAtIndex:i] objectForKey:@"functiontitle"];
+                    NSString * sDate = [[json objectAtIndex:i] objectForKey:@"fucntioindate"];
                     NSString * sSpeaker1 = [[json objectAtIndex:i] objectForKey:@"trainer1firstname"];
                     NSString * sSpeaker1Company = [[json objectAtIndex:i] objectForKey:@"trainer1org"];
                     NSString * sSpeaker2 = [[json objectAtIndex:i] objectForKey:@"trainer2firstname"];
@@ -728,7 +729,7 @@ int iNotificationCounter=0;
                     NSString * sSpeaker4lastname = [[json objectAtIndex:i] objectForKey:@"trainer4lastname"];
                     NSString * sSpeaker5lastname = [[json objectAtIndex:i] objectForKey:@"trainer5lastname"];
                     NSString * sSpeaker6lastname = [[json objectAtIndex:i] objectForKey:@"trainer6lastname"];
-
+                    
                     
                     
                     Sessions * mySessions = [[Sessions alloc] initWithSessionDate:sDate andSessionName:sName andSessionSpeaker1:sSpeaker1 andSpeaker1Company:sSpeaker1Company andSessionSpeaker2:sSpeaker2 andSpeaker2Company:sSpeaker2Company andSessionSpeaker3:sSpeaker3 andSpeaker3Company:sSpeaker3Company andSessionSpeaker4:sSpeaker4 andSpeaker4Company:sSpeaker4Company andSessionSpeaker5:sSpeaker5 andSpeaker5Company:sSpeaker5Company andSessionSpeaker6:sSpeaker6 andSpeaker6Company:sSpeaker6Company andSessionDesc:sDesc andSessionID:sSessionID andStartTime:sStartTime andEndTime:sEndTime andLocation:sLocation andSessionSpeaker1lastname:sSpeaker1lastname andSessionSpeaker2lastname:sSpeaker2lastname andSessionSpeaker3lastname:sSpeaker3lastname andSessionSpeaker4lastname:sSpeaker4lastname andSessionSpeaker5lastname:sSpeaker5lastname andSessionSpeaker6lastname:sSpeaker6lastname];

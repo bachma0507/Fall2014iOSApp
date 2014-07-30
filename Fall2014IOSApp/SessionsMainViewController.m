@@ -88,7 +88,7 @@
     
     [fetchRequest setEntity:entity];
     
-    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"sessionID CONTAINS 'CONCSES'"]];
+    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"sessionID CONTAINS 'COM'"]];
     
     NSSortDescriptor *sortDescriptor1 = [[NSSortDescriptor alloc] initWithKey:@"sessionDate" ascending:YES];
     NSSortDescriptor *sortDescriptor2 = [[NSSortDescriptor alloc] initWithKey:@"startTime" ascending:YES];
@@ -126,6 +126,8 @@
         NSDate *date = (NSDate*) [[myResults objectAtIndex:0] valueForKey:@"sessionDate"];
         
         NSString *stringDate = [dateFormatter stringFromDate:date];
+        
+        NSLog(@"sessionDate is: %@", stringDate);
         
             NSString *strPrevDate= stringDate;
             NSString *strCurrDate = nil;
