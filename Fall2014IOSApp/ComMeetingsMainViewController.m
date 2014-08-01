@@ -178,7 +178,32 @@
         
         NSManagedObject *object = [dateSection objectAtIndex:indexPath.row];
         cell.textLabel.text = [object valueForKey:@"sessionName"];
-        cell.detailTextLabel.text = [object valueForKey:@"sessionTime"];
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        //[dateFormatter setDateFormat:@"MM/dd/yy hh:mm"];
+        [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
+        
+        NSDate *date = (NSDate*) [object valueForKey:@"sessionDate"];
+        
+        NSString *stringDate = [dateFormatter stringFromDate:date];
+        
+        NSLog(@"Session Date is: %@", stringDate);
+        
+        NSDateFormatter *timeFormatter1 = [[NSDateFormatter alloc] init];
+        [timeFormatter1 setDateFormat:@"hh:mm a"];
+        
+        NSDate *time1 = (NSDate*) [object valueForKey:@"startTime"];
+        
+        NSString *stringStartTime = [timeFormatter1 stringFromDate:time1];
+        
+        NSDateFormatter *timeFormatter2 = [[NSDateFormatter alloc] init];
+        [timeFormatter2 setDateFormat:@"hh:mm a"];
+        
+        NSDate *time2 = (NSDate*) [object valueForKey:@"endTime"];
+        
+        NSString *stringEndTime = [timeFormatter2 stringFromDate:time2];
+        
+        NSString *sessionTime = [[NSString alloc] initWithFormat:@"%@ - %@", stringStartTime,stringEndTime];
+        cell.detailTextLabel.text = sessionTime;
         //cell.detailTextLabel.font = [UIFont fontWithName:@"Arial" size:10.0];
         //cell.textLabel.font = [UIFont fontWithName:@"Arial-Bold" size:10.0];
         //cell.textLabel.textColor = [UIColor brownColor];
@@ -193,7 +218,32 @@
     {
         NSManagedObject *object = [self.results objectAtIndex:indexPath.row];
         cell.textLabel.text = [object valueForKey:@"sessionName"];
-        cell.detailTextLabel.text = [object valueForKey:@"sessionTime"];
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        //[dateFormatter setDateFormat:@"MM/dd/yy hh:mm"];
+        [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
+        
+        NSDate *date = (NSDate*) [object valueForKey:@"sessionDate"];
+        
+        NSString *stringDate = [dateFormatter stringFromDate:date];
+        
+        NSLog(@"Session Date is: %@", stringDate);
+        
+        NSDateFormatter *timeFormatter1 = [[NSDateFormatter alloc] init];
+        [timeFormatter1 setDateFormat:@"hh:mm a"];
+        
+        NSDate *time1 = (NSDate*) [object valueForKey:@"startTime"];
+        
+        NSString *stringStartTime = [timeFormatter1 stringFromDate:time1];
+        
+        NSDateFormatter *timeFormatter2 = [[NSDateFormatter alloc] init];
+        [timeFormatter2 setDateFormat:@"hh:mm a"];
+        
+        NSDate *time2 = (NSDate*) [object valueForKey:@"endTime"];
+        
+        NSString *stringEndTime = [timeFormatter2 stringFromDate:time2];
+        
+        NSString *sessionTime = [[NSString alloc] initWithFormat:@"%@ - %@", stringStartTime,stringEndTime];
+        cell.detailTextLabel.text = sessionTime;
         //cell.detailTextLabel.font = [UIFont fontWithName:@"Arial" size:11.0];
         //cell.textLabel.font = [UIFont fontWithName:@"Arial-Bold" size:10.0];
         //cell.textLabel.textColor = [UIColor brownColor];
@@ -217,7 +267,7 @@
     
     [fetchRequest setEntity:entity];
     
-    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"sessionID CONTAINS 'BODMC'"]];
+    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"sessionID CONTAINS 'COM'"]];
     
     NSSortDescriptor *sortDescriptor1 = [[NSSortDescriptor alloc] initWithKey:@"sessionDate" ascending:YES];
     NSSortDescriptor *sortDescriptor2 = [[NSSortDescriptor alloc] initWithKey:@"startTime" ascending:YES];
@@ -252,17 +302,35 @@
         tempDict = nil;
         tempDict = [[NSMutableDictionary alloc] init];
         
-        NSString *strPrevDate= [[myResults objectAtIndex:0] valueForKey:@"sessionDate"];
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
+        
+        NSDate *date = (NSDate*) [[myResults objectAtIndex:0] valueForKey:@"sessionDate"];
+        
+        NSString *stringDate = [dateFormatter stringFromDate:date];
+        
+        NSLog(@"sessionDate is: %@", stringDate);
+        
+        NSString *strPrevDate= stringDate;
         NSString *strCurrDate = nil;
         NSMutableArray *tempArray = [[NSMutableArray alloc] init];
         //Add the Similar Date data in An Array then add this array to Dictionary
         //With date name as a Key. It helps to easily create section in table.
         for(int i=0; i< [myResults count]; i++)
         {
-            strCurrDate = [[myResults objectAtIndex:i] valueForKey:@"sessionDate"];
+            
+            NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+            [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
+            
+            NSDate *date = (NSDate*) [[myResults objectAtIndex:i] valueForKey:@"sessionDate"];
+            
+            NSString *stringDate2 = [dateFormatter stringFromDate:date];
+            
+            strCurrDate = stringDate2;
             
             if ([strCurrDate isEqualToString:strPrevDate])
             {
+                
                 [tempArray addObject:[myResults objectAtIndex:i]];
             }
             else
@@ -280,6 +348,9 @@
         NSArray *tArray = [tempDict allKeys];
         //Sort the array in ascending order
         dateArray = [tArray sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+        //NSSortDescriptor* sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:nil ascending:NO selector:@selector(localizedCompare:)];
+        //dateArray = [tArray sortedArrayUsingDescriptors:[NSArray arrayWithObject:sortDescriptor]];
+        
         
         [self.myTableView reloadData];
     }
