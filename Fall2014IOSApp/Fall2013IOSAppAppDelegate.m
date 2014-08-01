@@ -691,26 +691,31 @@ int iNotificationCounter=0;
         //CREATE SESSION OBJECTS
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),^{
             
-            //NSURL *url = [NSURL URLWithString:@"http://www.speedyreference.com/bicsi/convertcsv1.json"];
+            NSURL *url = [NSURL URLWithString:@"http://www.speedyreference.com/bicsi/convertcsv1.json"];
             //NSURL *url = [NSURL URLWithString:@"https://dev-webservice.bicsi.org/json/reply/MobSession?SessionAltCd=CN-FALL-CA-0914"];
-            NSURL *url = [NSURL URLWithString:@"http://speedyreference.com/bicsi/testtrunc2.json"];
+            //NSURL *url = [NSURL URLWithString:@"http://speedyreference.com/bicsi/testtrunc3.json"];
             NSData * data = [NSData dataWithContentsOfURL:url];
             
             
-            //NSString *dataStr = [[NSString alloc] initWithFormat:@"%@",data];
-            NSString * dataStr = [[NSString alloc] initWithData: data encoding:NSUTF8StringEncoding];
-            NSString *newDataStr = [dataStr substringWithRange:NSMakeRange(13, [dataStr length]-13)];
-            NSString *truncDataStr = [newDataStr substringToIndex:[ newDataStr length]-1 ];
-            
-            
-            NSLog(@"After truncated from front: %@", newDataStr);
-            NSLog(@"After truncated from end: %@", truncDataStr);
-            
-            NSData* truncData = [truncDataStr dataUsingEncoding:NSUTF8StringEncoding];
-            
+            //TRUNCATE FRONT AND END OF JSON. ALSO JSON STATEMENT AND CHANGE SESSIONDATE DATE FORMAT
+//            NSString * dataStr = [[NSString alloc] initWithData: data encoding:NSUTF8StringEncoding];
+//            NSString *newDataStr = [dataStr substringWithRange:NSMakeRange(13, [dataStr length]-13)];
+//            NSString *truncDataStr = [newDataStr substringToIndex:[ newDataStr length]-1 ];
+//            
+//            
+//            NSLog(@"After truncated from front: %@", newDataStr);
+//            NSLog(@"After truncated from end: %@", truncDataStr);
+//            
+//            NSData* truncData = [truncDataStr dataUsingEncoding:NSUTF8StringEncoding];
+            ///////////////
             dispatch_async(dispatch_get_main_queue(), ^{
                 
-                json = [NSJSONSerialization JSONObjectWithData:truncData options:kNilOptions error:nil];
+                json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+                
+                //USE STATEMENT BELOW FOR JSON TRUNCATE
+                //json = [NSJSONSerialization JSONObjectWithData:truncData options:kNilOptions error:nil];
+                
+                
                 //Set up our sessions array
                 sessionsArray = [[NSMutableArray alloc] init];
                 
@@ -772,7 +777,11 @@ int iNotificationCounter=0;
                         //[newManagedObject setValue:mySessions.sessionDay forKey:@"sessionDay"];
                         //[newManagedObject setValue:mySessions.sessionDate forKey:@"sessionDate"];
                         NSDateFormatter *dft = [[NSDateFormatter alloc] init];
-                        [dft setDateFormat:@"MM/dd/yy hh:mm"];
+                        
+                        //USE STATEMENT BELOW WHEN USING JSON TRUNCATE
+                        //[dft setDateFormat:@"MM-dd-yyyy"];
+                        
+                        [dft setDateFormat:@"MM/dd/yyyy hh:mm"];
                         NSDate *stDate = [dft dateFromString: mySessions.sessionDate];
                         [newManagedObject setValue:stDate forKey:@"sessionDate"];
                         

@@ -18,7 +18,7 @@
 
 @implementation ConfSchedDetailTableViewController
 @synthesize myObjects;
-@synthesize cschedule;
+@synthesize cschedule, mySessions;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -129,21 +129,39 @@
         
     }
     
+    
+    
     NSManagedObject *object = [self.myObjects objectAtIndex:indexPath.row];
     cell.sessionName.text = [object valueForKey:@"sessionName"];
-    cell.sessionTime.text = [object valueForKey:@"sessionTime"];
-    cell.sessionStatus.text = [object valueForKey:@"sessionStatus"];
     
-    NSString *itscecsStr = [[NSString alloc] initWithFormat:@"%@",[object valueForKey:@"itscecs"]];
-    if ([itscecsStr isEqual: @"3"]) {
-        cell.itscecs.text = @"ITS CECs: 3";
-    }
-    else if([itscecsStr isEqual: @"6"]){
-        cell.itscecs.text = @"ITS CECs: 6";
-    }
-    else{
-    cell.itscecs.text = @" ";
-    }
+    NSDate * sTime = [object valueForKey:@"startTime"];
+    NSDate * eTime = [object valueForKey:@"endTime"];
+    
+    NSDateFormatter *sdf = [[NSDateFormatter alloc]init];
+    [sdf setDateFormat:@"hh:mm a"];
+    NSString *sTimeStr = [sdf stringFromDate:sTime];
+    
+    NSDateFormatter *edf = [[NSDateFormatter alloc]init];
+    [edf setDateFormat:@"hh:mm a"];
+    NSString *eTimeStr = [sdf stringFromDate:eTime];
+    
+    NSString * sessionTime = [[NSString alloc] initWithFormat:@"%@ - %@", sTimeStr, eTimeStr];
+    
+    cell.sessionTime.text = sessionTime;
+    cell.itscecs.hidden = YES;
+    cell.sessionStatus.hidden = YES;
+    //cell.sessionStatus.text = [object valueForKey:@"sessionStatus"];
+    
+//    NSString *itscecsStr = [[NSString alloc] initWithFormat:@"%@",[object valueForKey:@"itscecs"]];
+//    if ([itscecsStr isEqual: @"3"]) {
+//        cell.itscecs.text = @"ITS CECs: 3";
+//    }
+//    else if([itscecsStr isEqual: @"6"]){
+//        cell.itscecs.text = @"ITS CECs: 6";
+//    }
+//    else{
+//    cell.itscecs.text = @" ";
+//    }
     
     //cell.itscecs.text =[object valueForKey:@"itscecs"];
     //cell.detailTextLabel.font = [UIFont fontWithName:@"Arial" size:10.0];
@@ -182,7 +200,7 @@
     
     [fetchRequest setEntity:entity];
     
-    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"NOT(sessionID CONTAINS 'BODMC') && sessionDate == %@",cschedule.date]];
+    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"NOT(sessionID CONTAINS 'COM' || sessionID CONTAINS 'EXHV' || sessionID CONTAINS 'EXHX' || sessionID CONTAINS 'DRIN' || sessionID CONTAINS 'BADG' || sessionID CONTAINS 'CRED_H' || sessionID CONTAINS 'FTA' || sessionID CONTAINS 'GUES' || sessionID CONTAINS 'INTL' || sessionID CONTAINS 'NEW_') && sessionDate == %@",cschedule.trueDate]];
     
     //[fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"NOT(sessionID CONTAINS 'BODMC')"]];
     
