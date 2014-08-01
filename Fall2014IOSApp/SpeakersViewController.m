@@ -157,8 +157,12 @@
         //Speakers * speakers = nil;
         if (tableView == self.myTableView){
         NSManagedObject *object = [self.objects objectAtIndex:indexPath.row];
+            
+            NSString * firstName = [[NSString alloc] initWithFormat:@"%@", [object valueForKey:@"speakerName"]];
+            NSString * lastName = [[NSString alloc] initWithFormat:@"%@", [object valueForKey:@"speakerLastName"]];
+            NSString * fullName = [[NSString alloc] initWithFormat:@"%@ %@", firstName, lastName];
             //speakers = [speakersArray objectAtIndex:indexPath.row];
-            cell.textLabel.text = [object valueForKey:@"speakerName"];
+            cell.textLabel.text = fullName;
             cell.detailTextLabel.text = [object valueForKey:@"speakerCompany"];
            //cell.detailTextLabel.font = [UIFont fontWithName:@"Arial" size:10.0];
             //cell.textLabel.font = [UIFont fontWithName:@"Arial-Bold" size:14.0];
@@ -168,7 +172,11 @@
         {
             //speakers = [results objectAtIndex:indexPath.row];
             NSManagedObject *object = [results objectAtIndex:indexPath.row];
-            cell.textLabel.text = [object valueForKey:@"speakerName"];
+            NSString * firstName = [[NSString alloc] initWithFormat:@"%@", [object valueForKey:@"speakerName"]];
+            NSString * lastName = [[NSString alloc] initWithFormat:@"%@", [object valueForKey:@"speakerLastName"]];
+            NSString * fullName = [[NSString alloc] initWithFormat:@"%@ %@", firstName, lastName];
+            //speakers = [speakersArray objectAtIndex:indexPath.row];
+            cell.textLabel.text = fullName;
             cell.detailTextLabel.text = [object valueForKey:@"speakerCompany"];
             //cell.detailTextLabel.font = [UIFont fontWithName:@"Arial" size:10.0];
             //cell.textLabel.font = [UIFont fontWithName:@"Arial-Bold" size:14.0];
@@ -200,6 +208,8 @@
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Speakers" inManagedObjectContext:self.managedObjectContext];
     
     [fetchRequest setEntity:entity];
+    
+    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"sessionID CONTAINS 'CONCSES' || sessionID CONTAINS 'PRECON' ||sessionID CONTAINS 'GS_THURS' || sessionID CONTAINS 'GS_TUES_' && NOT(sessionID CONTAINS 'GS_THURS_3') && NOT(sessionID CONTAINS 'GS_TUES_1')"]];
     
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"speakerName" ascending:YES];
     NSArray *sortDescriptors = [NSArray arrayWithObjects:sortDescriptor, nil];

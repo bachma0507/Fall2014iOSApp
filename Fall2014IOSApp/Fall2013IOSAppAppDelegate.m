@@ -572,10 +572,10 @@ int iNotificationCounter=0;
         });
         
         
-        //CREATE SPEAKER OBJECTS
+        //CREATE SPEAKER1 OBJECTS
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),^{
             
-            NSURL *url = [NSURL URLWithString:@"http://speedyreference.com/speakersF14.php"];
+            NSURL *url = [NSURL URLWithString:@"http://www.speedyreference.com/bicsi/convertcsv1.json"];
             NSData * data = [NSData dataWithContentsOfURL:url];
             
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -586,34 +586,36 @@ int iNotificationCounter=0;
                 
                 for (int i = 0; i < json.count; i++) {
                     //create speakers object
-                    NSString * sID = [[json objectAtIndex:i] objectForKey:@"id"];
-                    NSString * sCompany = [[json objectAtIndex:i] objectForKey:@"speakercompany"];
-                    NSString * sName = [[json objectAtIndex:i] objectForKey:@"speakername"];
-                    NSString * sCity = [[json objectAtIndex:i] objectForKey:@"speakercity"];
-                    NSString * sState = [[json objectAtIndex:i] objectForKey:@"speakerstate"];
-                    NSString * sCountry = [[json objectAtIndex:i] objectForKey:@"country"];
-                    NSString * sBio = [[json objectAtIndex:i] objectForKey:@"speakerbio"];
-                    NSString * sWebsite = [[json objectAtIndex:i] objectForKey:@"website"];
-                    NSString * sPic = [[json objectAtIndex:i] objectForKey:@"speakerPic"];
-                    NSString * sSession1 = [[json objectAtIndex:i] objectForKey:@"session1"];
-                    NSString * sSession1Date = [[json objectAtIndex:i] objectForKey:@"session1Date"];
-                    NSString * sSession1Time = [[json objectAtIndex:i] objectForKey:@"session1Time"];
-                    NSString * sSession1Desc = [[json objectAtIndex:i] objectForKey:@"session1Desc"];
-                    NSString * sSession2 = [[json objectAtIndex:i] objectForKey:@"session2"];
-                    NSString * sSession2Date = [[json objectAtIndex:i] objectForKey:@"session2Date"];
-                    NSString * sSession2Time = [[json objectAtIndex:i] objectForKey:@"session2Time"];
-                    NSString * sSession2Desc = [[json objectAtIndex:i] objectForKey:@"session2Desc"];
-                    NSString * sSessionID = [[json objectAtIndex:i] objectForKey:@"sessionID"];
-                    NSString * sSessionID2 = [[json objectAtIndex:i] objectForKey:@"sessionID2"];
-                    NSString * sStartTime = [[json objectAtIndex:i] objectForKey:@"startTime"];
-                    NSString * sEndTime = [[json objectAtIndex:i] objectForKey:@"endTime"];
-                    NSString * sLocation = [[json objectAtIndex:i] objectForKey:@"location"];
-                    NSString * sSess2StartTime = [[json objectAtIndex:i] objectForKey:@"sess2StartTime"];
-                    NSString * sSess2EndTime = [[json objectAtIndex:i] objectForKey:@"sess2EndTime"];
-                    NSString * sLocation2 = [[json objectAtIndex:i] objectForKey:@"location2"];
+                    //NSString * sID = [[json objectAtIndex:i] objectForKey:@"id"];
+                    NSString * sCompany = [[json objectAtIndex:i] objectForKey:@"trainer1org"];
+                    NSString * sName = [[json objectAtIndex:i] objectForKey:@"trainer1firstname"];
+                    NSString * sLastname = [[json objectAtIndex:i] objectForKey:@"trainer1lastname"];
+                    NSString * sCity = [[json objectAtIndex:i] objectForKey:@"trainer1city"];
+                    NSString * sState = [[json objectAtIndex:i] objectForKey:@"trainer1state"];
+                    NSString * sCountry = [[json objectAtIndex:i] objectForKey:@"trainer1country"];
+                    //NSString * sBio = [[json objectAtIndex:i] objectForKey:@"speakerbio"];
+                    //NSString * sWebsite = [[json objectAtIndex:i] objectForKey:@"website"];
+                    //NSString * sPic = [[json objectAtIndex:i] objectForKey:@"speakerPic"];
+                    NSString * sSession1 = [[json objectAtIndex:i] objectForKey:@"functiontitle"];
+                    NSString * sSession1Date = [[json objectAtIndex:i] objectForKey:@"fucntioindate"];
+                    //NSString * sSession1Time = [[json objectAtIndex:i] objectForKey:@"session1Time"];
+                    NSString * sSession1Desc = [[json objectAtIndex:i] objectForKey:@"functiondescription"];
+                    //NSString * sSession2 = [[json objectAtIndex:i] objectForKey:@"session2"];
+//                    NSString * sSession2Date = [[json objectAtIndex:i] objectForKey:@"session2Date"];
+//                    NSString * sSession2Time = [[json objectAtIndex:i] objectForKey:@"session2Time"];
+//                    NSString * sSession2Desc = [[json objectAtIndex:i] objectForKey:@"session2Desc"];
+                    NSString * sSessionID = [[json objectAtIndex:i] objectForKey:@"FUNCTIONCD"];
+                    //NSString * sSessionID2 = [[json objectAtIndex:i] objectForKey:@"sessionID2"];
+                    NSString * sStartTime = [[json objectAtIndex:i] objectForKey:@"functionStartTime"];
+                    NSString * sEndTime = [[json objectAtIndex:i] objectForKey:@"functionEndTime"];
+                    NSString * sLocation = [[json objectAtIndex:i] objectForKey:@"LOCATIONNAME"];
+//                    NSString * sSess2StartTime = [[json objectAtIndex:i] objectForKey:@"sess2StartTime"];
+//                    NSString * sSess2EndTime = [[json objectAtIndex:i] objectForKey:@"sess2EndTime"];
+//                    NSString * sLocation2 = [[json objectAtIndex:i] objectForKey:@"location2"];
                     
                     
-                    Speakers * mySpeakers = [[Speakers alloc] initWithSpeakerID:sID andSpeakerName:sName andSpeakerCompany:sCompany andSpeakerCity:sCity andSpeakerState:sState andSpeakerCountry:sCountry andSpeakerBio:sBio andSpeakerWebsite: sWebsite andSpeakerPic:sPic andSession1:sSession1 andSession1Date:sSession1Date andSession1Time:sSession1Time andSession1Desc:sSession1Desc andSession2:sSession2 andSession2Date:sSession2Date andSession2Time:sSession2Time andSession2Desc:sSession2Desc andSessionID:sSessionID andSessionID2:sSessionID2 andStartTime: sStartTime andEndTime: sEndTime andLocation: sLocation andSess2StartTime: sSess2StartTime andSess2EndTime: sSess2EndTime andLocation2: sLocation2];
+                    Speakers * mySpeakers = [[Speakers alloc] initWithSpeakerName: sName andSpeakerLastName: sLastname andSpeakerCompany: sCompany andSpeakerCity: sCity andSpeakerState: sState andSpeakerCountry: sCountry andSession1: sSession1 andSession1Date: sSession1Date andSession1Desc: sSession1Desc andSessionID:sSessionID andStartTime: sStartTime andEndTime: sEndTime andLocation: sLocation];
+                    
                     
                     //Add our speakers object to our speakersArray
                     [speakersArray addObject:mySpeakers];
@@ -636,35 +638,36 @@ int iNotificationCounter=0;
                         NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:@"Speakers" inManagedObjectContext:context];
                         
                         [newManagedObject setValue:mySpeakers.speakerName forKey:@"speakerName"];
-                        [newManagedObject setValue:mySpeakers.speakerID forKey:@"speakerID"];
+                        [newManagedObject setValue:mySpeakers.speakerLastName forKey:@"speakerLastName"];
+                        //[newManagedObject setValue:mySpeakers.speakerID forKey:@"speakerID"];
                         [newManagedObject setValue:mySpeakers.speakerCompany forKey:@"speakerCompany"];
                         [newManagedObject setValue:mySpeakers.speakerCity forKey:@"speakerCity"];
                         [newManagedObject setValue:mySpeakers.speakerState forKey:@"speakerState"];
                         [newManagedObject setValue:mySpeakers.speakerCountry forKey:@"speakerCountry"];
-                        [newManagedObject setValue:mySpeakers.speakerBio forKey:@"speakerBio"];
+                        //[newManagedObject setValue:mySpeakers.speakerBio forKey:@"speakerBio"];
                         [newManagedObject setValue:mySpeakers.session1 forKey:@"session1"];
                         [newManagedObject setValue:mySpeakers.session1Date forKey:@"session1Date"];
-                        [newManagedObject setValue:mySpeakers.session1Time forKey:@"session1Time"];
+                        //[newManagedObject setValue:mySpeakers.session1Time forKey:@"session1Time"];
                         [newManagedObject setValue:mySpeakers.session1Desc forKey:@"session1Desc"];
-                        [newManagedObject setValue:mySpeakers.session2 forKey:@"session2"];
-                        [newManagedObject setValue:mySpeakers.session2Date forKey:@"session2Date"];
-                        [newManagedObject setValue:mySpeakers.session2Time forKey:@"session2Time"];
-                        [newManagedObject setValue:mySpeakers.session2Desc forKey:@"session2Desc"];
+//                        [newManagedObject setValue:mySpeakers.session2 forKey:@"session2"];
+//                        [newManagedObject setValue:mySpeakers.session2Date forKey:@"session2Date"];
+//                        [newManagedObject setValue:mySpeakers.session2Time forKey:@"session2Time"];
+//                        [newManagedObject setValue:mySpeakers.session2Desc forKey:@"session2Desc"];
                         [newManagedObject setValue:mySpeakers.startTime forKey:@"startTime"];
                         [newManagedObject setValue:mySpeakers.endTime forKey:@"endTime"];
-                        [newManagedObject setValue:mySpeakers.speakerWebsite forKey:@"speakerWebsite"];
-                        [newManagedObject setValue:mySpeakers.speakerPic forKey:@"speakerPic"];
+//                        [newManagedObject setValue:mySpeakers.speakerWebsite forKey:@"speakerWebsite"];
+//                        [newManagedObject setValue:mySpeakers.speakerPic forKey:@"speakerPic"];
                         NSString * myLocation = [[NSString alloc] initWithFormat:@"%@",mySpeakers.location];
                         [newManagedObject setValue:myLocation forKey:@"location"];
-                        NSString * mySess2StartTime = [[NSString alloc] initWithFormat:@"%@",mySpeakers.sess2StartTime];
-                        [newManagedObject setValue:mySess2StartTime forKey:@"sess2StartTime"];
-                        NSString * mySess2EndTime = [[NSString alloc] initWithFormat:@"%@",mySpeakers.sess2EndTime];
-                        [newManagedObject setValue:mySess2EndTime forKey:@"sess2EndTime"];
-                        NSString * myLocation2 = [[NSString alloc] initWithFormat:@"%@",mySpeakers.location2];
-                        [newManagedObject setValue:myLocation2 forKey:@"location2"];
+//                        NSString * mySess2StartTime = [[NSString alloc] initWithFormat:@"%@",mySpeakers.sess2StartTime];
+//                        [newManagedObject setValue:mySess2StartTime forKey:@"sess2StartTime"];
+//                        NSString * mySess2EndTime = [[NSString alloc] initWithFormat:@"%@",mySpeakers.sess2EndTime];
+//                        [newManagedObject setValue:mySess2EndTime forKey:@"sess2EndTime"];
+//                        NSString * myLocation2 = [[NSString alloc] initWithFormat:@"%@",mySpeakers.location2];
+//                        [newManagedObject setValue:myLocation2 forKey:@"location2"];
                         [newManagedObject setValue:mySpeakers.sessionID forKey:@"sessionID"];
-                        NSString * mySessionID2 = [[NSString alloc] initWithFormat:@"%@",mySpeakers.sessionID2];
-                        [newManagedObject setValue:mySessionID2 forKey:@"sessionID2"];
+//                        NSString * mySessionID2 = [[NSString alloc] initWithFormat:@"%@",mySpeakers.sessionID2];
+//                        [newManagedObject setValue:mySessionID2 forKey:@"sessionID2"];
                         
                         
                         
@@ -687,6 +690,457 @@ int iNotificationCounter=0;
         
         
         //-------------------------
+        
+        //CREATE SPEAKER2 OBJECTS
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),^{
+            
+            NSURL *url = [NSURL URLWithString:@"http://www.speedyreference.com/bicsi/convertcsv1.json"];
+            NSData * data = [NSData dataWithContentsOfURL:url];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+                //Set up our speakers array
+                speakersArray = [[NSMutableArray alloc] init];
+                
+                for (int i = 0; i < json.count; i++) {
+                    //create speakers object
+                    
+                    NSString * sCompany = [[json objectAtIndex:i] objectForKey:@"trainer2org"];
+                    NSString * sName = [[json objectAtIndex:i] objectForKey:@"trainer2firstname"];
+                    NSString * sLastname = [[json objectAtIndex:i] objectForKey:@"trainer2lastname"];
+                    NSString * sCity = [[json objectAtIndex:i] objectForKey:@"trainer2city"];
+                    NSString * sState = [[json objectAtIndex:i] objectForKey:@"trainer2state"];
+                    NSString * sCountry = [[json objectAtIndex:i] objectForKey:@"trainer2country"];
+                    NSString * sSession1 = [[json objectAtIndex:i] objectForKey:@"functiontitle"];
+                    NSString * sSession1Date = [[json objectAtIndex:i] objectForKey:@"fucntioindate"];
+                    NSString * sSession1Desc = [[json objectAtIndex:i] objectForKey:@"functiondescription"];
+                    NSString * sSessionID = [[json objectAtIndex:i] objectForKey:@"FUNCTIONCD"];
+                    NSString * sStartTime = [[json objectAtIndex:i] objectForKey:@"functionStartTime"];
+                    NSString * sEndTime = [[json objectAtIndex:i] objectForKey:@"functionEndTime"];
+                    NSString * sLocation = [[json objectAtIndex:i] objectForKey:@"LOCATIONNAME"];
+                    
+                    
+                    
+                    Speakers * mySpeakers = [[Speakers alloc] initWithSpeakerName: sName andSpeakerLastName: sLastname andSpeakerCompany: sCompany andSpeakerCity: sCity andSpeakerState: sState andSpeakerCountry: sCountry andSession1: sSession1 andSession1Date: sSession1Date andSession1Desc: sSession1Desc andSessionID:sSessionID andStartTime: sStartTime andEndTime: sEndTime andLocation: sLocation];
+                    
+                    
+                    //Add our speakers object to our speakersArray
+                    [speakersArray addObject:mySpeakers];
+                    
+                    NSManagedObjectContext *context = [self managedObjectContext];
+                    
+                    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+                    
+                    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Speakers" inManagedObjectContext:context];
+                    
+                    [fetchRequest setEntity:entity];
+                    
+                    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"speakerName == %@",mySpeakers.speakerName]];
+                    
+                    NSArray *myResults = [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
+                    
+                    self.objects = myResults;
+                    if (!myResults || !myResults.count){
+                        
+                        NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:@"Speakers" inManagedObjectContext:context];
+                        
+                        [newManagedObject setValue:mySpeakers.speakerName forKey:@"speakerName"];
+                        [newManagedObject setValue:mySpeakers.speakerLastName forKey:@"speakerLastName"];
+                        [newManagedObject setValue:mySpeakers.speakerCompany forKey:@"speakerCompany"];
+                        [newManagedObject setValue:mySpeakers.speakerCity forKey:@"speakerCity"];
+                        [newManagedObject setValue:mySpeakers.speakerState forKey:@"speakerState"];
+                        [newManagedObject setValue:mySpeakers.speakerCountry forKey:@"speakerCountry"];
+                        [newManagedObject setValue:mySpeakers.session1 forKey:@"session1"];
+                        [newManagedObject setValue:mySpeakers.session1Date forKey:@"session1Date"];
+                        [newManagedObject setValue:mySpeakers.session1Desc forKey:@"session1Desc"];
+                        [newManagedObject setValue:mySpeakers.startTime forKey:@"startTime"];
+                        [newManagedObject setValue:mySpeakers.endTime forKey:@"endTime"];
+                        NSString * myLocation = [[NSString alloc] initWithFormat:@"%@",mySpeakers.location];
+                        [newManagedObject setValue:myLocation forKey:@"location"];
+                        [newManagedObject setValue:mySpeakers.sessionID forKey:@"sessionID"];
+                        
+                        
+                        NSError *error = nil;
+                        // Save the object to persistent store
+                        if (![context save:&error]) {
+                            NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
+                        }
+                        NSLog(@"You created a new Speaker object!");
+                    }
+                    
+                    
+                    
+                }
+                
+            });
+        });
+        
+        
+        
+        
+        //-------------------------
+        
+        //CREATE SPEAKER3 OBJECTS
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),^{
+            
+            NSURL *url = [NSURL URLWithString:@"http://www.speedyreference.com/bicsi/convertcsv1.json"];
+            NSData * data = [NSData dataWithContentsOfURL:url];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+                //Set up our speakers array
+                speakersArray = [[NSMutableArray alloc] init];
+                
+                for (int i = 0; i < json.count; i++) {
+                    //create speakers object
+                    
+                    NSString * sCompany = [[json objectAtIndex:i] objectForKey:@"trainer3org"];
+                    NSString * sName = [[json objectAtIndex:i] objectForKey:@"trainer3firstname"];
+                    NSString * sLastname = [[json objectAtIndex:i] objectForKey:@"trainer3lastname"];
+                    NSString * sCity = [[json objectAtIndex:i] objectForKey:@"trainer3city"];
+                    NSString * sState = [[json objectAtIndex:i] objectForKey:@"trainer3state"];
+                    NSString * sCountry = [[json objectAtIndex:i] objectForKey:@"trainer3country"];
+                    NSString * sSession1 = [[json objectAtIndex:i] objectForKey:@"functiontitle"];
+                    NSString * sSession1Date = [[json objectAtIndex:i] objectForKey:@"fucntioindate"];
+                    NSString * sSession1Desc = [[json objectAtIndex:i] objectForKey:@"functiondescription"];
+                    NSString * sSessionID = [[json objectAtIndex:i] objectForKey:@"FUNCTIONCD"];
+                    NSString * sStartTime = [[json objectAtIndex:i] objectForKey:@"functionStartTime"];
+                    NSString * sEndTime = [[json objectAtIndex:i] objectForKey:@"functionEndTime"];
+                    NSString * sLocation = [[json objectAtIndex:i] objectForKey:@"LOCATIONNAME"];
+                    
+                    
+                    
+                    Speakers * mySpeakers = [[Speakers alloc] initWithSpeakerName: sName andSpeakerLastName: sLastname andSpeakerCompany: sCompany andSpeakerCity: sCity andSpeakerState: sState andSpeakerCountry: sCountry andSession1: sSession1 andSession1Date: sSession1Date andSession1Desc: sSession1Desc andSessionID:sSessionID andStartTime: sStartTime andEndTime: sEndTime andLocation: sLocation];
+                    
+                    
+                    //Add our speakers object to our speakersArray
+                    [speakersArray addObject:mySpeakers];
+                    
+                    NSManagedObjectContext *context = [self managedObjectContext];
+                    
+                    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+                    
+                    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Speakers" inManagedObjectContext:context];
+                    
+                    [fetchRequest setEntity:entity];
+                    
+                    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"speakerName == %@",mySpeakers.speakerName]];
+                    
+                    NSArray *myResults = [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
+                    
+                    self.objects = myResults;
+                    if (!myResults || !myResults.count){
+                        
+                        NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:@"Speakers" inManagedObjectContext:context];
+                        
+                        [newManagedObject setValue:mySpeakers.speakerName forKey:@"speakerName"];
+                        [newManagedObject setValue:mySpeakers.speakerLastName forKey:@"speakerLastName"];
+                        [newManagedObject setValue:mySpeakers.speakerCompany forKey:@"speakerCompany"];
+                        [newManagedObject setValue:mySpeakers.speakerCity forKey:@"speakerCity"];
+                        [newManagedObject setValue:mySpeakers.speakerState forKey:@"speakerState"];
+                        [newManagedObject setValue:mySpeakers.speakerCountry forKey:@"speakerCountry"];
+                        [newManagedObject setValue:mySpeakers.session1 forKey:@"session1"];
+                        [newManagedObject setValue:mySpeakers.session1Date forKey:@"session1Date"];
+                        [newManagedObject setValue:mySpeakers.session1Desc forKey:@"session1Desc"];
+                        [newManagedObject setValue:mySpeakers.startTime forKey:@"startTime"];
+                        [newManagedObject setValue:mySpeakers.endTime forKey:@"endTime"];
+                        NSString * myLocation = [[NSString alloc] initWithFormat:@"%@",mySpeakers.location];
+                        [newManagedObject setValue:myLocation forKey:@"location"];
+                        [newManagedObject setValue:mySpeakers.sessionID forKey:@"sessionID"];
+                        
+                        
+                        NSError *error = nil;
+                        // Save the object to persistent store
+                        if (![context save:&error]) {
+                            NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
+                        }
+                        NSLog(@"You created a new Speaker object!");
+                    }
+                    
+                    
+                    
+                }
+                
+            });
+        });
+        
+        
+        
+        
+        //-------------------------
+        
+        //CREATE SPEAKER4 OBJECTS
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),^{
+            
+            NSURL *url = [NSURL URLWithString:@"http://www.speedyreference.com/bicsi/convertcsv1.json"];
+            NSData * data = [NSData dataWithContentsOfURL:url];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+                //Set up our speakers array
+                speakersArray = [[NSMutableArray alloc] init];
+                
+                for (int i = 0; i < json.count; i++) {
+                    //create speakers object
+                    
+                    NSString * sCompany = [[json objectAtIndex:i] objectForKey:@"trainer4org"];
+                    NSString * sName = [[json objectAtIndex:i] objectForKey:@"trainer4firstname"];
+                    NSString * sLastname = [[json objectAtIndex:i] objectForKey:@"trainer4lastname"];
+                    NSString * sCity = [[json objectAtIndex:i] objectForKey:@"trainer4city"];
+                    NSString * sState = [[json objectAtIndex:i] objectForKey:@"trainer4state"];
+                    NSString * sCountry = [[json objectAtIndex:i] objectForKey:@"trainer4country"];
+                    NSString * sSession1 = [[json objectAtIndex:i] objectForKey:@"functiontitle"];
+                    NSString * sSession1Date = [[json objectAtIndex:i] objectForKey:@"fucntioindate"];
+                    NSString * sSession1Desc = [[json objectAtIndex:i] objectForKey:@"functiondescription"];
+                    NSString * sSessionID = [[json objectAtIndex:i] objectForKey:@"FUNCTIONCD"];
+                    NSString * sStartTime = [[json objectAtIndex:i] objectForKey:@"functionStartTime"];
+                    NSString * sEndTime = [[json objectAtIndex:i] objectForKey:@"functionEndTime"];
+                    NSString * sLocation = [[json objectAtIndex:i] objectForKey:@"LOCATIONNAME"];
+                    
+                    
+                    
+                    Speakers * mySpeakers = [[Speakers alloc] initWithSpeakerName: sName andSpeakerLastName: sLastname andSpeakerCompany: sCompany andSpeakerCity: sCity andSpeakerState: sState andSpeakerCountry: sCountry andSession1: sSession1 andSession1Date: sSession1Date andSession1Desc: sSession1Desc andSessionID:sSessionID andStartTime: sStartTime andEndTime: sEndTime andLocation: sLocation];
+                    
+                    
+                    //Add our speakers object to our speakersArray
+                    [speakersArray addObject:mySpeakers];
+                    
+                    NSManagedObjectContext *context = [self managedObjectContext];
+                    
+                    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+                    
+                    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Speakers" inManagedObjectContext:context];
+                    
+                    [fetchRequest setEntity:entity];
+                    
+                    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"speakerName == %@",mySpeakers.speakerName]];
+                    
+                    NSArray *myResults = [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
+                    
+                    self.objects = myResults;
+                    if (!myResults || !myResults.count){
+                        
+                        NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:@"Speakers" inManagedObjectContext:context];
+                        
+                        [newManagedObject setValue:mySpeakers.speakerName forKey:@"speakerName"];
+                        [newManagedObject setValue:mySpeakers.speakerLastName forKey:@"speakerLastName"];
+                        [newManagedObject setValue:mySpeakers.speakerCompany forKey:@"speakerCompany"];
+                        [newManagedObject setValue:mySpeakers.speakerCity forKey:@"speakerCity"];
+                        [newManagedObject setValue:mySpeakers.speakerState forKey:@"speakerState"];
+                        [newManagedObject setValue:mySpeakers.speakerCountry forKey:@"speakerCountry"];
+                        [newManagedObject setValue:mySpeakers.session1 forKey:@"session1"];
+                        [newManagedObject setValue:mySpeakers.session1Date forKey:@"session1Date"];
+                        [newManagedObject setValue:mySpeakers.session1Desc forKey:@"session1Desc"];
+                        [newManagedObject setValue:mySpeakers.startTime forKey:@"startTime"];
+                        [newManagedObject setValue:mySpeakers.endTime forKey:@"endTime"];
+                        NSString * myLocation = [[NSString alloc] initWithFormat:@"%@",mySpeakers.location];
+                        [newManagedObject setValue:myLocation forKey:@"location"];
+                        [newManagedObject setValue:mySpeakers.sessionID forKey:@"sessionID"];
+                        
+                        
+                        NSError *error = nil;
+                        // Save the object to persistent store
+                        if (![context save:&error]) {
+                            NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
+                        }
+                        NSLog(@"You created a new Speaker object!");
+                    }
+                    
+                    
+                    
+                }
+                
+            });
+        });
+        
+        
+        
+        
+        //-------------------------
+        
+        //CREATE SPEAKER5 OBJECTS
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),^{
+            
+            NSURL *url = [NSURL URLWithString:@"http://www.speedyreference.com/bicsi/convertcsv1.json"];
+            NSData * data = [NSData dataWithContentsOfURL:url];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+                //Set up our speakers array
+                speakersArray = [[NSMutableArray alloc] init];
+                
+                for (int i = 0; i < json.count; i++) {
+                    //create speakers object
+                    
+                    NSString * sCompany = [[json objectAtIndex:i] objectForKey:@"trainer5org"];
+                    NSString * sName = [[json objectAtIndex:i] objectForKey:@"trainer5firstname"];
+                    NSString * sLastname = [[json objectAtIndex:i] objectForKey:@"trainer5lastname"];
+                    NSString * sCity = [[json objectAtIndex:i] objectForKey:@"trainer5city"];
+                    NSString * sState = [[json objectAtIndex:i] objectForKey:@"trainer5state"];
+                    NSString * sCountry = [[json objectAtIndex:i] objectForKey:@"trainer5country"];
+                    NSString * sSession1 = [[json objectAtIndex:i] objectForKey:@"functiontitle"];
+                    NSString * sSession1Date = [[json objectAtIndex:i] objectForKey:@"fucntioindate"];
+                    NSString * sSession1Desc = [[json objectAtIndex:i] objectForKey:@"functiondescription"];
+                    NSString * sSessionID = [[json objectAtIndex:i] objectForKey:@"FUNCTIONCD"];
+                    NSString * sStartTime = [[json objectAtIndex:i] objectForKey:@"functionStartTime"];
+                    NSString * sEndTime = [[json objectAtIndex:i] objectForKey:@"functionEndTime"];
+                    NSString * sLocation = [[json objectAtIndex:i] objectForKey:@"LOCATIONNAME"];
+                    
+                    
+                    
+                    Speakers * mySpeakers = [[Speakers alloc] initWithSpeakerName: sName andSpeakerLastName: sLastname andSpeakerCompany: sCompany andSpeakerCity: sCity andSpeakerState: sState andSpeakerCountry: sCountry andSession1: sSession1 andSession1Date: sSession1Date andSession1Desc: sSession1Desc andSessionID:sSessionID andStartTime: sStartTime andEndTime: sEndTime andLocation: sLocation];
+                    
+                    
+                    //Add our speakers object to our speakersArray
+                    [speakersArray addObject:mySpeakers];
+                    
+                    NSManagedObjectContext *context = [self managedObjectContext];
+                    
+                    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+                    
+                    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Speakers" inManagedObjectContext:context];
+                    
+                    [fetchRequest setEntity:entity];
+                    
+                    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"speakerName == %@",mySpeakers.speakerName]];
+                    
+                    NSArray *myResults = [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
+                    
+                    self.objects = myResults;
+                    if (!myResults || !myResults.count){
+                        
+                        NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:@"Speakers" inManagedObjectContext:context];
+                        
+                        [newManagedObject setValue:mySpeakers.speakerName forKey:@"speakerName"];
+                        [newManagedObject setValue:mySpeakers.speakerLastName forKey:@"speakerLastName"];
+                        [newManagedObject setValue:mySpeakers.speakerCompany forKey:@"speakerCompany"];
+                        [newManagedObject setValue:mySpeakers.speakerCity forKey:@"speakerCity"];
+                        [newManagedObject setValue:mySpeakers.speakerState forKey:@"speakerState"];
+                        [newManagedObject setValue:mySpeakers.speakerCountry forKey:@"speakerCountry"];
+                        [newManagedObject setValue:mySpeakers.session1 forKey:@"session1"];
+                        [newManagedObject setValue:mySpeakers.session1Date forKey:@"session1Date"];
+                        [newManagedObject setValue:mySpeakers.session1Desc forKey:@"session1Desc"];
+                        [newManagedObject setValue:mySpeakers.startTime forKey:@"startTime"];
+                        [newManagedObject setValue:mySpeakers.endTime forKey:@"endTime"];
+                        NSString * myLocation = [[NSString alloc] initWithFormat:@"%@",mySpeakers.location];
+                        [newManagedObject setValue:myLocation forKey:@"location"];
+                        [newManagedObject setValue:mySpeakers.sessionID forKey:@"sessionID"];
+                        
+                        
+                        NSError *error = nil;
+                        // Save the object to persistent store
+                        if (![context save:&error]) {
+                            NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
+                        }
+                        NSLog(@"You created a new Speaker object!");
+                    }
+                    
+                    
+                    
+                }
+                
+            });
+        });
+        
+        
+        
+        
+        //-------------------------
+        
+        //CREATE SPEAKER6 OBJECTS
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),^{
+            
+            NSURL *url = [NSURL URLWithString:@"http://www.speedyreference.com/bicsi/convertcsv1.json"];
+            NSData * data = [NSData dataWithContentsOfURL:url];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+                //Set up our speakers array
+                speakersArray = [[NSMutableArray alloc] init];
+                
+                for (int i = 0; i < json.count; i++) {
+                    //create speakers object
+                    
+                    NSString * sCompany = [[json objectAtIndex:i] objectForKey:@"trainer6org"];
+                    NSString * sName = [[json objectAtIndex:i] objectForKey:@"trainer6firstname"];
+                    NSString * sLastname = [[json objectAtIndex:i] objectForKey:@"trainer6lastname"];
+                    NSString * sCity = [[json objectAtIndex:i] objectForKey:@"trainer6city"];
+                    NSString * sState = [[json objectAtIndex:i] objectForKey:@"trainer6state"];
+                    NSString * sCountry = [[json objectAtIndex:i] objectForKey:@"trainer6country"];
+                    NSString * sSession1 = [[json objectAtIndex:i] objectForKey:@"functiontitle"];
+                    NSString * sSession1Date = [[json objectAtIndex:i] objectForKey:@"fucntioindate"];
+                    NSString * sSession1Desc = [[json objectAtIndex:i] objectForKey:@"functiondescription"];
+                    NSString * sSessionID = [[json objectAtIndex:i] objectForKey:@"FUNCTIONCD"];
+                    NSString * sStartTime = [[json objectAtIndex:i] objectForKey:@"functionStartTime"];
+                    NSString * sEndTime = [[json objectAtIndex:i] objectForKey:@"functionEndTime"];
+                    NSString * sLocation = [[json objectAtIndex:i] objectForKey:@"LOCATIONNAME"];
+                    
+                    
+                    
+                    Speakers * mySpeakers = [[Speakers alloc] initWithSpeakerName: sName andSpeakerLastName: sLastname andSpeakerCompany: sCompany andSpeakerCity: sCity andSpeakerState: sState andSpeakerCountry: sCountry andSession1: sSession1 andSession1Date: sSession1Date andSession1Desc: sSession1Desc andSessionID:sSessionID andStartTime: sStartTime andEndTime: sEndTime andLocation: sLocation];
+                    
+                    
+                    //Add our speakers object to our speakersArray
+                    [speakersArray addObject:mySpeakers];
+                    
+                    NSManagedObjectContext *context = [self managedObjectContext];
+                    
+                    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+                    
+                    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Speakers" inManagedObjectContext:context];
+                    
+                    [fetchRequest setEntity:entity];
+                    
+                    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"speakerName == %@",mySpeakers.speakerName]];
+                    
+                    NSArray *myResults = [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
+                    
+                    self.objects = myResults;
+                    if (!myResults || !myResults.count){
+                        
+                        NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:@"Speakers" inManagedObjectContext:context];
+                        
+                        [newManagedObject setValue:mySpeakers.speakerName forKey:@"speakerName"];
+                        [newManagedObject setValue:mySpeakers.speakerLastName forKey:@"speakerLastName"];
+                        [newManagedObject setValue:mySpeakers.speakerCompany forKey:@"speakerCompany"];
+                        [newManagedObject setValue:mySpeakers.speakerCity forKey:@"speakerCity"];
+                        [newManagedObject setValue:mySpeakers.speakerState forKey:@"speakerState"];
+                        [newManagedObject setValue:mySpeakers.speakerCountry forKey:@"speakerCountry"];
+                        [newManagedObject setValue:mySpeakers.session1 forKey:@"session1"];
+                        [newManagedObject setValue:mySpeakers.session1Date forKey:@"session1Date"];
+                        [newManagedObject setValue:mySpeakers.session1Desc forKey:@"session1Desc"];
+                        [newManagedObject setValue:mySpeakers.startTime forKey:@"startTime"];
+                        [newManagedObject setValue:mySpeakers.endTime forKey:@"endTime"];
+                        NSString * myLocation = [[NSString alloc] initWithFormat:@"%@",mySpeakers.location];
+                        [newManagedObject setValue:myLocation forKey:@"location"];
+                        [newManagedObject setValue:mySpeakers.sessionID forKey:@"sessionID"];
+                        
+                        
+                        NSError *error = nil;
+                        // Save the object to persistent store
+                        if (![context save:&error]) {
+                            NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
+                        }
+                        NSLog(@"You created a new Speaker object!");
+                    }
+                    
+                    
+                    
+                }
+                
+            });
+        });
+        
+        
+        
+        
+        //-------------------------
+
         
         //CREATE SESSION OBJECTS
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),^{

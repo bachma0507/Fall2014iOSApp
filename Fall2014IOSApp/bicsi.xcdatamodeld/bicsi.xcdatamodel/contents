@@ -80,28 +80,17 @@
     <entity name="Speakers" syncable="YES">
         <attribute name="endTime" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="location2" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="sess2EndTime" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="sess2StartTime" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="session1" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="session1Date" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="session1Desc" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="session1Time" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="session2" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="session2Date" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="session2Desc" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="session2Time" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="sessionID" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="sessionID2" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="speakerBio" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="speakerCity" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="speakerCompany" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="speakerCountry" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="speakerID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="speakerLastName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="speakerName" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="speakerPic" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="speakerState" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="speakerWebsite" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="startTime" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Sponsors" syncable="YES">
@@ -130,7 +119,7 @@
         <element name="Html" positionX="0" positionY="0" width="128" height="90"/>
         <element name="Sessions" positionX="0" positionY="0" width="128" height="420"/>
         <element name="Sessnotes" positionX="0" positionY="0" width="128" height="210"/>
-        <element name="Speakers" positionX="0" positionY="0" width="128" height="420"/>
+        <element name="Speakers" positionX="0" positionY="0" width="128" height="253"/>
         <element name="Sponsors" positionX="0" positionY="0" width="128" height="165"/>
         <element name="Timeinterval" positionX="0" positionY="0" width="128" height="60"/>
         <element name="Todo" positionX="0" positionY="0" width="128" height="90"/>

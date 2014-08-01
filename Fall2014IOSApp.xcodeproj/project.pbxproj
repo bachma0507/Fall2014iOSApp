@@ -291,6 +291,11 @@
 		4CBDD4C71848DA70007A9002 /* telegartner.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CBDD4AC1848DA70007A9002 /* telegartner.png */; };
 		4CBDD4C81848DA70007A9002 /* hyperline_gold.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CBDD4AD1848DA70007A9002 /* hyperline_gold.png */; };
 		4CBDD4C91848DA70007A9002 /* dymo_diamond.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CBDD4AE1848DA70007A9002 /* dymo_diamond.png */; };
+		4CBE7298198C05400090DA6E /* Speakers2.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBE7297198C05400090DA6E /* Speakers2.m */; };
+		4CBE729B198C05530090DA6E /* Speakers3.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBE729A198C05530090DA6E /* Speakers3.m */; };
+		4CBE729E198C05600090DA6E /* Speakers4.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBE729D198C05600090DA6E /* Speakers4.m */; };
+		4CBE72A1198C056D0090DA6E /* Speakers5.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBE72A0198C056D0090DA6E /* Speakers5.m */; };
+		4CBE72A4198C057D0090DA6E /* Speakers6.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBE72A3198C057D0090DA6E /* Speakers6.m */; };
 		4CC05AA5180C76DE0082A141 /* IpadLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC05AA4180C76DE0082A141 /* IpadLoginViewController.m */; };
 		4CC05AA8180C76F90082A141 /* IpadRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC05AA7180C76F90082A141 /* IpadRegisterViewController.m */; };
 		4CC05AAB180C77190082A141 /* IpadWallPicturesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC05AAA180C77190082A141 /* IpadWallPicturesViewController.m */; };
@@ -963,6 +968,16 @@
 		4CBDD4AC1848DA70007A9002 /* telegartner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = telegartner.png; sourceTree = "<group>"; };
 		4CBDD4AD1848DA70007A9002 /* hyperline_gold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hyperline_gold.png; sourceTree = "<group>"; };
 		4CBDD4AE1848DA70007A9002 /* dymo_diamond.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dymo_diamond.png; sourceTree = "<group>"; };
+		4CBE7296198C05400090DA6E /* Speakers2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Speakers2.h; sourceTree = "<group>"; };
+		4CBE7297198C05400090DA6E /* Speakers2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Speakers2.m; sourceTree = "<group>"; };
+		4CBE7299198C05530090DA6E /* Speakers3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Speakers3.h; sourceTree = "<group>"; };
+		4CBE729A198C05530090DA6E /* Speakers3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Speakers3.m; sourceTree = "<group>"; };
+		4CBE729C198C05600090DA6E /* Speakers4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Speakers4.h; sourceTree = "<group>"; };
+		4CBE729D198C05600090DA6E /* Speakers4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Speakers4.m; sourceTree = "<group>"; };
+		4CBE729F198C056D0090DA6E /* Speakers5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Speakers5.h; sourceTree = "<group>"; };
+		4CBE72A0198C056D0090DA6E /* Speakers5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Speakers5.m; sourceTree = "<group>"; };
+		4CBE72A2198C057D0090DA6E /* Speakers6.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Speakers6.h; sourceTree = "<group>"; };
+		4CBE72A3198C057D0090DA6E /* Speakers6.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Speakers6.m; sourceTree = "<group>"; };
 		4CC05AA3180C76DE0082A141 /* IpadLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IpadLoginViewController.h; sourceTree = "<group>"; };
 		4CC05AA4180C76DE0082A141 /* IpadLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IpadLoginViewController.m; sourceTree = "<group>"; };
 		4CC05AA6180C76F90082A141 /* IpadRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IpadRegisterViewController.h; sourceTree = "<group>"; };
@@ -1778,6 +1793,16 @@
 				4C453BAF185BC51A00D57388 /* CSchedule.m */,
 				4C453BB1185CE10600D57388 /* Html.h */,
 				4C453BB2185CE10600D57388 /* Html.m */,
+				4CBE7296198C05400090DA6E /* Speakers2.h */,
+				4CBE7297198C05400090DA6E /* Speakers2.m */,
+				4CBE7299198C05530090DA6E /* Speakers3.h */,
+				4CBE729A198C05530090DA6E /* Speakers3.m */,
+				4CBE729C198C05600090DA6E /* Speakers4.h */,
+				4CBE729D198C05600090DA6E /* Speakers4.m */,
+				4CBE729F198C056D0090DA6E /* Speakers5.h */,
+				4CBE72A0198C056D0090DA6E /* Speakers5.m */,
+				4CBE72A2198C057D0090DA6E /* Speakers6.h */,
+				4CBE72A3198C057D0090DA6E /* Speakers6.m */,
 			);
 			name = classes;
 			sourceTree = "<group>";
@@ -3046,6 +3071,8 @@
 				4C42864319475D7B007A5A11 /* MenuViewController.m in Sources */,
 				4C06D6DF176A2FF300B6E24D /* StartPageViewController.m in Sources */,
 				4C06D71B176A407B00B6E24D /* ConferenceScheduleViewController.m in Sources */,
+				4CBE72A4198C057D0090DA6E /* Speakers6.m in Sources */,
+				4CBE729E198C05600090DA6E /* Speakers4.m in Sources */,
 				4C4875A2176CEE8700059E21 /* SpeakersViewController.m in Sources */,
 				4C4875A5176CEF9600059E21 /* City.m in Sources */,
 				4C4875A8176D0B5800059E21 /* SpeakerDetailViewController.m in Sources */,
@@ -3095,6 +3122,7 @@
 				4CD8E07E1937E42F00A4326C /* OACall.m in Sources */,
 				4C088C5E177F667500CFBC96 /* NSRelationshipDescription+MagicalDataImport.m in Sources */,
 				4C088C5F177F667500CFBC96 /* NSString+MagicalDataImport.m in Sources */,
+				4CBE729B198C05530090DA6E /* Speakers3.m in Sources */,
 				4C088C60177F667500CFBC96 /* NSManagedObject+MagicalAggregation.m in Sources */,
 				4C018E391808F1DA00A567C6 /* WallPicturesViewController.m in Sources */,
 				4CD8E07B1937E42F00A4326C /* hmac.c in Sources */,
@@ -3161,10 +3189,12 @@
 				4CC5645E18CC32360033B05A /* EntranceHallFloorPlanViewController.m in Sources */,
 				4C7C0F6517A4A9B700726FC3 /* MyFavoritesCell.m in Sources */,
 				4C7C0F6817A4BEA300726FC3 /* MyFavoritesDetailViewController.m in Sources */,
+				4CBE72A1198C056D0090DA6E /* Speakers5.m in Sources */,
 				4CD8E09F1938121600A4326C /* ViewController.m in Sources */,
 				4C62C31517A972DA00C736BC /* ExhibitorWebViewController.m in Sources */,
 				4C6A496A17D0BDD9003941C7 /* ConfSchedTableViewController.m in Sources */,
 				4C6A496D17D0BE55003941C7 /* ConfSched.m in Sources */,
+				4CBE7298198C05400090DA6E /* Speakers2.m in Sources */,
 				4CD8E0941937E78300A4326C /* YelpAPIService.m in Sources */,
 				4CD8E0831937E42F00A4326C /* OAPlaintextSignatureProvider.m in Sources */,
 				4C453BB3185CE10600D57388 /* Html.m in Sources */,

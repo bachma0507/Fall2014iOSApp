@@ -82,32 +82,32 @@
     speakerName.text = speakers.speakerName;
     speakerName.textColor = [UIColor brownColor];
     speakerCompany.text = speakers.speakerCompany;
-    speakerBioTextView.text = speakers.speakerBio;
+    //speakerBioTextView.text = speakers.speakerBio;
     session1label.text = speakers.session1;
     session1DateLabel.text = speakers.session1Date;
-    session1TimeLabel.text = speakers.session1Time;
+    //session1TimeLabel.text = speakers.session1Time;
     sessionDesc = speakers.session1Desc;
     
-    session2label.text = speakers.session2;
-    session2DateLabel.text = speakers.session2Date;
-    session2TimeLabel.text = speakers.session2Time;
-    session2Desc = speakers.session2Desc;
+//    session2label.text = speakers.session2;
+//    session2DateLabel.text = speakers.session2Date;
+//    session2TimeLabel.text = speakers.session2Time;
+//    session2Desc = speakers.session2Desc;
     
     sessionId = speakers.sessionID;
-    sessionId2 = speakers.sessionID2;
+    //sessionId2 = speakers.sessionID2;
     
     startTimeStr = speakers.startTime;
     endTime = speakers.endTime;
     location = speakers.location;
     
-    sess2StartTime = speakers.sess2StartTime;
-    sess2EndTime = speakers.sess2EndTime;
-    location2 = speakers.location2;
-    poll1 = speakers.speakerWebsite;
-    poll2 = speakers.speakerPic;
-    
-    NSLog(@"Poll1 is: %@", speakers.speakerWebsite);
-    NSLog(@"Poll2 is: %@", speakers.speakerPic);
+//    sess2StartTime = speakers.sess2StartTime;
+//    sess2EndTime = speakers.sess2EndTime;
+//    location2 = speakers.location2;
+//    poll1 = speakers.speakerWebsite;
+//    poll2 = speakers.speakerPic;
+//    
+//    NSLog(@"Poll1 is: %@", speakers.speakerWebsite);
+//    NSLog(@"Poll2 is: %@", speakers.speakerPic);
 
     
     [[speakerBioTextView layer] setBorderColor:[[UIColor colorWithRed:48/256.0 green:134/256.0 blue:174/256.0 alpha:1.0] CGColor]];
