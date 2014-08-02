@@ -76,16 +76,44 @@
     UIBarButtonItem *backButtonItem = [[UIBarButtonItem alloc] initWithTitle:@" " style:UIBarButtonItemStylePlain target:nil action:nil];
     self.navigationItem.backBarButtonItem = backButtonItem;
     
-    self.title = speakers.speakerName;
+    session2DateLabel.hidden = YES;
+    session2label.hidden = YES;
+    session2TimeLabel.hidden = YES;
+    
+    NSString * bioText = [[NSString alloc] initWithFormat:@"%@ %@ represents %@, %@ %@, %@", speakers.speakerName, speakers.speakerLastName, speakers.speakerCompany, speakers.speakerCity, speakers.speakerState, speakers.speakerCountry ];
+    
+    
+    speakerBioTextView.text = bioText;
+    
+    NSString * firstName = [[NSString alloc] initWithFormat:@"%@", speakers.speakerName];
+    NSString * lastName = [[NSString alloc] initWithFormat:@"%@", speakers.speakerLastName];
+    NSString * fullName = [[NSString alloc] initWithFormat:@"%@ %@", firstName, lastName];
+    
+    self.title = fullName;
     
     //set our labels
-    speakerName.text = speakers.speakerName;
+    speakerName.text = fullName;
     speakerName.textColor = [UIColor brownColor];
     speakerCompany.text = speakers.speakerCompany;
     //speakerBioTextView.text = speakers.speakerBio;
     session1label.text = speakers.session1;
-    session1DateLabel.text = speakers.session1Date;
-    //session1TimeLabel.text = speakers.session1Time;
+    
+    NSString * sessDate = speakers.session1Date;
+    
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"MM/dd/yyyy hh:mm"];
+    NSDate *sessionD = [dateFormat dateFromString:sessDate];
+    
+    [dateFormat setDateStyle:NSDateFormatterMediumStyle];
+    sessDate = [dateFormat stringFromDate:sessionD];
+    
+    
+    session1DateLabel.text = sessDate;
+    
+    NSString * timePeriod = [[NSString alloc] initWithFormat:@"%@ - %@", speakers.startTime, speakers.endTime];
+    
+    
+    session1TimeLabel.text = timePeriod;
     sessionDesc = speakers.session1Desc;
     
 //    session2label.text = speakers.session2;
@@ -161,7 +189,7 @@
         destViewController.sessionTime = self.sessionTime;
         destViewController.sessionDesc = self.sessionDesc;
         destViewController.sessionId = self.sessionId;
-        destViewController.startTimeStr = self.startTimeStr;
+        destViewController.startTime = self.startTimeStr;
         destViewController.endTime = self.endTime;
         destViewController.location = self.location;
         destViewController.poll1 = self.poll1;

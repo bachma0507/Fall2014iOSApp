@@ -25,7 +25,7 @@
 @implementation SessionsViewController
 @synthesize session1Label, session1DateLabel, session1TimeLabel, session1DescTextField, speakerNameLabel, speakers;
 @synthesize session1DateLabelText, session1descTextFieldText, session1LabelText, session1TimeLabelText, speakerNameLabelText;
-@synthesize sessionName, sessionDate, sessionTime, sessionDesc, name, sessionId, sessionIdLabel, agendaButton, startTimeStr, endTime, locationLabel,location, sessionDay, poll1, pollButton;
+@synthesize sessionName, sessionDate, sessionTime, sessionDesc, name, sessionId, sessionIdLabel, agendaButton, startTime, endTime, locationLabel,location, sessionDay, poll1, pollButton;
 
 - (NSManagedObjectContext *)managedObjectContext {
     NSManagedObjectContext *context = nil;
@@ -58,9 +58,7 @@
     NSString *deviceID = [[NSString alloc] initWithFormat:@"%@",id];
     NSString *newDeviceID = [deviceID substringWithRange:NSMakeRange(30, [deviceID length]-30)];
     
-    NSLog(@"Untruncated Device ID is: %@", deviceID);
-    NSLog(@"Truncated Device ID is: %@", newDeviceID);
-    
+    pollButton.hidden = YES;
     
     //self.managedObjectContext = [[self.appDelegate coreDataStore] contextForCurrentThread];
     
@@ -77,7 +75,7 @@
     sessionIdLabel.text = self.sessionId;
     locationLabel.text = self.location;
     
-    startTimeStr = self.startTimeStr;
+    startTime = self.startTime;
     endTime = self.endTime;
     location = self.location;
     sessionDay = self.sessionDay;
@@ -93,7 +91,7 @@
     
     
     NSLog(@"Session Id 1 is: %@", self.sessionId);
-    NSLog(@"Session day is: %@", self.sessionDay);
+    NSLog(@"SESSION DATE IS: %@", self.sessionDate);
     
     //session1DescTextField.layer.borderWidth = 2.0f;
     //session1DescTextField.layer.borderColor = [[UIColor grayColor] CGColor];
@@ -247,8 +245,6 @@
     NSString *deviceID = [[NSString alloc] initWithFormat:@"%@",id];
     NSString *newDeviceID = [deviceID substringWithRange:NSMakeRange(30, [deviceID length]-30)];
     
-    NSLog(@"Untruncated Device ID is: %@", deviceID);
-    NSLog(@"Truncated Device ID is: %@", newDeviceID);
     
     NSLog(@"MY SESSION ID 1 IS: %@",self.sessionId);
     
@@ -259,13 +255,24 @@
         
         [newManagedObject setValue:self.sessionId forKey:@"sessionID"];
         [newManagedObject setValue:self.session1Label.text forKey:@"sessionname"];
-        [newManagedObject setValue:self.session1DateLabel.text forKey:@"sessiondate"];
+        
+        NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+        [dateFormat setDateStyle:NSDateFormatterMediumStyle];
+        NSDate *convDate = [dateFormat dateFromString:self.session1DateLabel.text];
+        
+        
+        [newManagedObject setValue:convDate forKey:@"sessiondate"];
         [newManagedObject setValue:self.session1TimeLabel.text forKey:@"sessiontime"];
         [newManagedObject setValue:self.locationLabel.text forKey:@"location"];
-        NSDateFormatter *df = [[NSDateFormatter alloc] init];
-        [df setDateFormat:@"hh:mm a"];
-        NSDate *sessTime = [df dateFromString: self.startTimeStr];
-        [newManagedObject setValue:sessTime forKey:@"starttime"];
+//        NSDateFormatter *df = [[NSDateFormatter alloc] init];
+//        [df setDateFormat:@"hh:mm a"];
+//        NSDate *sessTime = [df dateFromString: self.startTimeStr];
+        
+        
+        [dateFormat setDateStyle:NSDateFormatterMediumStyle];
+        NSDate *convStartTime = [dateFormat dateFromString:self.startTime];
+        
+        [newManagedObject setValue:convStartTime forKey:@"starttime"];
         [newManagedObject setValue:newDeviceID forKey:@"deviceowner"];
         [newManagedObject setValue:@"Yes" forKey:@"agenda"];
         
@@ -502,23 +509,50 @@
 
 //Event creation
 -(BOOL)createEvent:(EKEventStore*)eventStore{
-    NSString *myDateStr = [[NSString alloc]initWithFormat:@"%@",self.sessionDate];
-    NSString *myStartTimeStr = [[NSString alloc]initWithFormat:@"%@",self.startTimeStr];
-    NSString *myEndTimeStr = [[NSString alloc]initWithFormat:@"%@",self.endTime];
+    
+    NSLog(@"SESSION DATE IS: %@", self.sessionDate);
+    
+    
+    
+//    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+//    [dateFormatter setDateFormat:@"MMM dd, yyyy"];
+//    NSDate *date = (NSDate*) self.sessionDate;
+//    NSString *myDateStr = [dateFormatter stringFromDate:date];
+    
+    NSString * myDateStr = self.sessionDate;
+    
+    
+//    NSDateFormatter *timeFormatter1 = [[NSDateFormatter alloc] init];
+//    [timeFormatter1 setDateFormat:@"hh:mm a"];
+//    NSDate *time1 = (NSDate*) self.startTime;
+//    NSString *myStartTimeStr = [timeFormatter1 stringFromDate:time1];
+    
+    NSString *myStartTimeStr = self.startTime;
+    
+//    NSDateFormatter *timeFormatter2 = [[NSDateFormatter alloc] init];
+//    [timeFormatter2 setDateFormat:@"hh:mm a"];
+//    NSDate *time2 = (NSDate*) self.endTime;
+//    NSString *myEndTimeStr = [timeFormatter2 stringFromDate:time2];
+    
+    NSString *myEndTimeStr = self.endTime;
+    
     
     NSLog(@"myDateStr is: %@", myDateStr);
     NSLog(@"myStartTimeStr is: %@", myStartTimeStr);
-    
-    //NSLog(@"start time is %@",myStartTimeStr);
-    NSLog(@"myEndTimeStr is %@",myEndTimeStr);
+    NSLog(@"myEndTimeStr is: %@", myEndTimeStr);
     
     NSString *sessDateStr = [[NSString alloc]initWithFormat:@"%@ %@",myDateStr,myStartTimeStr];
     NSString *sessEndDateStr = [[NSString alloc]initWithFormat:@"%@ %@",myDateStr, myEndTimeStr];
     NSString *sessNameStr = [[NSString alloc]initWithFormat:@"%@", self.sessionName];
     NSString *sessLocationStr = [[NSString alloc]initWithFormat:@"%@", self.location];
     
+    NSLog(@"sessDateStr is: %@", sessDateStr);
+    NSLog(@"sessEndDateStr is: %@", sessEndDateStr);
+    
+    
     NSDateFormatter *df = [[NSDateFormatter alloc] init];
-    [df setDateFormat:@"MMM dd yyyy hh:mm a"];
+    [df setDateFormat:@"MMM dd, yyyy hh:mm a"];
+    //[df setDateStyle:NSDateFormatterMediumStyle];
     NSDate *sessDate = [df dateFromString: sessDateStr];
     NSLog(@"sessDate is: %@", sessDate);
     
@@ -528,7 +562,6 @@
     NSLog(@"sessEndDate is: %@", sessEndDate);
     
     
-    
     EKEvent *event = [EKEvent eventWithEventStore:eventStore];
     event.title = sessNameStr;
     event.startDate = sessDate;
@@ -536,6 +569,8 @@
     event.endDate = sessEndDate;
     event.location = sessLocationStr;
     event.calendar = [eventStore defaultCalendarForNewEvents];
+    
+    
     
     NSError *error;
     [eventStore saveEvent:event span:EKSpanThisEvent error:&error];
@@ -548,6 +583,55 @@
     }
     
     //[self createReminder];
+    
+    
+    
+//    NSString *myDateStr = [[NSString alloc]initWithFormat:@"%@",self.sessionDate];
+//    NSString *myStartTimeStr = [[NSString alloc]initWithFormat:@"%@",self.startTime];
+//    NSString *myEndTimeStr = [[NSString alloc]initWithFormat:@"%@",self.endTime];
+//    
+//    NSLog(@"myDateStr is: %@", myDateStr);
+//    NSLog(@"myStartTimeStr is: %@", myStartTimeStr);
+//    
+//    //NSLog(@"start time is %@",myStartTimeStr);
+//    NSLog(@"myEndTimeStr is %@",myEndTimeStr);
+//    
+//    NSString *sessDateStr = [[NSString alloc]initWithFormat:@"%@ %@",myDateStr,myStartTimeStr];
+//    NSString *sessEndDateStr = [[NSString alloc]initWithFormat:@"%@ %@",myDateStr, myEndTimeStr];
+//    NSString *sessNameStr = [[NSString alloc]initWithFormat:@"%@", self.sessionName];
+//    NSString *sessLocationStr = [[NSString alloc]initWithFormat:@"%@", self.location];
+//    
+//    NSDateFormatter *df = [[NSDateFormatter alloc] init];
+//    [df setDateFormat:@"MMM dd yyyy hh:mm a"];
+//    NSDate *sessDate = [df dateFromString: sessDateStr];
+//    NSLog(@"sessDate is: %@", sessDate);
+//    
+//    NSDateFormatter *dfEnd = [[NSDateFormatter alloc] init];
+//    [dfEnd setDateFormat:@"MMM dd yyyy hh:mm a"];
+//    NSDate *sessEndDate = [df dateFromString: sessEndDateStr];
+//    NSLog(@"sessEndDate is: %@", sessEndDate);
+//    
+//    
+//    
+//    EKEvent *event = [EKEvent eventWithEventStore:eventStore];
+//    event.title = sessNameStr;
+//    event.startDate = sessDate;
+//    //event.endDate = [event.startDate dateByAddingTimeInterval:3600];
+//    event.endDate = sessEndDate;
+//    event.location = sessLocationStr;
+//    event.calendar = [eventStore defaultCalendarForNewEvents];
+//    
+//    NSError *error;
+//    [eventStore saveEvent:event span:EKSpanThisEvent error:&error];
+//    
+//    if (error) {
+//        NSLog(@"Event Store Error: %@",[error localizedDescription]);
+//        return NO;
+//    }else{
+//        return YES;
+//    }
+//    
+//    //[self createReminder];
 }
 
 //-(void)createReminder

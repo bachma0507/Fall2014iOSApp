@@ -40,6 +40,7 @@
 
 
 @property (strong, nonatomic) IBOutlet UILabel *speakerName;
+//@property (strong, nonatomic) IBOutlet UILabel *speakerLastName;
 @property (strong, nonatomic) IBOutlet UILabel *speakerCompany;
 @property (strong, nonatomic) IBOutlet UILabel *speakerWebsite;
 @property (strong, nonatomic) IBOutlet UITextView *speakerBioTextView;

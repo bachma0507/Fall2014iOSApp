@@ -38,7 +38,7 @@
 @property (nonatomic, strong) NSString * sessionTime;
 @property (nonatomic, strong) NSString * name;
 @property (nonatomic, strong) NSString * sessionId;
-@property (nonatomic, strong) NSString * startTimeStr;
+@property (nonatomic, strong) NSString * startTime;
 @property (nonatomic, strong) NSString * endTime;
 @property (nonatomic, strong) NSString * location;
 @property (nonatomic, strong) NSString * sessionDay;
