@@ -113,6 +113,8 @@
     cell.boothNumberLabel.text = [object valueForKey:@"boothnumber"];
         //cell.sessionTimeLabel.text = [object valueForKey:@"sessiontime"];
     
+    exhibitorName = cell.exhibitorNameLabel.text;
+    
     //NSLog(@"BOOTH NUMBER IS %@", cell.boothNumberLabel.text);
     
     
@@ -221,6 +223,35 @@
         [array removeObjectAtIndex:indexPath.row];
         self.objects = array;
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        
+        //////
+        NSFetchRequest *fetchRequest2 = [[NSFetchRequest alloc] init];
+        
+        NSEntityDescription *entity2 = [NSEntityDescription entityForName:@"Exhibitors" inManagedObjectContext:context];
+        [fetchRequest2 setEntity:entity2];
+        
+        [fetchRequest2 setPredicate:[NSPredicate predicateWithFormat:@"name == %@", exhibitorName]];
+        NSArray *results2 = [self.managedObjectContext executeFetchRequest:fetchRequest2 error:nil];
+        self.objects = results2;
+        NSLog(@"Results Count is: %lu", (unsigned long)results2.count);
+        if (!results2 || !results2.count){//start nested if block
+            NSLog(@"No results2");}
+        else{
+            NSManagedObject *object = [results2 objectAtIndex:0];
+            [object setValue:NULL forKey:@"fav"];
+            
+            NSError *error = nil;
+            // Save the object to persistent store
+            if (![context save:&error]) {
+                NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
+                
+            }
+            
+            NSLog(@"You updated a FAV to NULL object in Exhibitors");
+            
+        }
+        /////
+        
     }
 }
 
