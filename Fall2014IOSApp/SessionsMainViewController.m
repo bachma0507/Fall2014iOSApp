@@ -377,11 +377,20 @@
 
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (self.searchDisplayController.isActive)
+    {
+        [self performSegueWithIdentifier:@"sessionsDetailCell" sender:self];
+    }
+}
+
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([segue.identifier isEqualToString:@"sessionsDetailCell"])
     {
+        
         if (self.searchDisplayController.isActive)
         {
             NSIndexPath * indexPath = [[self.searchDisplayController searchResultsTableView] indexPathForSelectedRow];
