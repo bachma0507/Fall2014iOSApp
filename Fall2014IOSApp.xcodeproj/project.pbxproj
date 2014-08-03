@@ -296,6 +296,7 @@
 		4CBE729E198C05600090DA6E /* Speakers4.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBE729D198C05600090DA6E /* Speakers4.m */; };
 		4CBE72A1198C056D0090DA6E /* Speakers5.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBE72A0198C056D0090DA6E /* Speakers5.m */; };
 		4CBE72A4198C057D0090DA6E /* Speakers6.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBE72A3198C057D0090DA6E /* Speakers6.m */; };
+		4CBE72A6198EBBD40090DA6E /* exhfavnew.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CBE72A5198EBBD40090DA6E /* exhfavnew.png */; };
 		4CC05AA5180C76DE0082A141 /* IpadLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC05AA4180C76DE0082A141 /* IpadLoginViewController.m */; };
 		4CC05AA8180C76F90082A141 /* IpadRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC05AA7180C76F90082A141 /* IpadRegisterViewController.m */; };
 		4CC05AAB180C77190082A141 /* IpadWallPicturesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC05AAA180C77190082A141 /* IpadWallPicturesViewController.m */; };
@@ -978,6 +979,7 @@
 		4CBE72A0198C056D0090DA6E /* Speakers5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Speakers5.m; sourceTree = "<group>"; };
 		4CBE72A2198C057D0090DA6E /* Speakers6.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Speakers6.h; sourceTree = "<group>"; };
 		4CBE72A3198C057D0090DA6E /* Speakers6.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Speakers6.m; sourceTree = "<group>"; };
+		4CBE72A5198EBBD40090DA6E /* exhfavnew.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = exhfavnew.png; sourceTree = "<group>"; };
 		4CC05AA3180C76DE0082A141 /* IpadLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IpadLoginViewController.h; sourceTree = "<group>"; };
 		4CC05AA4180C76DE0082A141 /* IpadLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IpadLoginViewController.m; sourceTree = "<group>"; };
 		4CC05AA6180C76F90082A141 /* IpadRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IpadRegisterViewController.h; sourceTree = "<group>"; };
@@ -1592,6 +1594,7 @@
 		4C36C691192E68940018AB39 /* Fall_2014_icons */ = {
 			isa = PBXGroup;
 			children = (
+				4CBE72A5198EBBD40090DA6E /* exhfavnew.png */,
 				4C6CFCFB19758E8D00AEB8B2 /* hotel_background_ipad.png */,
 				4C6CFCFC19758E8D00AEB8B2 /* hotel_background_ipad@2x.png */,
 				4C6CFCF319743DDA00AEB8B2 /* fall2014_new_session_rooms_iphone.png */,
@@ -2788,6 +2791,7 @@
 				4C018E331808E52500A567C6 /* gallery_tab_icon_unselected@2x.png in Resources */,
 				4CD8DECD1937816600A4326C /* mynotesglow.png in Resources */,
 				4C5A85681800926F00378976 /* navbarflatgrey2.png in Resources */,
+				4CBE72A6198EBBD40090DA6E /* exhfavnew.png in Resources */,
 				4CD8DF93193781C900A4326C /* confsched_568h@2x.png in Resources */,
 				4CD8DF95193781C900A4326C /* contactus_568h@2x.png in Resources */,
 				4C2368E717FB3708001843B4 /* button-green.png in Resources */,

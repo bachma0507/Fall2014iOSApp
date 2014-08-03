@@ -18,6 +18,7 @@
         <attribute name="boothLabel" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="coId" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="eventId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fav" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="mapId" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
@@ -114,7 +115,7 @@
     <elements>
         <element name="Cschedule" positionX="0" positionY="0" width="128" height="105"/>
         <element name="Ehschedule" positionX="0" positionY="0" width="128" height="120"/>
-        <element name="Exhibitors" positionX="0" positionY="0" width="128" height="165"/>
+        <element name="Exhibitors" positionX="0" positionY="0" width="128" height="180"/>
         <element name="Favorites" positionX="0" positionY="0" width="128" height="150"/>
         <element name="Html" positionX="0" positionY="0" width="128" height="90"/>
         <element name="Sessions" positionX="0" positionY="0" width="128" height="420"/>

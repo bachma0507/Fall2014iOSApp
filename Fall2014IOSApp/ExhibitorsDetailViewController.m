@@ -90,9 +90,12 @@
     self.objects = results;
     NSLog(@"Results Count is: %lu", (unsigned long)results.count);
     if (!results || !results.count){
+        
         [self.favoritesButton setTitle:@"Add to Favorites" forState:normal];
     }
     else{
+        
+        
         [self.favoritesButton setTitle:@"Remove from Favorites" forState:normal];
     }
     
@@ -186,8 +189,37 @@
             NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
         }
         
-        NSLog(@"You created a new object!");
+        NSLog(@"You created a new FAVORITES object!");
         [favoritesButton setTitle:@"Remove from Favorites" forState:normal];
+        
+        
+        /////
+        NSFetchRequest *fetchRequest2 = [[NSFetchRequest alloc] init];
+        
+        NSEntityDescription *entity2 = [NSEntityDescription entityForName:@"Exhibitors" inManagedObjectContext:context];
+        [fetchRequest2 setEntity:entity2];
+        [fetchRequest2 setPredicate:[NSPredicate predicateWithFormat:@"name == %@", nameLabel.text]];
+        NSArray *results2 = [self.managedObjectContext executeFetchRequest:fetchRequest2 error:nil];
+        self.objects = results2;
+        NSLog(@"Results Count is: %lu", (unsigned long)results2.count);
+        if (!results2 || !results2.count){//start nested if block
+            NSLog(@"No results2");}
+        else{
+            NSManagedObject *object = [results2 objectAtIndex:0];
+            [object setValue:@"Yes" forKey:@"fav"];
+            
+            NSError *error = nil;
+            // Save the object to persistent store
+            if (![context save:&error]) {
+                NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
+                
+            }
+        
+        }
+        
+        
+        NSLog(@"You updated a FAV to YES object in Exhibitors!");
+        /////
         
         
     }
@@ -215,13 +247,43 @@
             // Save the object to persistent store
             if (![context save:&error]) {
                 NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
+                
             }
             
-            NSLog(@"You updated an object");
+            NSLog(@"You updated a FAVORITES object");
             [self.favoritesButton setTitle:@"Add to Favorites" forState:normal];
         }
+        //////
+        NSFetchRequest *fetchRequest2 = [[NSFetchRequest alloc] init];
+        
+        NSEntityDescription *entity2 = [NSEntityDescription entityForName:@"Exhibitors" inManagedObjectContext:context];
+        [fetchRequest2 setEntity:entity2];
+
+        [fetchRequest2 setPredicate:[NSPredicate predicateWithFormat:@"name == %@", nameLabel.text]];
+        NSArray *results2 = [self.managedObjectContext executeFetchRequest:fetchRequest2 error:nil];
+        
+        self.objects = results2;
+        NSLog(@"Results Count is: %lu", (unsigned long)results2.count);
+        if (!results2 || !results2.count){//start nested if block
+            NSLog(@"No results2");}
+        else{
+            NSManagedObject *object = [results2 objectAtIndex:0];
+            [object setValue:NULL forKey:@"fav"];
+            
+            NSError *error = nil;
+            // Save the object to persistent store
+            if (![context save:&error]) {
+                NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
+                
+            }
+            
+            NSLog(@"You updated a FAV to NULL object in Exhibitors");
+            
+        }
+
         
         
+        //////
     }//end nested if block
     
 }//end else block

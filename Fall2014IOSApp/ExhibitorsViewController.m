@@ -166,7 +166,19 @@
     //myexhibitors = [exhibitorsArray objectAtIndex:indexPath.row];
     cell.textLabel.text = [object valueForKey:@"name"];
     //cell.textLabel.font = [UIFont fontWithName:@"Arial" size:15.0];
-    cell.textLabel.textColor = [UIColor brownColor];
+    //cell.textLabel.textColor = [UIColor brownColor];
+        NSString * fav = [NSString stringWithFormat:@"%@", [object valueForKey:@"fav"]];
+        //NSString * favName = [NSString stringWithFormat:@"%@", [object valueForKey:@"name"]];
+        
+        if ([fav isEqualToString:@"Yes"]) {
+            
+            cell.textLabel.textColor = [UIColor redColor];
+        }
+        else{
+        
+        cell.textLabel.textColor = [UIColor brownColor];
+        }
+        
     NSString * booth = [NSString stringWithFormat:@"Booth Number: %@", [object valueForKey:@"boothLabel"]];
     cell.detailTextLabel.text = booth;
     //cell.detailTextLabel.font = [UIFont fontWithName:@"Arial" size:13.0];
@@ -177,7 +189,18 @@
     NSManagedObject *object = [results objectAtIndex:indexPath.row];
     cell.textLabel.text = [object valueForKey:@"name"];
     //cell.textLabel.font = [UIFont fontWithName:@"Arial" size:15.0];
-    cell.textLabel.textColor = [UIColor brownColor];
+    //cell.textLabel.textColor = [UIColor brownColor];
+        NSString * fav = [NSString stringWithFormat:@"%@", [object valueForKey:@"fav"]];
+        
+        if ([fav isEqualToString:@"Yes"]) {
+            
+            cell.textLabel.textColor = [UIColor redColor];
+        }
+        else{
+            
+            cell.textLabel.textColor = [UIColor brownColor];
+        }
+        
     NSString * booth = [NSString stringWithFormat:@"Booth Number: %@", [object valueForKey:@"boothLabel"]];
     cell.detailTextLabel.text = booth;
     //cell.detailTextLabel.font = [UIFont fontWithName:@"Arial" size:13.0];
