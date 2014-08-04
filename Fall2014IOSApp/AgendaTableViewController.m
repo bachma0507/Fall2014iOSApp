@@ -114,8 +114,9 @@
     }
     
     NSManagedObject *object = [self.objects objectAtIndex:indexPath.row];
+    
     cell.sessionNameLabel.text = [object valueForKey:@"sessionname"];
-    cell.sessionNameLabel.textColor = [UIColor brownColor];
+    cell.sessionNameLabel.textColor = [UIColor redColor];
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
@@ -223,6 +224,8 @@
         
         NSManagedObject *object = [self.objects objectAtIndex:indexPath.row];
         
+        sessionId = [object valueForKey:@"sessionID"];
+        
         NSManagedObjectContext *context = [self managedObjectContext];
         
         [context deleteObject:[context objectWithID:[object objectID]]];
@@ -238,10 +241,33 @@
         [array removeObjectAtIndex:indexPath.row];
         self.objects = array;
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-        //[tableView reloadSections:[NSIndexSet indexSetWithIndex:indexPath.section] withRowAnimation: UITableViewRowAnimationAutomatic];
-        //[tableView reloadData];
-    
-//
+        //////
+        NSFetchRequest *fetchRequest2 = [[NSFetchRequest alloc] init];
+        
+        NSEntityDescription *entity2 = [NSEntityDescription entityForName:@"Sessions" inManagedObjectContext:context];
+        [fetchRequest2 setEntity:entity2];
+        
+        [fetchRequest2 setPredicate:[NSPredicate predicateWithFormat:@"sessionID == %@", sessionId]];
+        NSArray *results2 = [self.managedObjectContext executeFetchRequest:fetchRequest2 error:nil];
+        self.objects = results2;
+        NSLog(@"Results Count is: %lu", (unsigned long)results2.count);
+        if (!results2 || !results2.count){//start nested if block
+            NSLog(@"No results2");}
+        else{
+            NSManagedObject *object = [results2 objectAtIndex:0];
+            [object setValue:NULL forKey:@"planner"];
+            
+            NSError *error = nil;
+            // Save the object to persistent store
+            if (![context save:&error]) {
+                NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
+                
+            }
+            
+            NSLog(@"You updated a PLANNER to NULL object in Sessions");
+            
+        }
+        /////
        
     }
 }

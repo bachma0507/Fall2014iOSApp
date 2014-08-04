@@ -278,7 +278,16 @@
         
         NSManagedObject *object = [dateSection objectAtIndex:indexPath.row];
         cell.textLabel.text = [object valueForKey:@"sessionName"];
+        NSString * planner = [NSString stringWithFormat:@"%@", [object valueForKey:@"planner"]];
         
+        if ([planner isEqualToString:@"Yes"]) {
+            
+            cell.textLabel.textColor = [UIColor redColor];
+        }
+        else{
+            
+            cell.textLabel.textColor = [UIColor brownColor];
+        }
         
         
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
@@ -311,7 +320,7 @@
         //cell.textLabel.font = [UIFont fontWithName:@"Arial-Bold" size:10.0];
         //cell.textLabel.textColor = [UIColor brownColor];
         //cell.textLabel.font = [UIFont systemFontOfSize:11.0];
-        cell.textLabel.textColor = [UIColor brownColor];
+        //cell.textLabel.textColor = [UIColor brownColor];
         
         cell.textLabel.numberOfLines = 0;
         cell.textLabel.lineBreakMode = NSLineBreakByWordWrapping;
@@ -321,6 +330,17 @@
     {
         NSManagedObject *object = [self.results objectAtIndex:indexPath.row];
         cell.textLabel.text = [object valueForKey:@"sessionName"];
+        
+        NSString * planner = [NSString stringWithFormat:@"%@", [object valueForKey:@"planner"]];
+        
+        if ([planner isEqualToString:@"Yes"]) {
+            
+            cell.textLabel.textColor = [UIColor redColor];
+        }
+        else{
+            
+            cell.textLabel.textColor = [UIColor brownColor];
+        }
         
         
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
@@ -353,7 +373,7 @@
         //cell.textLabel.font = [UIFont fontWithName:@"Arial-Bold" size:10.0];
         //cell.textLabel.textColor = [UIColor brownColor];
         //cell.textLabel.font = [UIFont systemFontOfSize:13.0];
-        cell.textLabel.textColor = [UIColor brownColor];
+        //cell.textLabel.textColor = [UIColor brownColor];
         
         //cell.textLabel.numberOfLines = 0;
         //cell.textLabel.lineBreakMode = NSLineBreakByWordWrapping;

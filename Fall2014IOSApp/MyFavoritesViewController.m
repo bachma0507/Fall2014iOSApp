@@ -110,6 +110,7 @@
     
     NSManagedObject *object = [self.objects objectAtIndex:indexPath.row];
     cell.exhibitorNameLabel.text = [object valueForKey:@"exhibitorname"];
+    cell.exhibitorNameLabel.textColor = [UIColor redColor];
     cell.boothNumberLabel.text = [object valueForKey:@"boothnumber"];
         //cell.sessionTimeLabel.text = [object valueForKey:@"sessiontime"];
     

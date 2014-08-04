@@ -337,6 +337,36 @@
         [agendaButton setTitle:@"Remove from Planner" forState:normal];
 
 
+        /////
+        NSFetchRequest *fetchRequest2 = [[NSFetchRequest alloc] init];
+        
+        NSEntityDescription *entity2 = [NSEntityDescription entityForName:@"Sessions" inManagedObjectContext:context];
+        [fetchRequest2 setEntity:entity2];
+        [fetchRequest2 setPredicate:[NSPredicate predicateWithFormat:@"sessionID == %@", mySessions.sessionID]];
+        NSArray *results2 = [self.managedObjectContext executeFetchRequest:fetchRequest2 error:nil];
+        self.objects = results2;
+        NSLog(@"Results Count is: %lu", (unsigned long)results2.count);
+        if (!results2 || !results2.count){//start nested if block
+            NSLog(@"No results2");}
+        else{
+            NSManagedObject *object = [results2 objectAtIndex:0];
+            [object setValue:@"Yes" forKey:@"planner"];
+            
+            NSError *error = nil;
+            // Save the object to persistent store
+            if (![context save:&error]) {
+                NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
+                
+            }
+            
+        }
+        
+        
+        NSLog(@"You updated a PLANNER to YES object in Sessions!");
+        /////
+
+        
+        
     }
     else{//start else block
         NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
@@ -367,6 +397,39 @@
                         NSLog(@"You updated an object");
                         [self.agendaButton setTitle:@"Add to Planner" forState:normal];
                 }
+        
+        
+        //////
+        NSFetchRequest *fetchRequest2 = [[NSFetchRequest alloc] init];
+        
+        NSEntityDescription *entity2 = [NSEntityDescription entityForName:@"Sessions" inManagedObjectContext:context];
+        [fetchRequest2 setEntity:entity2];
+        
+        [fetchRequest2 setPredicate:[NSPredicate predicateWithFormat:@"sessionID == %@", mySessions.sessionID]];
+        NSArray *results2 = [self.managedObjectContext executeFetchRequest:fetchRequest2 error:nil];
+        
+        self.objects = results2;
+        NSLog(@"Results Count is: %lu", (unsigned long)results2.count);
+        if (!results2 || !results2.count){//start nested if block
+            NSLog(@"No results2");}
+        else{
+            NSManagedObject *object = [results2 objectAtIndex:0];
+            [object setValue:NULL forKey:@"planner"];
+            
+            NSError *error = nil;
+            // Save the object to persistent store
+            if (![context save:&error]) {
+                NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
+                
+            }
+            
+            NSLog(@"You updated a PLANNER to NULL object in Sessions");
+            
+        }
+        
+        
+        
+        //////
                 
         
     }//end nested if block

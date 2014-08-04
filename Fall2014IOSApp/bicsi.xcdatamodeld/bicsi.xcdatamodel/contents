@@ -41,6 +41,7 @@
     <entity name="Sessions" syncable="YES">
         <attribute name="endTime" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="planner" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="sessionDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="sessionDesc" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="sessionID" optional="YES" attributeType="String" syncable="YES"/>
@@ -118,7 +119,7 @@
         <element name="Exhibitors" positionX="0" positionY="0" width="128" height="180"/>
         <element name="Favorites" positionX="0" positionY="0" width="128" height="150"/>
         <element name="Html" positionX="0" positionY="0" width="128" height="90"/>
-        <element name="Sessions" positionX="0" positionY="0" width="128" height="420"/>
+        <element name="Sessions" positionX="0" positionY="0" width="128" height="435"/>
         <element name="Sessnotes" positionX="0" positionY="0" width="128" height="210"/>
         <element name="Speakers" positionX="0" positionY="0" width="128" height="253"/>
         <element name="Sponsors" positionX="0" positionY="0" width="128" height="165"/>

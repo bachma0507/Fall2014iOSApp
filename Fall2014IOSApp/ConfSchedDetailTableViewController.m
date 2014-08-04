@@ -134,6 +134,19 @@
     NSManagedObject *object = [self.myObjects objectAtIndex:indexPath.row];
     cell.sessionName.text = [object valueForKey:@"sessionName"];
     
+    NSString * planner = [NSString stringWithFormat:@"%@", [object valueForKey:@"planner"]];
+    
+    if ([planner isEqualToString:@"Yes"]) {
+        
+        cell.sessionName.textColor = [UIColor redColor];
+    }
+    else{
+        
+        cell.sessionName.textColor = [UIColor brownColor];
+    }
+    
+    
+    
     NSDate * sTime = [object valueForKey:@"startTime"];
     NSDate * eTime = [object valueForKey:@"endTime"];
     
