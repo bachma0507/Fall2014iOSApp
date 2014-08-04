@@ -213,7 +213,7 @@
     
     [fetchRequest setEntity:entity];
     
-    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"NOT(sessionID CONTAINS 'COM' || sessionID CONTAINS 'EXHV' || sessionID CONTAINS 'EXHX' || sessionID CONTAINS 'DRIN' || sessionID CONTAINS 'BADG' || sessionID CONTAINS 'CRED_H' || sessionID CONTAINS 'FTA' || sessionID CONTAINS 'GUES' || sessionID CONTAINS 'INTL' || sessionID CONTAINS 'NEW_') && sessionDate == %@",cschedule.trueDate]];
+    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"NOT(sessionID CONTAINS 'EXHV' || sessionID CONTAINS 'EXHX' || sessionID CONTAINS 'DRIN' || sessionID CONTAINS 'BADG' || sessionID CONTAINS 'CRED_H' || sessionID CONTAINS 'FTA' || sessionID CONTAINS 'GUES' || sessionID CONTAINS 'INTL' || sessionID CONTAINS 'NEW_') && sessionDate == %@",cschedule.trueDate]];
     
     //[fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"NOT(sessionID CONTAINS 'BODMC')"]];
     
