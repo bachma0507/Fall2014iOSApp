@@ -285,15 +285,20 @@ int iNotificationCounter=0;
         }
         else{
             for (NSManagedObject *managedObject in myResults) {
-                [context deleteObject:managedObject];
-                
-                NSError *error = nil;
-                // Save the object to persistent store
-                if (![context save:&error]) {
-                    NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
+                if (![[managedObject valueForKey:@"fav"] isEqualToString:@"Yes"]) {
+                    
+                    
+                    [context deleteObject:managedObject];
+                    
+                    
+                    NSError *error = nil;
+                    // Save the object to persistent store
+                    if (![context save:&error]) {
+                        NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
+                    }
+                    NSLog(@"Exhibitor object deleted!");
+                    
                 }
-                NSLog(@"Exhibitor object deleted!");
-                
             }
         }
         //FETCH AND DELETE SPEAKER OBJECTS
@@ -343,8 +348,12 @@ int iNotificationCounter=0;
         }
         else{
             for (NSManagedObject *managedObject in myResultsSessions) {
+                if (![[managedObject valueForKey:@"planner"] isEqualToString:@"Yes"]) {
+                
+                
                 [contextSessions deleteObject:managedObject];
                 
+                    
                 NSError *error = nil;
                 // Save the object to persistent store
                 if (![contextSessions save:&error]) {
@@ -354,7 +363,7 @@ int iNotificationCounter=0;
                 
             }
         }
-        
+    }
         
         //---------------------------------
         
@@ -533,6 +542,49 @@ int iNotificationCounter=0;
                     NSArray *myResults = [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
                     
                     self.objects = myResults;
+                    
+                    NSLog(@"EXHIBITOR MYRESULTS COUNT = %lu", myResults.count);
+                    
+                    if (myResults.count == 1) {
+                        NSFetchRequest *fetchRequest2 = [[NSFetchRequest alloc] init];
+                        
+                        NSEntityDescription *entity2 = [NSEntityDescription entityForName:@"Exhibitors" inManagedObjectContext:context];
+                        [fetchRequest2 setEntity:entity2];
+                        
+                        [fetchRequest2 setPredicate:[NSPredicate predicateWithFormat:@"name == %@ && coId == %@",myExhibitors.name, myExhibitors.coId]];
+                        NSArray *results2 = [self.managedObjectContext executeFetchRequest:fetchRequest2 error:nil];
+                        
+                        self.objects = results2;
+                        
+                        NSManagedObject *object = [results2 objectAtIndex:0];
+						
+						[object setValue:myExhibitors.name forKey:@"name"];
+                        
+                        [object setValue:myExhibitors.boothLabel forKey:@"boothLabel"];
+                        NSString * myCoId = [[NSString alloc] initWithFormat:@"%@",myExhibitors.coId];
+                        [object setValue:myCoId forKey:@"coId"];
+                        NSString * myMapId = [[NSString alloc] initWithFormat:@"%@",myExhibitors.mapId];
+                        [object setValue:myMapId forKey:@"mapId"];
+                        NSString * myBoothId = [[NSString alloc] initWithFormat:@"%@",myExhibitors.boothId];
+                        [object setValue:myBoothId forKey:@"boothId"];
+                        NSString * myEventId = [[NSString alloc] initWithFormat:@"%@",myExhibitors.eventId];
+                        [object setValue:myEventId forKey:@"eventId"];
+                        NSString * myPhone = [[NSString alloc] initWithFormat:@"%@",myExhibitors.phone];
+                        [object setValue:myPhone forKey:@"phone"];
+                        NSString * myURL = [[NSString alloc] initWithFormat:@"%@",myExhibitors.url];
+                        [object setValue:myURL forKey:@"url"];
+                        
+                        NSError *error = nil;
+                        // Save the object to persistent store
+                        if (![context save:&error]) {
+                            NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
+                            
+                        }
+                        NSLog(@"You updated an object in Exhibitors");
+                    }
+                    
+                    
+                    
                     if (!myResults || !myResults.count){
                         
                         NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:@"Exhibitors" inManagedObjectContext:context];
@@ -1223,6 +1275,73 @@ int iNotificationCounter=0;
                     NSArray *myResults = [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
                     
                     self.objects = myResults;
+                    
+                    NSLog(@"SESSION MYRESULTS COUNT = %lu", myResults.count);
+                    
+                    if (myResults.count >= 1) {
+                        NSFetchRequest *fetchRequest2 = [[NSFetchRequest alloc] init];
+                        
+                        NSEntityDescription *entity2 = [NSEntityDescription entityForName:@"Sessions" inManagedObjectContext:context];
+                        [fetchRequest2 setEntity:entity2];
+                        
+                        [fetchRequest2 setPredicate:[NSPredicate predicateWithFormat:@"sessionID == %@", mySessions.sessionID]];
+                        NSArray *results2 = [self.managedObjectContext executeFetchRequest:fetchRequest2 error:nil];
+                        
+                        self.objects = results2;
+                        
+                        NSManagedObject *object = [results2 objectAtIndex:0];
+                        
+                        NSDateFormatter *dft = [[NSDateFormatter alloc] init];
+                        
+                        //USE STATEMENT BELOW WHEN USING JSON TRUNCATE
+                        //[dft setDateFormat:@"MM-dd-yyyy"];
+                        
+                        [dft setDateFormat:@"MM/dd/yyyy hh:mm"];
+                        NSDate *stDate = [dft dateFromString: mySessions.sessionDate];
+                        [object setValue:stDate forKey:@"sessionDate"];
+                        [object setValue:mySessions.sessionSpeaker1 forKey:@"sessionSpeaker1"];
+                        [object setValue:mySessions.sessionSpeaker2 forKey:@"sessionSpeaker2"];
+                        [object setValue:mySessions.sessionSpeaker3 forKey:@"sessionSpeaker3"];
+                        [object setValue:mySessions.sessionSpeaker4 forKey:@"sessionSpeaker4"];
+                        [object setValue:mySessions.sessionSpeaker5 forKey:@"sessionSpeaker5"];
+                        [object setValue:mySessions.sessionSpeaker6 forKey:@"sessionSpeaker6"];
+                        [object setValue:mySessions.speaker1Company forKey:@"speaker1Company"];
+                        [object setValue:mySessions.speaker2Company forKey:@"speaker2Company"];
+                        [object setValue:mySessions.speaker3Company forKey:@"speaker3Company"];
+                        [object setValue:mySessions.speaker4Company forKey:@"speaker4Company"];
+                        [object setValue:mySessions.speaker5Company forKey:@"speaker5Company"];
+                        [object setValue:mySessions.speaker6Company forKey:@"speaker6Company"];
+                        [object setValue:mySessions.sessionSpeaker1lastname forKey:@"sessionSpeaker1lastname"];
+                        [object setValue:mySessions.sessionSpeaker2lastname forKey:@"sessionSpeaker2lastname"];
+                        [object setValue:mySessions.sessionSpeaker3lastname forKey:@"sessionSpeaker3lastname"];
+                        [object setValue:mySessions.sessionSpeaker4lastname forKey:@"sessionSpeaker4lastname"];
+                        [object setValue:mySessions.sessionSpeaker5lastname forKey:@"sessionSpeaker5lastname"];
+                        [object setValue:mySessions.sessionSpeaker6lastname forKey:@"sessionSpeaker6lastname"];
+                        [object setValue:mySessions.sessionDesc forKey:@"sessionDesc"];
+                        [object setValue:mySessions.sessionID forKey:@"sessionID"];
+                        
+                        NSDateFormatter *df = [[NSDateFormatter alloc] init];
+                        [df setDateFormat:@"hh:mm a"];
+                        NSDate *startTime = [df dateFromString: mySessions.startTime];
+                        [object setValue:startTime forKey:@"startTime"];
+                        
+                        NSDateFormatter *df2 = [[NSDateFormatter alloc] init];
+                        [df2 setDateFormat:@"hh:mm a"];
+                        NSDate *endTime = [df dateFromString: mySessions.endTime];
+                        [object setValue:endTime forKey:@"endTime"];
+                        
+                        NSString * myLocation3 = [[NSString alloc] initWithFormat:@"%@",mySessions.location];
+                        [object setValue:myLocation3 forKey:@"location"];
+                        
+                        NSError *error = nil;
+                        // Save the object to persistent store
+                        if (![context save:&error]) {
+                            NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
+                            
+                        }
+                        NSLog(@"You updated an object in Sessions");
+                    }
+                    
                     if (!myResults || !myResults.count){
                         
                         NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:@"Sessions" inManagedObjectContext:context];
