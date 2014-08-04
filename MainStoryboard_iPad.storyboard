@@ -372,7 +372,7 @@
             </objects>
             <point key="canvasLocation" x="-1736" y="-5023"/>
         </scene>
-        <!--Sessions Main View Controller - Sessions-->
+        <!--Sessions Main View Controller - Concurrent Sessions-->
         <scene sceneID="dDF-Mt-jMf">
             <objects>
                 <viewController id="eoI-zE-1io" customClass="SessionsMainViewController" sceneMemberID="viewController">
@@ -428,7 +428,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
-                    <navigationItem key="navigationItem" title="Sessions" id="tdX-Hm-gg6"/>
+                    <navigationItem key="navigationItem" title="Concurrent Sessions" id="tdX-Hm-gg6"/>
                     <connections>
                         <outlet property="myTableView" destination="XzH-lv-HwO" id="ulp-A5-7ki"/>
                         <outlet property="searchBar" destination="I9x-bf-9Mv" id="342-y4-lZS"/>
@@ -794,7 +794,7 @@
                                     <segue destination="eoI-zE-1io" kind="push" id="c39-M0-0dX"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" text="Session Information" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="A8M-42-Cbx">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" text="Concurrent Sessions" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="A8M-42-Cbx">
                                 <rect key="frame" x="330" y="412" width="109" height="46"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -3492,10 +3492,10 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="llJ-MJ-Tf6"/>
-        <segue reference="SFt-NY-1lL"/>
-        <segue reference="muH-WA-dU8"/>
-        <segue reference="xWE-49-eAT"/>
+        <segue reference="x9l-yO-e2N"/>
         <segue reference="eyd-89-hvr"/>
         <segue reference="zdp-PR-IH3"/>
+        <segue reference="SFt-NY-1lL"/>
+        <segue reference="muH-WA-dU8"/>
     </inferredMetricsTieBreakers>
 </document>
