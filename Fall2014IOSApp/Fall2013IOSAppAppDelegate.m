@@ -545,7 +545,7 @@ int iNotificationCounter=0;
                     
                     NSLog(@"EXHIBITOR MYRESULTS COUNT = %lu", myResults.count);
                     
-                    if (myResults.count == 1) {
+                    if (myResults.count >= 1) {
                         NSFetchRequest *fetchRequest2 = [[NSFetchRequest alloc] init];
                         
                         NSEntityDescription *entity2 = [NSEntityDescription entityForName:@"Exhibitors" inManagedObjectContext:context];
