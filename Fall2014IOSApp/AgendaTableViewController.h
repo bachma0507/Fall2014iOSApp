@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "AgendaCell.h"
 
+
 @interface AgendaTableViewController : UITableViewController
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
@@ -19,6 +20,7 @@
 @property (nonatomic, strong) NSString * sessionName;
 @property (nonatomic, strong) NSString * sessionId;
 @property (nonatomic, strong) NSString * location;
+
 
 //@property (strong, nonatomic) NSArray *dateArray;
 //@property (strong, nonatomic) NSMutableDictionary *tempDict;

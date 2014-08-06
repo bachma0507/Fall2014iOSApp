@@ -49,6 +49,7 @@
     
     [TestFlight passCheckpoint:@"MyAgendaTable-info-viewed"];
     
+    [self.tableView reloadData];
     
     UIBarButtonItem *backButtonItem = [[UIBarButtonItem alloc] initWithTitle:@" " style:UIBarButtonItemStylePlain target:nil action:nil];
     self.navigationItem.backBarButtonItem = backButtonItem;
@@ -170,7 +171,8 @@
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Sessnotes" inManagedObjectContext:self.managedObjectContext];
     [fetchRequest setEntity:entity];
     
-    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"deviceowner == %@ && agenda == 'Yes'", newDeviceID]];
+    //[fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"deviceowner == %@ && agenda == 'Yes'", newDeviceID]];
+    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"agenda == 'Yes'"]];
     //NSError *error = nil;
     //NSArray *array = [self executeFetchRequest:fetchRequest error:&error];
     
@@ -192,7 +194,7 @@
         AudioServicesCreateSystemSoundID((__bridge_retained CFURLRef)fileURL,&soundID);
         AudioServicesPlaySystemSound(soundID);
         
-        NSString *message = @"You have not added any sessions to your planner. Please click on Add to Planner when viewing Session details. If you signed up for sessions when you registered, please click on the My BICSI icon and go to My Schedule.";
+        NSString *message = @"You have not added any items to your planner. Please tap Add to Planner when viewing Schedule or Session details. If you signed up for sessions or other items when you registered, please tap the Import button above or tap the My BICSI icon below and go to My Schedule.";
         UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"Notification"
                                                            message:message
                                                           delegate:self
@@ -307,6 +309,34 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    // Edit the entity name as appropriate.
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Sessnotes" inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    
+    //[fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"deviceowner == %@ && agenda == 'Yes'", newDeviceID]];
+    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"agenda == 'Yes'"]];
+    //NSError *error = nil;
+    //NSArray *array = [self executeFetchRequest:fetchRequest error:&error];
+    
+    // Edit the sort key as appropriate.
+    NSSortDescriptor *sortDescriptor1 = [[NSSortDescriptor alloc] initWithKey:@"sessiondate" ascending:YES];
+    NSSortDescriptor *sortDescriptor2 = [[NSSortDescriptor alloc] initWithKey:@"starttime" ascending:YES];
+    NSArray *sortDescriptors = [NSArray arrayWithObjects:sortDescriptor1, sortDescriptor2, nil];
+    
+    [fetchRequest setSortDescriptors:sortDescriptors];
+    
+    NSArray *results = [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
+    
+    [self.refreshControl endRefreshing];
+    self.objects = results;
+    
+    [self.tableView reloadData];
 }
 
 @end

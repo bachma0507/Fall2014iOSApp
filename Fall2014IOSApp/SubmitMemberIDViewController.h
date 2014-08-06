@@ -21,6 +21,6 @@
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 - (IBAction)loginClicked:(id)sender;
-- (IBAction)skipClicked:(id)sender;
+
 
 @end
