@@ -111,11 +111,59 @@
     sessionDate = mySessions.sessionDate;
     //sessionDay = mySessions.sessionDay;
     
-
     
     NSLog(@"Session Id 1 is: %@", mySessions.sessionID);
     //NSLog(@"Session startTime is: %@", mySessions.startTimeStr);
     //NSLog(@"Session day is: %@", mySessions.sessionDay);
+    
+    
+    if ([mySessions.sessionID hasPrefix:@"COM"]) {
+        sessionDescTextField.text = @"Committee Meeting";
+    }
+    
+    if ([mySessions.sessionID hasPrefix:@"ATT"]) {
+        sessionDescTextField.text = @"Registration Information";
+    }
+    
+    if ([mySessions.sessionID hasPrefix:@"BIC_EX"]) {
+        sessionDescTextField.text = @"Exhibition and Reception";
+    }
+    
+    if ([mySessions.sessionID hasPrefix:@"BIC_CARES"]) {
+        sessionDescTextField.text = @"BICSI Cares Presentation and Drawing";
+    }
+    
+    if ([mySessions.sessionID hasPrefix:@"BICSI_C_"]) {
+        sessionDescTextField.text = @"BICSI Community";
+    }
+    
+    if ([mySessions.sessionID hasPrefix:@"BREAK"]) {
+        sessionDescTextField.text = @"Break";
+    }
+    
+    if ([mySessions.sessionID hasPrefix:@"CONF"]) {
+        sessionDescTextField.text = @"Conference Wrap-up, Closing Video and Door Prize Drawing";
+    }
+    
+    if ([mySessions.sessionID hasPrefix:@"CRED_EXAM"]) {
+        sessionDescTextField.text = @"RCDD, RTPM, DCDC, ESS and OSP Exams";
+    }
+    
+    if ([mySessions.sessionID hasPrefix:@"EH_BREAK"]) {
+        sessionDescTextField.text = @"Continental Breakfast and Exhibits";
+    }
+    
+    if ([mySessions.sessionID hasPrefix:@"EH_LUNCH"]) {
+        sessionDescTextField.text = @"Attendee Lunch in the Exhibit Hall";
+    }
+    
+    if ([mySessions.sessionID hasPrefix:@"EXAM_CHECK"]) {
+        sessionDescTextField.text = @"Exam Check-in";
+    }
+    
+    if ([mySessions.sessionID hasPrefix:@"GS_CALL"]) {
+        sessionDescTextField.text = @"Conference Call to Order and Opening Remarks";
+    }
     
     
     [[sessionDescTextField layer] setBorderColor:[[UIColor colorWithRed:48/256.0 green:134/256.0 blue:174/256.0 alpha:1.0] CGColor]];
@@ -266,7 +314,7 @@
     } else {
          NSString * sessIDStr = [[NSString alloc]initWithFormat:@"%@",self.mySessions.sessionID];
         
-        if ([sessIDStr hasPrefix:@"BODM"]) {
+        if ([sessIDStr hasPrefix:@"COM"] || [sessIDStr hasPrefix:@"EH"] || [sessIDStr hasPrefix:@"BREAK"] || [sessIDStr hasPrefix:@"ATT"] || [sessIDStr hasPrefix:@"BIC"] || [sessIDStr hasPrefix:@"CRED"] || [sessIDStr hasPrefix:@"EX"] || [sessIDStr hasPrefix:@"GS_CALL"] || [sessIDStr hasPrefix:@"GUE"] || [sessIDStr hasPrefix:@"CONF"]) {
             NSString *message = @"Survey not applicable for this meeting.";
             UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"Notification"
                                                                message:message
@@ -441,7 +489,7 @@
 - (IBAction)takeSurvey:(id)sender {
     NSString * sessIDStr = [[NSString alloc]initWithFormat:@"%@",self.mySessions.sessionID];
     
-    if ([sessIDStr hasPrefix:@"BODM"]) {
+    if ([sessIDStr hasPrefix:@"COM"] || [sessIDStr hasPrefix:@"EH"] || [sessIDStr hasPrefix:@"BREAK"] || [sessIDStr hasPrefix:@"ATT"] || [sessIDStr hasPrefix:@"BIC"] || [sessIDStr hasPrefix:@"CRED"] || [sessIDStr hasPrefix:@"EX"] || [sessIDStr hasPrefix:@"GS_CALL"] || [sessIDStr hasPrefix:@"GUE"] || [sessIDStr hasPrefix:@"CONF"]) {
         NSString *message = @"Survey not applicable for this meeting.";
         UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"Notification"
                                                            message:message
