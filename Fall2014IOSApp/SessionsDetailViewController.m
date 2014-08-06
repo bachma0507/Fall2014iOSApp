@@ -351,6 +351,13 @@
         else{
             NSManagedObject *object = [results2 objectAtIndex:0];
             [object setValue:@"Yes" forKey:@"planner"];
+            NSString * value = [[NSString alloc] initWithFormat:@"%@", [object valueForKey:@"sessionName"]];
+            NSString * value2 = [[NSString alloc] initWithFormat:@"%@", [object valueForKey:@"location"]];
+            NSString * value3 = [[NSString alloc] initWithFormat:@"%@", [object valueForKey:@"sessionID"]];
+            
+            NSLog(@"THE VALUE FOR KEY SESSIONNAME is: %@", value);
+            NSLog(@"THE VALUE FOR KEY LOCATION is: %@", value2);
+            NSLog(@"THE VALUE FOR KEY SESSIONID is: %@", value3);
             
             NSError *error = nil;
             // Save the object to persistent store

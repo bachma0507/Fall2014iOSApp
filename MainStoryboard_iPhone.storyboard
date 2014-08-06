@@ -694,7 +694,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oBK-fT-gbl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="544" y="210"/>
+            <point key="canvasLocation" x="659" y="535"/>
         </scene>
         <!--Agenda Detail View Controller-->
         <scene sceneID="1vx-zk-eY9">
@@ -1759,6 +1759,53 @@
             </objects>
             <point key="canvasLocation" x="217" y="-323"/>
         </scene>
+        <!--Submit MemberID View Controller-->
+        <scene sceneID="o6C-He-Z2u">
+            <objects>
+                <viewController id="xZl-95-97N" customClass="SubmitMemberIDViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dug-8Z-VB8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="zID-ag-jNh">
+                                <rect key="frame" x="66" y="173" width="188" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zRO-r6-4DD">
+                                <rect key="frame" x="129" y="225" width="49" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginClicked:" destination="xZl-95-97N" eventType="touchUpInside" id="5M9-4M-9Xx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ssj-eV-0jU">
+                                <rect key="frame" x="138" y="284" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Skip">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="skipClicked:" destination="xZl-95-97N" eventType="touchUpInside" id="9Gk-9y-au5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jtk-AD-CQQ"/>
+                    <connections>
+                        <outlet property="txtUsername" destination="zID-ag-jNh" id="ckk-Kc-enf"/>
+                        <segue destination="3Kb-FE-RsI" kind="push" identifier="submit_success" id="Zb2-FN-Ezb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="goc-TV-i8u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="487" y="-24"/>
+        </scene>
         <!--Exhibitors View Controller - Exhibitors-->
         <scene sceneID="3r7-17-Ouz">
             <objects>
@@ -2446,7 +2493,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="3Kb-FE-RsI" kind="push" id="4A7-tU-KQ5"/>
+                                    <segue destination="xZl-95-97N" kind="push" id="m44-yK-IF2"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="wBe-hG-p3N">
