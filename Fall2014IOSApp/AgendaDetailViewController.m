@@ -84,12 +84,27 @@
 
 - (IBAction)takeSurvey:(id)sender{
     
-    NSString * myURL = [NSString stringWithFormat:@"https://www.research.net/s/%@", self.sessionId];
-    //    NSURL *url = [NSURL URLWithString:myURL];
-    //	[[UIApplication sharedApplication] openURL:url];
-    NSURL *URL = [NSURL URLWithString:myURL];
-	SVWebViewController *webViewController = [[SVWebViewController alloc] initWithURL:URL];
-	[self.navigationController pushViewController:webViewController animated:YES];
+    NSString * sessIDStr = [[NSString alloc]initWithFormat:@"%@",self.sessionId];
+    
+    if ([sessIDStr hasPrefix:@"COM"] || [sessIDStr hasPrefix:@"EH"] || [sessIDStr hasPrefix:@"BREAK"] || [sessIDStr hasPrefix:@"ATT"] || [sessIDStr hasPrefix:@"BIC"] || [sessIDStr hasPrefix:@"CRED"] || [sessIDStr hasPrefix:@"EX"] || [sessIDStr hasPrefix:@"GS_CALL"] || [sessIDStr hasPrefix:@"GUE"] || [sessIDStr hasPrefix:@"CONF"]) {
+        NSString *message = @"Survey not applicable for this meeting.";
+        UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"Notification"
+                                                           message:message
+                                                          delegate:self
+                                                 cancelButtonTitle:@"Ok"
+                                                 otherButtonTitles:nil,nil];
+        [alertView show];
+    }
+    
+    else{
+        
+        NSString * myURL = [NSString stringWithFormat:@"https://www.research.net/s/%@", self.sessionId];
+        //    NSURL *url = [NSURL URLWithString:myURL];
+        //	[[UIApplication sharedApplication] openURL:url];
+        NSURL *URL = [NSURL URLWithString:myURL];
+        SVWebViewController *webViewController = [[SVWebViewController alloc] initWithURL:URL];
+        [self.navigationController pushViewController:webViewController animated:YES];
+    }
     
 }
 
@@ -201,8 +216,22 @@
         [self.SurveyPopoverController dismissPopoverAnimated:YES];
         self.SurveyPopoverController = nil;
     } else {
-        [self performSegueWithIdentifier:@"surveyDetail" sender:sender];
+        NSString * sessIDStr = [[NSString alloc]initWithFormat:@"%@",self.sessionId];
+        
+        if ([sessIDStr hasPrefix:@"COM"] || [sessIDStr hasPrefix:@"EH"] || [sessIDStr hasPrefix:@"BREAK"] || [sessIDStr hasPrefix:@"ATT"] || [sessIDStr hasPrefix:@"BIC"] || [sessIDStr hasPrefix:@"CRED"] || [sessIDStr hasPrefix:@"EX"] || [sessIDStr hasPrefix:@"GS_CALL"] || [sessIDStr hasPrefix:@"GUE"] || [sessIDStr hasPrefix:@"CONF"]) {
+            NSString *message = @"Survey not applicable for this meeting.";
+            UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"Notification"
+                                                               message:message
+                                                              delegate:self
+                                                     cancelButtonTitle:@"Ok"
+                                                     otherButtonTitles:nil,nil];
+            [alertView show];
+        }
+        else{
+            [self performSegueWithIdentifier:@"surveyDetail" sender:sender];
+        }
     }
+
 }
 
 
