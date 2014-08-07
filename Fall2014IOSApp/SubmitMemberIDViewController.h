@@ -10,7 +10,14 @@
 #import "Functions.h"
 #import <CoreData/CoreData.h>
 
+@class MBProgressHUD;
+
 @interface SubmitMemberIDViewController : UIViewController
+
+{
+    MBProgressHUD *HUD;
+    
+}
 
 @property (nonatomic, strong) NSMutableArray * json;
 @property (nonatomic, strong) NSMutableArray * functionsArray;

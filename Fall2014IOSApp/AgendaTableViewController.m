@@ -172,7 +172,7 @@
     [fetchRequest setEntity:entity];
     
     //[fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"deviceowner == %@ && agenda == 'Yes'", newDeviceID]];
-    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"agenda == 'Yes'"]];
+    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"NOT(sessionID CONTAINS 'GUES' || sessionID CONTAINS 'OD_') && agenda == 'Yes'"]];
     //NSError *error = nil;
     //NSArray *array = [self executeFetchRequest:fetchRequest error:&error];
     
@@ -320,7 +320,7 @@
     [fetchRequest setEntity:entity];
     
     //[fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"deviceowner == %@ && agenda == 'Yes'", newDeviceID]];
-    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"agenda == 'Yes'"]];
+    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"NOT(sessionID CONTAINS 'GUES' || sessionID CONTAINS 'OD_') && agenda == 'Yes'"]];
     //NSError *error = nil;
     //NSArray *array = [self executeFetchRequest:fetchRequest error:&error];
     
