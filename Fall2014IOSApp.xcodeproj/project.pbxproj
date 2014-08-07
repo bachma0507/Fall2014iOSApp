@@ -172,6 +172,9 @@
 		4C6088C11770DB190055719C /* ExhibitHallFloorPlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6088C01770DB190055719C /* ExhibitHallFloorPlanViewController.m */; };
 		4C6088C41770F33F0055719C /* EHSchedule.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6088C31770F33F0055719C /* EHSchedule.m */; };
 		4C62C31517A972DA00C736BC /* ExhibitorWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C62C31417A972DA00C736BC /* ExhibitorWebViewController.m */; };
+		4C63591419913EFB00AE4D9B /* SubmitMemberIDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C63591319913EFB00AE4D9B /* SubmitMemberIDViewController.m */; };
+		4C63591719913FA000AE4D9B /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C63591619913FA000AE4D9B /* KeychainItemWrapper.m */; };
+		4C63591A1991500500AE4D9B /* Functions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6359191991500500AE4D9B /* Functions.m */; };
 		4C6456C818EC95280011D002 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C6456C718EC95280011D002 /* CoreBluetooth.framework */; };
 		4C66AB15179A2DE0001BD035 /* AgendaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C66AB14179A2DE0001BD035 /* AgendaCell.m */; };
 		4C66AB18179A2DFF001BD035 /* AgendaTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C66AB17179A2DFF001BD035 /* AgendaTableViewController.m */; };
@@ -822,6 +825,12 @@
 		4C6088C31770F33F0055719C /* EHSchedule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHSchedule.m; sourceTree = "<group>"; };
 		4C62C31317A972DA00C736BC /* ExhibitorWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExhibitorWebViewController.h; sourceTree = "<group>"; };
 		4C62C31417A972DA00C736BC /* ExhibitorWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExhibitorWebViewController.m; sourceTree = "<group>"; };
+		4C63591219913EFB00AE4D9B /* SubmitMemberIDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubmitMemberIDViewController.h; sourceTree = "<group>"; };
+		4C63591319913EFB00AE4D9B /* SubmitMemberIDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubmitMemberIDViewController.m; sourceTree = "<group>"; };
+		4C63591519913FA000AE4D9B /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
+		4C63591619913FA000AE4D9B /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainItemWrapper.m; sourceTree = "<group>"; };
+		4C6359181991500500AE4D9B /* Functions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Functions.h; sourceTree = "<group>"; };
+		4C6359191991500500AE4D9B /* Functions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Functions.m; sourceTree = "<group>"; };
 		4C6456C718EC95280011D002 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		4C66AB13179A2DE0001BD035 /* AgendaCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgendaCell.h; sourceTree = "<group>"; };
 		4C66AB14179A2DE0001BD035 /* AgendaCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgendaCell.m; sourceTree = "<group>"; };
@@ -1751,6 +1760,8 @@
 		4C48759F176CEDE200059E21 /* classes */ = {
 			isa = PBXGroup;
 			children = (
+				4C63591519913FA000AE4D9B /* KeychainItemWrapper.h */,
+				4C63591619913FA000AE4D9B /* KeychainItemWrapper.m */,
 				4C42863C19475C83007A5A11 /* RNFrostedSidebar.h */,
 				4C42863D19475C83007A5A11 /* RNFrostedSidebar.m */,
 				4C018E201808AA8700A567C6 /* Constants.h */,
@@ -1806,6 +1817,8 @@
 				4CBE72A0198C056D0090DA6E /* Speakers5.m */,
 				4CBE72A2198C057D0090DA6E /* Speakers6.h */,
 				4CBE72A3198C057D0090DA6E /* Speakers6.m */,
+				4C6359181991500500AE4D9B /* Functions.h */,
+				4C6359191991500500AE4D9B /* Functions.m */,
 			);
 			name = classes;
 			sourceTree = "<group>";
@@ -2075,6 +2088,8 @@
 				4C66AB17179A2DFF001BD035 /* AgendaTableViewController.m */,
 				4C24FD5A179F56DC006C017E /* AgendaDetailViewController.h */,
 				4C24FD5B179F56DC006C017E /* AgendaDetailViewController.m */,
+				4C63591219913EFB00AE4D9B /* SubmitMemberIDViewController.h */,
+				4C63591319913EFB00AE4D9B /* SubmitMemberIDViewController.m */,
 			);
 			name = MyPlanner;
 			sourceTree = "<group>";
@@ -3136,6 +3151,7 @@
 				4C088C62177F667500CFBC96 /* NSManagedObject+MagicalFinders.m in Sources */,
 				4C088C63177F667500CFBC96 /* NSManagedObject+MagicalRecord.m in Sources */,
 				4C088C64177F667500CFBC96 /* NSManagedObject+MagicalRequests.m in Sources */,
+				4C63591A1991500500AE4D9B /* Functions.m in Sources */,
 				4C088C65177F667500CFBC96 /* NSManagedObjectContext+MagicalObserving.m in Sources */,
 				4CD8E0851937E42F00A4326C /* OARequestParameter.m in Sources */,
 				4C088C66177F667500CFBC96 /* NSManagedObjectContext+MagicalRecord.m in Sources */,
@@ -3170,6 +3186,7 @@
 				4CE1B37A178FA614006EF171 /* Sessions.m in Sources */,
 				4CE1B37F17904B57006EF171 /* SessionsMainViewController.m in Sources */,
 				4CE1B38417906770006EF171 /* SessionsDetailViewController.m in Sources */,
+				4C63591719913FA000AE4D9B /* KeychainItemWrapper.m in Sources */,
 				4CD40E381796DA71002052FC /* NotesViewController.m in Sources */,
 				4C687E2518270D3F002FE54B /* LocateOnMapViewController.m in Sources */,
 				4C474E1017988D7500953979 /* AllMyNotesViewController.m in Sources */,
@@ -3202,6 +3219,7 @@
 				4CD8E0941937E78300A4326C /* YelpAPIService.m in Sources */,
 				4CD8E0831937E42F00A4326C /* OAPlaintextSignatureProvider.m in Sources */,
 				4C453BB3185CE10600D57388 /* Html.m in Sources */,
+				4C63591419913EFB00AE4D9B /* SubmitMemberIDViewController.m in Sources */,
 				4C6A497017D0CB92003941C7 /* ConfSchedDetailTableViewController.m in Sources */,
 				4CCEF9F617D281620024E854 /* ProgramPDFViewController.m in Sources */,
 				4CD8E0821937E42F00A4326C /* OAMutableURLRequest.m in Sources */,

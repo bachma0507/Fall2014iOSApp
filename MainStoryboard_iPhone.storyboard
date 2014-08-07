@@ -630,7 +630,7 @@
             </objects>
             <point key="canvasLocation" x="2778" y="-2223"/>
         </scene>
-        <!--Agenda Table View Controller - My Planner-->
+        <!--Agenda Table View Controller - My Schedule Planner-->
         <scene sceneID="eML-0W-fyI">
             <objects>
                 <tableViewController id="3Kb-FE-RsI" customClass="AgendaTableViewController" sceneMemberID="viewController">
@@ -690,11 +690,17 @@
                         </connections>
                     </tableView>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
-                    <navigationItem key="navigationItem" title="My Planner" id="noT-1c-8Xr"/>
+                    <navigationItem key="navigationItem" title="My Schedule Planner" id="kVm-tg-S8B">
+                        <barButtonItem key="rightBarButtonItem" title="Import" id="snA-1I-zST">
+                            <connections>
+                                <segue destination="xZl-95-97N" kind="push" id="B0W-sz-nRj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oBK-fT-gbl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="544" y="210"/>
+            <point key="canvasLocation" x="920" y="-26"/>
         </scene>
         <!--Agenda Detail View Controller-->
         <scene sceneID="1vx-zk-eY9">
@@ -778,7 +784,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="exU-SX-95Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="746" y="681"/>
+            <point key="canvasLocation" x="953" y="1095"/>
         </scene>
         <!--All My Notes View Controller - My Notes-->
         <scene sceneID="76b-Pu-x9x">
@@ -1759,6 +1765,57 @@
             </objects>
             <point key="canvasLocation" x="217" y="-323"/>
         </scene>
+        <!--Submit MemberID View Controller-->
+        <scene sceneID="o6C-He-Z2u">
+            <objects>
+                <viewController id="xZl-95-97N" customClass="SubmitMemberIDViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dug-8Z-VB8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ut5-Tc-MAT">
+                                <rect key="frame" x="20" y="129" width="280" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="zID-ag-jNh">
+                                <rect key="frame" x="66" y="173" width="188" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zRO-r6-4DD">
+                                <rect key="frame" x="129" y="225" width="49" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginClicked:" destination="xZl-95-97N" eventType="touchUpInside" id="5M9-4M-9Xx"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter your Member ID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wOf-hE-yvD">
+                                <rect key="frame" x="54" y="144" width="212" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.63137254899999995" green="0.73333333329999995" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jtk-AD-CQQ"/>
+                    <connections>
+                        <outlet property="txtUsername" destination="zID-ag-jNh" id="ckk-Kc-enf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="goc-TV-i8u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="297" y="202"/>
+        </scene>
         <!--Exhibitors View Controller - Exhibitors-->
         <scene sceneID="3r7-17-Ouz">
             <objects>
@@ -2446,7 +2503,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="3Kb-FE-RsI" kind="push" id="4A7-tU-KQ5"/>
+                                    <segue destination="3Kb-FE-RsI" kind="push" id="yae-48-AvO"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="wBe-hG-p3N">
@@ -2512,7 +2569,7 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Session Planner" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rtz-Pf-dea">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Schedule Planner" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rtz-Pf-dea">
                                 <rect key="frame" x="221" y="366" width="94" height="40"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -4098,9 +4155,9 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="ia9-ZG-dp5"/>
-        <segue reference="Dsf-md-SSX"/>
-        <segue reference="XSx-XV-6K8"/>
+        <segue reference="3a1-YG-Me0"/>
         <segue reference="qLg-su-tkS"/>
+        <segue reference="6XG-ma-1Ri"/>
         <segue reference="FV1-tM-kMf"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -55,6 +55,29 @@
     UIBarButtonItem *backButtonItem = [[UIBarButtonItem alloc] initWithTitle:@" " style:UIBarButtonItemStylePlain target:nil action:nil];
     self.navigationItem.backBarButtonItem = backButtonItem;
     
+//    NSManagedObjectContext *context = [self managedObjectContext];
+//    
+//    NSFetchRequest *fetchRequest2 = [[NSFetchRequest alloc] init];
+//    
+//    NSEntityDescription *entity2 = [NSEntityDescription entityForName:@"Sessions" inManagedObjectContext:context];
+//    [fetchRequest2 setEntity:entity2];
+//    [fetchRequest2 setPredicate:[NSPredicate predicateWithFormat:@"sessionID == %@", mySessions.sessionID]];
+//    NSArray *results2 = [self.managedObjectContext executeFetchRequest:fetchRequest2 error:nil];
+//    self.objects = results2;
+//    NSLog(@"Results Count is: %lu", (unsigned long)results2.count);
+//    if (!results2 || !results2.count){//start nested if block
+//        NSLog(@"No results2");}
+//    else{
+//        NSManagedObject *object = [results2 objectAtIndex:0];
+//        NSLog(@"VALUE OF PLANNER KEY IS: %@", [object valueForKey:@"planner"]);
+//        
+//        if ([[object valueForKey:@"planner"] isEqualToString:@"Yes"]) {
+//            [agendaButton setTitle:@"Remove from Planner" forState:normal];
+//        }
+//        
+//    }
+    
+    
     self.title = mySessions.sessionName;
     
     sessionNameLabel.text = mySessions.sessionName;
@@ -186,7 +209,7 @@
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Sessnotes" inManagedObjectContext:self.managedObjectContext];
     [fetchRequest setEntity:entity];
     //[fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"title != 'Todo with Image'"]];
-    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"sessionID == %@ && deviceowner == %@ && agenda == 'Yes'",mySessions.sessionID,newDeviceID]];
+    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"sessionID == %@ && agenda == 'Yes'",mySessions.sessionID]];
      NSLog(@"MY SESSION ID 1 IS: %@",mySessions.sessionID);
     
      NSArray *results = [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
@@ -399,6 +422,13 @@
         else{
             NSManagedObject *object = [results2 objectAtIndex:0];
             [object setValue:@"Yes" forKey:@"planner"];
+            NSString * value = [[NSString alloc] initWithFormat:@"%@", [object valueForKey:@"sessionName"]];
+            NSString * value2 = [[NSString alloc] initWithFormat:@"%@", [object valueForKey:@"location"]];
+            NSString * value3 = [[NSString alloc] initWithFormat:@"%@", [object valueForKey:@"sessionID"]];
+            
+            NSLog(@"THE VALUE FOR KEY SESSIONNAME is: %@", value);
+            NSLog(@"THE VALUE FOR KEY LOCATION is: %@", value2);
+            NSLog(@"THE VALUE FOR KEY SESSIONID is: %@", value3);
             
             NSError *error = nil;
             // Save the object to persistent store
@@ -422,7 +452,7 @@
         NSEntityDescription *entity = [NSEntityDescription entityForName:@"Sessnotes" inManagedObjectContext:context];
         [fetchRequest setEntity:entity];
         //[fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"title != 'Todo with Image'"]];
-        [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"sessionID == %@ && deviceowner == %@ && agenda == 'Yes'",mySessions.sessionID,newDeviceID]];
+        [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"sessionID == %@ && agenda == 'Yes'",mySessions.sessionID]];
         NSLog(@"MY SESSION ID 1 IS: %@",mySessions.sessionID);
         
          NSArray *results = [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];

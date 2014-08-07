@@ -101,7 +101,7 @@
     NSString * sessDate = speakers.session1Date;
     
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateFormat:@"MM/dd/yyyy hh:mm"];
+    [dateFormat setDateFormat:@"MM-dd-yyyy"];
     NSDate *sessionD = [dateFormat dateFromString:sessDate];
     
     [dateFormat setDateStyle:NSDateFormatterMediumStyle];
