@@ -247,6 +247,8 @@ int iNotificationCounter=0;
 //    [UIView commitAnimations];
     
     
+    
+    
     [self updateAllData];
     
     
@@ -627,7 +629,7 @@ int iNotificationCounter=0;
         //CREATE SPEAKER1 OBJECTS
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),^{
             
-            NSURL *url = [NSURL URLWithString:@"https://dev-webservice.bicsi.org/json/reply/MobSession?SessionAltCd=CN-FALL-CA-0914"];
+            NSURL *url = [NSURL URLWithString:@"https://webservice.bicsi.org/json/reply/MobSession?SessionAltCd=CN-FALL-CA-0914"];
             NSData * data = [NSData dataWithContentsOfURL:url];
             
             //TRUNCATE FRONT AND END OF JSON. ALSO JSON STATEMENT AND CHANGE SESSIONDATE DATE FORMAT
@@ -755,7 +757,7 @@ int iNotificationCounter=0;
         //CREATE SPEAKER2 OBJECTS
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),^{
             
-            NSURL *url = [NSURL URLWithString:@"https://dev-webservice.bicsi.org/json/reply/MobSession?SessionAltCd=CN-FALL-CA-0914"];
+            NSURL *url = [NSURL URLWithString:@"https://webservice.bicsi.org/json/reply/MobSession?SessionAltCd=CN-FALL-CA-0914"];
             NSData * data = [NSData dataWithContentsOfURL:url];
             
             //TRUNCATE FRONT AND END OF JSON. ALSO JSON STATEMENT AND CHANGE SESSIONDATE DATE FORMAT
@@ -854,7 +856,7 @@ int iNotificationCounter=0;
         //CREATE SPEAKER3 OBJECTS
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),^{
             
-            NSURL *url = [NSURL URLWithString:@"https://dev-webservice.bicsi.org/json/reply/MobSession?SessionAltCd=CN-FALL-CA-0914"];
+            NSURL *url = [NSURL URLWithString:@"https://webservice.bicsi.org/json/reply/MobSession?SessionAltCd=CN-FALL-CA-0914"];
             NSData * data = [NSData dataWithContentsOfURL:url];
             
             //TRUNCATE FRONT AND END OF JSON. ALSO JSON STATEMENT AND CHANGE SESSIONDATE DATE FORMAT
@@ -953,7 +955,7 @@ int iNotificationCounter=0;
         //CREATE SPEAKER4 OBJECTS
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),^{
             
-            NSURL *url = [NSURL URLWithString:@"https://dev-webservice.bicsi.org/json/reply/MobSession?SessionAltCd=CN-FALL-CA-0914"];
+            NSURL *url = [NSURL URLWithString:@"https://webservice.bicsi.org/json/reply/MobSession?SessionAltCd=CN-FALL-CA-0914"];
             NSData * data = [NSData dataWithContentsOfURL:url];
             
             //TRUNCATE FRONT AND END OF JSON. ALSO JSON STATEMENT AND CHANGE SESSIONDATE DATE FORMAT
@@ -1052,7 +1054,7 @@ int iNotificationCounter=0;
         //CREATE SPEAKER5 OBJECTS
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),^{
             
-            NSURL *url = [NSURL URLWithString:@"https://dev-webservice.bicsi.org/json/reply/MobSession?SessionAltCd=CN-FALL-CA-0914"];
+            NSURL *url = [NSURL URLWithString:@"https://webservice.bicsi.org/json/reply/MobSession?SessionAltCd=CN-FALL-CA-0914"];
             NSData * data = [NSData dataWithContentsOfURL:url];
             
             //TRUNCATE FRONT AND END OF JSON. ALSO JSON STATEMENT AND CHANGE SESSIONDATE DATE FORMAT
@@ -1150,7 +1152,7 @@ int iNotificationCounter=0;
         //CREATE SPEAKER6 OBJECTS
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),^{
             
-            NSURL *url = [NSURL URLWithString:@"https://dev-webservice.bicsi.org/json/reply/MobSession?SessionAltCd=CN-FALL-CA-0914"];
+            NSURL *url = [NSURL URLWithString:@"https://webservice.bicsi.org/json/reply/MobSession?SessionAltCd=CN-FALL-CA-0914"];
             NSData * data = [NSData dataWithContentsOfURL:url];
             
             //TRUNCATE FRONT AND END OF JSON. ALSO JSON STATEMENT AND CHANGE SESSIONDATE DATE FORMAT
@@ -1251,7 +1253,7 @@ int iNotificationCounter=0;
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),^{
             
             //NSURL *url = [NSURL URLWithString:@"http://www.speedyreference.com/bicsi/convertcsv1.json"];
-            NSURL *url = [NSURL URLWithString:@"https://dev-webservice.bicsi.org/json/reply/MobSession?SessionAltCd=CN-FALL-CA-0914"];
+            NSURL *url = [NSURL URLWithString:@"https://webservice.bicsi.org/json/reply/MobSession?SessionAltCd=CN-FALL-CA-0914"];
             //NSURL *url = [NSURL URLWithString:@"http://speedyreference.com/bicsi/testtrunc3.json"];
             NSData * data = [NSData dataWithContentsOfURL:url];
             

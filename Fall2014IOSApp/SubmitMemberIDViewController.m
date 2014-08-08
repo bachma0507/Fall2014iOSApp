@@ -96,7 +96,7 @@
             
             NSLog(@"PostData: %@",post);
             
-            NSString * webURL = [[NSString alloc] initWithFormat:@"https://dev-webservice.bicsi.org/json/reply/MobFunctions?sess=CN-FALL-CA-0914&custcd=%@", [self.txtUsername text]];
+            NSString * webURL = [[NSString alloc] initWithFormat:@"https://webservice.bicsi.org/json/reply/MobFunctions?sess=CN-FALL-CA-0914&custcd=%@", [self.txtUsername text]];
             
             
             NSURL *url=[NSURL URLWithString:webURL];
@@ -462,7 +462,7 @@
 //            
 //            NSLog(@"PostData: %@",post);
 //            
-//            NSString * webURL = [[NSString alloc] initWithFormat:@"https://dev-webservice.bicsi.org/json/reply/MobFunctions?sess=CN-FALL-CA-0914&custcd=%@", [self.txtUsername text]];
+//            NSString * webURL = [[NSString alloc] initWithFormat:@"https://webservice.bicsi.org/json/reply/MobFunctions?sess=CN-FALL-CA-0914&custcd=%@", [self.txtUsername text]];
 //            
 //            
 //            NSURL *url=[NSURL URLWithString:webURL];
