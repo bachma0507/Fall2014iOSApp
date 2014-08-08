@@ -54,9 +54,9 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    NSUUID *id = [[UIDevice currentDevice] identifierForVendor];
-    NSString *deviceID = [[NSString alloc] initWithFormat:@"%@",id];
-    NSString *newDeviceID = [deviceID substringWithRange:NSMakeRange(30, [deviceID length]-30)];
+    //NSUUID *id = [[UIDevice currentDevice] identifierForVendor];
+    //NSString *deviceID = [[NSString alloc] initWithFormat:@"%@",id];
+    //NSString *newDeviceID = [deviceID substringWithRange:NSMakeRange(30, [deviceID length]-30)];
     
     pollButton.hidden = YES;
     
