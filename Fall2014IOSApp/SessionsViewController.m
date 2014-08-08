@@ -109,7 +109,7 @@
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Sessnotes" inManagedObjectContext:self.managedObjectContext];
     [fetchRequest setEntity:entity];
     //[fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"title != 'Todo with Image'"]];
-    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"sessionID == %@ && deviceowner == %@ && agenda == 'Yes'",self.sessionId,newDeviceID]];
+    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"sessionID == %@ && agenda == 'Yes'",self.sessionId]];
     NSLog(@"MY SESSION ID 1 IS: %@",self.sessionId);
     
     NSArray *results = [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
@@ -323,7 +323,7 @@
         NSEntityDescription *entity = [NSEntityDescription entityForName:@"Sessnotes" inManagedObjectContext:context];
         [fetchRequest setEntity:entity];
         
-        [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"sessionID == %@ && deviceowner == %@ && agenda == 'Yes'",self.sessionId,newDeviceID]];
+        [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"sessionID == %@ && agenda == 'Yes'",self.sessionId]];
         NSLog(@"MY SESSION ID 1 IS: %@",self.sessionId);
         
         NSArray *results = [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
