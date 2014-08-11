@@ -36,6 +36,7 @@ int iNotificationCounter=0;
     
 }
 
+
 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 #define SYSTEM_VERSION_EQUAL_TO(v)                  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedSame)
@@ -256,6 +257,7 @@ int iNotificationCounter=0;
     
     
 }
+
 
 
 -(void)updateAllData{
@@ -629,7 +631,14 @@ int iNotificationCounter=0;
         //CREATE SPEAKER1 OBJECTS
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),^{
             
+            //NSHTTPURLResponse *response = nil;
+            
             NSURL *url = [NSURL URLWithString:@"https://webservice.bicsi.org/json/reply/MobSession?SessionAltCd=CN-FALL-CA-0914"];
+            
+            //if ([response statusCode] >= 200 && [response statusCode] < 300){//BEGIN IF RESPONSE STATUSCODE
+
+            
+            
             NSData * data = [NSData dataWithContentsOfURL:url];
             
             //TRUNCATE FRONT AND END OF JSON. ALSO JSON STATEMENT AND CHANGE SESSIONDATE DATE FORMAT
@@ -747,6 +756,7 @@ int iNotificationCounter=0;
                 }
                 
             });
+            
         });
         
         
@@ -757,7 +767,13 @@ int iNotificationCounter=0;
         //CREATE SPEAKER2 OBJECTS
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),^{
             
+            //NSHTTPURLResponse *response = nil;
+            
             NSURL *url = [NSURL URLWithString:@"https://webservice.bicsi.org/json/reply/MobSession?SessionAltCd=CN-FALL-CA-0914"];
+            
+            //if ([response statusCode] >= 200 && [response statusCode] < 300){//BEGIN IF RESPONSE STATUSCODE
+
+            
             NSData * data = [NSData dataWithContentsOfURL:url];
             
             //TRUNCATE FRONT AND END OF JSON. ALSO JSON STATEMENT AND CHANGE SESSIONDATE DATE FORMAT
@@ -846,6 +862,19 @@ int iNotificationCounter=0;
                 }
                 
             });
+                
+//            }//END OF IF RESPONSE STATUSCODE
+//            else{
+//                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"ERROR"
+//                                                                    message:@"Connection to database failed."
+//                                                                   delegate:self
+//                                                          cancelButtonTitle:@"Ok"
+//                                                          otherButtonTitles:nil, nil];
+//                //alertView.tag = 1;
+//                [alertView show];
+//                
+//            }
+
         });
         
         
@@ -856,7 +885,13 @@ int iNotificationCounter=0;
         //CREATE SPEAKER3 OBJECTS
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),^{
             
+            //NSHTTPURLResponse *response = nil;
+            
             NSURL *url = [NSURL URLWithString:@"https://webservice.bicsi.org/json/reply/MobSession?SessionAltCd=CN-FALL-CA-0914"];
+            
+            //if ([response statusCode] >= 200 && [response statusCode] < 300){//BEGIN IF RESPONSE STATUSCODE
+
+            
             NSData * data = [NSData dataWithContentsOfURL:url];
             
             //TRUNCATE FRONT AND END OF JSON. ALSO JSON STATEMENT AND CHANGE SESSIONDATE DATE FORMAT
@@ -945,6 +980,19 @@ int iNotificationCounter=0;
                 }
                 
             });
+                
+//            }//END OF IF RESPONSE STATUSCODE
+//            else{
+//                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"ERROR"
+//                                                                    message:@"Connection to database failed."
+//                                                                   delegate:self
+//                                                          cancelButtonTitle:@"Ok"
+//                                                          otherButtonTitles:nil, nil];
+//                //alertView.tag = 1;
+//                [alertView show];
+//                
+//            }
+
         });
         
         
@@ -955,7 +1003,13 @@ int iNotificationCounter=0;
         //CREATE SPEAKER4 OBJECTS
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),^{
             
+            //NSHTTPURLResponse *response = nil;
+            
             NSURL *url = [NSURL URLWithString:@"https://webservice.bicsi.org/json/reply/MobSession?SessionAltCd=CN-FALL-CA-0914"];
+            
+            //if ([response statusCode] >= 200 && [response statusCode] < 300){//BEGIN IF RESPONSE STATUSCODE
+
+            
             NSData * data = [NSData dataWithContentsOfURL:url];
             
             //TRUNCATE FRONT AND END OF JSON. ALSO JSON STATEMENT AND CHANGE SESSIONDATE DATE FORMAT
@@ -1044,6 +1098,19 @@ int iNotificationCounter=0;
                 }
                 
             });
+                
+//            }//END OF IF RESPONSE STATUSCODE
+//            else{
+//                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"ERROR"
+//                                                                    message:@"Connection to database failed."
+//                                                                   delegate:self
+//                                                          cancelButtonTitle:@"Ok"
+//                                                          otherButtonTitles:nil, nil];
+//                //alertView.tag = 1;
+//                [alertView show];
+//                
+//            }
+
         });
         
         
@@ -1054,7 +1121,13 @@ int iNotificationCounter=0;
         //CREATE SPEAKER5 OBJECTS
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),^{
             
+            //NSHTTPURLResponse *response = nil;
+            
             NSURL *url = [NSURL URLWithString:@"https://webservice.bicsi.org/json/reply/MobSession?SessionAltCd=CN-FALL-CA-0914"];
+            
+            //if ([response statusCode] >= 200 && [response statusCode] < 300){//BEGIN IF RESPONSE STATUSCODE
+
+            
             NSData * data = [NSData dataWithContentsOfURL:url];
             
             //TRUNCATE FRONT AND END OF JSON. ALSO JSON STATEMENT AND CHANGE SESSIONDATE DATE FORMAT
@@ -1142,6 +1215,19 @@ int iNotificationCounter=0;
                 }
                 
             });
+                
+//            }//END OF IF RESPONSE STATUSCODE
+//            else{
+//                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"ERROR"
+//                                                                    message:@"Connection to database failed."
+//                                                                   delegate:self
+//                                                          cancelButtonTitle:@"Ok"
+//                                                          otherButtonTitles:nil, nil];
+//                //alertView.tag = 1;
+//                [alertView show];
+//                
+//            }
+
         });
         
         
@@ -1152,7 +1238,13 @@ int iNotificationCounter=0;
         //CREATE SPEAKER6 OBJECTS
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),^{
             
+            //NSHTTPURLResponse *response = nil;
+            
             NSURL *url = [NSURL URLWithString:@"https://webservice.bicsi.org/json/reply/MobSession?SessionAltCd=CN-FALL-CA-0914"];
+            
+            //if ([response statusCode] >= 200 && [response statusCode] < 300){//BEGIN IF RESPONSE STATUSCODE
+
+            
             NSData * data = [NSData dataWithContentsOfURL:url];
             
             //TRUNCATE FRONT AND END OF JSON. ALSO JSON STATEMENT AND CHANGE SESSIONDATE DATE FORMAT
@@ -1241,6 +1333,19 @@ int iNotificationCounter=0;
                 }
                 
             });
+                
+//            }//END OF IF RESPONSE STATUSCODE
+//            else{
+//                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"ERROR"
+//                                                                    message:@"Connection to database failed."
+//                                                                   delegate:self
+//                                                          cancelButtonTitle:@"Ok"
+//                                                          otherButtonTitles:nil, nil];
+//                //alertView.tag = 1;
+//                [alertView show];
+//                
+//            }
+
         });
         
         
@@ -1250,11 +1355,21 @@ int iNotificationCounter=0;
 
         
         //CREATE SESSION OBJECTS
+        
+        //@try {
+        
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),^{
+            
+            //NSHTTPURLResponse *response = nil;
             
             //NSURL *url = [NSURL URLWithString:@"http://www.speedyreference.com/bicsi/convertcsv1.json"];
             NSURL *url = [NSURL URLWithString:@"https://webservice.bicsi.org/json/reply/MobSession?SessionAltCd=CN-FALL-CA-0914"];
             //NSURL *url = [NSURL URLWithString:@"http://speedyreference.com/bicsi/testtrunc3.json"];
+            
+            //if ([response statusCode] >= 200 && [response statusCode] < 300){//BEGIN IF RESPONSE STATUSCODE
+                
+            
+            
             NSData * data = [NSData dataWithContentsOfURL:url];
             
             
@@ -1471,13 +1586,39 @@ int iNotificationCounter=0;
                     }
                     
                     
-                    
-                    
+                
+                
                 }
                 
                 
             });
+//            }//END OF IF RESPONSE STATUSCODE
+//            else{
+//                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"ERROR"
+//                                                                    message:@"Connection to database failed."
+//                                                                   delegate:self
+//                                                          cancelButtonTitle:@"Ok"
+//                                                          otherButtonTitles:nil, nil];
+//                //alertView.tag = 1;
+//                [alertView show];
+//
+//            }
         });
+        
+//        }
+//        @catch (NSException * e) {
+//            NSLog(@"Exception: %@", e);
+//            //[self alertStatus:@"Sign in Failed." :@"Error!" :0];
+//            
+//            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"ERROR"
+//                                                                message:@"Oops! There seems to be an issue accessing the database. Please try again."
+//                                                               delegate:self
+//                                                      cancelButtonTitle:@"Ok"
+//                                                      otherButtonTitles:nil, nil];
+//            //alertView.tag = 1;
+//            [alertView show];
+//
+//        }
         
 //        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
 //        [formatter setDateFormat:@"MMM d yyyy"];
