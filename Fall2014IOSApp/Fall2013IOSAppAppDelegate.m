@@ -261,6 +261,8 @@ int iNotificationCounter=0;
 
 
 -(void)updateAllData{
+    
+#pragma mark - Check to see if Internet Connection Available
     //CHECK TO SEE IF INTERNET CONNECTION IS AVAILABLE
     internetReach = [Reachability reachabilityForInternetConnection];
     [internetReach startNotifier];
@@ -274,6 +276,8 @@ int iNotificationCounter=0;
     }
     else{//START REACHABILITY ELSE
         //FETCH AND DELETE EXHIBITOR OBJECTS
+        
+#pragma mark - Fetch and Delete Exhibitor Objects
         NSManagedObjectContext *context = [self managedObjectContext];
         
         NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
@@ -306,6 +310,7 @@ int iNotificationCounter=0;
             }
         }
         //FETCH AND DELETE SPEAKER OBJECTS
+        #pragma mark - Fetch and Delete Speaker Objects
         NSManagedObjectContext *contextSpeakers = [self managedObjectContext];
         
         NSFetchRequest *fetchRequestSpeakers = [[NSFetchRequest alloc] init];
@@ -337,6 +342,7 @@ int iNotificationCounter=0;
         //---------------------------------
         
         //FETCH AND DELETE SESSION OBJECTS
+        #pragma mark - Fetch and Delete Session Objects
         NSManagedObjectContext *contextSessions = [self managedObjectContext];
         
         NSFetchRequest *fetchRequestSessions = [[NSFetchRequest alloc] init];
@@ -375,6 +381,7 @@ int iNotificationCounter=0;
         //---------------------------------
         
         //FETCH AND DELETE SPONSOR OBJECTS
+        #pragma mark - Fetch and Delete Sponsor Objects
         NSManagedObjectContext *contextSponsors = [self managedObjectContext];
         
         NSFetchRequest *fetchRequestSponsors = [[NSFetchRequest alloc] init];
@@ -409,6 +416,7 @@ int iNotificationCounter=0;
         //---------------------------------
         
         //FETCH AND DELETE CSCHEDULE OBJECTS
+        #pragma mark - Fetch and Delete CSchedule Objects
         NSManagedObjectContext *contextCschedule = [self managedObjectContext];
         
         NSFetchRequest *fetchRequestCschedule = [[NSFetchRequest alloc] init];
@@ -441,6 +449,7 @@ int iNotificationCounter=0;
         //---------------------------------
         
         //FETCH AND DELETE EHSCHEDULE OBJECTS
+        #pragma mark - Fetch and Delete EHSchedule Objects
         NSManagedObjectContext *contextEhschedule = [self managedObjectContext];
         
         NSFetchRequest *fetchRequestEhschedule = [[NSFetchRequest alloc] init];
@@ -502,6 +511,7 @@ int iNotificationCounter=0;
         
         
         //CREATE EXHIBITOR OBJECTS
+        #pragma mark - Create Exhibitor Objects
         
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),^{
             
@@ -629,6 +639,7 @@ int iNotificationCounter=0;
         
         
         //CREATE SPEAKER1 OBJECTS
+        #pragma mark - Create Speaker1 Objects
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),^{
             
             //NSHTTPURLResponse *response = nil;
@@ -765,6 +776,7 @@ int iNotificationCounter=0;
         //-------------------------
         
         //CREATE SPEAKER2 OBJECTS
+        #pragma mark - Create Speaker2 Objects
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),^{
             
             //NSHTTPURLResponse *response = nil;
@@ -883,6 +895,7 @@ int iNotificationCounter=0;
         //-------------------------
         
         //CREATE SPEAKER3 OBJECTS
+        #pragma mark - Create Speaker3 Objects
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),^{
             
             //NSHTTPURLResponse *response = nil;
@@ -1001,6 +1014,7 @@ int iNotificationCounter=0;
         //-------------------------
         
         //CREATE SPEAKER4 OBJECTS
+        #pragma mark - Create Speaker4 Objects
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),^{
             
             //NSHTTPURLResponse *response = nil;
@@ -1119,6 +1133,7 @@ int iNotificationCounter=0;
         //-------------------------
         
         //CREATE SPEAKER5 OBJECTS
+        #pragma mark - Create Speaker5 Objects
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),^{
             
             //NSHTTPURLResponse *response = nil;
@@ -1236,6 +1251,7 @@ int iNotificationCounter=0;
         //-------------------------
         
         //CREATE SPEAKER6 OBJECTS
+        #pragma mark - Create Speaker6 Objects
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),^{
             
             //NSHTTPURLResponse *response = nil;
@@ -1355,6 +1371,7 @@ int iNotificationCounter=0;
 
         
         //CREATE SESSION OBJECTS
+        #pragma mark - Create Session Objects
         
         //@try {
         
@@ -1634,6 +1651,7 @@ int iNotificationCounter=0;
         //-------------------------
         
         //CREATE SPONSOR OBJECTS
+        #pragma mark - Create Sponsor Objects
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),^{
             
             NSURL *url = [NSURL URLWithString:@"http://speedyreference.com/sponsorsF14.php"];
@@ -1710,6 +1728,7 @@ int iNotificationCounter=0;
         //    //-------------------------
         
         //CREATE CSCHEDULE OBJECTS
+        #pragma mark - Create CSchedule Objects
         
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),^{
             
@@ -1786,6 +1805,7 @@ int iNotificationCounter=0;
         //    //-------------------------
         
         //CREATE EHSCHEDULE OBJECTS
+        #pragma mark - Create EHSchedule Objects
         
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),^{
             
@@ -1978,6 +1998,8 @@ int iNotificationCounter=0;
     [managedObjectContext executeFetchRequest:fetchRequest error:nil];
 }
 
+#pragma mark - Core Data Objects and methods
+
 -(NSManagedObjectContext *)managedObjectContext
 {
     if (_managedObjectContext != nil) {
@@ -2110,6 +2132,8 @@ int iNotificationCounter=0;
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     [FBSession.activeSession close];
 }
+
+#pragma mark - Setup Push Methods
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:
 (NSData *)deviceToken
