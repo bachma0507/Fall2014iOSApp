@@ -144,6 +144,10 @@
         sessionDescTextField.text = @"Committee Meeting";
     }
     
+    if ([mySessions.sessionID hasPrefix:@"COM_BOD"]) {
+        sessionDescTextField.text = @"Board of Directors Meeting";
+    }
+    
     if ([mySessions.sessionID hasPrefix:@"ATT"]) {
         sessionDescTextField.text = @"Registration Information";
     }

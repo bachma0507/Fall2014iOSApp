@@ -131,6 +131,7 @@
     
     if (tableView == self.myTableView) {
         return self.objects.count;
+        
     }
     else
     {

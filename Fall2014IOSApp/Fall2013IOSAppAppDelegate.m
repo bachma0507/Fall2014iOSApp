@@ -711,7 +711,7 @@ int iNotificationCounter=0;
                     
                     [fetchRequest setEntity:entity];
                     
-                    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"speakerName == %@",mySpeakers.speakerName]];
+                    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"speakerLastName == %@",mySpeakers.speakerLastName]];
                     
                     NSArray *myResults = [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
                     
@@ -836,7 +836,7 @@ int iNotificationCounter=0;
                     
                     [fetchRequest setEntity:entity];
                     
-                    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"speakerName == %@",mySpeakers.speakerName]];
+                    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"speakerLastName == %@",mySpeakers.speakerLastName]];
                     
                     NSArray *myResults = [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
                     
@@ -859,6 +859,8 @@ int iNotificationCounter=0;
                         NSString * myLocation = [[NSString alloc] initWithFormat:@"%@",mySpeakers.location];
                         [newManagedObject setValue:myLocation forKey:@"location"];
                         [newManagedObject setValue:mySpeakers.sessionID forKey:@"sessionID"];
+                        
+                        
                         
                         
                         NSError *error = nil;
@@ -955,7 +957,7 @@ int iNotificationCounter=0;
                     
                     [fetchRequest setEntity:entity];
                     
-                    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"speakerName == %@",mySpeakers.speakerName]];
+                    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"speakerLastName == %@",mySpeakers.speakerLastName]];
                     
                     NSArray *myResults = [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
                     
@@ -978,6 +980,8 @@ int iNotificationCounter=0;
                         NSString * myLocation = [[NSString alloc] initWithFormat:@"%@",mySpeakers.location];
                         [newManagedObject setValue:myLocation forKey:@"location"];
                         [newManagedObject setValue:mySpeakers.sessionID forKey:@"sessionID"];
+                        
+                        
                         
                         
                         NSError *error = nil;
@@ -1074,7 +1078,7 @@ int iNotificationCounter=0;
                     
                     [fetchRequest setEntity:entity];
                     
-                    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"speakerName == %@",mySpeakers.speakerName]];
+                    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"speakerLastName == %@",mySpeakers.speakerLastName]];
                     
                     NSArray *myResults = [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
                     
@@ -1097,6 +1101,8 @@ int iNotificationCounter=0;
                         NSString * myLocation = [[NSString alloc] initWithFormat:@"%@",mySpeakers.location];
                         [newManagedObject setValue:myLocation forKey:@"location"];
                         [newManagedObject setValue:mySpeakers.sessionID forKey:@"sessionID"];
+                        
+                        
                         
                         
                         NSError *error = nil;
@@ -1192,7 +1198,7 @@ int iNotificationCounter=0;
                     
                     [fetchRequest setEntity:entity];
                     
-                    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"speakerName == %@",mySpeakers.speakerName]];
+                    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"speakerLastName == %@",mySpeakers.speakerLastName]];
                     
                     NSArray *myResults = [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
                     
@@ -1215,6 +1221,8 @@ int iNotificationCounter=0;
                         NSString * myLocation = [[NSString alloc] initWithFormat:@"%@",mySpeakers.location];
                         [newManagedObject setValue:myLocation forKey:@"location"];
                         [newManagedObject setValue:mySpeakers.sessionID forKey:@"sessionID"];
+                        
+                        
                         
                         
                         NSError *error = nil;
@@ -1311,7 +1319,7 @@ int iNotificationCounter=0;
                     
                     [fetchRequest setEntity:entity];
                     
-                    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"speakerName == %@",mySpeakers.speakerName]];
+                    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"speakerLastName == %@",mySpeakers.speakerLastName]];
                     
                     NSArray *myResults = [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
                     
@@ -1334,6 +1342,8 @@ int iNotificationCounter=0;
                         NSString * myLocation = [[NSString alloc] initWithFormat:@"%@",mySpeakers.location];
                         [newManagedObject setValue:myLocation forKey:@"location"];
                         [newManagedObject setValue:mySpeakers.sessionID forKey:@"sessionID"];
+                        
+                        
                         
                         
                         NSError *error = nil;
