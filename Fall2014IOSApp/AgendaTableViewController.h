@@ -15,6 +15,7 @@
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 @property (strong, nonatomic) NSArray *objects;
+@property (strong, nonatomic) NSArray *objects2;
 //@property   (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 
 @property (nonatomic, strong) NSString * sessionName;

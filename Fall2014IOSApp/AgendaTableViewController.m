@@ -251,7 +251,7 @@
         
         [fetchRequest2 setPredicate:[NSPredicate predicateWithFormat:@"sessionID == %@", sessionId]];
         NSArray *results2 = [self.managedObjectContext executeFetchRequest:fetchRequest2 error:nil];
-        self.objects = results2;
+        self.objects2 = results2;
         NSLog(@"Results Count is: %lu", (unsigned long)results2.count);
         if (!results2 || !results2.count){//start nested if block
             NSLog(@"No results2");}
@@ -268,8 +268,11 @@
             
             NSLog(@"You updated a PLANNER to NULL object in Sessions");
             
+            
+            
         }
         /////
+        
        
     }
 }
