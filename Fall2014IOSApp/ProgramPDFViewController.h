@@ -14,16 +14,19 @@
 
 @end
 
-@interface ProgramPDFViewController : UIViewController <UIWebViewDelegate>
+@interface ProgramPDFViewController : UIViewController <UIWebViewDelegate, UIDocumentInteractionControllerDelegate>
 
 @property (weak, nonatomic) id <ProgramPDFViewControllerDelegate> delegate;
 @property (strong, nonatomic) IBOutlet UIWebView *webView;
 @property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activity;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *openInButton;
 
 
 - (IBAction)handlePinch:(UIPinchGestureRecognizer *)recognizer;
 
 - (IBAction)handlePan:(UIPanGestureRecognizer *)recognizer;
+
+- (IBAction)shareButton:(id)sender;
 
 
 @end

@@ -12,6 +12,8 @@
 
 #import "Constants.h"
 
+#import "AppConstant.h"
+
 #import <AudioToolbox/AudioToolbox.h>
 
 //#import "UIImage+ResizeAdditions.h"
@@ -196,13 +198,14 @@
     [file saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         
         if (succeeded){
-            
+            PFUser * user = [PFUser currentUser];
             //Add the image to the object, and add the comments, the user, and the geolocation (fake)
             PFObject *imageObject =
             
             [PFObject objectWithClassName:WALL_OBJECT];
             [imageObject setObject:file forKey:KEY_IMAGE];
-            [imageObject setObject:[PFUser currentUser].username forKey:KEY_USER];
+            //[imageObject setObject:[PFUser currentUser].username forKey:KEY_USER];
+            [imageObject setObject:[user objectForKey:PF_USER_FULLNAME] forKey:KEY_USER];
             
             [imageObject setObject:self.commentTextField.text forKey:KEY_COMMENT];
             

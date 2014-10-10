@@ -7,8 +7,12 @@
 //
 
 #import "ProgramPDFViewController.h"
+#import "DocPath.h"
 
 @interface ProgramPDFViewController ()
+{
+    UIDocumentInteractionController *docController;
+}
 
 @end
 
@@ -28,6 +32,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.openInButton.enabled = NO;
     
     [TestFlight passCheckpoint:@"PDFPresentations-info-viewed"];
     
@@ -99,6 +105,39 @@
                                          recognizer.view.center.y + translation.y);
     [recognizer setTranslation:CGPointMake(0, 0) inView:self.view];
     
+}
+
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
+if (navigationType == UIWebViewNavigationTypeLinkClicked ) {
+    self.openInButton.enabled = YES;
+}
+    return YES;
+    
+}
+
+
+-(IBAction)shareButton:(id)sender
+{
+    
+    NSString * appDocPath = [DocPath documentsPath];
+    
+    NSString * currentURL = webView.request.URL.absoluteString;
+    NSData *pdfData = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:currentURL]];
+    //NSString *resourceDocPath = [[NSString alloc] initWithString:[[[[NSBundle mainBundle]  resourcePath] stringByDeletingLastPathComponent] stringByAppendingPathComponent:@"Documents"]];
+    NSString* theFileName = [[currentURL lastPathComponent] stringByDeletingPathExtension];
+    NSString *filePath = [appDocPath stringByAppendingPathComponent:[theFileName stringByAppendingString:@".pdf"]];
+    [pdfData writeToFile:filePath atomically:YES];
+    NSURL *url = [NSURL fileURLWithPath:filePath];
+    
+    NSString * myURL = [[NSString alloc]initWithFormat:@"%@", url];
+    NSLog(@"The file path is: %@", myURL);
+    [NSURLRequest requestWithURL:url];
+    [webView setUserInteractionEnabled:YES];
+    docController =[UIDocumentInteractionController interactionControllerWithURL:url];
+    docController.delegate = self;
+    [docController presentOpenInMenuFromBarButtonItem:sender animated:YES];
+    
+    //[super viewDidLoad];
 }
 
 @end
