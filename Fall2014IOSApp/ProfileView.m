@@ -13,6 +13,8 @@
 #import "utilities.h"
 
 #import "ProfileView.h"
+#import "NavigationController.h"
+
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 @interface ProfileView()
@@ -39,13 +41,13 @@
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self)
-    {
-        self.tabBarItem.title = nil;
-        [self.tabBarItem setImage:[UIImage imageNamed:@"tab_profile"]];
-        [self.tabBarItem setSelectedImage:[UIImage imageNamed:@"tab_profile"]];
-        self.tabBarItem.title = @"Profile";
-    }
+//    if (self)
+//    {
+//        self.tabBarItem.title = nil;
+//        [self.tabBarItem setImage:[UIImage imageNamed:@"tab_profile"]];
+//        [self.tabBarItem setSelectedImage:[UIImage imageNamed:@"tab_profile"]];
+//        self.tabBarItem.title = @"Profile";
+//    }
     return self;
 }
 //-------------------------------------------------------------------------------------------------------------------------------------------------
@@ -53,10 +55,24 @@
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 {
     [super viewDidLoad];
-    self.title = @"Profile";
+    
+    
+    //self.title = @"Profile";
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectZero];
+    label.backgroundColor = [UIColor clearColor];
+    label.font = [UIFont boldSystemFontOfSize:20.0];
+    //label.shadowColor = [UIColor colorWithWhite:0.0 alpha:0.5];
+    label.textAlignment = NSTextAlignmentCenter;
+    // ^-Use UITextAlignmentCenter for older SDKs.
+    label.textColor = [UIColor blackColor]; // change this color
+    self.navigationItem.titleView = label;
+    label.text = NSLocalizedString(@"Profile", @"");
+    [label sizeToFit];
+    
     //---------------------------------------------------------------------------------------------------------------------------------------------
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Log out" style:UIBarButtonItemStylePlain target:self
-                                                                             action:@selector(actionLogout)];
+    //self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Log out" style:UIBarButtonItemStylePlain target:self
+                                                                             //action:@selector(actionLogout)];
     //---------------------------------------------------------------------------------------------------------------------------------------------
     [self.view addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)]];
     //---------------------------------------------------------------------------------------------------------------------------------------------

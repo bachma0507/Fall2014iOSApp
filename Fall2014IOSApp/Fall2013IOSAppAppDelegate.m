@@ -209,7 +209,7 @@ int iNotificationCounter=0;
         
             tabBarItem3.selectedImage = [[UIImage imageNamed:@"social_tab_icon_selected.png"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal ];
             tabBarItem3.image = [[UIImage imageNamed:@"social_tab_icon_unselected.png"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal ];
-            tabBarItem3.title = @"Social";
+            tabBarItem3.title = @"Chat Rooms";
         
             tabBarItem4.selectedImage = [[UIImage imageNamed:@"mybicsi_tab_icon_selected.png"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal ];
             tabBarItem4.image = [[UIImage imageNamed:@"mybicsi_tab_icon_unselected.png"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal ];

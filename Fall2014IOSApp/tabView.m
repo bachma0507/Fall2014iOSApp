@@ -12,6 +12,7 @@
 #import "PrivateView.h"
 #import "ProfileView.h"
 #import "AppConstant.h"
+#import "CustomPagerViewController.h"
 
 @interface tabView ()
 
@@ -28,6 +29,7 @@
     NavigationController *nc1 = [[NavigationController alloc] initWithRootViewController:[[GroupView alloc] init]];
     NavigationController *nc2 = [[NavigationController alloc] initWithRootViewController:[[PrivateView alloc] init]];
     NavigationController *nc3 = [[NavigationController alloc] initWithRootViewController:[[ProfileView alloc] init]];
+    
     
     self.tabBarController = [[UITabBarController alloc] init];
     self.tabBarController.viewControllers = [NSArray arrayWithObjects:nc1, nc2, nc3, nil];

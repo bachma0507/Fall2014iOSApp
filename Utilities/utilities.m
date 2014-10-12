@@ -13,7 +13,8 @@
 
 #import "utilities.h"
 //#import "WelcomeView.h"
-//#import "NavigationController.h"
+#import "NavigationController.h"
+#import "ChatLoginViewController.h"
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 BOOL ShouldStartPhotoLibrary(id object, BOOL canEdit)
@@ -52,8 +53,10 @@ BOOL ShouldStartPhotoLibrary(id object, BOOL canEdit)
 void LoginUser(id target)
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 {
-//	NavigationController *navigationController = [[NavigationController alloc] initWithRootViewController:[[WelcomeView alloc] init]];
-//	[target presentViewController:navigationController animated:YES completion:nil];
+	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:[[ChatLoginViewController alloc] init]];
+	[target presentViewController:navigationController animated:YES completion:nil];
+    
+
 }
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------

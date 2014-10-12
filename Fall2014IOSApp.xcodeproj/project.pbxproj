@@ -391,6 +391,9 @@
 		4CC0ADED19E72BC600C42CCF /* ChatGallery.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC0ADEC19E72BC600C42CCF /* ChatGallery.m */; };
 		4CC0ADEF19E771B700C42CCF /* PrivateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CC0ADEE19E771B700C42CCF /* PrivateView.xib */; };
 		4CC0ADF119E7728200C42CCF /* ProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CC0ADF019E7728200C42CCF /* ProfileView.xib */; };
+		4CC0ADF419E80BA700C42CCF /* ChatLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC0ADF319E80BA700C42CCF /* ChatLoginViewController.m */; };
+		4CC0ADF719E80BC800C42CCF /* ChatRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC0ADF619E80BC800C42CCF /* ChatRegisterViewController.m */; };
+		4CC0ADFE19E9E48E00C42CCF /* GroupViewTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC0ADFD19E9E48E00C42CCF /* GroupViewTableViewController.m */; };
 		4CC152511936249B00336A3C /* tabbarflatblack.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CC152501936249B00336A3C /* tabbarflatblack.png */; };
 		4CC152531936298900336A3C /* navbarflatblack2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CC152521936298900336A3C /* navbarflatblack2.png */; };
 		4CC1525519362A6100336A3C /* navbarflatwhite2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CC1525419362A6100336A3C /* navbarflatwhite2.png */; };
@@ -1229,6 +1232,12 @@
 		4CC0ADEC19E72BC600C42CCF /* ChatGallery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatGallery.m; sourceTree = "<group>"; };
 		4CC0ADEE19E771B700C42CCF /* PrivateView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PrivateView.xib; sourceTree = "<group>"; };
 		4CC0ADF019E7728200C42CCF /* ProfileView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileView.xib; sourceTree = "<group>"; };
+		4CC0ADF219E80BA700C42CCF /* ChatLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatLoginViewController.h; sourceTree = "<group>"; };
+		4CC0ADF319E80BA700C42CCF /* ChatLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatLoginViewController.m; sourceTree = "<group>"; };
+		4CC0ADF519E80BC800C42CCF /* ChatRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatRegisterViewController.h; sourceTree = "<group>"; };
+		4CC0ADF619E80BC800C42CCF /* ChatRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatRegisterViewController.m; sourceTree = "<group>"; };
+		4CC0ADFC19E9E48E00C42CCF /* GroupViewTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupViewTableViewController.h; sourceTree = "<group>"; };
+		4CC0ADFD19E9E48E00C42CCF /* GroupViewTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupViewTableViewController.m; sourceTree = "<group>"; };
 		4CC152501936249B00336A3C /* tabbarflatblack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbarflatblack.png; sourceTree = "<group>"; };
 		4CC152521936298900336A3C /* navbarflatblack2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navbarflatblack2.png; sourceTree = "<group>"; };
 		4CC1525419362A6100336A3C /* navbarflatwhite2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navbarflatwhite2.png; sourceTree = "<group>"; };
@@ -2190,15 +2199,19 @@
 				4C9B1DA419E341FA007E0F51 /* 1 */,
 				4C9B1DA519E34203007E0F51 /* 2 */,
 				4C9B1E4719E43449007E0F51 /* 3 */,
+				4CC0ADEB19E72BC600C42CCF /* ChatGallery.h */,
+				4CC0ADEC19E72BC600C42CCF /* ChatGallery.m */,
+				4CC0ADF219E80BA700C42CCF /* ChatLoginViewController.h */,
+				4CC0ADF319E80BA700C42CCF /* ChatLoginViewController.m */,
+				4CC0ADF519E80BC800C42CCF /* ChatRegisterViewController.h */,
+				4CC0ADF619E80BC800C42CCF /* ChatRegisterViewController.m */,
 				4C9B1E3519E343F3007E0F51 /* ChatView.h */,
 				4C9B1E3619E343F3007E0F51 /* ChatView.m */,
 				4C9B1E3819E3482E007E0F51 /* Images */,
-				4CC0ADE319E717CA00C42CCF /* tabView.h */,
-				4CC0ADE419E717CA00C42CCF /* tabView.m */,
 				4CC0ADE819E7191700C42CCF /* NavigationController.h */,
 				4CC0ADE919E7191700C42CCF /* NavigationController.m */,
-				4CC0ADEB19E72BC600C42CCF /* ChatGallery.h */,
-				4CC0ADEC19E72BC600C42CCF /* ChatGallery.m */,
+				4CC0ADE319E717CA00C42CCF /* tabView.h */,
+				4CC0ADE419E717CA00C42CCF /* tabView.m */,
 			);
 			name = Chat;
 			sourceTree = "<group>";
@@ -2208,6 +2221,8 @@
 			children = (
 				4C9B1DA619E342C7007E0F51 /* GroupView.h */,
 				4C9B1DA719E342C7007E0F51 /* GroupView.m */,
+				4CC0ADFC19E9E48E00C42CCF /* GroupViewTableViewController.h */,
+				4CC0ADFD19E9E48E00C42CCF /* GroupViewTableViewController.m */,
 			);
 			name = 1;
 			sourceTree = "<group>";
@@ -3669,6 +3684,7 @@
 				4C9B1D9919E31F4B007E0F51 /* UIAlertView+AFNetworking.m in Sources */,
 				4C9B1E1B19E34387007E0F51 /* JSQMessagesTimestampFormatter.m in Sources */,
 				4CD8E0841937E42F00A4326C /* OAProblem.m in Sources */,
+				4CC0ADFE19E9E48E00C42CCF /* GroupViewTableViewController.m in Sources */,
 				4CD8E07D1937E42F00A4326C /* OAAttachment.m in Sources */,
 				4C2D6A09174541100053BCC0 /* Fall2013IOSAppAppDelegate.m in Sources */,
 				4C9B1E3719E343F3007E0F51 /* ChatView.m in Sources */,
@@ -3744,6 +3760,7 @@
 				4C9B1E1A19E34387007E0F51 /* JSQMessagesBubbleImageFactory.m in Sources */,
 				4C8A834B177B7ECF00022E03 /* ExhibitorsViewController.m in Sources */,
 				4C9B1E2519E34387007E0F51 /* JSQMessagesCollectionViewCellOutgoing.m in Sources */,
+				4CC0ADF719E80BC800C42CCF /* ChatRegisterViewController.m in Sources */,
 				4C9B1D8F19E31F4B007E0F51 /* AFHTTPRequestOperationManager.m in Sources */,
 				4CBCB2C7180878EA008D4522 /* PFAlertViewController.m in Sources */,
 				4CD8E09E1938121600A4326C /* ResultTableViewCell.m in Sources */,
@@ -3775,6 +3792,7 @@
 				4C088C63177F667500CFBC96 /* NSManagedObject+MagicalRecord.m in Sources */,
 				4C088C64177F667500CFBC96 /* NSManagedObject+MagicalRequests.m in Sources */,
 				4C63591A1991500500AE4D9B /* Functions.m in Sources */,
+				4CC0ADF419E80BA700C42CCF /* ChatLoginViewController.m in Sources */,
 				4C088C65177F667500CFBC96 /* NSManagedObjectContext+MagicalObserving.m in Sources */,
 				4C9B1E1C19E34387007E0F51 /* JSQMessagesToolbarButtonFactory.m in Sources */,
 				4CD8E0851937E42F00A4326C /* OARequestParameter.m in Sources */,
@@ -3959,6 +3977,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;

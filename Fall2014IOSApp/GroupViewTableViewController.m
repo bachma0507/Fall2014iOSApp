@@ -1,70 +1,49 @@
 //
-//  GroupView.m
+//  GroupViewTableViewController.m
 //  Fall2014IOSApp
 //
-//  Created by Barry on 10/6/14.
+//  Created by Barry on 10/11/14.
 //  Copyright (c) 2014 BICSI. All rights reserved.
 //
 
-#import "GroupView.h"
+#import "GroupViewTableViewController.h"
 #import <Parse/Parse.h>
 #import "ProgressHUD.h"
 
 #import "AppConstant.h"
 #import "utilities.h"
 
-#import "GroupView.h"
 #import "ChatView.h"
 #import "ChatGallery.h"
+#import "ProfileView.h"
+#import "NavigationController.h"
+#import "PrivateView.h"
 
-@interface GroupView () 
-
+@interface GroupViewTableViewController ()
 {
     NSMutableArray *chatrooms;
+    UINavigationController * nv;
 }
+
 
 @end
 
-@implementation GroupView
+@implementation GroupViewTableViewController
 
-//-------------------------------------------------------------------------------------------------------------------------------------------------
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-//-------------------------------------------------------------------------------------------------------------------------------------------------
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self)
-    {
-        self.tabBarItem.title = nil;
-        [self.tabBarItem setImage:[UIImage imageNamed:@"tab_group"]];
-        [self.tabBarItem setSelectedImage:[UIImage imageNamed:@"tab_group"]];
-        self.tabBarItem.title = @"Group";
-    }
-    return self;
-}
 
-//-------------------------------------------------------------------------------------------------------------------------------------------------
-- (void)viewDidLoad
-//-------------------------------------------------------------------------------------------------------------------------------------------------
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     
-//    self.tabBarItem.title = nil;
-//    [self.tabBarItem setImage:[UIImage imageNamed:@"tab_group"]];
-//    [self.tabBarItem setSelectedImage:[UIImage imageNamed:@"tab_group"]];
-//    self.tabBarItem.title = @"Group";
-    
-//    UIBarButtonItem *btn=[[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleBordered target:self action:@selector(btnClick)];
-//    self.navigationItem.leftBarButtonItem=btn;
-    
-    self.title = @"Group";
+    //self.title = @"Group";
     //---------------------------------------------------------------------------------------------------------------------------------------------
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"New" style:UIBarButtonItemStylePlain target:self
-                                                                             action:@selector(actionNew)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"New Room" style:UIBarButtonItemStyleBordered target:self action:@selector(actionNew)];
     //---------------------------------------------------------------------------------------------------------------------------------------------
     
-    //---------------------------------------------------------------------------------------------------------------------------------------------
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:self
-                                                                             action:@selector(btnClick)];
+    UIBarButtonItem *backButtonItem = [[UIBarButtonItem alloc] initWithTitle:@" " style:UIBarButtonItemStylePlain target:nil action:nil];
+    self.navigationItem.backBarButtonItem = backButtonItem;
+    
+//    //---------------------------------------------------------------------------------------------------------------------------------------------
+//    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:self action:@selector(btnClick)];
     //---------------------------------------------------------------------------------------------------------------------------------------------
     
     self.tableView.separatorInset = UIEdgeInsetsZero;
@@ -72,17 +51,6 @@
     chatrooms = [[NSMutableArray alloc] init];
 }
 
--(void)btnClick
-{
-    [self.navigationController popViewControllerAnimated:YES];
-//    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
-//    
-//    UIViewController *cg = [storyboard instantiateViewControllerWithIdentifier:@"ChatLoginViewController" ];
-//    
-//    [self.navigationController presentViewController:cg animated:YES completion:NULL];
-}
-
-//-------------------------------------------------------------------------------------------------------------------------------------------------
 - (void)viewDidAppear:(BOOL)animated
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 {
@@ -93,13 +61,14 @@
     [self refreshTable];
 }
 
+
 #pragma mark - User actions
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 - (void)actionNew
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"Please enter a name for your group" delegate:self
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"Please enter a name for your room" delegate:self
                                           cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
     alert.alertViewStyle = UIAlertViewStylePlainTextInput;
     [alert show];
@@ -177,6 +146,9 @@
     
     PFObject *room = [chatrooms objectAtIndex:indexPath.row];
     cell.textLabel.text = room[PF_CHATROOMS_ROOM];
+    cell.detailTextLabel.text = @"Tap to enter";
+    cell.detailTextLabel.font = [UIFont fontWithName:@"Arial" size:10.0];
+    cell.detailTextLabel.textColor = [UIColor colorWithRed:189/255.0 green:189/255.0 blue:189/255.0 alpha:1.0];
     
     return cell;
 }
@@ -196,4 +168,19 @@
     [self.navigationController pushViewController:chatView animated:YES];
 }
 
+- (IBAction)PrivateButtonPressed:(id)sender {
+    
+    PrivateView *prv = [[PrivateView alloc] initWithNibName:@"PrivateView" bundle:nil];
+    
+    [self.navigationController pushViewController:prv animated:YES];
+}
+
+- (IBAction)ProfileButtonPressed:(id)sender {
+    
+    ProfileView *pv = [[ProfileView alloc] initWithNibName:@"ProfileView" bundle:nil];
+    
+    [self.navigationController pushViewController:pv animated:YES];
+    //[self presentViewController:pv animated:YES completion:nil];
+    
+}
 @end

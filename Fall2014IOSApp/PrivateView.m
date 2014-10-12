@@ -34,13 +34,13 @@
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self)
-    {
-        self.tabBarItem.title = nil;
-        [self.tabBarItem setImage:[UIImage imageNamed:@"tab_private"]];
-        [self.tabBarItem setSelectedImage:[UIImage imageNamed:@"tab_private"]];
-        self.tabBarItem.title = @"Private";
-    }
+//    if (self)
+//    {
+//        self.tabBarItem.title = nil;
+//        [self.tabBarItem setImage:[UIImage imageNamed:@"tab_private"]];
+//        [self.tabBarItem setSelectedImage:[UIImage imageNamed:@"tab_private"]];
+//        self.tabBarItem.title = @"Private";
+//    }
     return self;
 }
 
@@ -50,7 +50,18 @@
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 {
     [super viewDidLoad];
-    self.title = @"Private";
+    //self.title = @"Private";
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectZero];
+    label.backgroundColor = [UIColor clearColor];
+    label.font = [UIFont boldSystemFontOfSize:20.0];
+    //label.shadowColor = [UIColor colorWithWhite:0.0 alpha:0.5];
+    label.textAlignment = NSTextAlignmentCenter;
+    // ^-Use UITextAlignmentCenter for older SDKs.
+    label.textColor = [UIColor blackColor]; // change this color
+    self.navigationItem.titleView = label;
+    label.text = NSLocalizedString(@"Private Chat", @"");
+    [label sizeToFit];
     //---------------------------------------------------------------------------------------------------------------------------------------------
     self.tableView.tableHeaderView = viewHeader;
     self.tableView.separatorInset = UIEdgeInsetsZero;

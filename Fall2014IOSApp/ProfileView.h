@@ -10,4 +10,6 @@
 
 @interface ProfileView : UITableViewController <UIActionSheetDelegate, UIImagePickerControllerDelegate>
 
+@property (strong, nonatomic) UIWindow *window;
+
 @end

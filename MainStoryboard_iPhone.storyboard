@@ -10,14 +10,14 @@
             <objects>
                 <viewController id="rfL-V6-SNu" customClass="SocialViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wKn-5K-NLC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scenery5.png" id="A9r-6n-3kb">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="0pG-rq-weh">
-                                <rect key="frame" x="10" y="266" width="300" height="50"/>
+                                <rect key="frame" x="10" y="294" width="300" height="50"/>
                                 <inset key="insetFor6xAndEarlier" minX="0.0" minY="-20" maxX="0.0" maxY="20"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" image="twitterpost.png">
@@ -32,7 +32,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="l6H-eP-HYz">
-                                <rect key="frame" x="10" y="181" width="300" height="50"/>
+                                <rect key="frame" x="10" y="200" width="300" height="50"/>
                                 <inset key="insetFor6xAndEarlier" minX="0.0" minY="-20" maxX="0.0" maxY="20"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" image="facebookpost.png">
@@ -47,7 +47,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.84999999999999987" contentMode="left" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6WH-jq-u2a">
-                                <rect key="frame" x="76" y="89" width="169" height="68"/>
+                                <rect key="frame" x="76" y="99" width="169" height="68"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <inset key="insetFor6xAndEarlier" minX="0.0" minY="-20" maxX="0.0" maxY="20"/>
                                 <attributedString key="attributedText">
@@ -62,7 +62,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="FXz-FP-pQh">
-                                <rect key="frame" x="10" y="351" width="300" height="50"/>
+                                <rect key="frame" x="10" y="388" width="300" height="50"/>
                                 <inset key="insetFor6xAndEarlier" minX="0.0" minY="-20" maxX="0.0" maxY="20"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" image="twitterfeed.png">
@@ -77,7 +77,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hzo-50-ayd">
-                                <rect key="frame" x="3" y="99" width="73" height="47"/>
+                                <rect key="frame" x="3" y="109" width="73" height="47"/>
                                 <inset key="insetFor6xAndEarlier" minX="0.0" minY="-20" maxX="0.0" maxY="20"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" image="facebook.png">
@@ -92,7 +92,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Mx3-Li-9EA">
-                                <rect key="frame" x="245" y="99" width="73" height="47"/>
+                                <rect key="frame" x="245" y="109" width="73" height="47"/>
                                 <inset key="insetFor6xAndEarlier" minX="0.0" minY="-20" maxX="0.0" maxY="20"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" image="twitter.png">
@@ -121,11 +121,11 @@
             <objects>
                 <viewController id="S8a-pQ-EAm" customClass="TwitterFeedViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="n5T-KG-MAy">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" id="rna-Wa-B8V">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.63137254899999995" green="0.73333333329999995" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
@@ -133,7 +133,7 @@
                                 </connections>
                             </webView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" animating="YES" style="whiteLarge" id="j1e-o6-Oyh">
-                                <rect key="frame" x="142" y="254" width="37" height="37"/>
+                                <rect key="frame" x="142" y="280" width="37" height="37"/>
                                 <color key="color" red="0.57186706509999996" green="0.93949558420000001" blue="0.56136621419999999" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
                         </subviews>
@@ -208,21 +208,6 @@
                 </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="965" y="-825"/>
-        </scene>
-        <!--Tab View-->
-        <scene sceneID="dic-SY-2T5">
-            <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="B0N-r3-HVA" customClass="tabView" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Wz0-jT-Ld4">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="3z6-gv-xHf"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QsH-Ae-QEw" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="391" y="-2560"/>
         </scene>
         <!--More View Controller-->
         <scene sceneID="1Tj-gb-3pN">
@@ -1110,11 +1095,10 @@
                                     <action selector="loginButtonTouchHandler:" destination="C3Y-bg-Xdd" eventType="touchUpInside" id="7cn-Mv-LBw"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.89999999999999991" contentMode="scaleToFill" editable="NO" id="7cL-oC-oA1">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.89999999999999991" contentMode="scaleToFill" editable="NO" text="Already have a user account for the Photo Gallery or Chat Rooms? Then sign in below. If not, create a user account." id="7cL-oC-oA1">
                                 <rect key="frame" x="39" y="68" width="243" height="100"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <inset key="insetFor6xAndEarlier" minX="0.0" minY="-20" maxX="0.0" maxY="20"/>
-                                <string key="text">Already have a user account that allows you to upload your conference pics and view the gallery? Then sign in below. If not, create a user account.</string>
                                 <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -1149,12 +1133,12 @@
                         <outlet property="facebookLoginButton" destination="gXb-VS-iaV" id="cpc-L0-vPY"/>
                         <outlet property="passwordTextField" destination="wee-aZ-c7f" id="up3-B3-dA5"/>
                         <outlet property="userTextField" destination="V1N-Rt-DwF" id="kbE-Qh-mmm"/>
-                        <segue destination="ygm-ym-oLz" kind="push" identifier="LoginSuccesful" id="MvJ-uY-WBg"/>
+                        <segue destination="wxH-JW-VAP" kind="push" identifier="LoginSuccesful" id="Qcc-o1-J1t"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wce-Pj-ASz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-952" y="-3146"/>
+            <point key="canvasLocation" x="-686" y="-3167"/>
         </scene>
         <!--Sign Up-->
         <scene sceneID="Scs-vD-J8X">
@@ -1200,12 +1184,12 @@
                         <outlet property="emailRegisterTextField" destination="Vs0-eO-xh4" id="KFS-ZW-FOu"/>
                         <outlet property="passwordRegisterTextField" destination="BuZ-jG-lTa" id="wPQ-iA-olw"/>
                         <outlet property="userRegisterTextField" destination="6ej-RJ-eDI" id="LGm-Tt-f32"/>
-                        <segue destination="ygm-ym-oLz" kind="push" identifier="SignupSuccesful" id="rTJ-UH-eeF"/>
+                        <segue destination="wxH-JW-VAP" kind="push" identifier="SignupSuccesful" id="9cZ-Dy-QTD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kOR-KH-PGf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-457" y="-3190"/>
+            <point key="canvasLocation" x="683" y="-3153"/>
         </scene>
         <!--Report Photo-->
         <scene sceneID="Uu4-Ed-jWB">
@@ -1252,7 +1236,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XMp-RD-bf9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="692" y="-3521"/>
+            <point key="canvasLocation" x="605" y="-3781"/>
         </scene>
         <!--Wall Pictures View Controller-->
         <scene sceneID="44j-G1-icx">
@@ -1278,22 +1262,11 @@
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <navigationItem key="navigationItem" id="jhn-Kd-qIu">
                         <nil key="title"/>
-                        <barButtonItem key="leftBarButtonItem" title="Logout" id="uV8-AB-oGZ">
+                        <barButtonItem key="leftBarButtonItem" title="Report Photo" id="uV8-AB-oGZ">
                             <connections>
-                                <action selector="logoutPressed:" destination="wxH-JW-VAP" id="d46-bN-rBf"/>
+                                <segue destination="PSY-EL-2VH" kind="push" id="Nh9-gw-7T1"/>
                             </connections>
                         </barButtonItem>
-                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Qsn-PH-hmH">
-                            <rect key="frame" x="96" y="6" width="128" height="33"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                            <state key="normal" title="Report Photo">
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <connections>
-                                <segue destination="PSY-EL-2VH" kind="push" id="df8-e3-LEB"/>
-                            </connections>
-                        </button>
                         <barButtonItem key="rightBarButtonItem" title="Upload" id="MVp-SP-n9c">
                             <connections>
                                 <segue destination="yMd-s0-jtG" kind="push" id="txT-yD-NDu"/>
@@ -1308,7 +1281,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IoT-BG-Ai9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-62" y="-3521"/>
+            <point key="canvasLocation" x="-270" y="-3623"/>
         </scene>
         <!--Upload Photo-->
         <scene sceneID="s9E-MQ-eca">
@@ -1370,7 +1343,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MAP-lu-UZi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="297" y="-3516"/>
+            <point key="canvasLocation" x="291" y="-3390"/>
         </scene>
         <!--Item-->
         <scene sceneID="z6M-0O-uYb">
@@ -1439,7 +1412,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f4X-Bg-Y3Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1404" y="-2341"/>
+            <point key="canvasLocation" x="-658" y="-1547"/>
         </scene>
         <!--Conf Sched Detail Table View Controller-->
         <scene sceneID="TIo-d8-YXG">
@@ -1507,43 +1480,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mqL-4g-yFB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-715" y="-356"/>
-        </scene>
-        <!--Chat & Gallery-->
-        <scene sceneID="z24-03-c1x">
-            <objects>
-                <viewController storyboardIdentifier="ChatGalleryId" title="Chat &amp; Gallery" id="ygm-ym-oLz" customClass="ChatGallery" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="jRx-OW-B96">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pGe-9C-iMR">
-                                <rect key="frame" x="114" y="249" width="93" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Photo Gallery">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="wxH-JW-VAP" kind="push" id="1Yy-4j-Ss5"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Hcp-Zi-o0b">
-                                <rect key="frame" x="139" y="310" width="42" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Chat">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="B0N-r3-HVA" kind="push" id="ggH-9A-awx"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Chat &amp; Gallery" id="Omu-aZ-bkm"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dYl-mW-aRA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-428" y="-2297"/>
         </scene>
         <!--Exhibit Hall Schedule-->
         <scene sceneID="AGx-F2-Mrv">
@@ -2672,7 +2608,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Gd-tk-mIu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="601" y="-629"/>
+            <point key="canvasLocation" x="621" y="-625"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ALk-TW-Hnj">
@@ -2694,7 +2630,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8bB-rV-u91" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1532" y="-938"/>
+            <point key="canvasLocation" x="-2040" y="-1659"/>
         </scene>
         <!--Custom Pager View Controller-->
         <scene sceneID="Bhv-9j-9Zu">
@@ -2731,7 +2667,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Ie-OG-Piq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="153" y="710"/>
+            <point key="canvasLocation" x="-263" y="856"/>
         </scene>
         <!--Hotel Information-->
         <scene sceneID="aMN-0n-Ol4">
@@ -2833,7 +2769,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2bF-ev-9oZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1147" y="575"/>
+            <point key="canvasLocation" x="-1227" y="723"/>
         </scene>
         <!--Speakers-->
         <scene sceneID="JmC-iy-yx4">
@@ -2909,7 +2845,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="-773" y="-2317"/>
+            <point key="canvasLocation" x="-302" y="-1633"/>
         </scene>
         <!--Speaker Detail View Controller-->
         <scene sceneID="FOy-zt-Vp4">
@@ -3332,13 +3268,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8mr-Vr-sS8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-62" y="-1481"/>
+            <point key="canvasLocation" x="132" y="-1323"/>
         </scene>
-        <!--Social-->
+        <!--Chat Rooms-->
         <scene sceneID="eOI-CQ-PKc">
             <objects>
                 <navigationController id="enQ-KR-oEw" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Social" image="social_tab_icon_unselected.png" id="t0L-2Q-Jw3"/>
+                    <tabBarItem key="tabBarItem" title="Chat Rooms" image="social_tab_icon_unselected.png" id="t0L-2Q-Jw3"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="MUw-9o-y2l">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -3346,12 +3282,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="rfL-V6-SNu" kind="relationship" relationship="rootViewController" id="Jk3-u1-c4A"/>
+                        <segue destination="bOC-Jp-ivm" kind="relationship" relationship="rootViewController" id="uVB-JU-vdk"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nv5-Gk-zJ1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="27" y="1698"/>
+            <point key="canvasLocation" x="-1438" y="-2199"/>
         </scene>
         <!--Sessions Detail View Controller-->
         <scene sceneID="M8h-b1-54R">
@@ -3689,7 +3625,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OFN-Dv-Kmh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1382" y="-129"/>
+            <point key="canvasLocation" x="-1672" y="-63"/>
         </scene>
         <!--Locate On Map View Controller-->
         <scene sceneID="LJz-J2-nzX">
@@ -4148,6 +4084,202 @@
             </objects>
             <point key="canvasLocation" x="2569" y="-2706"/>
         </scene>
+        <!--Chat Rooms Log In-->
+        <scene sceneID="79C-rT-7fg">
+            <objects>
+                <viewController storyboardIdentifier="ChatLoginViewController" title="Chat Rooms Log In" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bOC-Jp-ivm" customClass="ChatLoginViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JNd-sc-0hl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scenery5.png" id="orb-pv-Cn4">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" id="Cgk-tX-duI">
+                                <rect key="frame" x="41" y="197" width="238" height="30"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="-20" maxX="0.0" maxY="20"/>
+                                <color key="textColor" red="0.75686274509999996" green="0.27450980390000002" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" id="nbM-iF-hMr">
+                                <rect key="frame" x="41" y="250" width="238" height="30"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="-20" maxX="0.0" maxY="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="LMx-m5-Fnc">
+                                <rect key="frame" x="129" y="302" width="63" height="30"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="-20" maxX="0.0" maxY="20"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Log In" backgroundImage="button-green.png">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="logInPressed:" destination="bOC-Jp-ivm" eventType="touchUpInside" id="m3H-yW-isG"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pW2-De-4ds">
+                                <rect key="frame" x="139" y="344" width="42" height="21"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="-20" maxX="0.0" maxY="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.75686274509999996" green="0.27450980390000002" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qVs-ry-dac">
+                                <rect key="frame" x="82" y="380" width="157" height="30"/>
+                                <color key="backgroundColor" red="0.14901960780000001" green="0.2274509804" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="-20" maxX="0.0" maxY="20"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Log in with facebook" backgroundImage="facebook_button.png">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginButtonTouchHandler:" destination="bOC-Jp-ivm" eventType="touchUpInside" id="8KN-jt-i3f"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.89999997615814209" contentMode="scaleToFill" editable="NO" text="Already have a user account for the Chat Rooms or Photo Gallery? Then sign in below. If not, create a user account." id="BS2-Cx-QK7">
+                                <rect key="frame" x="39" y="67" width="243" height="100"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="-20" maxX="0.0" maxY="20"/>
+                                <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xYg-GF-ZBJ">
+                                <rect key="frame" x="139" y="422" width="42" height="21"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="-20" maxX="0.0" maxY="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.75686274509999996" green="0.27450980390000002" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="x95-JP-pNX">
+                                <rect key="frame" x="75" y="455" width="170" height="30"/>
+                                <color key="backgroundColor" red="0.24774749090000001" green="0.35757869530000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="-20" maxX="0.0" maxY="20"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Create a user account" backgroundImage="createuser_button.png">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="wHO-bk-aK1" kind="push" id="OPY-Sc-InU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.8862745098" green="0.98431372549999996" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <navigationItem key="navigationItem" title="Chat Rooms Log In" id="akD-jW-q7o"/>
+                    <connections>
+                        <outlet property="createUserButton" destination="x95-JP-pNX" id="hA8-3s-P64"/>
+                        <outlet property="facebookLoginButton" destination="qVs-ry-dac" id="Khs-kO-gof"/>
+                        <outlet property="passwordTextField" destination="nbM-iF-hMr" id="aGh-cm-nvO"/>
+                        <outlet property="userTextField" destination="Cgk-tX-duI" id="4dh-Mp-GIL"/>
+                        <segue destination="poy-DP-yzY" kind="push" identifier="LoginSuccesful" id="Bmv-kT-R6k"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w7B-ez-dmX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-672" y="-2537"/>
+        </scene>
+        <!--Group View Table View Controller-->
+        <scene sceneID="Fvs-ay-7Z4">
+            <objects>
+                <tableViewController id="poy-DP-yzY" customClass="GroupViewTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="7D2-bE-Uta">
+                        <rect key="frame" x="0.0" y="64" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="separatorColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <connections>
+                            <outlet property="dataSource" destination="poy-DP-yzY" id="YJy-dN-SFq"/>
+                            <outlet property="delegate" destination="poy-DP-yzY" id="sBL-sz-cvv"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="JXV-71-6Oe">
+                        <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" id="vDD-Xa-lH4">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ls3-S8-yON">
+                                <rect key="frame" x="9" y="7" width="85" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Private Chat">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="PrivateButtonPressed:" destination="poy-DP-yzY" eventType="touchUpInside" id="W7B-PQ-IPv"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9Fr-Eh-7Bt">
+                            <rect key="frame" x="107" y="7" width="128" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Profile">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="ProfileButtonPressed:" destination="poy-DP-yzY" eventType="touchUpInside" id="kei-qL-hG2"/>
+                            </connections>
+                        </button>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sRR-Ob-zoh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-180" y="-2649"/>
+        </scene>
+        <!--Register-->
+        <scene sceneID="8XA-pK-uiK">
+            <objects>
+                <viewController title="Register" id="wHO-bk-aK1" customClass="ChatRegisterViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZJ6-ge-oug">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" id="F3M-Bj-Yuz">
+                                <rect key="frame" x="51" y="132" width="218" height="30"/>
+                                <color key="textColor" red="0.75686274509999996" green="0.27450980390000002" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" id="SdS-zi-P2D">
+                                <rect key="frame" x="51" y="260" width="218" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="PGe-p4-4nD">
+                                <rect key="frame" x="112" y="317" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Sign Up" backgroundImage="createuser_button.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="signUpUserPressed:" destination="wHO-bk-aK1" eventType="touchUpInside" id="9jN-QT-4n9"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" minimumFontSize="17" id="m8f-NV-xXo">
+                                <rect key="frame" x="51" y="197" width="218" height="30"/>
+                                <color key="textColor" red="0.75686274509999996" green="0.27450980390000002" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.63137254899999995" green="0.73333333329999995" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <navigationItem key="navigationItem" title="Sign Up" id="tKb-AS-eZ2"/>
+                    <connections>
+                        <outlet property="emailRegisterTextField" destination="m8f-NV-xXo" id="5yo-kU-5Q3"/>
+                        <outlet property="passwordRegisterTextField" destination="SdS-zi-P2D" id="CJu-2l-gKT"/>
+                        <outlet property="userRegisterTextField" destination="F3M-Bj-Yuz" id="VxF-WH-JEb"/>
+                        <segue destination="poy-DP-yzY" kind="push" identifier="SignupSuccesful" id="v11-zK-g7b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T48-wI-qIa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-873" y="-1887"/>
+        </scene>
     </scenes>
     <resources>
         <image name="add-notes.png" width="25" height="28"/>
@@ -4220,9 +4352,10 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="6XG-ma-1Ri"/>
-        <segue reference="MvJ-uY-WBg"/>
+        <segue reference="v11-zK-g7b"/>
+        <segue reference="9cZ-Dy-QTD"/>
         <segue reference="qLg-su-tkS"/>
-        <segue reference="3a1-YG-Me0"/>
         <segue reference="ia9-ZG-dp5"/>
+        <segue reference="R22-dx-yzm"/>
     </inferredMetricsTieBreakers>
 </document>
