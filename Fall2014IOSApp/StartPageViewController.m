@@ -10,6 +10,7 @@
 #import "MBProgressHUD.h"
 #import "Reachability.h"
 #import "Fall2013IOSAppAppDelegate.h"
+#import "SWRevealViewController.h"
 
 @interface StartPageViewController ()
 @property (nonatomic, strong) NSMutableIndexSet *optionIndices;
@@ -36,6 +37,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    
+    // Change button color
+   // _sidebarButton.tintColor = [UIColor colorWithWhite:0.1f alpha:0.9f];
+    
+    // Set the side bar button action. When it's tapped, it'll show up the sidebar.
+    //_sidebarButton.target = self.revealViewController;
+    //_sidebarButton.action = @selector(revealToggle:);
+    
+    // Set the gesture
+    //[self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     
     self.optionIndices = [NSMutableIndexSet indexSetWithIndex:1];
     

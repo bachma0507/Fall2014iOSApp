@@ -7,6 +7,7 @@
 //
 
 #import "CECInfoViewController.h"
+#import "SWRevealViewController.h"
 
 @interface CECInfoViewController ()
 
@@ -39,6 +40,29 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    // Change button color
+//    _sidebarButton.tintColor = [UIColor colorWithWhite:0.1f alpha:0.9f];
+//    
+//    // Set the side bar button action. When it's tapped, it'll show up the sidebar.
+//    _sidebarButton.target = self.revealViewController;
+//    _sidebarButton.action = @selector(revealToggle:);
+//    
+//    // Set the gesture
+//    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectZero];
+    label.backgroundColor = [UIColor clearColor];
+    label.font = [UIFont boldSystemFontOfSize:20.0];
+    //label.shadowColor = [UIColor colorWithWhite:0.0 alpha:0.5];
+    label.textAlignment = NSTextAlignmentCenter;
+    // ^-Use UITextAlignmentCenter for older SDKs.
+    label.textColor = [UIColor blackColor]; // change this color
+    self.navigationItem.titleView = label;
+    label.text = NSLocalizedString(@"CEC Information", @"");
+    [label sizeToFit];
+    
     
     [TestFlight passCheckpoint:@"CEC-info-viewed"];
     

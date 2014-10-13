@@ -16,6 +16,8 @@
 #import "StartPageViewController.h"
 #import <AdSupport/AdSupport.h>
 #import "TestFlight.h"
+#import "RootController.h"
+#import "NewViewController.h"
 //#import <FYX/FYX.h>
 
 
@@ -187,7 +189,9 @@ int iNotificationCounter=0;
         // code here
         
         // Assign tab bar item with titles
-            UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
+        UIStoryboard *tabStoryBoard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:nil];
+//            UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
+        UITabBarController *tabBarController = [tabStoryBoard instantiateViewControllerWithIdentifier:@"Tab Controller"];
             UITabBar *tabBar = tabBarController.tabBar;
             //[tabBarController.tabBar setBackgroundColor:[UIColor blackColor]];
             //tabBarController.tabBar.translucent = NO;
@@ -196,6 +200,31 @@ int iNotificationCounter=0;
             UITabBarItem *tabBarItem3 = [tabBar.items objectAtIndex:2];
             UITabBarItem *tabBarItem4 = [tabBar.items objectAtIndex:3];
             UITabBarItem *tabBarItem5 = [tabBar.items objectAtIndex:4];
+        
+        
+        //self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+        
+        //UITabBarController *tabController = [tabStoryBoard instantiateViewControllerWithIdentifier:@"Tab Controller"];
+        
+        NewViewController *CEC, *TE, *CM, *HI, *FM, *PR, *FAA, *CU;
+        
+        CEC = [tabStoryBoard instantiateViewControllerWithIdentifier:@"CEC"];
+        TE = [tabStoryBoard instantiateViewControllerWithIdentifier:@"TE"];
+        CM = [tabStoryBoard instantiateViewControllerWithIdentifier:@"CM"];
+        HI = [tabStoryBoard instantiateViewControllerWithIdentifier:@"HI"];
+        FM = [tabStoryBoard instantiateViewControllerWithIdentifier:@"FM"];
+        PR = [tabStoryBoard instantiateViewControllerWithIdentifier:@"PR"];
+        FAA = [tabStoryBoard instantiateViewControllerWithIdentifier:@"FAA"];
+        CU = [tabStoryBoard instantiateViewControllerWithIdentifier:@"CU"];
+        
+        RootController *menuController = [[RootController alloc]
+                                          initWithViewControllers:@[tabBarController, CEC, TE, CM, HI, FM, PR, FAA, CU]
+                                          andMenuTitles:@[@"Home", @"CEC Information", @"Training & Exams", @"Committee Meetings", @"Hotel Information", @"Interactive Floor Maps", @"Presentations (PDF)", @"Find Area Activities", @"Contact Us"]];
+        
+        self.window.rootViewController = menuController;
+        [self.window makeKeyAndVisible];
+
+        
         
         //
         //

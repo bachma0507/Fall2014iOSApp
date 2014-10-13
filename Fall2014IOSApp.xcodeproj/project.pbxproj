@@ -394,6 +394,13 @@
 		4CC0ADF419E80BA700C42CCF /* ChatLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC0ADF319E80BA700C42CCF /* ChatLoginViewController.m */; };
 		4CC0ADF719E80BC800C42CCF /* ChatRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC0ADF619E80BC800C42CCF /* ChatRegisterViewController.m */; };
 		4CC0ADFE19E9E48E00C42CCF /* GroupViewTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC0ADFD19E9E48E00C42CCF /* GroupViewTableViewController.m */; };
+		4CC0AE0119EA442000C42CCF /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC0AE0019EA442000C42CCF /* SWRevealViewController.m */; };
+		4CC0AE0519EA4A7400C42CCF /* SidebarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC0AE0419EA4A7400C42CCF /* SidebarViewController.m */; };
+		4CC0AE0A19EA4DFF00C42CCF /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CC0AE0719EA4DFF00C42CCF /* menu.png */; };
+		4CC0AE0B19EA4DFF00C42CCF /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CC0AE0819EA4DFF00C42CCF /* menu@2x.png */; };
+		4CC0AE0C19EA4DFF00C42CCF /* nav_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CC0AE0919EA4DFF00C42CCF /* nav_bg.png */; };
+		4CC0AE1E19EB28CF00C42CCF /* RootController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC0AE1D19EB28CF00C42CCF /* RootController.m */; };
+		4CC0AE2119EB355A00C42CCF /* NewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC0AE2019EB355A00C42CCF /* NewViewController.m */; };
 		4CC152511936249B00336A3C /* tabbarflatblack.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CC152501936249B00336A3C /* tabbarflatblack.png */; };
 		4CC152531936298900336A3C /* navbarflatblack2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CC152521936298900336A3C /* navbarflatblack2.png */; };
 		4CC1525519362A6100336A3C /* navbarflatwhite2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CC1525419362A6100336A3C /* navbarflatwhite2.png */; };
@@ -1238,6 +1245,17 @@
 		4CC0ADF619E80BC800C42CCF /* ChatRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatRegisterViewController.m; sourceTree = "<group>"; };
 		4CC0ADFC19E9E48E00C42CCF /* GroupViewTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupViewTableViewController.h; sourceTree = "<group>"; };
 		4CC0ADFD19E9E48E00C42CCF /* GroupViewTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupViewTableViewController.m; sourceTree = "<group>"; };
+		4CC0ADFF19EA441600C42CCF /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		4CC0AE0019EA442000C42CCF /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		4CC0AE0319EA4A7400C42CCF /* SidebarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SidebarViewController.h; sourceTree = "<group>"; };
+		4CC0AE0419EA4A7400C42CCF /* SidebarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidebarViewController.m; sourceTree = "<group>"; };
+		4CC0AE0719EA4DFF00C42CCF /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
+		4CC0AE0819EA4DFF00C42CCF /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@2x.png"; sourceTree = "<group>"; };
+		4CC0AE0919EA4DFF00C42CCF /* nav_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_bg.png; sourceTree = "<group>"; };
+		4CC0AE1C19EB28CF00C42CCF /* RootController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootController.h; sourceTree = "<group>"; };
+		4CC0AE1D19EB28CF00C42CCF /* RootController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootController.m; sourceTree = "<group>"; };
+		4CC0AE1F19EB355A00C42CCF /* NewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewViewController.h; sourceTree = "<group>"; };
+		4CC0AE2019EB355A00C42CCF /* NewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewViewController.m; sourceTree = "<group>"; };
 		4CC152501936249B00336A3C /* tabbarflatblack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbarflatblack.png; sourceTree = "<group>"; };
 		4CC152521936298900336A3C /* navbarflatblack2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navbarflatblack2.png; sourceTree = "<group>"; };
 		4CC1525419362A6100336A3C /* navbarflatwhite2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navbarflatwhite2.png; sourceTree = "<group>"; };
@@ -1782,6 +1800,7 @@
 		4C2D69FE174541100053BCC0 /* Fall2014IOSApp */ = {
 			isa = PBXGroup;
 			children = (
+				4CC0AE0219EA4A5B00C42CCF /* SideBar */,
 				4C9B1DA319E341F3007E0F51 /* Chat */,
 				4C428652194A0B17007A5A11 /* Comments */,
 				4CCB78DD1843B65700D9D1C6 /* CEC */,
@@ -2003,58 +2022,56 @@
 		4C48759F176CEDE200059E21 /* classes */ = {
 			isa = PBXGroup;
 			children = (
-				4C9B1E3019E343A2007E0F51 /* JSQSystemSoundPlayer */,
-				4C9B1DA919E34387007E0F51 /* JSQMessagesViewController */,
-				4C9B1D9F19E31F84007E0F51 /* Utilities */,
 				4C9B1D6719E31F4A007E0F51 /* AFNetworking */,
-				4C9B1D6119E31E99007E0F51 /* ProgressHUD */,
+				4C4875A3176CEF9600059E21 /* City.h */,
+				4C4875A4176CEF9600059E21 /* City.m */,
+				4C6A496B17D0BE55003941C7 /* ConfSched.h */,
+				4C6A496C17D0BE55003941C7 /* ConfSched.m */,
+				4C018E201808AA8700A567C6 /* Constants.h */,
+				4C453BAE185BC51A00D57388 /* CSchedule.h */,
+				4C453BAF185BC51A00D57388 /* CSchedule.m */,
+				4CC0ADE019E6F71500C42CCF /* DocPath.h */,
+				4CC0ADE119E6F71500C42CCF /* DocPath.m */,
+				4C6088C21770F33F0055719C /* EHSchedule.h */,
+				4C6088C31770F33F0055719C /* EHSchedule.m */,
+				4C8A8346177B7CC100022E03 /* exhibitors.h */,
+				4C8A8347177B7CC100022E03 /* exhibitors.m */,
+				4C6359181991500500AE4D9B /* Functions.h */,
+				4C6359191991500500AE4D9B /* Functions.m */,
+				4CE1C0061774D5E0000218CE /* hotels.h */,
+				4CE1C0071774D5E0000218CE /* hotels.m */,
+				4C453BB1185CE10600D57388 /* Html.h */,
+				4C453BB2185CE10600D57388 /* Html.m */,
+				4C3FD799175BBFAC00B381AA /* infoItems.h */,
+				4C3FD79A175BBFAC00B381AA /* infoItems.m */,
+				4C9B1DA919E34387007E0F51 /* JSQMessagesViewController */,
+				4C9B1E3019E343A2007E0F51 /* JSQSystemSoundPlayer */,
 				4C63591519913FA000AE4D9B /* KeychainItemWrapper.h */,
 				4C63591619913FA000AE4D9B /* KeychainItemWrapper.m */,
-				4C42863C19475C83007A5A11 /* RNFrostedSidebar.h */,
-				4C42863D19475C83007A5A11 /* RNFrostedSidebar.m */,
-				4C018E201808AA8700A567C6 /* Constants.h */,
-				4C088C76177F674200CFBC96 /* SessionNotes.h */,
-				4C088C77177F674200CFBC96 /* SessionNotes.m */,
-				4C088C1D177F667500CFBC96 /* MagicalRecord */,
-				4CCD3F601777F811002E11DC /* SVWebViewController */,
-				4CACEAC01776B5D400E90BD8 /* MBProgressHUD.h */,
-				4CACEAC11776B5D400E90BD8 /* MBProgressHUD.m */,
 				4C4B72CC17738AE5002627B7 /* LORichTextLabel.h */,
 				4C4B72CD17738AE5002627B7 /* LORichTextLabel.m */,
 				4C4B72CE17738AE5002627B7 /* LORichTextLabelStyle.h */,
 				4C4B72CF17738AE5002627B7 /* LORichTextLabelStyle.m */,
-				4C4B72D017738AE5002627B7 /* UIView+Layout.h */,
-				4C4B72D117738AE5002627B7 /* UIView+Layout.m */,
-				4C3FD799175BBFAC00B381AA /* infoItems.h */,
-				4C3FD79A175BBFAC00B381AA /* infoItems.m */,
-				4C43CE9E17474E34008AAA9D /* Reachability.h */,
-				4C43CE9F17474E34008AAA9D /* Reachability.m */,
-				4C3EC0E117645CA9002E7415 /* socialItems.h */,
-				4C3EC0E217645CAA002E7415 /* socialItems.m */,
-				4C4875A3176CEF9600059E21 /* City.h */,
-				4C4875A4176CEF9600059E21 /* City.m */,
-				4C4875A9176E11B000059E21 /* Speakers.h */,
-				4C4875AA176E11B000059E21 /* Speakers.m */,
-				4CF23D91176FA4F0009B7F60 /* Sponsors.h */,
-				4CF23D92176FA4F0009B7F60 /* Sponsors.m */,
-				4C6088C21770F33F0055719C /* EHSchedule.h */,
-				4C6088C31770F33F0055719C /* EHSchedule.m */,
-				4CE1C0061774D5E0000218CE /* hotels.h */,
-				4CE1C0071774D5E0000218CE /* hotels.m */,
-				4C8A8346177B7CC100022E03 /* exhibitors.h */,
-				4C8A8347177B7CC100022E03 /* exhibitors.m */,
-				4CE1B378178FA614006EF171 /* Sessions.h */,
-				4CE1B379178FA614006EF171 /* Sessions.m */,
-				4CAE765F179B1F6D004FF2FE /* PagerViewController.h */,
-				4CAE7660179B1F6D004FF2FE /* PagerViewController.m */,
-				4C6A496B17D0BE55003941C7 /* ConfSched.h */,
-				4C6A496C17D0BE55003941C7 /* ConfSched.m */,
+				4C088C1D177F667500CFBC96 /* MagicalRecord */,
 				4C3C390818219B6700927FFD /* MapPoint.h */,
 				4C3C390918219B6700927FFD /* MapPoint.m */,
-				4C453BAE185BC51A00D57388 /* CSchedule.h */,
-				4C453BAF185BC51A00D57388 /* CSchedule.m */,
-				4C453BB1185CE10600D57388 /* Html.h */,
-				4C453BB2185CE10600D57388 /* Html.m */,
+				4CACEAC01776B5D400E90BD8 /* MBProgressHUD.h */,
+				4CACEAC11776B5D400E90BD8 /* MBProgressHUD.m */,
+				4CAE765F179B1F6D004FF2FE /* PagerViewController.h */,
+				4CAE7660179B1F6D004FF2FE /* PagerViewController.m */,
+				4C9B1D6119E31E99007E0F51 /* ProgressHUD */,
+				4C43CE9E17474E34008AAA9D /* Reachability.h */,
+				4C43CE9F17474E34008AAA9D /* Reachability.m */,
+				4C42863C19475C83007A5A11 /* RNFrostedSidebar.h */,
+				4C42863D19475C83007A5A11 /* RNFrostedSidebar.m */,
+				4C088C76177F674200CFBC96 /* SessionNotes.h */,
+				4C088C77177F674200CFBC96 /* SessionNotes.m */,
+				4CE1B378178FA614006EF171 /* Sessions.h */,
+				4CE1B379178FA614006EF171 /* Sessions.m */,
+				4C3EC0E117645CA9002E7415 /* socialItems.h */,
+				4C3EC0E217645CAA002E7415 /* socialItems.m */,
+				4C4875A9176E11B000059E21 /* Speakers.h */,
+				4C4875AA176E11B000059E21 /* Speakers.m */,
 				4CBE7296198C05400090DA6E /* Speakers2.h */,
 				4CBE7297198C05400090DA6E /* Speakers2.m */,
 				4CBE7299198C05530090DA6E /* Speakers3.h */,
@@ -2065,10 +2082,18 @@
 				4CBE72A0198C056D0090DA6E /* Speakers5.m */,
 				4CBE72A2198C057D0090DA6E /* Speakers6.h */,
 				4CBE72A3198C057D0090DA6E /* Speakers6.m */,
-				4C6359181991500500AE4D9B /* Functions.h */,
-				4C6359191991500500AE4D9B /* Functions.m */,
-				4CC0ADE019E6F71500C42CCF /* DocPath.h */,
-				4CC0ADE119E6F71500C42CCF /* DocPath.m */,
+				4CF23D91176FA4F0009B7F60 /* Sponsors.h */,
+				4CF23D92176FA4F0009B7F60 /* Sponsors.m */,
+				4CCD3F601777F811002E11DC /* SVWebViewController */,
+				4CC0ADFF19EA441600C42CCF /* SWRevealViewController.h */,
+				4CC0AE0019EA442000C42CCF /* SWRevealViewController.m */,
+				4C4B72D017738AE5002627B7 /* UIView+Layout.h */,
+				4C4B72D117738AE5002627B7 /* UIView+Layout.m */,
+				4C9B1D9F19E31F84007E0F51 /* Utilities */,
+				4CC0AE1C19EB28CF00C42CCF /* RootController.h */,
+				4CC0AE1D19EB28CF00C42CCF /* RootController.m */,
+				4CC0AE1F19EB355A00C42CCF /* NewViewController.h */,
+				4CC0AE2019EB355A00C42CCF /* NewViewController.m */,
 			);
 			name = classes;
 			sourceTree = "<group>";
@@ -2466,6 +2491,26 @@
 				4CBDD4AE1848DA70007A9002 /* dymo_diamond.png */,
 			);
 			name = canada14sponsorimages;
+			sourceTree = "<group>";
+		};
+		4CC0AE0219EA4A5B00C42CCF /* SideBar */ = {
+			isa = PBXGroup;
+			children = (
+				4CC0AE0619EA4DEE00C42CCF /* images */,
+				4CC0AE0319EA4A7400C42CCF /* SidebarViewController.h */,
+				4CC0AE0419EA4A7400C42CCF /* SidebarViewController.m */,
+			);
+			name = SideBar;
+			sourceTree = "<group>";
+		};
+		4CC0AE0619EA4DEE00C42CCF /* images */ = {
+			isa = PBXGroup;
+			children = (
+				4CC0AE0719EA4DFF00C42CCF /* menu.png */,
+				4CC0AE0819EA4DFF00C42CCF /* menu@2x.png */,
+				4CC0AE0919EA4DFF00C42CCF /* nav_bg.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 		4CC5645B18CC32020033B05A /* EntranceHallFloorPlan */ = {
@@ -3303,6 +3348,7 @@
 				4C1FC0FE1761131700C1C09B /* ipad_72x72.png in Resources */,
 				4CD8E0BC1938F5AA00A4326C /* mic_on.png in Resources */,
 				4C76B08D17F91A9A0017E71E /* mybicsi_tab_icon_selected@2x.png in Resources */,
+				4CC0AE0A19EA4DFF00C42CCF /* menu.png in Resources */,
 				4CBDD4BC1848DA70007A9002 /* ofs_bronze.png in Resources */,
 				4C76B08E17F91A9A0017E71E /* mybicsi_tab_icon_unselected@2x.png in Resources */,
 				4CD8DF58193781AB00A4326C /* floormaps-ipad.png in Resources */,
@@ -3466,6 +3512,7 @@
 				4CD8DF91193781C900A4326C /* committee_568h@2x.png in Resources */,
 				4CD8DF64193781AB00A4326C /* speakers-ipad.png in Resources */,
 				4CD8DF9B193781C900A4326C /* exhibitors_568h@2x.png in Resources */,
+				4CC0AE0B19EA4DFF00C42CCF /* menu@2x.png in Resources */,
 				4C326E9A1961E308006D4B76 /* cecinfo-ipad@2x.png in Resources */,
 				4C3A0D00177C9CB900DA1D7E /* ehschedule-json.json in Resources */,
 				4C9B1E2B19E34387007E0F51 /* JSQMessagesLoadEarlierHeaderView.xib in Resources */,
@@ -3519,6 +3566,7 @@
 				4CF45E531781F42A000F6A5D /* facebookpost_ipad@2x.png in Resources */,
 				4CF45E541781F42A000F6A5D /* facebookpost_ipad.png in Resources */,
 				4CBDD4C61848DA70007A9002 /* wowcloud_bronze.png in Resources */,
+				4CC0AE0C19EA4DFF00C42CCF /* nav_bg.png in Resources */,
 				4CC152511936249B00336A3C /* tabbarflatblack.png in Resources */,
 				4CD8DFE0193781E300A4326C /* ehschedule-ipad@2x.png in Resources */,
 				4CD8DFE1193781E300A4326C /* ehscheduleglow-ipad@2x.png in Resources */,
@@ -3705,6 +3753,7 @@
 				4C1284AD18D52B4D00060A56 /* ReportViewController.m in Sources */,
 				4C3EC0CD17642619002E7415 /* SocialDetailViewController.m in Sources */,
 				4C3EC0E317645CAA002E7415 /* socialItems.m in Sources */,
+				4CC0AE0519EA4A7400C42CCF /* SidebarViewController.m in Sources */,
 				4CE68DFF176553880082FA84 /* RNCachingURLProtocol.m in Sources */,
 				4CC0ADEA19E7191700C42CCF /* NavigationController.m in Sources */,
 				4C9B1D9D19E31F4B007E0F51 /* UIRefreshControl+AFNetworking.m in Sources */,
@@ -3762,6 +3811,7 @@
 				4C9B1E2519E34387007E0F51 /* JSQMessagesCollectionViewCellOutgoing.m in Sources */,
 				4CC0ADF719E80BC800C42CCF /* ChatRegisterViewController.m in Sources */,
 				4C9B1D8F19E31F4B007E0F51 /* AFHTTPRequestOperationManager.m in Sources */,
+				4CC0AE1E19EB28CF00C42CCF /* RootController.m in Sources */,
 				4CBCB2C7180878EA008D4522 /* PFAlertViewController.m in Sources */,
 				4CD8E09E1938121600A4326C /* ResultTableViewCell.m in Sources */,
 				4C8A834E177B80B800022E03 /* ExhibitorsDetailViewController.m in Sources */,
@@ -3805,6 +3855,7 @@
 				4CD8E0811937E42F00A4326C /* OAHMAC_SHA1SignatureProvider.m in Sources */,
 				4C088C69177F667500CFBC96 /* NSManagedObjectModel+MagicalRecord.m in Sources */,
 				4C874E1318E34AD90083F04E /* EulaViewController.m in Sources */,
+				4CC0AE0119EA442000C42CCF /* SWRevealViewController.m in Sources */,
 				4C018E3C1808F1F500A567C6 /* UploadImageViewController.m in Sources */,
 				4C9B1E1119E34387007E0F51 /* JSQSystemSoundPlayer+JSQMessages.m in Sources */,
 				4C088C6A177F667500CFBC96 /* NSPersistentStore+MagicalRecord.m in Sources */,
@@ -3892,6 +3943,7 @@
 				4C326EB51963406A006D4B76 /* ShopViewController.m in Sources */,
 				4C9B1E1919E34387007E0F51 /* JSQMessagesAvatarFactory.m in Sources */,
 				4C28488217D2BB5600F6C6B2 /* confSchedDetailViewCell.m in Sources */,
+				4CC0AE2119EB355A00C42CCF /* NewViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

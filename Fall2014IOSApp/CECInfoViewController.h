@@ -26,7 +26,7 @@
 @property (strong, nonatomic) NSArray *objects;
 
 
-
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 @property (strong, nonatomic) IBOutlet UIWebView *webView;
 @property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activity;
 

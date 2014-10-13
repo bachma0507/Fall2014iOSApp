@@ -157,10 +157,10 @@ extern int iNotificationCounter;
     
     //For reseting the tabbar badge value
     //Added by Maaj
-    UITabBarController *tBar = (UITabBarController*)[[[UIApplication sharedApplication] keyWindow] rootViewController];
-    UITabBarItem *item=[[[tBar tabBar] items] objectAtIndex:1];
-    [item setBadgeValue:nil];
-    iNotificationCounter = 0;
+//    UITabBarController *tBar = (UITabBarController*)[[[UIApplication sharedApplication] keyWindow] rootViewController];
+//    UITabBarItem *item=[[[tBar tabBar] items] objectAtIndex:1];
+//    [item setBadgeValue:nil];
+//    iNotificationCounter = 0;
     //----------------------------------------------//
     
 }

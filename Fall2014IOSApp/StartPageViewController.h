@@ -42,6 +42,8 @@
 
 @property (strong, nonatomic) IBOutlet UILabel *updateLabel;
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
+
 
 - (IBAction)buttonPressed:(id)sender;
 
