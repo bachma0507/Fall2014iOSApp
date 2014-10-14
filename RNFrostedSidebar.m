@@ -266,7 +266,7 @@ static RNFrostedSidebar *rn_frostedMenu;
         _contentView.showsHorizontalScrollIndicator = NO;
         _contentView.showsVerticalScrollIndicator = NO;
         
-        _width = 150;
+        _width = 250;
         _animationDuration = 0.25f;
         _itemSize = CGSizeMake(_width/2, _width/2);
         _itemViews = [NSMutableArray array];
