@@ -8,7 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@class FloorMapsViewController;
+
+@protocol FloorMapsViewControllerDelegate
+
+@end
+
 @interface FloorMapsViewController : UIViewController
+@property (weak, nonatomic) id <FloorMapsViewControllerDelegate> delegate;
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
 @property (strong, nonatomic) IBOutlet UIImageView *imageView2;
 

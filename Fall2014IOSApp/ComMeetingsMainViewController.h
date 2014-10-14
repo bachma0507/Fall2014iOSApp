@@ -11,11 +11,18 @@
 #import "SessionsViewController.h"
 @class MBProgressHUD;
 
+@class ComMeetingsMainViewController;
+
+@protocol ComMeetingsMainViewControllerDelegate
+
+@end
+
 @interface ComMeetingsMainViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UIAlertViewDelegate>
 {
     MBProgressHUD *HUD;
     
 }
+@property (weak, nonatomic) id <ComMeetingsMainViewControllerDelegate> delegate;
 
 @property (nonatomic, strong) NSMutableArray * results;
 

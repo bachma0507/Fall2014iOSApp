@@ -410,11 +410,15 @@
 }
 
 - (IBAction)onBurger:(id)sender {
+    
+    if ( [UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad ) /* Device is iPad */
+    {
+    
     NSArray *images = @[
-                        [UIImage imageNamed:@"hotelinfo-ipad"],
-                        [UIImage imageNamed:@"contactus-ipad"],
                         [UIImage imageNamed:@"cecinfo-ipad"],
                         [UIImage imageNamed:@"trainingexams-ipad"],
+                        [UIImage imageNamed:@"hotelinfo-ipad"],
+                        [UIImage imageNamed:@"contactus-ipad"],
                         [UIImage imageNamed:@"email-ipad"],
                         [UIImage imageNamed:@"presentations-ipad"],
 //                        [UIImage imageNamed:@"sponsors"],
@@ -447,33 +451,83 @@
     callout.delegate = self;
     //    callout.showFromRight = YES;
     [callout show];
+        
+        }
+    
+    else{
+        NSArray *images = @[
+                            [UIImage imageNamed:@"cecinfo"],
+                            [UIImage imageNamed:@"trainingexams"],
+                            [UIImage imageNamed:@"committee"],
+                            [UIImage imageNamed:@"hotelinfo"],
+                            [UIImage imageNamed:@"floormaps"],
+                            [UIImage imageNamed:@"presentations"],
+                            [UIImage imageNamed:@"findactivity"],
+                            [UIImage imageNamed:@"contactus"],
+                            [UIImage imageNamed:@"email"],
+                            
+                            //                        [UIImage imageNamed:@"sponsors"],
+                            //                        [UIImage imageNamed:@"sessions"],
+                            //                        [UIImage imageNamed:@"exhibitors"],
+                            //                        [UIImage imageNamed:@"favexhibitors"],
+                            //                        [UIImage imageNamed:@"mynotes"],
+                            //                        [UIImage imageNamed:@"myagenda"],
+                            
+                            
+                            
+                            ];
+        NSArray *colors = @[
+                            [UIColor colorWithRed:240/255.f green:159/255.f blue:254/255.f alpha:1],
+                            [UIColor colorWithRed:255/255.f green:137/255.f blue:167/255.f alpha:1],
+                            [UIColor colorWithRed:126/255.f green:242/255.f blue:195/255.f alpha:1],
+                            [UIColor colorWithRed:119/255.f green:152/255.f blue:255/255.f alpha:1],
+                            [UIColor colorWithRed:240/255.f green:159/255.f blue:254/255.f alpha:1],
+                            [UIColor colorWithRed:255/255.f green:137/255.f blue:167/255.f alpha:1],
+                            [UIColor colorWithRed:126/255.f green:242/255.f blue:195/255.f alpha:1],
+                            [UIColor colorWithRed:119/255.f green:152/255.f blue:255/255.f alpha:1],
+                            [UIColor colorWithRed:240/255.f green:159/255.f blue:254/255.f alpha:1],
+                            //                        [UIColor colorWithRed:255/255.f green:137/255.f blue:167/255.f alpha:1],
+                            //                        [UIColor colorWithRed:126/255.f green:242/255.f blue:195/255.f alpha:1],
+                            //                        [UIColor colorWithRed:119/255.f green:152/255.f blue:255/255.f alpha:1],
+                            ];
+        
+        RNFrostedSidebar *callout = [[RNFrostedSidebar alloc] initWithiPhoneImages:images selectedIndices:self.optionIndices borderColors:colors];
+        //    RNFrostedSidebar *callout = [[RNFrostedSidebar alloc] initWithImages:images];
+        callout.delegate = self;
+        //    callout.showFromRight = YES;
+        [callout show];
+    }
 }
 
 #pragma mark - RNFrostedSidebarDelegate
 
 - (void)sidebar:(RNFrostedSidebar *)sidebar didTapItemAtIndex:(NSUInteger)index {
+    
+    if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) /* Device is iPad */
+    {
+    
     NSLog(@"Tapped item at index %lu",(unsigned long)index);
     switch (index) {
         case 0:
-            [self performSegueWithIdentifier:@"segueToHotel" sender:self];
-            
-            [sidebar dismissAnimated:YES completion:nil];
-            break;
-            
-        case 1:
-            [self performSegueWithIdentifier:@"segueToContactUs" sender:self];
-            
-            [sidebar dismissAnimated:YES completion:nil];
-            break;
-            
-        case 2:
             [self performSegueWithIdentifier:@"segueToCECInfo" sender:self];
             
             [sidebar dismissAnimated:YES completion:nil];
             break;
             
-        case 3:
+        case 1:
             [self performSegueWithIdentifier:@"segueToExams" sender:self];
+            
+            [sidebar dismissAnimated:YES completion:nil];
+            break;
+            
+        case 2:
+            [self performSegueWithIdentifier:@"segueToHotel" sender:self];
+            
+            [sidebar dismissAnimated:YES completion:nil];
+            break;
+            
+        case 3:
+            [self performSegueWithIdentifier:@"segueToContactUs" sender:self];
             
             [sidebar dismissAnimated:YES completion:nil];
             break;
@@ -550,110 +604,128 @@
             break;
         default:
             break;
+        }
     }
-    
-//    if (index == 0) {
-//        
-//        [self performSegueWithIdentifier:@"segueToHotel" sender:self];
-//        
-//        [sidebar dismissAnimated:YES completion:nil];
-//    }
-//    
-//    if (index == 1) {
-//        
-//        [self performSegueWithIdentifier:@"segueToContactUs" sender:self];
-//        
-//        [sidebar dismissAnimated:YES completion:nil];
-//    }
-//    
-//    if (index == 2) {
-//        
-//        [self performSegueWithIdentifier:@"segueToCECInfo" sender:self];
-//        
-//        [sidebar dismissAnimated:YES completion:nil];
-//    }
-//    
-//    if (index == 3) {
-//        
-//        [self performSegueWithIdentifier:@"segueToExams" sender:self];
-//        
-//        [sidebar dismissAnimated:YES completion:nil];
-//    }
-//    
-//    if (index == 4) {
-//        
-//        if ([MFMailComposeViewController canSendMail])
-//        {
-//            NSUUID *id = [[UIDevice currentDevice] identifierForVendor];
-//            NSString *deviceID = [[NSString alloc] initWithFormat:@"%@",id];
-//            NSString *newDeviceID = [deviceID substringWithRange:NSMakeRange(30, [deviceID length]-30)];
-//            
-//            NSLog(@"Untruncated Device ID is: %@", deviceID);
-//            NSLog(@"Truncated Device ID is: %@", newDeviceID);
-//            
-//            
-//            UIDevice *currentDevice = [UIDevice currentDevice];
-//            NSString *model = [currentDevice model];
-//            NSString *systemVersion = [currentDevice systemVersion];
-//            
-//            NSArray *languageArray = [NSLocale preferredLanguages];
-//            NSString *language = [languageArray objectAtIndex:0];
-//            NSLocale *locale = [NSLocale currentLocale];
-//            NSString *country = [locale localeIdentifier];
-//            
-//            NSString *appVersion = [[NSBundle mainBundle]
-//                                    objectForInfoDictionaryKey:(NSString *)kCFBundleVersionKey];
-//            
-//            NSString *deviceSpecs =
-//            [NSString stringWithFormat:@"Model: %@ \n System Version: %@ \n Language: %@ \n Country: %@ \n App Version: %@",
-//             model, systemVersion, language, country, appVersion];
-//            NSLog(@"Device Specs --> %@",deviceSpecs);
-//            
-//            //        NSString * emailNoteBody = [[NSString alloc] initWithFormat:@"Enter issue:\n \n My Device Specs: \n %@",deviceSpecs];
-//            //        NSString * emailNoteSubject = [[NSString alloc] initWithFormat:@"Email BICSI Tech Support"];
-//            
-//            NSString * emailNoteBody = [[NSString alloc] initWithFormat:@"Enter your comments"];
-//            NSString * emailNoteSubject = [[NSString alloc] initWithFormat:@"My Comments: 2014 Fall Conference"];
-//            
-//            
-//            // Email Subject
-//            NSString *emailTitle = emailNoteSubject;
-//            // Email Content
-//            NSString *messageBody = emailNoteBody;
-//            // To address
-//            NSArray *toRecipents = [NSArray arrayWithObject:@"support@bicsi.org"];
-//            
-//            MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
-//            mc.mailComposeDelegate = self;
-//            [mc setSubject:emailTitle];
-//            [mc setMessageBody:messageBody isHTML:NO];
-//            [mc setToRecipients:toRecipents];
-//            
-//            // Present mail view controller on screen
-//            [self presentViewController:mc animated:YES completion:NULL];
-//            
-//        }
-//        else
-//        {
-//            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Failure"
-//                                                            message:@"Your device doesn't support the composer sheet"
-//                                                           delegate:nil
-//                                                  cancelButtonTitle:@"OK"
-//                                                  otherButtonTitles: nil];
-//            [alert show];
-//            
-//        }
-//        [sidebar dismissAnimated:YES completion:nil];
-//    }
-//    
-//    
-//    
-//    if (index == 5) {
-//        
-//        [self performSegueWithIdentifier:@"segueToPresentations" sender:self];
-//        
-//        [sidebar dismissAnimated:YES completion:nil];
-//    }
+    else { //STUFF FOR IPHONE
+        NSLog(@"Tapped item at index %lu",(unsigned long)index);
+        switch (index) {
+            case 0:
+                [self performSegueWithIdentifier:@"segueToCECInfo" sender:self];
+                
+                [sidebar dismissAnimated:YES completion:nil];
+                break;
+                
+            case 1:
+                [self performSegueWithIdentifier:@"segueToExams" sender:self];
+                
+                [sidebar dismissAnimated:YES completion:nil];
+                break;
+                
+            case 2:
+                [self performSegueWithIdentifier:@"segueToCM" sender:self];
+                
+                [sidebar dismissAnimated:YES completion:nil];
+                break;
+                
+            case 3:
+                [self performSegueWithIdentifier:@"segueToHotel" sender:self];
+                
+                [sidebar dismissAnimated:YES completion:nil];
+                break;
+                
+            case 4:
+                [self performSegueWithIdentifier:@"segueToFM" sender:self];
+                
+                [sidebar dismissAnimated:YES completion:nil];
+                break;
+                
+            case 5:
+                [self performSegueWithIdentifier:@"segueToPresentations" sender:self];
+                
+                [sidebar dismissAnimated:YES completion:nil];
+                break;
+                
+            case 6:
+                [self performSegueWithIdentifier:@"segueToFAA" sender:self];
+                
+                [sidebar dismissAnimated:YES completion:nil];
+                break;
+                
+            case 7:
+                [self performSegueWithIdentifier:@"segueToContactUs" sender:self];
+                
+                [sidebar dismissAnimated:YES completion:nil];
+                break;
+                
+            case 8:
+                if ([MFMailComposeViewController canSendMail])
+                {
+                    NSUUID *id = [[UIDevice currentDevice] identifierForVendor];
+                    NSString *deviceID = [[NSString alloc] initWithFormat:@"%@",id];
+                    NSString *newDeviceID = [deviceID substringWithRange:NSMakeRange(30, [deviceID length]-30)];
+                    
+                    NSLog(@"Untruncated Device ID is: %@", deviceID);
+                    NSLog(@"Truncated Device ID is: %@", newDeviceID);
+                    
+                    
+                    UIDevice *currentDevice = [UIDevice currentDevice];
+                    NSString *model = [currentDevice model];
+                    NSString *systemVersion = [currentDevice systemVersion];
+                    
+                    NSArray *languageArray = [NSLocale preferredLanguages];
+                    NSString *language = [languageArray objectAtIndex:0];
+                    NSLocale *locale = [NSLocale currentLocale];
+                    NSString *country = [locale localeIdentifier];
+                    
+                    NSString *appVersion = [[NSBundle mainBundle]
+                                            objectForInfoDictionaryKey:(NSString *)kCFBundleVersionKey];
+                    
+                    NSString *deviceSpecs =
+                    [NSString stringWithFormat:@"Model: %@ \n System Version: %@ \n Language: %@ \n Country: %@ \n App Version: %@",
+                     model, systemVersion, language, country, appVersion];
+                    NSLog(@"Device Specs --> %@",deviceSpecs);
+                    
+                    //        NSString * emailNoteBody = [[NSString alloc] initWithFormat:@"Enter issue:\n \n My Device Specs: \n %@",deviceSpecs];
+                    //        NSString * emailNoteSubject = [[NSString alloc] initWithFormat:@"Email BICSI Tech Support"];
+                    
+                    NSString * emailNoteBody = [[NSString alloc] initWithFormat:@"Enter your comments"];
+                    NSString * emailNoteSubject = [[NSString alloc] initWithFormat:@"My Comments: 2014 Fall Conference"];
+                    
+                    
+                    // Email Subject
+                    NSString *emailTitle = emailNoteSubject;
+                    // Email Content
+                    NSString *messageBody = emailNoteBody;
+                    // To address
+                    NSArray *toRecipents = [NSArray arrayWithObject:@"support@bicsi.org"];
+                    
+                    MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
+                    mc.mailComposeDelegate = self;
+                    [mc setSubject:emailTitle];
+                    [mc setMessageBody:messageBody isHTML:NO];
+                    [mc setToRecipients:toRecipents];
+                    
+                    // Present mail view controller on screen
+                    [self presentViewController:mc animated:YES completion:NULL];
+                    
+                }
+                else
+                {
+                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Failure"
+                                                                    message:@"Your device doesn't support the composer sheet"
+                                                                   delegate:nil
+                                                          cancelButtonTitle:@"OK"
+                                                          otherButtonTitles: nil];
+                    [alert show];
+                    
+                }
+                [sidebar dismissAnimated:YES completion:nil];
+                break;
+            default:
+                break;
+        }
+
+    }
 }
 
 - (void) mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
@@ -694,7 +766,7 @@
     if ([segue.identifier isEqualToString:@"segueToHotel"]) {
         
         HotelWebViewController *destViewController = segue.destinationViewController;
-        destViewController.title = @"";
+        destViewController.title = @"Hotel Information";
         [[segue destinationViewController] setDelegate:self];
         
     }
@@ -702,7 +774,7 @@
     if ([segue.identifier isEqualToString:@"segueToContactUs"]) {
         
         ContactUsViewController *destViewController = segue.destinationViewController;
-        destViewController.title = @"";
+        destViewController.title = @"Contact Us";
         [[segue destinationViewController] setDelegate:self];
         
     }
@@ -710,7 +782,7 @@
     if ([segue.identifier isEqualToString:@"segueToCECInfo"]) {
         
         CECInfoViewController *destViewController = segue.destinationViewController;
-        destViewController.title = @"";
+        destViewController.title = @"CEC Information";
         [[segue destinationViewController] setDelegate:self];
         
     }
@@ -718,21 +790,45 @@
     if ([segue.identifier isEqualToString:@"segueToExams"]) {
         
         ExamsViewController *destViewController = segue.destinationViewController;
-        destViewController.title = @"";
+        destViewController.title = @"Training & Exams";
         [[segue destinationViewController] setDelegate:self];
         
     }
     
     if ([segue.identifier isEqualToString:@"segueToPresentations"]) {
         
-        ExamsViewController *destViewController = segue.destinationViewController;
+        ProgramPDFViewController *destViewController = segue.destinationViewController;
+        destViewController.title = @"Presentations";
+        [[segue destinationViewController] setDelegate:self];
+        
+    }
+    
+    if ([segue.identifier isEqualToString:@"segueToFAA"]) {
+        
+        FindAreaActivitiesViewController *destViewController = segue.destinationViewController;
         destViewController.title = @"";
         [[segue destinationViewController] setDelegate:self];
         
     }
     
+    if ([segue.identifier isEqualToString:@"segueToFM"]) {
+        
+        FloorMapsViewController *destViewController = segue.destinationViewController;
+        destViewController.title = @"Floor Maps";
+        [[segue destinationViewController] setDelegate:self];
+        
+    }
+    
+    if ([segue.identifier isEqualToString:@"segueToCM"]) {
+        
+        ComMeetingsMainViewController *destViewController = segue.destinationViewController;
+        destViewController.title = @"Committee Meetings";
+        [[segue destinationViewController] setDelegate:self];
+        
+    }
     
 }
+
 
 
 

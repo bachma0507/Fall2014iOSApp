@@ -303,6 +303,56 @@ static RNFrostedSidebar *rn_frostedMenu;
     return self;
 }
 
+- (instancetype)initWithiPhoneImages:(NSArray *)images selectedIndices:(NSIndexSet *)selectedIndices borderColors:(NSArray *)colors {
+    if (self = [super init]) {
+        _isSingleSelect = NO;
+        _contentView = [[UIScrollView alloc] init];
+        _contentView.alwaysBounceHorizontal = NO;
+        _contentView.alwaysBounceVertical = YES;
+        _contentView.bounces = YES;
+        _contentView.clipsToBounds = NO;
+        _contentView.showsHorizontalScrollIndicator = NO;
+        _contentView.showsVerticalScrollIndicator = NO;
+        
+        _width = 150;
+        _animationDuration = 0.25f;
+        _itemSize = CGSizeMake(_width/2, _width/2);
+        _itemViews = [NSMutableArray array];
+        _tintColor = [UIColor colorWithWhite:0.2 alpha:0.73];
+        _borderWidth = 2;
+        _itemBackgroundColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:0.25];
+        
+        if (colors) {
+            NSAssert([colors count] == [images count], @"Border color count must match images count. If you want a blank border, use [UIColor clearColor].");
+        }
+        
+        _selectedIndices = [selectedIndices mutableCopy] ?: [NSMutableIndexSet indexSet];
+        _borderColors = colors;
+        _images = images;
+        
+        [_images enumerateObjectsUsingBlock:^(UIImage *image, NSUInteger idx, BOOL *stop) {
+            RNCalloutItemView *view = [[RNCalloutItemView alloc] init];
+            view.itemIndex = idx;
+            view.clipsToBounds = YES;
+            view.imageView.image = image;
+            [_contentView addSubview:view];
+            
+            [_itemViews addObject:view];
+            
+            if (_borderColors && _selectedIndices && [_selectedIndices containsIndex:idx]) {
+                UIColor *color = _borderColors[idx];
+                view.layer.borderColor = color.CGColor;
+            }
+            else {
+                view.layer.borderColor = [UIColor clearColor].CGColor;
+            }
+        }];
+    }
+    return self;
+}
+
+
+
 - (instancetype)initWithImages:(NSArray *)images selectedIndices:(NSIndexSet *)selectedIndices {
     return [self initWithImages:images selectedIndices:selectedIndices borderColors:nil];
 }

@@ -9,7 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "SVWebViewController.h"
 
+@class FindAreaActivitiesViewController;
+
+@protocol FindAreaActivitiesViewControllerDelegate
+
+@end
+
 @interface FindAreaActivitiesViewController : UIViewController
+@property (weak, nonatomic) id <FindAreaActivitiesViewControllerDelegate> delegate;
 - (IBAction)buttonPressed:(id)sender;
 
 @end

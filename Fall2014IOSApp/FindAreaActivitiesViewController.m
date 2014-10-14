@@ -8,6 +8,8 @@
 
 #import "FindAreaActivitiesViewController.h"
 
+
+
 @interface FindAreaActivitiesViewController ()
 
 @end

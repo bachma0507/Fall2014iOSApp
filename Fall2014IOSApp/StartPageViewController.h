@@ -18,11 +18,14 @@
 #import "ExamsViewController.h"
 #import <MessageUI/MessageUI.h>
 #import "ProgramPDFViewController.h"
+#import "FindAreaActivitiesViewController.h"
+#import "FloorMapsViewController.h"
+#import "ComMeetingsMainViewController.h"
 
 @class MBProgressHUD;
 @class Reachability;
 
-@interface StartPageViewController : UIViewController<RNFrostedSidebarDelegate, HotelWebViewControllerDelegate, ContactUsViewControllerDelegate, CECInfoViewControllerDelegate, ExamsViewControllerDelegate,MFMailComposeViewControllerDelegate, ProgramPDFViewControllerDelegate>
+@interface StartPageViewController : UIViewController<RNFrostedSidebarDelegate, HotelWebViewControllerDelegate, ContactUsViewControllerDelegate, CECInfoViewControllerDelegate, ExamsViewControllerDelegate,MFMailComposeViewControllerDelegate, ProgramPDFViewControllerDelegate, FindAreaActivitiesViewControllerDelegate, FloorMapsViewControllerDelegate, ComMeetingsMainViewControllerDelegate>
 {
     MBProgressHUD *HUD;
     Reachability *internetReach;
