@@ -132,7 +132,7 @@
 //    sess2EndTime = speakers.sess2EndTime;
 //    location2 = speakers.location2;
 //    poll1 = speakers.speakerWebsite;
-//    poll2 = speakers.speakerPic;
+//    speakerPic = speakers.speakerPic;
 //    
 //    NSLog(@"Poll1 is: %@", speakers.speakerWebsite);
 //    NSLog(@"Poll2 is: %@", speakers.speakerPic);

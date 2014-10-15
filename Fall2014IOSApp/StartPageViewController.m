@@ -37,6 +37,8 @@
 {
     [super viewDidLoad];
     
+    
+    
     self.optionIndices = [NSMutableIndexSet indexSetWithIndex:1];
     
     [TestFlight passCheckpoint:@"StartPage-viewed"];
@@ -45,6 +47,13 @@
         NSLog(@"First time run");
         
         [self performSegueWithIdentifier: @"eulaview" sender: self];
+        
+    }
+    
+    if(![[NSUserDefaults standardUserDefaults] boolForKey:@"hasSeenOverlay"]){
+        NSLog(@"First time view overlay");
+        
+        [self showTutorialOverlay];
         
     }
 
@@ -829,7 +838,43 @@
     
 }
 
+-(void) showTutorialOverlay
+{
+    UIView *topView = [[UIView alloc] initWithFrame:CGRectMake(0,0,self.view.frame.size.width,self.view.frame.size.height)];
+    
+    UIView *tutView = [[UIView alloc] initWithFrame:CGRectMake(0,0,self.view.frame.size.width,self.view.frame.size.height)];
+    [tutView setBackgroundColor:[UIColor blackColor]];
+    [tutView setAlpha:0.4];
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.frame = topView.frame;
+    [button addTarget:self action:@selector(hideTutorialOverlay) forControlEvents:UIControlEventTouchUpInside];
+    
+    CGRect statusBarFrame = [[UIApplication sharedApplication] statusBarFrame];
+    
+    UIImageView *tutImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"overlay"]];
+    [tutImageView setFrame:CGRectMake(0, (-1) * statusBarFrame.size.height, self.view.frame.size.width, self.view.frame.size.height)];
+    
+    
+    [tutView addSubview:button];
+    [topView addSubview:tutView];
+    [topView addSubview:tutImageView];
+    topView.tag = 12;
+    
+    [self.view addSubview:topView];
+    
+}
 
+
+-(void) hideTutorialOverlay
+{
+    
+    UIView *topview = [self.view.window viewWithTag:12];
+    [topview removeFromSuperview];
+    
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"hasSeenOverlay"];
+    
+}
 
 
 
