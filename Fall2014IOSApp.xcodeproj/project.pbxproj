@@ -343,7 +343,7 @@
 		4CAE7661179B1F6D004FF2FE /* PagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CAE7660179B1F6D004FF2FE /* PagerViewController.m */; };
 		4CAE7664179B206D004FF2FE /* CustomPagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CAE7663179B206D004FF2FE /* CustomPagerViewController.m */; };
 		4CAE7667179D86F1004FF2FE /* AllNotesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CAE7666179D86F1004FF2FE /* AllNotesCell.m */; };
-		4CAF0D9B19EDFCBB00961A3A /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF0D9A19EDFCBB00961A3A /* NSString+MD5.m */; };
+		4CAF0D9B19EDFCBB00961A3A /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF0D9A19EDFCBB00961A3A /* NSString+MD5.m */; settings = {COMPILER_FLAGS = "-w"; }; };
 		4CAF0DBA19EED8C200961A3A /* overlay4-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CAF0DB419EED8C200961A3A /* overlay4-ipad.png */; };
 		4CAF0DBB19EED8C200961A3A /* overlay4-ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CAF0DB519EED8C200961A3A /* overlay4-ipad@2x.png */; };
 		4CAF0DBC19EED8C200961A3A /* overlay4.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CAF0DB619EED8C200961A3A /* overlay4.png */; };
