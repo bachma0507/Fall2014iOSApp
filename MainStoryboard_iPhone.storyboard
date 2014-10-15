@@ -4225,19 +4225,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" id="F3M-Bj-Yuz">
-                                <rect key="frame" x="51" y="132" width="218" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="BICSI Username" minimumFontSize="17" id="F3M-Bj-Yuz">
+                                <rect key="frame" x="51" y="257" width="218" height="30"/>
                                 <color key="textColor" red="0.75686274509999996" green="0.27450980390000002" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" id="SdS-zi-P2D">
-                                <rect key="frame" x="51" y="260" width="218" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full Name" minimumFontSize="17" id="Afv-j4-mDw">
+                                <rect key="frame" x="51" y="134" width="218" height="30"/>
+                                <color key="textColor" red="0.75686274509999996" green="0.27450980390000002" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="BICSI Password" minimumFontSize="17" id="SdS-zi-P2D">
+                                <rect key="frame" x="51" y="322" width="218" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="PGe-p4-4nD">
-                                <rect key="frame" x="112" y="317" width="97" height="30"/>
+                                <rect key="frame" x="112" y="379" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Sign Up" backgroundImage="createuser_button.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -4247,7 +4253,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" minimumFontSize="17" id="m8f-NV-xXo">
-                                <rect key="frame" x="51" y="197" width="218" height="30"/>
+                                <rect key="frame" x="51" y="194" width="218" height="30"/>
                                 <color key="textColor" red="0.75686274509999996" green="0.27450980390000002" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -4260,13 +4266,14 @@
                     <connections>
                         <outlet property="emailRegisterTextField" destination="m8f-NV-xXo" id="5yo-kU-5Q3"/>
                         <outlet property="passwordRegisterTextField" destination="SdS-zi-P2D" id="CJu-2l-gKT"/>
+                        <outlet property="userFullNameTextField" destination="Afv-j4-mDw" id="Hdn-Q1-iKo"/>
                         <outlet property="userRegisterTextField" destination="F3M-Bj-Yuz" id="VxF-WH-JEb"/>
                         <segue destination="poy-DP-yzY" kind="push" identifier="SignupSuccesful" id="v11-zK-g7b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T48-wI-qIa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-873" y="-1887"/>
+            <point key="canvasLocation" x="-1017" y="-1847"/>
         </scene>
     </scenes>
     <resources>
@@ -4340,10 +4347,10 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="6XG-ma-1Ri"/>
         <segue reference="v11-zK-g7b"/>
         <segue reference="9cZ-Dy-QTD"/>
         <segue reference="qLg-su-tkS"/>
+        <segue reference="6XG-ma-1Ri"/>
         <segue reference="ia9-ZG-dp5"/>
         <segue reference="R22-dx-yzm"/>
     </inferredMetricsTieBreakers>

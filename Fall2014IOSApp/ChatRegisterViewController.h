@@ -13,6 +13,7 @@
 @property (nonatomic, strong) IBOutlet UITextField *userRegisterTextField;
 @property (nonatomic, strong) IBOutlet UITextField *passwordRegisterTextField;
 @property (nonatomic, strong) IBOutlet UITextField *emailRegisterTextField;
+@property (strong, nonatomic) IBOutlet UITextField *userFullNameTextField;
 
 
 -(IBAction)signUpUserPressed:(id)sender;

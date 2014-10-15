@@ -12,13 +12,16 @@
 
 #import <Parse/Parse.h>
 
+#import <CommonCrypto/CommonDigest.h>
+#import "NSString+MD5.h"
+
 @interface ChatRegisterViewController ()
 
 @end
 
 @implementation ChatRegisterViewController
 
-@synthesize userRegisterTextField = _userRegisterTextField, passwordRegisterTextField = _passwordRegisterTextField, emailRegisterTextField = _emailRegisterTextField;
+@synthesize userRegisterTextField = _userRegisterTextField, passwordRegisterTextField = _passwordRegisterTextField, emailRegisterTextField = _emailRegisterTextField, userFullNameTextField = _userFullNameTextField;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -74,15 +77,97 @@
 ////Sign Up Button pressed
 -(IBAction)signUpUserPressed:(id)sender
 {
-    //[TestFlight passCheckpoint:@"GalleryRegButton-pressed"];
+    ////////////////BICSI STUFF
+    NSInteger success = 0;
+    @try {
+        
+        
+        if([self.userRegisterTextField.text isEqualToString:@""] || [self.passwordRegisterTextField.text isEqualToString:@""] ) {
+            
+            [self alertStatus:@"Please enter Username and Password" :@"Sign in Failed!" :0];
+            
+        } else {
+            
+            
+            NSString *PW = [[NSString alloc] initWithFormat:@"%@", self.passwordRegisterTextField.text];
+            NSString *hashPW = [PW MD5];
+            
+            
+            
+            NSString *post =[[NSString alloc] initWithFormat:@"Name=%@&PW=%@", self.userRegisterTextField.text, hashPW];
+            
+            NSLog(@"PostData: %@",post);
+            
+            
+            NSString * webURL = [[NSString alloc] initWithFormat:@"https://webservice.bicsi.org/json/reply/MobAuth?Name=%@&PW=%@", self.userRegisterTextField.text, hashPW];
+            
+            
+            NSURL *url=[NSURL URLWithString:webURL];
+            
+            NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+            
+            NSString *postLength = [NSString stringWithFormat:@"%lu", (unsigned long)[postData length]];
+            
+            NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+            [request setURL:url];
+            [request setHTTPMethod:@"POST"];
+            [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
+            [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+            [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+            [request setHTTPBody:postData];
+            
+            //[NSURLRequest setAllowsAnyHTTPSCertificate:YES forHost:[url host]];
+            
+            NSError *error = [[NSError alloc] init];
+            NSHTTPURLResponse *response = nil;
+            NSData *urlData=[NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+            
+            NSLog(@"Response code: %ld", (long)[response statusCode]);
+            
+            if ([response statusCode] >= 200 && [response statusCode] < 300)
+            {
+                NSString *responseData = [[NSString alloc]initWithData:urlData encoding:NSUTF8StringEncoding];
+                NSLog(@"Response ==> %@", responseData);
+                
+                NSError *error = nil;
+                NSDictionary *jsonData = [NSJSONSerialization
+                                          JSONObjectWithData:urlData
+                                          options:NSJSONReadingMutableContainers
+                                          error:&error];
+                
+                success = [jsonData[@"success"] integerValue];
+                NSLog(@"Success: %ld",(long)success);
+                
+                if(success == 1)
+                {
+                    NSLog(@"Login SUCCESS");
+                    
+                } else {
+                    
+                    NSString *error_msg = (NSString *) jsonData[@"error_message"];
+                    [self alertStatus:error_msg :@"Sign in Failed!" :0];
+                }
+                
+            } else {
+                //if (error) NSLog(@"Error: %@", error);
+                [self alertStatus:@"Connection Failed - You must be a BICSI Member to sign in" :@"Sign in Failed!" :0];
+            }
+        }
+    }
+    @catch (NSException * e) {
+        NSLog(@"Exception: %@", e);
+        [self alertStatus:@"Sign in Failed." :@"Error!" :0];
+    }
+    if (success) {
     
+    ////////////////////////////PARSE STUFF
     PFUser *user = [PFUser user];
     user.username = self.userRegisterTextField.text;
     user.password = self.passwordRegisterTextField.text;
     user.email = self.emailRegisterTextField.text;
     user[PF_USER_EMAILCOPY] = self.emailRegisterTextField.text;
-    user[PF_USER_FULLNAME] = self.userRegisterTextField.text;
-    user[PF_USER_FULLNAME_LOWER] = [self.userRegisterTextField.text lowercaseString];
+    user[PF_USER_FULLNAME] = self.userFullNameTextField.text;
+    user[PF_USER_FULLNAME_LOWER] = [self.userFullNameTextField.text lowercaseString];
     
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {
@@ -97,6 +182,18 @@
         }
     }];
     
+    }
+}
+
+- (void) alertStatus:(NSString *)msg :(NSString *)title :(int) tag
+{
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title
+                                                        message:msg
+                                                       delegate:self
+                                              cancelButtonTitle:@"Ok"
+                                              otherButtonTitles:nil, nil];
+    alertView.tag = tag;
+    [alertView show];
     
 }
 

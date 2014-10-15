@@ -13,6 +13,7 @@
 #import "AFNetworking.h"
 #import "utilities.h"
 
+
 #import <Parse/Parse.h>
 
 @interface ChatLoginViewController ()
@@ -89,7 +90,7 @@
     
     NSString *username = _userTextField.text;
     NSString *password = _passwordTextField.text;
-    
+
     [PFUser logInWithUsernameInBackground:username password:password block:^(PFUser *user, NSError *error) {
         if (user) {
             //Open the wall
@@ -104,6 +105,9 @@
         }
     }];
 }
+
+
+
 
 - (IBAction)loginButtonTouchHandler:(id)sender {
     
